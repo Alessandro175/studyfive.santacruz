@@ -391,7 +391,7 @@ function seleccionarRespuesta(index) {
         opciones[index].classList.add('correcta');
         feedbackTexto.textContent = "¡Correcto! " + pregunta.explicacion;
         feedbackImagen.src = "img/10280401.jpg";
-        puntuacion += 10 * gradoSeleccionado; // Más puntos para grados superiores
+        puntuacion += 10;// * gradoSeleccionado; // Más puntos para grados superiores
         mostrarPantallaFelicitacionesRespuesta();
     } else {
         // Respuesta incorrecta
