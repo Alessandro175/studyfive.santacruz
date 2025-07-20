@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+        iniciarAudioLobby();
+});
+
 // Seleccionar preguntas aleatorias (debe estar definida globalmente)
 function seleccionarPreguntasAleatorias(preguntasOriginales, cantidad = 10) {
     const preguntas = [...preguntasOriginales];
@@ -429,7 +433,7 @@ function siguientePregunta() {
 function mostrarResultados() {
     document.getElementById('juego').classList.add('hidden');
     document.getElementById('resultados').classList.remove('hidden');
-    const puntajeMaximo = preguntas.length * 10 * gradoSeleccionado;
+    const puntajeMaximo = preguntas.length * 10;// * gradoSeleccionado;
     const porcentaje = Math.round((puntuacion / puntajeMaximo) * 100);
     document.getElementById('resultado-titulo').textContent = `Resultados de ${materiaSeleccionada}`;
     document.getElementById('resultado-puntuacion').textContent = `Puntuación: ${puntuacion} de ${puntajeMaximo} (${porcentaje}%)`;
@@ -654,6 +658,3 @@ function volverAudioLobby() {
         audioLobby.play().catch(()=>{});
     }
 }
-
-
-
