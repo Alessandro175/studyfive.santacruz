@@ -1321,9 +1321,108 @@ const bancoPreguntas = {
             }
         ],
         'Personal Social': [
-             
-        ], 
-    },   
+            {
+            pregunta: "¿Cómo se llama el lugar donde vivimos con nuestra familia?",
+            opciones: ["Casa", "Escuela", "Parque", "Mercado"],
+            respuesta: "Casa"
+            },
+            {
+            pregunta: "¿Quiénes forman parte de tu familia?",
+            opciones: ["Padres, hermanos, abuelos", "Profesores, doctores, vecinos", "Amigos del colegio", "Animales del zoológico"],
+            respuesta: "Padres, hermanos, abuelos"
+            },
+            {
+            pregunta: "¿Qué debemos hacer antes de cruzar la calle?",
+            opciones: ["Mirar a ambos lados", "Correr rápido", "Cantar", "Cerrar los ojos"],
+            respuesta: "Mirar a ambos lados"
+            },
+            {
+            pregunta: "¿Cuál es la capital del Perú?",
+            opciones: ["Lima", "Cusco", "Arequipa", "Puno"],
+            respuesta: "Lima"
+            },
+            {
+            pregunta: "¿Qué valor mostramos al compartir nuestros juguetes?",
+            opciones: ["Solidaridad", "Tristeza", "Enojo", "Orgullo"],
+            respuesta: "Solidaridad"
+            },
+            {
+            pregunta: "¿A dónde vamos para aprender con nuestros compañeros?",
+            opciones: ["Escuela", "Hospital", "Mercado", "Casa"],
+            respuesta: "Escuela"
+            },
+            {
+            pregunta: "¿Qué persona nos ayuda cuando estamos enfermos?",
+            opciones: ["Doctor", "Profesor", "Panadero", "Bombero"],
+            respuesta: "Doctor"
+            },
+            {
+            pregunta: "¿Cuál es el símbolo patrio que se iza los lunes?",
+            opciones: ["Bandera del Perú", "Mapa del Perú", "Escudo", "Moneda"],
+            respuesta: "Bandera del Perú"
+            },
+            {
+            pregunta: "¿Qué se celebra el 28 de julio en el Perú?",
+            opciones: ["Fiestas Patrias", "Navidad", "Semana Santa", "Carnaval"],
+            respuesta: "Fiestas Patrias"
+            },
+            {
+            pregunta: "¿Qué debemos hacer cuando alguien habla?",
+            opciones: ["Escuchar con atención", "Hablar más fuerte", "Gritar", "Ignorar"],
+            respuesta: "Escuchar con atención"
+            },
+            {
+            pregunta: "¿Qué valor demostramos al decir siempre la verdad?",
+            opciones: ["Honestidad", "Mentira", "Rencor", "Desobediencia"],
+            respuesta: "Honestidad"
+            },
+            {
+            pregunta: "¿Quién cuida el orden en una ciudad?",
+            opciones: ["Policía", "Panadero", "Pescador", "Profesor"],
+            respuesta: "Policía"
+            },
+            {
+            pregunta: "¿Qué usamos para transportarnos por el agua?",
+            opciones: ["Barco", "Auto", "Bicicleta", "Avión"],
+            respuesta: "Barco"
+            },
+            {
+            pregunta: "¿Qué significa ser puntual?",
+            opciones: ["Llegar a tiempo", "Llegar tarde", "Irse sin avisar", "No asistir"],
+            respuesta: "Llegar a tiempo"
+            },
+            {
+            pregunta: "¿Cuál de estas acciones ayuda al medio ambiente?",
+            opciones: ["Reciclar", "Botar basura al río", "Quemar árboles", "Usar plástico sin control"],
+            respuesta: "Reciclar"
+            },
+            {
+            pregunta: "¿Qué debemos hacer si cometemos un error?",
+            opciones: ["Pedir disculpas", "Reírnos", "Escondernos", "Ignorarlo"],
+            respuesta: "Pedir disculpas"
+            },
+            {
+            pregunta: "¿Quién nos enseña en el colegio?",
+            opciones: ["Profesor", "Cocinero", "Bombero", "Mecánico"],
+            respuesta: "Profesor"
+            },
+            {
+            pregunta: "¿Qué derecho tienen todos los niños?",
+            opciones: ["A la educación", "A no comer", "A no jugar", "A trabajar siempre"],
+            respuesta: "A la educación"
+            },
+            {
+            pregunta: "¿Qué debemos hacer con los ancianos?",
+            opciones: ["Respetarlos y ayudarlos", "Ignorarlos", "Reírnos", "Empujarlos"],
+            respuesta: "Respetarlos y ayudarlos"
+            },
+            {
+            pregunta: "¿Qué muestra una buena convivencia?",
+            opciones: ["Respetar a los demás", "Gritar en clase", "Pelearnos", "Ensuciar el aula"],
+            respuesta: "Respetar a los demás"
+            }
+         ], 
+    }, 
     3:{
         'Inglés': [
             {
@@ -5249,7 +5348,7 @@ const bancoPreguntas = {
                 respuestaCorrecta: 2,
                 explicacion: "El colonialismo provocó la destrucción de muchas culturas indígenas en América."
             }
-        ], 
+                  ]
     },
             // Similar para grados 3-6 con preguntas cada vez más complejas
              };
