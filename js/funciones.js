@@ -259,8 +259,9 @@ function renderMaterias() {
         { nombre: 'Matemática', icon: '44310e98-8556-42b5-bd9e-948d44db06f6' },
         { nombre: 'Comunicación', icon: '780030d2-ad72-4a0c-8056-f8adedc058e0' },
         { nombre: 'Ciencia y Tecnología', icon: '8654c946-2772-4be6-b915-8a6ca2b1cd6f' },
-        { nombre: 'Personal Social', icon: '46cdf4a7-6748-4e93-98df-73d1bda51860' }
-    ];
+        { nombre: 'Personal Social', icon: '46cdf4a7-6748-4e93-98df-73d1bda51860'},
+        { nombre: 'Arte y Cultura', icon: '0e0de5b8-070c-41c1-8d90-52b1b380cf19'},
+        ];
     const grid = document.querySelector('#seleccion-materia .grid');
     grid.innerHTML = '';
     materias.forEach(mat => {
@@ -614,7 +615,8 @@ function reproducirAudioResolve(materia) {
         "Matemática": "mt.mp3",
         "Comunicación": "com.mp3",
         "Ciencia y Tecnología": "cyt.mp3",
-        "Personal Social": "ps.mp3"
+        "Personal Social": "ps.mp3",
+        "Arte y Cultura": "art.mp3"
     };
 
     // Detener el audio de lobby si está activo

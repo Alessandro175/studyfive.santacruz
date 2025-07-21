@@ -589,6 +589,187 @@ const bancoPreguntas = {
             explicacion: "Amar a nuestra patria significa cuidar y respetar el Perú, nuestro país."
             }
         ],
+        'Arte y Cultura': [
+                    {
+      pregunta: "¿Qué usamos para dibujar líneas y formas?",
+      opciones: ["Pegamento", "Lápiz", "Tijera", "Goma"],
+      respuestaCorrecta: 1,
+      explicacion: "El lápiz nos ayuda a dibujar formas y líneas con facilidad."
+    },
+    {
+      pregunta: "¿Qué danza es típica de la selva peruana?",
+      opciones: ["Samba", "Marinera", "Danza de las tijeras", "Pandilla"],
+      respuestaCorrecta: 3,
+      explicacion: "La pandilla es una danza alegre de la región amazónica del Perú."
+    },
+    {
+      pregunta: "¿Qué usamos para borrar dibujos de lápiz?",
+      opciones: ["Goma", "Papel", "Tijera", "Lápiz de color"],
+      respuestaCorrecta: 0,
+      explicacion: "La goma sirve para borrar trazos de lápiz."
+    },
+    {
+      pregunta: "¿Qué instrumento musical tiene cuerdas?",
+      opciones: ["Cajón", "Zampoña", "Guitarra", "Tambor"],
+      respuestaCorrecta: 2,
+      explicacion: "La guitarra es un instrumento de cuerdas que se toca con los dedos o pua."
+    },
+    {
+      pregunta: "¿Qué color usamos para pintar el cielo?",
+      opciones: ["Rojo", "Azul", "Marrón", "Negro"],
+      respuestaCorrecta: 1,
+      explicacion: "El cielo suele representarse con el color azul en los dibujos."
+    },
+    {
+      pregunta: "¿Qué expresión usamos en el arte teatral?",
+      opciones: ["Silencio", "Voz y cuerpo", "Dormir", "Saltos altos"],
+      respuestaCorrecta: 1,
+      explicacion: "En el teatro se usan la voz y el cuerpo para expresar emociones."
+    },
+    {
+      pregunta: "¿Qué color es parte de la bandera del Perú?",
+      opciones: ["Verde", "Amarillo", "Rojo", "Azul"],
+      respuestaCorrecta: 2,
+      explicacion: "El rojo es uno de los colores principales de la bandera del Perú."
+    },
+    {
+      pregunta: "¿Qué es una pintura?",
+      opciones: ["Un baile", "Una canción", "Una imagen hecha con colores", "Un instrumento"],
+      respuestaCorrecta: 2,
+      explicacion: "Una pintura es una forma de arte visual creada con colores."
+    },
+    {
+      pregunta: "¿Qué usamos para pegar papeles en un collage?",
+      opciones: ["Tijera", "Pintura", "Goma", "Témpera"],
+      respuestaCorrecta: 2,
+      explicacion: "La goma o pegamento nos permite unir piezas de papel."
+    },
+    {
+      pregunta: "¿Qué danza tradicional se baila en Puno?",
+      opciones: ["Caporales", "Marinera", "Pandilla", "Diablada"],
+      respuestaCorrecta: 3,
+      explicacion: "La Diablada es una danza típica del altiplano peruano, especialmente en Puno."
+    },
+                { pregunta: "¿Qué usamos para pintar un dibujo?",
+                opciones: ["Pincel", "Tenedor", "Regla", "Cepillo"],
+                respuestaCorrecta: 0,
+                explicacion: "El pincel sirve para pintar con témperas o acuarelas."
+                },
+                {
+                pregunta: "¿Qué color se obtiene al mezclar azul con amarillo?",
+                opciones: ["Rojo", "Naranja", "Verde", "Gris"],
+                respuestaCorrecta: 2,
+                explicacion: "Mezclando azul y amarillo se forma el color verde."
+                },
+                {
+                pregunta: "¿Cuál de estos es un instrumento musical peruano?",
+                opciones: ["Cajón", "Violín", "Trombón", "Flauta dulce"],
+                respuestaCorrecta: 0,
+                explicacion: "El cajón es un instrumento de percusión peruano."
+                },
+                {
+                pregunta: "¿Qué usamos para colorear nuestros dibujos?",
+                opciones: ["Tizas", "Lápices de colores", "Clavos", "Piedras"],
+                respuestaCorrecta: 1,
+                explicacion: "Los lápices de colores sirven para colorear dibujos."
+                },
+                {
+                pregunta: "¿Qué es la marinera?",
+                opciones: ["Un tipo de pintura", "Un instrumento", "Un baile peruano", "Un color"],
+                respuestaCorrecta: 2,
+                explicacion: "La marinera es una danza tradicional del Perú."
+                },
+                {
+                pregunta: "¿Cuál de estos es un color primario?",
+                opciones: ["Verde", "Naranja", "Rojo", "Rosado"],
+                respuestaCorrecta: 2,
+                explicacion: "Rojo es un color primario junto al azul y amarillo."
+                },
+                {
+                pregunta: "¿Qué se usa para hacer una melodía?",
+                opciones: ["Colores", "Instrumentos musicales", "Tijeras", "Pegamento"],
+                respuestaCorrecta: 1,
+                explicacion: "Los instrumentos musicales crean melodías y ritmos."
+                },
+                {
+                pregunta: "¿Qué danza peruana se baila con pañuelos?",
+                opciones: ["Samba", "Huayno", "Marinera", "Polca"],
+                respuestaCorrecta: 2,
+                explicacion: "La marinera se baila con pañuelos y mucho ritmo."
+                },
+                {
+                pregunta: "¿Qué usamos para crear sonidos en el arte musical?",
+                opciones: ["Goma", "Tijera", "Instrumentos", "Papel"],
+                respuestaCorrecta: 2,
+                explicacion: "Los instrumentos musicales permiten crear sonidos."
+                },
+                {
+                pregunta: "¿Qué es un mural?",
+                opciones: ["Un baile", "Un dibujo grande en la pared", "Una canción", "Un instrumento"],
+                respuestaCorrecta: 1,
+                explicacion: "Un mural es una pintura grande en una pared."
+                },
+                {
+                pregunta: "¿Qué instrumento de viento es usado en la música andina?",
+                opciones: ["Guitarra", "Zampoña", "Cajón", "Maracas"],
+                respuestaCorrecta: 1,
+                explicacion: "La zampoña es un instrumento típico de la sierra del Perú."
+                },
+                {
+                pregunta: "¿Qué color se forma al mezclar rojo con azul?",
+                opciones: ["Naranja", "Celeste", "Morado", "Gris"],
+                respuestaCorrecta: 2,
+                explicacion: "Rojo y azul forman el color morado."
+                },
+                {
+                pregunta: "¿Qué parte del cuerpo usamos para tocar el cajón?",
+                opciones: ["Codos", "Manos", "Rodillas", "Cabeza"],
+                respuestaCorrecta: 1,
+                explicacion: "El cajón se toca con las manos haciendo ritmos."
+                },
+                {
+                pregunta: "¿Qué es la creatividad?",
+                opciones: ["Dormir mucho", "Jugar fútbol", "Inventar y crear cosas", "Repetir lo mismo"],
+                respuestaCorrecta: 2,
+                explicacion: "La creatividad es imaginar y crear algo nuevo y original."
+                },
+                {
+                pregunta: "¿Qué se usa para hacer música con ritmo?",
+                opciones: ["Instrumentos de percusión", "Pegamento", "Tizas", "Tijeras"],
+                respuestaCorrecta: 0,
+                explicacion: "Los instrumentos de percusión como el cajón dan ritmo a la música."
+                },
+                {
+                pregunta: "¿Cuál de estos es un ejemplo de arte?",
+                opciones: ["Una pintura", "Un cuaderno vacío", "Una regla", "Un borrador"],
+                respuestaCorrecta: 0,
+                explicacion: "La pintura es una forma de expresión artística."
+                },
+                {
+                pregunta: "¿Qué material usamos para moldear figuras con las manos?",
+                opciones: ["Cartón", "Plastilina", "Papel", "Tiza"],
+                respuestaCorrecta: 1,
+                explicacion: "La plastilina permite crear figuras con las manos."
+                },
+                {
+                pregunta: "¿Cuál de estas es una danza alegre del Perú?",
+                opciones: ["Rock", "Polca", "Caporales", "Balada"],
+                respuestaCorrecta: 2,
+                explicacion: "Los caporales son una danza festiva del altiplano peruano."
+                },
+                {
+                pregunta: "¿Qué instrumento se sopla para hacer sonidos?",
+                opciones: ["Guitarra", "Cajón", "Zampoña", "Tambores"],
+                respuestaCorrecta: 2,
+                explicacion: "La zampoña se sopla para producir notas musicales."
+                },
+                {
+                pregunta: "¿Qué forma de arte usamos para contar historias con imágenes?",
+                opciones: ["Pintura", "Dibujo", "Teatro", "Cine"],
+                respuestaCorrecta: 1,
+                explicacion: "El dibujo permite representar historias o escenas con imágenes."
+                }     
+        ],
     }, 
     2:{
         'Inglés': [
@@ -1421,7 +1602,135 @@ const bancoPreguntas = {
             opciones: ["Respetar a los demás", "Gritar en clase", "Pelearnos", "Ensuciar el aula"],
             respuesta: "Respetar a los demás"
             }
-         ], 
+        ],
+        'Arte y Cultura': [
+    {
+        pregunta: "¿Qué es una obra de arte?",
+        opciones: ["Una comida deliciosa", "Una creación artística que expresa ideas o emociones", "Una tarea del colegio", "Una película de acción"],
+        respuestaCorrecta: 1,
+        explicacion: "Una obra de arte es una creación artística que busca expresar ideas, emociones o belleza."
+    },
+    {
+        pregunta: "¿Qué es el teatro?",
+        opciones: ["Una técnica de dibujo", "Una danza típica", "Una forma de arte escénico", "Una pintura famosa"],
+        respuestaCorrecta: 2,
+        explicacion: "El teatro es una forma de arte escénico que representa historias frente a una audiencia."
+    },
+    {
+        pregunta: "¿Cuál de estos es un instrumento de viento?",
+        opciones: ["Guitarra", "Flauta", "Tambor", "Violín"],
+        respuestaCorrecta: 1,
+        explicacion: "La flauta es un instrumento de viento porque produce sonido al soplar aire en ella."
+    },
+    {
+        pregunta: "¿Qué es la danza negra o afroperuana?",
+        opciones: ["Una danza moderna", "Un estilo de teatro", "Una danza tradicional con raíces africanas", "Una técnica de pintura"],
+        respuestaCorrecta: 2,
+        explicacion: "La danza negra o afroperuana tiene raíces africanas y es típica de la costa del Perú."
+    },
+    {
+        pregunta: "¿Qué color se obtiene al mezclar azul y amarillo?",
+        opciones: ["Rojo", "Verde", "Naranja", "Marrón"],
+        respuestaCorrecta: 1,
+        explicacion: "Al mezclar azul y amarillo se obtiene el color verde."
+    },
+    {
+        pregunta: "¿Qué significa arte abstracto?",
+        opciones: ["Imita la realidad", "Usa formas reales", "No representa figuras reales", "Es una danza tradicional"],
+        respuestaCorrecta: 2,
+        explicacion: "El arte abstracto no representa figuras reales, sino formas y colores libres."
+    },
+    {
+        pregunta: "¿Cuál es una danza típica del altiplano boliviano?",
+        opciones: ["Caporales", "Marinera", "Saya", "Huayno"],
+        respuestaCorrecta: 0,
+        explicacion: "Los Caporales son una danza tradicional boliviana muy popular también en Perú."
+    },
+    {
+        pregunta: "¿Qué instrumento se usa en las danzas andinas?",
+        opciones: ["Piano", "Quena", "Saxofón", "Violonchelo"],
+        respuestaCorrecta: 1,
+        explicacion: "La quena es un instrumento de viento tradicional de los Andes."
+    },
+    {
+        pregunta: "¿Qué representan los colores cálidos?",
+        opciones: ["Tristeza", "Frialdad", "Alegría y energía", "Oscuridad"],
+        respuestaCorrecta: 2,
+        explicacion: "Los colores cálidos como el rojo, naranja y amarillo transmiten alegría y energía."
+    },
+    {
+        pregunta: "¿Qué es una pintura mural?",
+        opciones: ["Pintura sobre papel", "Pintura en tela", "Pintura hecha en una pared", "Pintura en cerámica"],
+        respuestaCorrecta: 2,
+        explicacion: "Una pintura mural es aquella que se realiza directamente sobre una pared."
+    },
+    {
+        pregunta: "¿Qué baile peruano representa el cortejo del gallo y la gallina?",
+        opciones: ["Marinera", "Huaylas", "Tondero", "Festejo"],
+        respuestaCorrecta: 0,
+        explicacion: "La marinera representa el galanteo entre el hombre y la mujer, como el gallo y la gallina."
+    },
+    {
+        pregunta: "¿Qué es la escultura?",
+        opciones: ["Un tipo de canto", "Una pintura", "Una forma de arte tridimensional", "Una danza"],
+        respuestaCorrecta: 2,
+        explicacion: "La escultura es una forma de arte que se realiza en tres dimensiones como piedra, madera o metal."
+    },
+    {
+        pregunta: "¿Qué es una coreografía?",
+        opciones: ["Un tipo de pintura", "Una secuencia de movimientos de baile", "Una melodía", "Un instrumento musical"],
+        respuestaCorrecta: 1,
+        explicacion: "La coreografía es la organización de los pasos y movimientos en una danza."
+    },
+    {
+        pregunta: "¿Qué son los colores fríos?",
+        opciones: ["Rojo, naranja, amarillo", "Azul, verde, violeta", "Negro y blanco", "Rosa y marrón"],
+        respuestaCorrecta: 1,
+        explicacion: "Los colores fríos como azul, verde y violeta transmiten calma y serenidad."
+    },
+    {
+        pregunta: "¿Qué significa ritmo en la música?",
+        opciones: ["El volumen de una canción", "La duración de los sonidos", "El tipo de voz", "La velocidad del viento"],
+        respuestaCorrecta: 1,
+        explicacion: "El ritmo es la organización de los sonidos y silencios en el tiempo."
+    },
+    {
+        pregunta: "¿Qué tipo de arte se usa en el carnaval?",
+        opciones: ["Arte digital", "Arte escénico y visual", "Arte culinario", "Arte fotográfico"],
+        respuestaCorrecta: 1,
+        explicacion: "En el carnaval se usa arte visual como disfraces y escénico como danzas y música."
+    },
+    {
+        pregunta: "¿Qué representa el Festejo?",
+        opciones: ["Fiestas europeas", "La vida en el campo", "La herencia africana", "Los incas"],
+        respuestaCorrecta: 2,
+        explicacion: "El festejo representa la alegría y tradición de la cultura afroperuana."
+    },
+    {
+        pregunta: "¿Qué es una paleta de colores?",
+        opciones: ["Una caja de crayones", "Una tabla donde se mezclan colores", "Una hoja para pintar", "Un dibujo"],
+        respuestaCorrecta: 1,
+        explicacion: "La paleta es donde los pintores mezclan sus colores."
+    },
+    {
+        pregunta: "¿Qué es un autorretrato?",
+        opciones: ["Pintura de otra persona", "Dibujo de un paisaje", "Pintura de uno mismo", "Foto grupal"],
+        respuestaCorrecta: 2,
+        explicacion: "El autorretrato es una representación de uno mismo hecha por el artista."
+    },
+    {
+        pregunta: "¿Qué es el arte popular?",
+        opciones: ["Arte moderno", "Arte de élite", "Arte de las comunidades y pueblos", "Arte de museos"],
+        respuestaCorrecta: 2,
+        explicacion: "El arte popular se hace en las comunidades y representa sus costumbres y creencias."
+    },
+    {
+        pregunta: "¿Qué representa la danza Los Shapis?",
+        opciones: ["La ciudad", "La selva", "El campo", "Los carnavales andinos"],
+        respuestaCorrecta: 3,
+        explicacion: "Los Shapis representan los carnavales de los Andes con colorido y alegría."
+    }
+]
     }, 
     3:{
         'Inglés': [
@@ -2334,6 +2643,194 @@ const bancoPreguntas = {
                 explicacion: "Reconocer nuestros errores nos ayuda a mejorar."
             }
         ], 
+        'Arte y Cultura': [
+            {
+                pregunta: "¿Cuántas notas musicales existen en total?",
+                opciones: ["5", "7", "8", "6"],
+                respuestaCorrecta: 1,
+                explicacion: "Existen 7 notas musicales: do, re, mi, fa, sol, la y si."
+            },
+            {
+                pregunta: "¿Qué ritmo musical es típico de la selva peruana?",
+                opciones: ["Huayno", "Marinera", "Pandilla", "Saya"],
+                respuestaCorrecta: 2,
+                explicacion: "La pandilla es una danza y ritmo típico de la región amazónica del Perú."
+            },
+            {
+                pregunta: "¿Cuál es un instrumento típico de la selva?",
+                opciones: ["Quena", "Tambor con piel de mono", "Zampoña", "Trompeta"],
+                respuestaCorrecta: 1,
+                explicacion: "En la selva se usan tambores artesanales hechos con piel de animales."
+            },
+            {
+                pregunta: "¿Qué danza boliviana es muy conocida y se baila en Perú también?",
+                opciones: ["Saya", "Samba", "Cumbia", "Tondero"],
+                respuestaCorrecta: 0,
+                explicacion: "La saya es una danza afroboliviana que también se baila en la región sur del Perú."
+            },
+            {
+                pregunta: "¿Qué colores se forman al mezclar azul y amarillo?",
+                opciones: ["Verde", "Rojo", "Naranja", "Celeste"],
+                respuestaCorrecta: 0,
+                explicacion: "El verde se forma al mezclar azul con amarillo."
+            },
+            {
+                pregunta: "¿Qué es un autorretrato?",
+                opciones: ["Un dibujo de una casa", "Una pintura de uno mismo", "Una foto grupal", "Un paisaje"],
+                respuestaCorrecta: 1,
+                explicacion: "El autorretrato es una representación que hace una persona de sí misma."
+            },
+            {
+                pregunta: "¿Qué artista pintó la famosa obra 'La Mona Lisa'?",
+                opciones: ["Picasso", "Van Gogh", "Leonardo da Vinci", "Monet"],
+                respuestaCorrecta: 2,
+                explicacion: "Leonardo da Vinci fue el autor de la famosa pintura 'La Mona Lisa'."
+            },
+            {
+                pregunta: "¿Qué instrumento tiene cuerdas y se toca con arco?",
+                opciones: ["Guitarra", "Piano", "Violín", "Tambor"],
+                respuestaCorrecta: 2,
+                explicacion: "El violín tiene cuerdas y se toca con un arco."
+            },
+            {
+                pregunta: "¿Qué es una melodía?",
+                opciones: ["Una escultura", "Una sucesión de sonidos musicales", "Un color", "Un tipo de baile"],
+                respuestaCorrecta: 1,
+                explicacion: "La melodía es una sucesión de notas que suenan agradables al oído."
+            },
+            {
+                pregunta: "¿Qué instrumento musical se sopla y tiene teclas?",
+                opciones: ["Zampoña", "Saxofón", "Acordeón", "Quena"],
+                respuestaCorrecta: 2,
+                explicacion: "El acordeón se toca soplando aire y presionando teclas."
+            },
+            {
+                pregunta: "¿Qué pintura representa un paisaje natural?",
+                opciones: ["Retrato", "Abstracto", "Paisaje", "Moderno"],
+                respuestaCorrecta: 2,
+                explicacion: "Un paisaje representa montañas, ríos, árboles o el campo."
+            },
+            {
+                pregunta: "¿Qué danza representa la cosecha de arroz en la selva?",
+                opciones: ["Pandilla", "Danza de los negritos", "Arroz chaufa", "Apu inca"],
+                respuestaCorrecta: 0,
+                explicacion: "La pandilla simboliza la cosecha y celebración amazónica."
+            },
+            {
+                pregunta: "¿Cuál de estos es un color terciario?",
+                opciones: ["Verde", "Naranja", "Marrón", "Rojo"],
+                respuestaCorrecta: 2,
+                explicacion: "El marrón se obtiene mezclando varios colores primarios y secundarios."
+            },
+            {
+                pregunta: "¿Qué nota musical sigue después de FA?",
+                opciones: ["SOL", "MI", "SI", "LA"],
+                respuestaCorrecta: 0,
+                explicacion: "La nota que sigue a FA es SOL."
+            },
+            {
+                pregunta: "¿Qué instrumento de viento es típico de los Andes?",
+                opciones: ["Zampoña", "Bajo", "Piano", "Batería"],
+                respuestaCorrecta: 0,
+                explicacion: "La zampoña es un instrumento tradicional andino hecho de cañas."
+            },
+            {
+                pregunta: "¿Qué es la danza 'Los Shapis'?",
+                opciones: ["Una danza del altiplano", "Una danza selvática alegre", "Una danza europea", "Una marcha militar"],
+                respuestaCorrecta: 1,
+                explicacion: "Los Shapis es una danza colorida y alegre de la selva central peruana."
+            },
+            {
+                pregunta: "¿Qué son los colores fríos?",
+                opciones: ["Rojo, amarillo, naranja", "Verde, azul, violeta", "Negro y blanco", "Dorado y plateado"],
+                respuestaCorrecta: 1,
+                explicacion: "Los colores fríos transmiten calma, como el azul y el verde."
+            },
+            {
+                pregunta: "¿Qué tipo de arte se realiza con barro o arcilla?",
+                opciones: ["Dibujo", "Pintura", "Escultura", "Música"],
+                respuestaCorrecta: 2,
+                explicacion: "La escultura usa materiales como el barro para formar figuras."
+            },
+            {
+                pregunta: "¿Qué es una paleta de colores?",
+                opciones: ["Una flauta", "Un conjunto de colores", "Un instrumento", "Una danza"],
+                respuestaCorrecta: 1,
+                explicacion: "La paleta contiene todos los colores que el artista va a usar."
+            },
+            {
+                pregunta: "¿Qué danza se baila con trajes coloridos y máscaras en Bolivia?",
+                opciones: ["Saya", "Caporales", "Cumbia", "Pandilla"],
+                respuestaCorrecta: 1,
+                explicacion: "Los Caporales es una danza boliviana con trajes brillantes y energía."
+            },
+            {
+                pregunta: "¿Qué tipo de arte representa ideas con formas sin sentido real?",
+                opciones: ["Realismo", "Abstracto", "Costumbrismo", "Cubismo"],
+                respuestaCorrecta: 1,
+                explicacion: "El arte abstracto usa líneas y colores para expresar emociones sin forma definida."
+            },
+            {
+                pregunta: "¿Qué instrumento musical es muy usado en bandas escolares?",
+                opciones: ["Trombón", "Quena", "Guitarra", "Zampoña"],
+                respuestaCorrecta: 0,
+                explicacion: "El trombón es común en bandas musicales escolares."
+            },
+            {
+                pregunta: "¿Qué es un boceto?",
+                opciones: ["Una canción", "Un dibujo rápido", "Una danza", "Una película"],
+                respuestaCorrecta: 1,
+                explicacion: "El boceto es un dibujo previo, hecho rápidamente para planificar una obra."
+            },
+            {
+                pregunta: "¿Qué instrumento es parecido al tambor pero más pequeño?",
+                opciones: ["Guitarra", "Bongo", "Violín", "Flauta"],
+                respuestaCorrecta: 1,
+                explicacion: "El bongo es un instrumento de percusión más pequeño que el tambor."
+            },
+            {
+                pregunta: "¿Cuál es un color complementario del rojo?",
+                opciones: ["Verde", "Azul", "Amarillo", "Marrón"],
+                respuestaCorrecta: 0,
+                explicacion: "El verde es el color complementario del rojo en el círculo cromático."
+            },
+            {
+                pregunta: "¿Qué representa una pintura costumbrista?",
+                opciones: ["La vida diaria de un pueblo", "Figuras abstractas", "Dibujos digitales", "Animales fantásticos"],
+                respuestaCorrecta: 0,
+                explicacion: "El costumbrismo muestra las tradiciones y actividades del pueblo."
+            },
+            {
+                pregunta: "¿Qué danza de la selva se caracteriza por el uso de palos?",
+                opciones: ["Pandilla", "Danza de la anaconda", "Palizada", "Sikuris"],
+                respuestaCorrecta: 2,
+                explicacion: "La palizada es una danza amazónica en la que se usan palos rítmicamente."
+            },
+            {
+                pregunta: "¿Qué instrumento tiene teclas y cuerdas y se toca con los dedos?",
+                opciones: ["Flauta", "Piano", "Guitarra", "Acordeón"],
+                respuestaCorrecta: 2,
+                explicacion: "La guitarra tiene cuerdas y se toca con los dedos."
+            },
+            {
+                pregunta: "¿Qué forma geométrica se usa mucho en diseños artísticos?",
+                opciones: ["Círculo", "Rombo", "Triángulo", "Todas las anteriores"],
+                respuestaCorrecta: 3,
+                explicacion: "Todas las formas geométricas pueden formar patrones artísticos."
+            },
+            {
+                pregunta: "¿Qué colores forman el color gris?",
+                opciones: ["Negro y blanco", "Rojo y azul", "Amarillo y marrón", "Naranja y verde"],
+                respuestaCorrecta: 0,
+                explicacion: "El gris se forma al mezclar blanco con negro."
+            },
+            {
+                pregunta: "¿Qué instrumento es usado en la música de Caporales?",
+                opciones: ["Zampoña", "Timbales", "Bombo", "Charango"],
+                respuestaCorrecta: 2,
+                explicacion: "El bombo es esencial en la danza Caporales por su ritmo fuerte."
+            }
+        ],
     },
     4:{
         'Inglés': [
@@ -3243,6 +3740,134 @@ const bancoPreguntas = {
             explicacion: "La identidad cultural incluye todo lo que caracteriza a una comunidad."
         }
         ], 
+        'Arte y Cultura': [
+            {   
+                pregunta: "¿Qué danza afroperuana representa la resistencia cultural de los esclavos traídos al Perú?",
+                opciones: ["Marinera", "Festejo", "Huayno", "Santiago"],
+                respuestaCorrecta: 1,
+                explicacion: "El festejo es una danza afroperuana que representa la cultura de los esclavos africanos en la costa del Perú."
+            },
+            {
+                pregunta: "¿Qué representa la danza de los Caporales?",
+                opciones: ["Un baile de los incas", "La autoridad del capataz en las haciendas", "Una fiesta de la selva", "Un baile ceremonial del altiplano"],
+                respuestaCorrecta: 1,
+                explicacion: "El Caporal representa al capataz que vigilaba a los esclavos, por eso su vestimenta y actitud fuerte."
+            },
+            {
+                pregunta: "¿En qué departamento se originó la danza de los Caporales?",
+                opciones: ["Cusco", "La Paz", "Puno", "Arequipa"],
+                respuestaCorrecta: 1,
+                explicacion: "La danza de los Caporales tiene origen en Bolivia, específicamente en La Paz."
+            },
+            {
+                pregunta: "¿Cuál es una danza representativa de la cultura negra en el Perú?",
+                opciones: ["Valicha", "Diablada", "Son de los diablos", "Shapis"],
+                respuestaCorrecta: 2,
+                explicacion: "El Son de los Diablos es una danza afroperuana con máscaras y pasos teatrales."
+            },
+            {
+                pregunta: "¿Qué elementos se usan en el teatro escolar para representar personajes?",
+                opciones: ["Cartulina y crayones", "Máscaras, vestuario y escenografía", "Tizas y borrador", "Solo un guion"],
+                respuestaCorrecta: 1,
+                explicacion: "El teatro usa máscaras, vestuario y escenografía para dar vida a los personajes."
+            },
+            {
+                pregunta: "¿Cuál es el objetivo principal del teatro en la escuela?",
+                opciones: ["Aprender matemáticas", "Practicar educación física", "Desarrollar expresión artística y corporal", "Cantar himnos"],
+                respuestaCorrecta: 2,
+                explicacion: "El teatro ayuda a expresar emociones, desarrollar el lenguaje y fortalecer la expresión corporal."
+            },
+            {
+                pregunta: "¿Cuál de estos colores expresa energía y entusiasmo en una obra artística?",
+                opciones: ["Azul", "Gris", "Rojo", "Negro"],
+                respuestaCorrecta: 2,
+                explicacion: "El color rojo transmite fuerza, energía y pasión."
+            },
+            {
+                pregunta: "¿Qué tipo de danza es considerada un Patrimonio Cultural de la Nación en Perú?",
+                opciones: ["La marinera", "El reggaetón", "La zamba", "La danza de las tijeras"],
+                respuestaCorrecta: 3,
+                explicacion: "La danza de las tijeras es reconocida como Patrimonio Cultural Inmaterial de la Nación y de la Humanidad."
+            },
+            {
+                pregunta: "¿Qué instrumentos son comunes en las danzas afroperuanas?",
+                opciones: ["Charango y quena", "Violín y piano", "Cajón y cajita", "Flauta dulce y arpa"],
+                respuestaCorrecta: 2,
+                explicacion: "El cajón y la cajita son instrumentos tradicionales afroperuanos."
+            },
+            {
+                pregunta: "¿Qué baile peruano es conocido por su pañuelo blanco?",
+                opciones: ["Sikuri", "Tondero", "Marinera", "Caporales"],
+                respuestaCorrecta: 2,
+                explicacion: "La marinera se baila con un pañuelo blanco y representa el cortejo amoroso."
+            },
+            {
+                pregunta: "¿Cuál es un tipo de danza típica del pueblo afrodescendiente en Perú?",
+                opciones: ["Marinera norteña", "Zamacueca", "Danza de los Pallas", "Negritos"],
+                respuestaCorrecta: 3,
+                explicacion: "La danza de los Negritos es una danza navideña con raíces afroperuanas."
+            },
+            {
+                pregunta: "¿Qué caracteriza la danza de Caporales?",
+                opciones: ["Pasos suaves y lentos", "Zapateo fuerte, trajes brillantes y acrobacias", "Giros con velos", "Movimientos solo con los brazos"],
+                respuestaCorrecta: 1,
+                explicacion: "El Caporal incluye saltos, zapateos intensos y trajes vistosos."
+            },
+            {
+                pregunta: "¿Qué es el teatro escolar?",
+                opciones: ["Una obra de televisión", "Una competencia deportiva", "Una representación escénica hecha por estudiantes", "Una danza tradicional"],
+                respuestaCorrecta: 2,
+                explicacion: "El teatro escolar permite a los estudiantes interpretar obras con personajes y escenografía."
+            },
+            {
+                pregunta: "¿Qué colores suelen representar la alegría?",
+                opciones: ["Negro y gris", "Rojo y morado", "Amarillo y naranja", "Verde y marrón"],
+                respuestaCorrecta: 2,
+                explicacion: "El amarillo y el naranja son colores cálidos que transmiten alegría y energía."
+            },
+            {
+                pregunta: "¿Qué es un telón en el teatro?",
+                opciones: ["Una comida típica", "El piso del escenario", "La cortina que se abre y cierra al empezar o terminar una obra", "Un instrumento musical"],
+                respuestaCorrecta: 2,
+                explicacion: "El telón marca el inicio y fin de una obra teatral."
+            },
+            {
+                pregunta: "¿Qué expresión se usa para iniciar una obra teatral?",
+                opciones: ["¡Arriba!", "¡A escena!", "¡Música maestro!", "¡Apaguen la luz!"],
+                respuestaCorrecta: 1,
+                explicacion: "¡A escena! es la expresión que da inicio a la presentación teatral."
+            },
+            {
+                pregunta: "¿Qué danza afroperuana es muy enérgica y rápida?",
+                opciones: ["Festejo", "Marinera", "Saya", "Carnavalito"],
+                respuestaCorrecta: 0,
+                explicacion: "El festejo se caracteriza por su ritmo rápido y sus movimientos alegres."
+            },
+            {
+                pregunta: "¿Cuál de estos instrumentos se utiliza en los Caporales?",
+                opciones: ["Cajón", "Trompeta", "Charango", "Zampoña"],
+                respuestaCorrecta: 1,
+                explicacion: "Las bandas de Caporales usan trompetas para marcar el ritmo en los desfiles."
+            },
+            {
+                pregunta: "¿Qué representan las danzas negritudes o negroide en Perú?",
+                opciones: ["La tradición andina", "La herencia española", "La cultura africana traída por los esclavos", "La cultura asiática"],
+                respuestaCorrecta: 2,
+                explicacion: "Estas danzas reflejan la identidad cultural africana del Perú costero."
+            },
+            {
+                pregunta: "¿Qué personaje aparece a veces en la danza de los Caporales con un látigo?",
+                opciones: ["El ángel", "El diablo", "El capataz", "El abuelo"],
+                respuestaCorrecta: 2,
+                explicacion: "El capataz aparece como figura dominante con látigo en la danza."
+            },
+            {
+                pregunta: "¿Qué baile representa el cortejo entre un hombre y una mujer con movimientos delicados?",
+                opciones: ["Festejo", "Saya", "Caporales", "Marinera"],
+                respuestaCorrecta: 3,
+                explicacion: "La marinera muestra el galanteo amoroso entre los bailarines con elegancia."
+            }
+        ],
     },
     5:{
         'Inglés': [
@@ -4311,6 +4936,188 @@ const bancoPreguntas = {
                 explicacion: "Los Paracas destacaron por sus tejidos complejos y técnicas de momificación."
             }
         ], 
+        'Arte y Cultura': [
+                {
+                    pregunta: "¿Qué es el arte dramático?",
+                    opciones: ["Un estilo de música", "Una técnica de pintura", "La representación de historias mediante actuación", "Un tipo de danza tradicional"],
+                    respuestaCorrecta: 2,
+                    explicacion: "El arte dramático es una forma de arte en la que se representan historias mediante actuaciones teatrales."
+                },
+                {
+                    pregunta: "¿Qué es un telón en el teatro?",
+                    opciones: ["Un tipo de maquillaje", "La tela que cubre el escenario", "Un personaje teatral", "Una técnica de canto"],
+                    respuestaCorrecta: 1,
+                    explicacion: "El telón es la gran tela que cubre y descubre el escenario antes y después de la función."
+                },
+                {
+                    pregunta: "¿Qué representa la danza de los Caporales?",
+                    opciones: ["El poder del conquistador español", "La lucha afroperuana", "La figura del capataz de la hacienda", "La vida andina campesina"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La danza de los Caporales representa al capataz que vigilaba a los esclavos africanos en las haciendas coloniales."
+                },
+                {
+                    pregunta: "¿Cuál de los siguientes es un instrumento musical de viento?",
+                    opciones: ["Cajón", "Quena", "Charango", "Bombo"],
+                    respuestaCorrecta: 1,
+                    explicacion: "La quena es un instrumento de viento tradicional andino."
+                },
+                {
+                    pregunta: "¿Qué colores forman el círculo cromático primario?",
+                    opciones: ["Rojo, azul, amarillo", "Verde, naranja, violeta", "Blanco, negro, gris", "Celeste, marrón, rosado"],
+                    respuestaCorrecta: 0,
+                    explicacion: "Los colores primarios del círculo cromático son rojo, azul y amarillo."
+                },
+                {
+                    pregunta: "¿Qué caracteriza a una obra de teatro?",
+                    opciones: ["Solo música y baile", "Improvisación total", "Actuación, guión y escenografía", "Uso exclusivo de marionetas"],
+                    respuestaCorrecta: 2,
+                    explicacion: "Una obra de teatro se caracteriza por la actuación de actores, un guión y escenografía que ambienta la historia."
+                },
+                {
+                    pregunta: "¿Qué es el claroscuro en la pintura?",
+                    opciones: ["Técnica de pintura con colores cálidos", "Juego de luces y sombras", "Uso de pinturas digitales", "Mezcla de texturas"],
+                    respuestaCorrecta: 1,
+                    explicacion: "El claroscuro es una técnica artística que juega con las luces y sombras para dar profundidad a la obra."
+                },
+                {
+                    pregunta: "¿Cuál es la capital cultural del Perú por su tradición artística?",
+                    opciones: ["Lima", "Arequipa", "Ayacucho", "Cusco"],
+                    respuestaCorrecta: 2,
+                    explicacion: "Ayacucho es conocida por su gran tradición artística en retablos, música y festividades."
+                },
+                {
+                    pregunta: "¿Qué danza afroperuana representa la herencia africana en el Perú?",
+                    opciones: ["El caporal", "La marinera", "El festejo", "El huayno"],
+                    respuestaCorrecta: 2,
+                    explicacion: "El festejo es una danza afroperuana que celebra la herencia africana con mucho ritmo y alegría."
+                },
+                {
+                    pregunta: "¿Qué técnica de dibujo utiliza solo líneas?",
+                    opciones: ["Puntillismo", "Sombreado", "Lineal", "Acuarela"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La técnica lineal se basa en el uso de líneas para formar las figuras sin relleno ni color."
+                },
+                {
+                    pregunta: "¿Qué representa la danza de las Tijeras?",
+                    opciones: ["El poder militar", "El enfrentamiento de habilidades y resistencia", "La fe religiosa", "La caza de animales"],
+                    respuestaCorrecta: 1,
+                    explicacion: "La danza de las Tijeras representa un duelo de habilidades físicas, resistencia y simbolismo cultural andino."
+                },
+                {
+                    pregunta: "¿Qué tipo de ritmo tiene el caporal?",
+                    opciones: ["Lento y melancólico", "Acelerado y vigoroso", "Uniforme y constante", "Suelto y libre"],
+                    respuestaCorrecta: 1,
+                    explicacion: "El caporal se caracteriza por su ritmo acelerado y pasos fuertes y vigorosos."
+                },
+                {
+                    pregunta: "¿Qué color se asocia con la paz?",
+                    opciones: ["Rojo", "Negro", "Blanco", "Amarillo"],
+                    respuestaCorrecta: 2,
+                    explicacion: "El blanco se asocia tradicionalmente con la paz y la pureza."
+                },
+                {
+                    pregunta: "¿Qué instrumento musical acompaña muchas danzas afroperuanas?",
+                    opciones: ["Guitarra", "Cajón", "Zampoña", "Trompeta"],
+                    respuestaCorrecta: 1,
+                    explicacion: "El cajón es un instrumento esencial en muchas danzas afroperuanas como el festejo."
+                },
+                {
+                    pregunta: "¿Qué es un mural?",
+                    opciones: ["Una danza de la selva", "Un tipo de teatro", "Una pintura hecha sobre una pared", "Un instrumento musical tradicional"],
+                    respuestaCorrecta: 2,
+                    explicacion: "Un mural es una pintura de gran tamaño hecha directamente sobre una pared o muro."
+                },
+                {
+                    pregunta: "¿Qué danza representa la alegría del pueblo negro en la costa peruana?",
+                    opciones: ["El huayno", "El carnaval arequipeño", "El festejo", "La diablada"],
+                    respuestaCorrecta: 2,
+                    explicacion: "El festejo es una danza alegre que celebra la herencia afroperuana."
+                },
+                {
+                    pregunta: "¿Qué representa la diablada puneña?",
+                    opciones: ["La guerra inca", "El triunfo del bien sobre el mal", "La caza de llamas", "La llegada del virrey"],
+                    respuestaCorrecta: 1,
+                    explicacion: "La diablada simboliza la lucha entre el bien (arcángeles) y el mal (diablos)."
+                },
+                {
+                    pregunta: "¿Qué es una zarzuela?",
+                    opciones: ["Una danza selvática", "Una técnica de pintura", "Un género teatral con canto y diálogo", "Un instrumento tradicional"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La zarzuela es un género teatral que mezcla actuación con partes cantadas."
+                },
+                {
+                    pregunta: "¿Qué famoso cuadro pintó Leonardo da Vinci?",
+                    opciones: ["La Noche Estrellada", "La Última Cena", "El Grito", "Guernica"],
+                    respuestaCorrecta: 1,
+                    explicacion: "Leonardo da Vinci pintó 'La Última Cena', una de sus obras más reconocidas."
+                },
+                {
+                    pregunta: "¿Qué material se usa en esculturas tradicionales de Ayacucho?",
+                    opciones: ["Plomo", "Yeso", "Piedra de Huamanga", "Bronce"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La piedra de Huamanga es muy usada en esculturas religiosas y artísticas ayacuchanas."
+                },
+                {
+                    pregunta: "¿Qué ritmo musical tiene origen en Bolivia y se baila también en Perú?",
+                    opciones: ["Huaylas", "Festejo", "Saya", "Marinera"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La saya es un ritmo boliviano afroandino que también se baila en zonas del sur del Perú."
+                },
+                {
+                    pregunta: "¿Qué representa la vestimenta en el Caporal?",
+                    opciones: ["Riqueza y nobleza", "Dominio y fuerza", "Libertad y justicia", "Fe religiosa"],
+                    respuestaCorrecta: 1,
+                    explicacion: "La vestimenta del caporal simboliza fuerza, dominio y autoridad sobre los esclavos."
+                },
+                {
+                    pregunta: "¿Qué danza peruana es considerada Patrimonio Cultural de la Nación?",
+                    opciones: ["Festejo", "Caporal", "Marinera", "Tondero"],
+                    respuestaCorrecta: 2,
+                    explicacion: "La Marinera es reconocida como Patrimonio Cultural por su elegancia y tradición."
+                },
+                {
+                    pregunta: "¿Cuál es una obra reconocida de Picasso?",
+                    opciones: ["El Grito", "Guernica", "La Gioconda", "La Última Cena"],
+                    respuestaCorrecta: 1,
+                    explicacion: "Guernica es una obra de Pablo Picasso que representa los horrores de la guerra."
+                },
+                {
+                    pregunta: "¿Cuál es la diferencia entre color cálido y frío?",
+                    opciones: ["Cálido es más oscuro", "Frío solo se usa en acuarelas", "Cálidos generan energía, fríos tranquilidad", "No existe diferencia"],
+                    respuestaCorrecta: 2,
+                    explicacion: "Los colores cálidos (rojo, naranja) transmiten energía; los fríos (azul, verde) dan calma."
+                },
+                {
+                    pregunta: "¿Qué danza representa a los esclavos africanos en Perú?",
+                    opciones: ["Festejo", "Tondero", "Huayno", "Carnaval de Arequipa"],
+                    respuestaCorrecta: 0,
+                    explicacion: "El festejo celebra la cultura afrodescendiente en el Perú."
+                },
+                {
+                    pregunta: "¿Qué material es típico en el arte cerámico mochica?",
+                    opciones: ["Madera", "Metal", "Barro cocido", "Hueso"],
+                    respuestaCorrecta: 2,
+                    explicacion: "Los mochicas usaban barro cocido para hacer sus cerámicas expresivas y detalladas."
+                },
+                {
+                    pregunta: "¿Qué instrumento usa el danzante de tijeras?",
+                    opciones: ["Castañuelas", "Tijeras metálicas", "Cajón", "Guitarra"],
+                    respuestaCorrecta: 1,
+                    explicacion: "El danzante de tijeras usa dos láminas metálicas que produce sonidos mientras baila."
+                },
+                {
+                    pregunta: "¿Qué técnica artística utiliza pinceles y pigmentos disueltos en agua?",
+                    opciones: ["Carboncillo", "Témpera", "Óleo", "Acuarela"],
+                    respuestaCorrecta: 3,
+                    explicacion: "La acuarela es una técnica que usa pigmentos en agua, ideal para lograr transparencias."
+                },
+                {
+                    pregunta: "¿Qué danza representa la alegría de los carnavales en Cajamarca?",
+                    opciones: ["Carnaval cajamarquino", "Diablada", "Huaylas", "Caporal"],
+                    respuestaCorrecta: 0,
+                    explicacion: "El carnaval cajamarquino es una danza llena de colores y diversión en la región de Cajamarca."
+                }
+        ],
     },
     6:{
         'Inglés': [
@@ -5348,7 +6155,135 @@ const bancoPreguntas = {
                 respuestaCorrecta: 2,
                 explicacion: "El colonialismo provocó la destrucción de muchas culturas indígenas en América."
             }
-                  ]
+        ],
+        'Arte y Cultura': [
+            {
+    pregunta: "¿Qué representa el color azul en la teoría del color?",
+    opciones: ["Tristeza y calma", "Pasión y fuerza", "Envidia y miedo", "Alegría y energía"],
+    respuestaCorrecta: 0,
+    explicacion: "El color azul suele asociarse con la calma, la tranquilidad y la tristeza en el arte."
+},
+{
+    pregunta: "¿Qué danza afroperuana se caracteriza por el uso del cajón y movimientos sensuales?",
+    opciones: ["Marinera", "Festejo", "Valicha", "Caporal"],
+    respuestaCorrecta: 1,
+    explicacion: "El festejo es una danza afroperuana alegre, con mucho ritmo y uso del cajón peruano."
+},
+{
+    pregunta: "¿Qué artista pintó la obra 'La noche estrellada'?",
+    opciones: ["Pablo Picasso", "Claude Monet", "Vincent van Gogh", "Leonardo da Vinci"],
+    respuestaCorrecta: 2,
+    explicacion: "'La noche estrellada' es una de las obras más famosas de Van Gogh, pintada en 1889."
+},
+{
+    pregunta: "¿Cuál es un instrumento musical de viento originario de los Andes?",
+    opciones: ["Charango", "Cajón", "Quena", "Zampoña"],
+    respuestaCorrecta: 2,
+    explicacion: "La quena es un instrumento andino hecho de caña o hueso que se toca soplando por un extremo."
+},
+{
+    pregunta: "¿Qué tipo de teatro combina música, diálogo y danza?",
+    opciones: ["Teatro de títeres", "Teatro musical", "Teatro de sombras", "Teatro clásico"],
+    respuestaCorrecta: 1,
+    explicacion: "El teatro musical mezcla actuación con canciones y coreografías."
+},
+{
+    pregunta: "¿Qué tipo de pintura usa solo blanco y negro?",
+    opciones: ["Óleo", "Acuarela", "Monocromía", "Pastel"],
+    respuestaCorrecta: 2,
+    explicacion: "La monocromía se refiere a obras hechas con un solo color o tonos del mismo."
+},
+{
+    pregunta: "¿Qué ritmo musical originario de Brasil es muy popular en carnavales?",
+    opciones: ["Tango", "Cueca", "Samba", "Cumbia"],
+    respuestaCorrecta: 2,
+    explicacion: "La samba es una danza tradicional brasileña, llena de energía y colores."
+},
+{
+    pregunta: "¿Qué danza boliviana es muy conocida y se baila con trajes brillantes y máscaras?",
+    opciones: ["Saya", "Diablada", "Tobas", "Caporales"],
+    respuestaCorrecta: 1,
+    explicacion: "La diablada es una danza tradicional de Oruro con trajes llamativos y temática religiosa."
+},
+{
+    pregunta: "¿Qué danza peruana se baila con pañuelos y es un símbolo de coquetería?",
+    opciones: ["Huayno", "Marinera", "Tondero", "Festejo"],
+    respuestaCorrecta: 1,
+    explicacion: "La marinera es considerada la danza nacional del Perú, representando el cortejo entre una pareja."
+},
+{
+    pregunta: "¿Qué obra es considerada el primer dibujo humano en la historia?",
+    opciones: ["Mona Lisa", "Guernica", "El hombre de Vitruvio", "Pinturas rupestres"],
+    respuestaCorrecta: 3,
+    explicacion: "Las pinturas rupestres hechas en cuevas como las de Altamira muestran dibujos de hace miles de años."
+},
+{
+    pregunta: "¿Qué se necesita para realizar una obra de teatro?",
+    opciones: ["Solo bailarines", "Música clásica", "Actores, escenografía y guion", "Instrumentos musicales"],
+    respuestaCorrecta: 2,
+    explicacion: "Una obra de teatro necesita guion, actores, vestuario y escenografía."
+},
+{
+    pregunta: "¿Qué es una sinfonía?",
+    opciones: ["Una escultura abstracta", "Una obra musical larga y compleja", "Un paso de baile", "Una técnica de pintura"],
+    respuestaCorrecta: 1,
+    explicacion: "Una sinfonía es una obra musical compleja compuesta por varios movimientos, generalmente para orquesta."
+},
+{
+    pregunta: "¿Qué instrumento se usa mucho en el huayno?",
+    opciones: ["Arpa", "Guitarra eléctrica", "Violín", "Saxofón"],
+    respuestaCorrecta: 2,
+    explicacion: "El violín da el ritmo y melodía al huayno, una danza popular andina."
+},
+{
+    pregunta: "¿Qué color se forma al mezclar rojo y azul?",
+    opciones: ["Anaranjado", "Verde", "Morado", "Rosado"],
+    respuestaCorrecta: 2,
+    explicacion: "Rojo + azul da como resultado el color morado (violeta)."
+},
+{
+    pregunta: "¿Qué estilo artístico se caracteriza por líneas rectas y tecnología?",
+    opciones: ["Cubismo", "Renacimiento", "Arte digital", "Futurismo"],
+    respuestaCorrecta: 3,
+    explicacion: "El futurismo muestra movimiento, máquinas y velocidad, con líneas modernas."
+},
+{
+    pregunta: "¿Qué se celebra en los carnavales peruanos con música y danza?",
+    opciones: ["Pascua", "La cosecha", "La fertilidad y alegría", "El Día del maestro"],
+    respuestaCorrecta: 2,
+    explicacion: "Los carnavales celebran la alegría, la abundancia y la unión del pueblo."
+},
+{
+    pregunta: "¿Qué instrumento peruano tiene forma de guitarra pequeña?",
+    opciones: ["Zampoña", "Charango", "Caja", "Cajón"],
+    respuestaCorrecta: 1,
+    explicacion: "El charango es típico del altiplano, hecho a veces de caparazón de armadillo."
+},
+{
+    pregunta: "¿Qué es un mural?",
+    opciones: ["Un instrumento musical", "Una obra de teatro", "Una pintura grande en una pared", "Un baile en grupo"],
+    respuestaCorrecta: 2,
+    explicacion: "Los murales son pinturas que se hacen sobre muros o paredes, generalmente públicas."
+},
+{
+    pregunta: "¿Qué colores son primarios?",
+    opciones: ["Rojo, azul, amarillo", "Naranja, verde, violeta", "Rojo, verde, negro", "Azul, blanco, negro"],
+    respuestaCorrecta: 0,
+    explicacion: "Los colores primarios no se pueden formar mezclando otros colores: rojo, azul y amarillo."
+},
+{
+    pregunta: "¿Quién fue un pintor importante del Renacimiento?",
+    opciones: ["Miguel Ángel", "Van Gogh", "Frida Kahlo", "Salvador Dalí"],
+    respuestaCorrecta: 0,
+    explicacion: "Miguel Ángel fue escultor y pintor del Renacimiento, autor de la Capilla Sixtina."
+},
+{
+    pregunta: "¿Qué tipo de baile es el caporal?",
+    opciones: ["Afroperuano", "Selvático", "Altiplánico", "Costeño"],
+    respuestaCorrecta: 2,
+    explicacion: "El caporal es una danza del altiplano boliviano y peruano, con vestimenta pesada y vigorosa."
+},
+        ],
     },
             // Similar para grados 3-6 con preguntas cada vez más complejas
              };
