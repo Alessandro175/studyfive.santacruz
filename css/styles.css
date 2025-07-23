@@ -1,299 +1,132 @@
-/* 🎨 Paleta principal */
-:root {
-    --color-primario: #4F46E5;
-    --color-secundario: #10B981;
-    --color-terciario: #F59E0B;
-    --color-error: #EF4444;
-    --color-fondo: #F0F9FF;
-    --color-texto: #1E293B;
-}
+  :root {
+            --color-primario: #4F46E5;
+            --color-secundario: #10B981;
+            --color-terciario: #F59E0B;
+        }
+        
+        body {
+            font-family: 'Baloo 2', cursive;
+            background-color: #F0F9FF;
+            color: #1E293B;
+        }
+        
+        .titulo {
+            font-family: 'Fredoka One', cursive;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-jugar {
+            background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-jugar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+        
+        .materia-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        .pregunta-container {
+            animation: aparecer 0.5s ease-out;
+        }
+        
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .respuesta {
+            transition: all 0.2s ease;
+        }
+        
+        .respuesta:hover {
+            transform: scale(1.02);
+        }
+        
+        .correcta {
+            background-color: #10B981 !important;
+            color: white !important;
+        }
+        
+        .incorrecta {
+            background-color: #EF4444 !important;
+            color: white !important;
+        }
+        
+        .puntuacion-anim {
+            animation: rebote 0.5s 2;
+        }
+        
+        @keyframes rebote {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        /* Temáticas por grado */
+        .grado-1 {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+        }
+        
+        .grado-2 {
+            background: linear-gradient(135deg, #EFF6FF, #BFDBFE);
+        }
+        
+        .grado-3 {
+            background: linear-gradient(135deg, #ECFDF5, #A7F3D0);
+        }
+        
+        .grado-4 {
+            background: linear-gradient(135deg, #FEF3C7, #FCD34D);
+        }
+        
+        .grado-5 {
+            background: linear-gradient(135deg, #EDE9FE, #C4B5FD);
+        }
+        
+        .grado-6 {
+            background: linear-gradient(135deg, #FCE7F3, #FBCFE8);
+        }
 
-/* 🌍 Estilos globales */
-body {
-    font-family: 'Baloo 2', cursive;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    margin: 0;
-    padding: 0;
-}
-
-/* ✍️ Títulos */
-.titulo {
-    font-family: 'Fredoka One', cursive;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 2rem;
-}
-
-/* 📦 Tarjetas */
-.card {
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 1rem;
-    background-color: white;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* 🎮 Botón de jugar */
-.btn-jugar {
-    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-    transition: all 0.3s ease;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.btn-jugar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
-}
-
-/* 🧠 Iconos por materia */
-.materia-icon {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
-/* 💬 Preguntas */
-.pregunta-container {
-    animation: aparecer 0.5s ease-out;
-}
-
-@keyframes aparecer {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ✅ Respuestas */
-.respuesta {
-    transition: all 0.2s ease;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 8px;
-    margin: 0.5rem 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.respuesta:hover {
-    transform: scale(1.02);
-}
-
-.correcta {
-    background-color: var(--color-secundario) !important;
-    color: white !important;
-}
-
-.incorrecta {
-    background-color: var(--color-error) !important;
-    color: white !important;
-}
-
-/* 🏅 Puntuación con rebote */
-.puntuacion-anim {
-    animation: rebote 0.5s 2;
-}
-
-@keyframes rebote {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-}
-
-/* 📚 Temas por grado */
-.grado-1 { background: linear-gradient(135deg, #FEE2E2, #FECACA); }
-.grado-2 { background: linear-gradient(135deg, #EFF6FF, #BFDBFE); }
-.grado-3 { background: linear-gradient(135deg, #ECFDF5, #A7F3D0); }
-.grado-4 { background: linear-gradient(135deg, #FEF3C7, #FCD34D); }
-.grado-5 { background: linear-gradient(135deg, #EDE9FE, #C4B5FD); }
-.grado-6 { background: linear-gradient(135deg, #FCE7F3, #FBCFE8); }
-
-/* ❌ Ícono de error */
 #icono-error-respuesta {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px;
-    color: #ff3333;
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: #ff3333;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 #icono-error-respuesta.visible {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* 👀 Efecto sacudida */
 @keyframes sacudida {
-    0% { transform: translate(-50%, -50%) translateX(0); }
-    25% { transform: translate(-50%, -50%) translateX(-10px); }
-    50% { transform: translate(-50%, -50%) translateX(10px); }
-    75% { transform: translate(-50%, -50%) translateX(-10px); }
-    100% { transform: translate(-50%, -50%) translateX(0); }
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  25% { transform: translate(-50%, -50%) translateX(-10px); }
+  50% { transform: translate(-50%, -50%) translateX(10px); }
+  75% { transform: translate(-50%, -50%) translateX(-10px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
 }
 
 .sacudida-error {
-    animation: sacudida 0.6s ease;
+  animation: sacudida 0.6s ease;
 }
-
-/* 📱 Responsive para móviles */
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 1.5rem;
-    }
-
-    .materia-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .btn-jugar {
-        font-size: 0.95rem;
-        padding: 8px 16px;
-    }
-
-    .respuesta {
-        font-size: 0.9rem;
-    }
-
-    .card {
-        padding: 0.8rem;
-    }
-}
-/* Reset general */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background: linear-gradient(to bottom, #f0f4f8, #dbe9f4);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-/* Título principal */
-h1 {
-  color: #1a237e;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  animation: aparecer 1s ease-in-out;
-}
-
-/* Tarjetas de grados o materias */
-.tarjeta {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  width: 280px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.tarjeta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.tarjeta h2 {
-  color: #0d47a1;
-  margin-bottom: 10px;
-}
-
-/* Botones */
-button {
-  background: linear-gradient(to right, #2196f3, #1e88e5);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 1rem;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-  background: linear-gradient(to right, #42a5f5, #1976d2);
-  transform: scale(1.05);
-}
-
-/* Preguntas y opciones */
-.pregunta {
-  font-size: 1.3rem;
-  color: #263238;
-  margin-bottom: 20px;
-}
-
-.opciones {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.opciones button {
-  background: #ffffff;
-  border: 2px solid #90caf9;
-  color: #0d47a1;
-}
-
-.opciones button:hover {
-  background: #e3f2fd;
-}
-
-/* Icono de respuesta */
-.respuesta-icono {
-  font-size: 4rem;
-  animation: vibrar 0.5s ease;
-}
-
-/* Animaciones */
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes vibrar {
-  0% { transform: scale(1); }
-  25% { transform: scale(1.2); }
-  50% { transform: scale(0.9); }
-  75% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .tarjeta {
-    width: 90%;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-}
-

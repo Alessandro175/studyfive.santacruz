@@ -216,20 +216,6 @@ const bancoPreguntas = {
             {pregunta:"Completa la operación: 9 - 3 = __",opciones:["5","6","7","12"],respuestaCorrecta:1,explicacion:"Si tienes 9 objetos y quitas 3, te quedan 6 objetos"}
         ],
         'Comunicación': [
-            {pregunta:"¿Cuál es el primer día de la semana?",opciones:["Martes", "Lunes", "Domingo", "Miércoles"],respuestaCorrecta: 1,explicacion:"El lunes es el primer día de la semana según el calendario escolar y laboral."},
-            {pregunta:"¿Cuántas vocales tiene el alfabeto español?",opciones: ["4", "5", "6", "3"],respuestaCorrecta: 1,explicacion: "El alfabeto español tiene 5 vocales: a, e, i, o, u."},
-            {pregunta:"¿Qué animal vive en el agua?",opciones: ["León", "Pez", "Conejo", "Pájaro"],respuestaCorrecta: 1,explicacion: "El pez es un animal que vive en el agua."},
-            {pregunta:"¿Qué animal dice 'miau'?",opciones: ["Perro", "Gato", "Vaca", "Pato"],respuestaCorrecta: 1,explicacion: "El gato es el animal que hace el sonido 'miau'."},
-            {pregunta:"¿Cuántos dedos tenemos en una mano?",opciones: ["4", "5", "6", "3"],respuestaCorrecta: 1,explicacion: "Cada mano tiene 5 dedos: pulgar, índice, medio, anular y meñique."},
-            {pregunta:"¿De qué color es el sol?",opciones: ["Azul", "Amarillo", "Verde", "Rojo"],respuestaCorrecta: 1,explicacion: "El sol se ve de color amarillo desde la Tierra."},
-            {pregunta:"¿Cuál es la primera letra del Alfabeto",opciones:["C","S","F","A"],respuestaCorrecta: 3,explicacion:"La letra A es la primera letra del alfabeto."},
-            {pregunta:"¿Qué es una palabra?",opciones:["Un número","Un conjunto de letras que tiene significado","Un dibujo","Un juego"],respuestaCorrecta: 1,explicacion: "Porque esta establecido correctamente"},
-            {pregunta:"¿Qué es un cuento?",opciones: ["Un número", "Una receta", "Una pelota", "Una historia inventada"],respuestaCorrecta: 3,explicacion: "Porque es una historia fictisia deacuerdo a nuestros gustos"},
-            {pregunta:"¿Cuál es una palabra con m?",opciones: ["Mamá", "Niño", "Soldado", "Susy"],respuestaCorrecta: 0,explicacion: "Es la palabra que empieza con M"},
-            {pregunta:"¿Qué animal dice 'Gua'?",opciones: ["Perro", "Gato", "Oso", "Oveja"],respuestaCorrecta: 0,explicacion: "El Perro es el animal que hace el sonido Guau'."},
-            {pregunta:"¿Cuántos dedos tenemos en una mano?",opciones: ["4", "5", "6", "3"],respuestaCorrecta: 1,explicacion: "Cada mano tiene 5 dedos: pulgar, índice, medio, anular y meñique."},
-            {pregunta:"¿De qué color son los Árboles?",opciones: ["Rosado", "Celeste", "Verde", "Rojo"],respuestaCorrecta: 2,explicacion: "Los Árboles se ven de color Verde en la Tierra."},
-            {pregunta:"¿Cuál es la Ultima letra del Alfabeto",opciones:["z","O","R","A"],respuestaCorrecta: 0,explicacion:"La letra Z es la Ultima letra del alfabeto."},
             {
                 pregunta: "¿Qué signo se usa al terminar una pregunta?",
                 opciones: ["Punto", "Signo de exclamación", "Coma", "Signo de interrogación"],
