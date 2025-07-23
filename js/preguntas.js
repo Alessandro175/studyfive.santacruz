@@ -223,13 +223,134 @@ const bancoPreguntas = {
             {pregunta:"¿Cuántos dedos tenemos en una mano?",opciones: ["4", "5", "6", "3"],respuestaCorrecta: 1,explicacion: "Cada mano tiene 5 dedos: pulgar, índice, medio, anular y meñique."},
             {pregunta:"¿De qué color es el sol?",opciones: ["Azul", "Amarillo", "Verde", "Rojo"],respuestaCorrecta: 1,explicacion: "El sol se ve de color amarillo desde la Tierra."},
             {pregunta:"¿Cuál es la primera letra del Alfabeto",opciones:["C","S","F","A"],respuestaCorrecta: 3,explicacion:"La letra A es la primera letra del alfabeto."},
-            {pregunta:"¿Qué es una palabra?",opciones:["Un número","Un conjunto de letras que tiene significado","Un dibujo","Un juego"],respuestaCorrecta:"Un conjunto de letras que tiene un significado",explicacion: "Porque esta establecido correctamente"},
+            {pregunta:"¿Qué es una palabra?",opciones:["Un número","Un conjunto de letras que tiene significado","Un dibujo","Un juego"],respuestaCorrecta: 1,explicacion: "Porque esta establecido correctamente"},
             {pregunta:"¿Qué es un cuento?",opciones: ["Un número", "Una receta", "Una pelota", "Una historia inventada"],respuestaCorrecta: 3,explicacion: "Porque es una historia fictisia deacuerdo a nuestros gustos"},
             {pregunta:"¿Cuál es una palabra con m?",opciones: ["Mamá", "Niño", "Soldado", "Susy"],respuestaCorrecta: 0,explicacion: "Es la palabra que empieza con M"},
             {pregunta:"¿Qué animal dice 'Gua'?",opciones: ["Perro", "Gato", "Oso", "Oveja"],respuestaCorrecta: 0,explicacion: "El Perro es el animal que hace el sonido Guau'."},
             {pregunta:"¿Cuántos dedos tenemos en una mano?",opciones: ["4", "5", "6", "3"],respuestaCorrecta: 1,explicacion: "Cada mano tiene 5 dedos: pulgar, índice, medio, anular y meñique."},
             {pregunta:"¿De qué color son los Árboles?",opciones: ["Rosado", "Celeste", "Verde", "Rojo"],respuestaCorrecta: 2,explicacion: "Los Árboles se ven de color Verde en la Tierra."},
             {pregunta:"¿Cuál es la Ultima letra del Alfabeto",opciones:["z","O","R","A"],respuestaCorrecta: 0,explicacion:"La letra Z es la Ultima letra del alfabeto."},
+            {
+                pregunta: "¿Qué signo se usa al terminar una pregunta?",
+                opciones: ["Punto", "Signo de exclamación", "Coma", "Signo de interrogación"],
+                respuestaCorrecta: 3,
+                explicacion: "El signo de interrogación se usa al inicio y al final de una pregunta."
+            },
+            {
+                pregunta: "¿Cuál es el propósito de una noticia?",
+                opciones: ["Jugar", "Informar", "Ordenar", "Cantar"],
+                respuestaCorrecta: 1,
+                explicacion: "La noticia tiene como objetivo informar un hecho real."
+            },
+            {
+                pregunta: "¿Qué es una oración?",
+                opciones: ["Un conjunto de letras", "Un grupo de signos", "Una palabra aislada", "Un conjunto de palabras con sentido completo"],
+                respuestaCorrecta: 3,
+                explicacion: "Una oración expresa una idea completa con sujeto y predicado."
+            },
+            {
+                pregunta: "¿Qué signo se usa para separar elementos en una lista?",
+                opciones: ["Comillas", "Coma", "Punto final", "Paréntesis"],
+                respuestaCorrecta: 1,
+                explicacion: "La coma separa palabras u oraciones breves en una enumeración."
+            },
+            {
+                pregunta: "¿Qué tipo de texto busca convencer al lector?",
+                opciones: ["Poético", "Narrativo", "Descriptivo", "Argumentativo"],
+                respuestaCorrecta: 3,
+                explicacion: "El texto argumentativo defiende una idea o punto de vista."
+            },
+            {
+                pregunta: "¿Qué parte de la historia presenta el problema del personaje?",
+                opciones: ["Final", "Inicio", "Nudo", "Epílogo"],
+                respuestaCorrecta: 2,
+                explicacion: "El nudo es donde ocurre el conflicto o problema en el texto narrativo."
+            },
+            {
+                pregunta: "¿Qué es un adjetivo?",
+                opciones: ["Una palabra que nombra acciones", "Una palabra que nombra cosas", "Una palabra que describe al sustantivo", "Una palabra que une frases"],
+                respuestaCorrecta: 2,
+                explicacion: "El adjetivo indica cómo es el sustantivo (grande, rojo, rápido, etc.)."
+            },
+            {
+                pregunta: "¿Cuál es la intención de un texto instructivo?",
+                opciones: ["Narrar una historia", "Decir un poema", "Dar indicaciones", "Hacer preguntas"],
+                respuestaCorrecta: 2,
+                explicacion: "Los textos instructivos explican cómo hacer algo paso a paso."
+            },
+            {
+                pregunta: "¿Cuál de las siguientes es una oración exclamativa?",
+                opciones: ["¿Dónde está tu cuaderno?", "¡Qué bonito dibujo!", "El niño juega en el parque.", "Toma tu cuaderno."],
+                respuestaCorrecta: 1,
+                explicacion: "La exclamación expresa emoción o sorpresa, y se marca con ¡!"
+            },
+            {
+                pregunta: "¿Qué función cumple el sujeto en una oración?",
+                opciones: ["Realizar la acción", "Indicar el tiempo", "Describir el lugar", "Dar emoción"],
+                respuestaCorrecta: 0,
+                explicacion: "El sujeto es quien realiza o recibe la acción en una oración."
+            },
+            {
+                pregunta: "¿Qué palabra es un sinónimo de 'alegre'?",
+                opciones: ["Triste", "Contento", "Serio", "Molesto"],
+                respuestaCorrecta: 1,
+                explicacion: "Contento es un sinónimo de alegre, ya que expresa felicidad."
+            },
+            {
+                pregunta: "¿Qué tipo de texto es una fábula?",
+                opciones: ["Texto instructivo", "Texto lírico", "Texto narrativo", "Texto expositivo"],
+                respuestaCorrecta: 2,
+                explicacion: "La fábula es un texto narrativo breve con enseñanza o moraleja."
+            },
+            {
+                pregunta: "¿Para qué sirve un cartel informativo?",
+                opciones: ["Para jugar", "Para bailar", "Para informar", "Para cantar"],
+                respuestaCorrecta: 2,
+                explicacion: "El cartel transmite información útil a las personas."
+            },
+            {
+                pregunta: "¿Qué parte del cuento es el desenlace?",
+                opciones: ["Inicio", "Problema", "Clímax", "Final de la historia"],
+                respuestaCorrecta: 3,
+                explicacion: "El desenlace es el final, donde se resuelve el conflicto."
+            },
+            {
+                pregunta: "¿Qué se necesita para leer con fluidez?",
+                opciones: ["Leer muy rápido", "Saltar palabras", "Leer con ritmo, entonación y comprensión", "Decir palabras al azar"],
+                respuestaCorrecta: 2,
+                explicacion: "La fluidez incluye ritmo, entonación y comprensión lectora."
+            },
+            {
+                pregunta: "¿Cuál es un ejemplo de sustantivo común?",
+                opciones: ["Lima", "José", "Perro", "Juanita"],
+                respuestaCorrecta: 2,
+                explicacion: "Perro es un sustantivo común porque no nombra algo específico."
+            },
+            {
+                pregunta: "¿Qué palabra rima con 'ratón'?",
+                opciones: ["Camión", "Cielo", "Zapato", "Ratita"],
+                respuestaCorrecta: 0,
+                explicacion: "'Ratón' y 'camión' riman porque terminan igual."
+            },
+            {
+                pregunta: "¿Qué texto se escribe para expresar sentimientos personales?",
+                opciones: ["Noticia", "Receta", "Poema", "Instructivo"],
+                respuestaCorrecta: 2,
+                explicacion: "El poema permite expresar emociones y sentimientos con belleza."
+            },
+            {
+                pregunta: "¿Qué se necesita para comprender un texto leído?",
+                opciones: ["Leer sin pensar", "Leer una sola vez", "Prestar atención y entender las ideas", "Leer solo el título"],
+                respuestaCorrecta: 2,
+                explicacion: "Comprender implica entender el contenido, no solo leer palabras."
+            },
+            {
+                pregunta: "¿Qué palabra es un antónimo de 'alto'?",
+                opciones: ["Gigante", "Pequeño", "Bajo", "Delgado"],
+                respuestaCorrecta: 2,
+                explicacion: "'Bajo' es lo opuesto a 'alto', por eso es su antónimo."
+            }
+
         ],
         'Ciencia y Tecnología': [ 
             {
@@ -252,8 +373,8 @@ const bancoPreguntas = {
             },
             {
             pregunta: "¿Qué sale del grifo cuando lo abrimos?",
-            opciones: ["Aire", "Agua", "Leche", "Jugo"],
-            respuestaCorrecta: 1,
+            opciones: ["Aire", , "Leche", "Jugo","Agua"],
+            respuestaCorrecta: 3,
             explicacion: "Del grifo sale agua, que es muy importante para beber, cocinar y lavar."
             },
             {
@@ -264,14 +385,14 @@ const bancoPreguntas = {
             },
             {
             pregunta: "¿Qué vemos en el cielo durante el día?",
-            opciones: ["Luna", "Estrellas", "Sol", "Planetas"],
-            respuestaCorrecta: 2,
+            opciones: ["Sol", "Luna", "Estrellas", "Planetas"],
+            respuestaCorrecta: 0,
             explicacion: "Durante el día vemos el Sol, que nos da luz y calor."
             },
             {
             pregunta: "¿Qué aparato nos ayuda a ver programas y películas?",
-            opciones: ["Televisión", "Refrigerador", "Lavadora", "Horno"],
-            respuestaCorrecta: 0,
+            opciones: [ "Refrigerador", "Lavadora", "Televisión", "Horno"],
+            respuestaCorrecta: 2,
             explicacion: "La televisión nos permite ver programas, películas y noticias."
             },
             {
@@ -282,43 +403,43 @@ const bancoPreguntas = {
             },
             {
             pregunta: "¿Qué parte del cuerpo usamos para ver?",
-            opciones: ["Oídos", "Nariz", "Ojos", "Boca"],
-            respuestaCorrecta: 2,
+            opciones: ["Oídos", "Boca", "Pancreas",  "Ojos"],
+            respuestaCorrecta: 3,
             explicacion: "Usamos los ojos para ver todo lo que está a nuestro alrededor."
             },
             {
             pregunta: "¿Qué aparato mantiene fría nuestra comida?",
-            opciones: ["Televisión", "Refrigerador", "Teléfono", "Computadora"],
+            opciones: ["Microoscopio", "Refrigerador", "Impresaora", "Horno"],
             respuestaCorrecta: 1,
             explicacion: "El refrigerador mantiene fría la comida para que no se dañe."
             },
             {
             pregunta: "¿Cuál de estos es un mamífero?",
-            opciones: ["Pez", "Pájaro", "Perro", "Serpiente"],
+            opciones: ["Toro", "Loro", "Perro", "Ciaman"],
             respuestaCorrecta: 2,
             explicacion: "El perro es un mamífero porque tiene pelo y toma leche de su mamá cuando es bebé."
             },
             {
             pregunta: "¿Qué vemos en el cielo durante la noche?",
-            opciones: ["Sol", "Luna", "Nubes", "Arcoíris"],
+            opciones: ["Sol", "Luna", "Tornados", "Arcoíris"],
             respuestaCorrecta: 1,
             explicacion: "Durante la noche vemos la luna, que nos da luz cuando está oscuro."
             },
             {
             pregunta: "¿Cuál de estos materiales se puede reciclar?",
-            opciones: ["Papel", "Comida", "Piedras", "Tierra"],
+            opciones: ["Papel", "Comida", "Plutonio", "Vidrio"],
             respuestaCorrecta: 0,
             explicacion: "El papel se puede reciclar para hacer nuevos libros y cuadernos."
             },
             {
             pregunta: "¿Qué parte de la planta está bajo la tierra?",
-            opciones: ["Hojas", "Flores", "Raíces", "Ramas"],
-            respuestaCorrecta: 2,
+            opciones: ["Hojas", "Flores", "Tallo", "Raíces"],
+            respuestaCorrecta: 3,
             explicacion: "Las raíces están bajo la tierra y ayudan a la planta a obtener agua y nutrientes."
             },
             {
             pregunta: "¿Cuál es la fuente de energía más importante para la Tierra?",
-            opciones: ["Luna", "Sol", "Viento", "Agua"],
+            opciones: ["Luna","Agua" , "Viento", "Sol" ],
             respuestaCorrecta: 1,
             explicacion: "El Sol es la fuente de energía más importante, nos da luz y calor."
             },
@@ -770,6 +891,28 @@ const bancoPreguntas = {
                 explicacion: "El dibujo permite representar historias o escenas con imágenes."
                 }     
         ],
+        'Fisica Cuantica': [
+            {
+                pregunta: "¿Qué es la física cuántica?",
+                opciones: ["Estudio de los planetas", "Estudio de partículas subatómicas", "Estudio de animales", "Estudio de plantas"],
+                respuestaCorrecta: 1,
+                explicacion: "La física cuántica estudia las partículas más pequeñas del universo, como electrones y fotones."
+            },
+            {
+                pregunta: "¿Qué es un fotón?",
+                opciones: ["Una partícula de luz", "Un tipo de animal", "Una planta", "Un planeta"],
+                respuestaCorrecta: 0,
+                explicacion: "Un fotón es una partícula elemental que representa la luz."
+            },
+            {
+               pregunta: "¿Qué significa 'superposición cuántica'?",
+                opciones: ["Un estado de reposo", "Partículas en múltiples estados al mismo tiempo", "Movimiento rápido", "Cambio de color"],
+                respuestaCorrecta: 1,
+                explicacion: "En superposición, una partícula puede estar en varios estados a la vez hasta que se mide."
+            },
+            
+        ],
+
     }, 
     2:{
         'Inglés': [
@@ -5784,195 +5927,188 @@ const bancoPreguntas = {
                 opciones: ["Expresión propia de una región", "Palabra extranjera", "Palabra inventada", "Nombre de una persona"],
                 respuestaCorrecta: 0,
                 explicacion: "Un modismo es una expresión típica como 'tirar la toalla'."
-            }
-        ],
-        'Ciencia y Tecnología': [
-            {
-                pregunta: "¿Qué función cumple el sistema nervioso central?",
-                opciones: ["Coordina las funciones del cuerpo", "Filtra la sangre", "Almacena alimentos", "Produce hormonas digestivas"],
-                respuestaCorrecta: 0,
-                explicacion: "El sistema nervioso central controla y coordina las funciones del cuerpo."
             },
-            {
-                pregunta: "¿Qué tipo de energía se obtiene del movimiento del viento?",
-                opciones: ["Energía eólica", "Energía térmica", "Energía geotérmica", "Energía nuclear"],
-                respuestaCorrecta: 0,
-                explicacion: "La energía eólica se genera a partir del viento mediante aerogeneradores."
-            },
-            {
-                pregunta: "¿Qué es un ecosistema?",
-                opciones: ["Un conjunto de seres vivos y su entorno", "Una célula vegetal", "Un planeta lejano", "Una montaña sin vida"],
-                respuestaCorrecta: 0,
-                explicacion: "Un ecosistema está formado por organismos vivos y los elementos no vivos con los que interactúan."
-            },
-            {
-                pregunta: "¿Cuál es la función de los glóbulos blancos?",
-                opciones: ["Defender el cuerpo de enfermedades", "Transportar oxígeno", "Ayudar a la digestión", "Regular la temperatura"],
-                respuestaCorrecta: 0,
-                explicacion: "Los glóbulos blancos protegen al cuerpo de virus y bacterias."
-            },
-            {
-                pregunta: "¿Qué nombre recibe el paso del estado sólido al líquido?",
-                opciones: ["Fusión", "Evaporación", "Condensación", "Solidificación"],
-                respuestaCorrecta: 0,
-                explicacion: "La fusión es el proceso en el que un sólido se convierte en líquido al calentarse."
-            },
-            {
-                pregunta: "¿Qué es la célula?",
-                opciones: ["La unidad básica de los seres vivos", "Una partícula del aire", "Una glándula digestiva", "Un órgano reproductivo"],
-                respuestaCorrecta: 0,
-                explicacion: "La célula es la unidad mínima de vida en todos los seres vivos."
-            },
-            {
-                pregunta: "¿Cuál de estas es una tecnología de información?",
-                opciones: ["Computadora", "Termómetro", "Regla", "Lupa"],
-                respuestaCorrecta: 0,
-                explicacion: "La computadora se usa para procesar y transmitir información."
-            },
-            {
-                pregunta: "¿Qué planeta tiene un sistema de anillos visibles?",
-                opciones: ["Saturno", "Marte", "Venus", "Mercurio"],
-                respuestaCorrecta: 0,
-                explicacion: "Saturno es conocido por su espectacular sistema de anillos."
-            },
-            {
-                pregunta: "¿Qué es un circuito eléctrico?",
-                opciones: ["Un camino cerrado por donde circula la corriente", "Un satélite en órbita", "Un tubo con agua", "Una brújula antigua"],
-                respuestaCorrecta: 0,
-                explicacion: "Un circuito eléctrico permite el paso de corriente entre componentes conectados."
-            },
-            {
-                pregunta: "¿Qué es la biodiversidad?",
-                opciones: ["La variedad de especies vivas en un lugar", "El cambio del clima", "El uso de energía eléctrica", "La extinción de animales"],
-                respuestaCorrecta: 0,
-                explicacion: "La biodiversidad se refiere a la variedad de vida en un ecosistema o en el planeta."
-            },
-            {
-                pregunta: "¿Qué instrumento se utiliza para observar células?",
-                opciones: ["Microscopio", "Termómetro", "Compás", "Telescopio"],
-                respuestaCorrecta: 0,
-                explicacion: "El microscopio permite observar objetos diminutos como las células."
-            },
-            {
-                pregunta: "¿Qué función tiene el sistema digestivo?",
-                opciones: ["Transformar alimentos en nutrientes", "Controlar los músculos", "Transportar sangre", "Generar oxígeno"],
-                respuestaCorrecta: 0,
-                explicacion: "El sistema digestivo descompone los alimentos para que el cuerpo aproveche los nutrientes."
-            },
-            {
-                pregunta: "¿Qué gas exhalamos al respirar?",
-                opciones: ["Dióxido de carbono", "Oxígeno", "Nitrógeno", "Helio"],
-                respuestaCorrecta: 0,
-                explicacion: "Exhalamos dióxido de carbono como resultado de la respiración celular."
-            },
-            {
-                pregunta: "¿Qué cuerpo celeste es el centro del sistema solar?",
-                opciones: ["El Sol", "La Tierra", "La Luna", "Marte"],
-                respuestaCorrecta: 0,
-                explicacion: "El Sol es el centro del sistema solar y fuente principal de energía."
-            },
-            {
-                pregunta: "¿Cuál es una fuente de energía renovable?",
-                opciones: ["Energía solar", "Carbón", "Gas natural", "Petróleo"],
-                respuestaCorrecta: 0,
-                explicacion: "La energía solar es limpia y se renueva constantemente."
-            },
-            {
-                pregunta: "¿Qué parte de la planta absorbe agua y minerales?",
-                opciones: ["Raíz", "Tallo", "Hoja", "Flor"],
-                respuestaCorrecta: 0,
-                explicacion: "Las raíces absorben agua y nutrientes del suelo."
-            },
-            {
-                pregunta: "¿Qué tipo de articulación permite mover el brazo en círculo?",
-                opciones: ["Enartrosis", "Bisagra", "Deslizante", "Fija"],
-                respuestaCorrecta: 0,
-                explicacion: "La enartrosis permite el movimiento circular como en el hombro."
-            },
-            {
-                pregunta: "¿Qué es la capa de ozono?",
-                opciones: ["Una capa que protege de rayos UV", "Una nube tóxica", "Un tipo de gas venenoso", "Una parte del núcleo terrestre"],
-                respuestaCorrecta: 0,
-                explicacion: "La capa de ozono filtra los rayos ultravioleta del sol."
-            },
-            {
-                pregunta: "¿Cuál es la principal causa del calentamiento global?",
-                opciones: ["Gases de efecto invernadero", "El ciclo lunar", "Erupciones volcánicas", "Movimientos tectónicos"],
-                respuestaCorrecta: 0,
-                explicacion: "Los gases contaminantes atrapan el calor en la atmósfera y elevan la temperatura global."
-            },
-            {
-                pregunta: "¿Qué órgano filtra la sangre en el cuerpo humano?",
-                opciones: ["Riñón", "Estómago", "Hígado", "Pulmón"],
-                respuestaCorrecta: 0,
-                explicacion: "Los riñones filtran y eliminan desechos de la sangre."
-            },
-            {
-                pregunta: "¿Qué es una hipótesis en un experimento?",
-                opciones: ["Una suposición que se prueba", "Una ley científica", "Un resultado exacto", "Un fenómeno natural"],
-                respuestaCorrecta: 0,
-                explicacion: "La hipótesis es una posible explicación que se verifica con pruebas."
-            },
-            {
-                pregunta: "¿Cuál es el satélite natural de la Tierra?",
-                opciones: ["La Luna", "El Sol", "Venus", "Júpiter"],
-                respuestaCorrecta: 0,
-                explicacion: "La Luna gira alrededor de la Tierra y es su satélite natural."
-            },
-            {
-                pregunta: "¿Qué fuerza hace que los objetos caigan?",
-                opciones: ["Gravedad", "Magnetismo", "Electricidad", "Fricción"],
-                respuestaCorrecta: 0,
-                explicacion: "La gravedad atrae los objetos hacia el centro de la Tierra."
-            },
-            {
-                pregunta: "¿Qué aparato mide la temperatura?",
-                opciones: ["Termómetro", "Telescopio", "Barómetro", "Microscopio"],
-                respuestaCorrecta: 0,
-                explicacion: "El termómetro mide el calor o la temperatura de un objeto o ambiente."
-            },
-            {
-                pregunta: "¿Qué nombre recibe el cambio de líquido a gas?",
-                opciones: ["Evaporación", "Fusión", "Condensación", "Sublimación"],
-                respuestaCorrecta: 0,
-                explicacion: "La evaporación transforma el agua en vapor."
-            },
-            {
-                pregunta: "¿Qué animal es un invertebrado?",
-                opciones: ["Pulpo", "Caballo", "Perro", "Gato"],
-                respuestaCorrecta: 0,
-                explicacion: "El pulpo no tiene columna vertebral, es un invertebrado."
-            },
-            {
-                pregunta: "¿Qué función cumplen los pulmones?",
-                opciones: ["Intercambio de gases", "Filtrar sangre", "Crear energía", "Procesar alimentos"],
-                respuestaCorrecta: 0,
-                explicacion: "Los pulmones toman oxígeno y eliminan dióxido de carbono."
-            },
-            {
-                pregunta: "¿Qué nombre recibe el movimiento de rotación de la Tierra?",
-                opciones: ["Giro sobre su eje", "Traslación", "Revolución", "Gravitación"],
-                respuestaCorrecta: 0,
-                explicacion: "La rotación es el giro de la Tierra sobre su eje y dura 24 horas."
-            },
-            {
-                pregunta: "¿Qué aparato convierte energía solar en eléctrica?",
-                opciones: ["Panel solar", "Turbina de viento", "Motor", "Foco"],
-                respuestaCorrecta: 0,
-                explicacion: "Los paneles solares transforman luz solar en electricidad."
-            },
-            {
-                pregunta: "¿Qué nombre recibe el estado en el que una sustancia pasa de gas a líquido?",
-                opciones: ["Condensación", "Evaporación", "Fusión", "Sublimación"],
-                respuestaCorrecta: 0,
-                explicacion: "La condensación ocurre cuando el gas se enfría y se convierte en líquido."
-            },
-            {
-                pregunta: "¿Qué parte del cuerpo humano se encarga de bombear sangre?",
-                opciones: ["Corazón", "Pulmones", "Hígado", "Estómago"],
-                respuestaCorrecta: 0,
-                explicacion: "El corazón bombea sangre a todo el cuerpo para llevar oxígeno y nutrientes."
-            }
+    {
+        pregunta: "¿Cuál es la función principal del ADN en las células?",
+        opciones: ["Producir energía", "Almacenar información genética", "Regular la temperatura", "Transportar oxígeno"],
+        respuestaCorrecta: 1,
+        explicacion: "El ADN contiene las instrucciones genéticas necesarias para el desarrollo y funcionamiento de los seres vivos."
+    },
+    {
+        pregunta: "¿Qué es una célula eucariota?",
+        opciones: ["Una célula sin núcleo", "Una célula con núcleo definido", "Una célula con pared celular", "Una célula unicelular"],
+        respuestaCorrecta: 1,
+        explicacion: "Las células eucariotas tienen núcleo definido y organelos rodeados por membranas."
+    },
+    {
+        pregunta: "¿Qué ley explica la inercia de un objeto?",
+        opciones: ["Primera ley de Newton", "Segunda ley de Newton", "Tercera ley de Newton", "Ley de conservación de la energía"],
+        respuestaCorrecta: 0,
+        explicacion: "La primera ley de Newton dice que un cuerpo en reposo o en movimiento rectilíneo uniforme se mantendrá así si no hay una fuerza externa."
+    },
+    {
+        pregunta: "¿Qué tipo de energía produce una planta hidroeléctrica?",
+        opciones: ["Térmica", "Solar", "Eólica", "Eléctrica"],
+        respuestaCorrecta: 3,
+        explicacion: "Una planta hidroeléctrica convierte la energía del agua en energía eléctrica."
+    },
+    {
+        pregunta: "¿Cuál es la unidad principal de la herencia?",
+        opciones: ["Gen", "Cromosoma", "ADN", "Proteína"],
+        respuestaCorrecta: 0,
+        explicacion: "El gen es la unidad básica de herencia y está compuesto por ADN."
+    },
+    {
+        pregunta: "¿Cuál de estos materiales es un buen conductor de electricidad?",
+        opciones: ["Madera", "Vidrio", "Cobre", "Plástico"],
+        respuestaCorrecta: 2,
+        explicacion: "El cobre es un excelente conductor de electricidad."
+    },
+    {
+        pregunta: "¿Qué es la fotosíntesis?",
+        opciones: ["Respiración de los animales", "Transformación de la glucosa", "Proceso por el cual las plantas fabrican su alimento", "Formación de raíces"],
+        respuestaCorrecta: 2,
+        explicacion: "Es el proceso por el que las plantas convierten la luz solar en alimento."
+    },
+    {
+        pregunta: "¿Qué función cumple la mitocondria en la célula?",
+        opciones: ["Controlar la entrada de sustancias", "Producir energía", "Almacenar agua", "Sintetizar proteínas"],
+        respuestaCorrecta: 1,
+        explicacion: "La mitocondria es responsable de la respiración celular y la producción de energía (ATP)."
+    },
+    {
+        pregunta: "¿Qué fenómeno ocurre cuando la luz cambia de dirección al pasar de un medio a otro?",
+        opciones: ["Reflexión", "Absorción", "Difracción", "Refracción"],
+        respuestaCorrecta: 3,
+        explicacion: "La refracción es el cambio de dirección de la luz al pasar de un medio a otro con distinta densidad."
+    },
+    {
+        pregunta: "¿Qué compuesto se libera durante la respiración celular?",
+        opciones: ["Nitrógeno", "Hidrógeno", "Oxígeno", "Dióxido de carbono"],
+        respuestaCorrecta: 3,
+        explicacion: "Durante la respiración celular se libera dióxido de carbono como producto de desecho."
+    },
+    {
+        pregunta: "¿Qué órgano regula la glucosa en la sangre?",
+        opciones: ["Corazón", "Pulmón", "Páncreas", "Hígado"],
+        respuestaCorrecta: 2,
+        explicacion: "El páncreas libera insulina, que regula los niveles de glucosa en la sangre."
+    },
+    {
+        pregunta: "¿Qué capa de la Tierra está formada por rocas sólidas?",
+        opciones: ["Núcleo externo", "Manto", "Corteza terrestre", "Astenosfera"],
+        respuestaCorrecta: 2,
+        explicacion: "La corteza terrestre es la capa más externa y está formada por rocas sólidas."
+    },
+    {
+        pregunta: "¿Cuál es la función del sistema inmunológico?",
+        opciones: ["Regular la temperatura", "Transportar oxígeno", "Defender el cuerpo de enfermedades", "Producir hormonas"],
+        respuestaCorrecta: 2,
+        explicacion: "El sistema inmunológico defiende al cuerpo de agentes patógenos."
+    },
+    {
+        pregunta: "¿Qué instrumento se usa para observar células?",
+        opciones: ["Telescopio", "Microscopio", "Binoculares", "Termómetro"],
+        respuestaCorrecta: 1,
+        explicacion: "El microscopio permite observar estructuras celulares invisibles a simple vista."
+    },
+    {
+        pregunta: "¿Cuál es el principal gas responsable del efecto invernadero?",
+        opciones: ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Hidrógeno"],
+        respuestaCorrecta: 2,
+        explicacion: "El CO₂ es uno de los principales gases causantes del efecto invernadero."
+    },
+    {
+        pregunta: "¿Qué tipo de energía se almacena en una batería?",
+        opciones: ["Cinética", "Eléctrica", "Química", "Solar"],
+        respuestaCorrecta: 2,
+        explicacion: "La batería almacena energía química que se transforma en energía eléctrica."
+    },
+    {
+        pregunta: "¿Qué es una célula madre?",
+        opciones: ["Una célula que produce leche", "Una célula que transporta oxígeno", "Una célula capaz de transformarse en otros tipos de células", "Una célula del sistema digestivo"],
+        respuestaCorrecta: 2,
+        explicacion: "Las células madre pueden convertirse en distintos tipos celulares."
+    },
+    {
+        pregunta: "¿Qué propiedad tiene un imán?",
+        opciones: ["Absorber luz", "Conducir calor", "Atraer metales", "Cambiar de color"],
+        respuestaCorrecta: 2,
+        explicacion: "Los imanes atraen ciertos metales como el hierro y el níquel."
+    },
+    {
+        pregunta: "¿Qué es una hipótesis en el método científico?",
+        opciones: ["Una conclusión", "Un experimento", "Una predicción basada en observaciones", "Un dato exacto"],
+        respuestaCorrecta: 2,
+        explicacion: "Es una suposición que se puede comprobar mediante la experimentación."
+    },
+    {
+        pregunta: "¿Qué tipo de célula tiene pared celular?",
+        opciones: ["Célula animal", "Célula vegetal", "Célula muscular", "Célula nerviosa"],
+        respuestaCorrecta: 1,
+        explicacion: "Las células vegetales poseen pared celular que les da rigidez y protección."
+    },
+    {
+        pregunta: "¿Qué es la velocidad?",
+        opciones: ["Distancia entre dos puntos", "Cambio de posición en el tiempo", "Cantidad de materia", "Tamaño de un objeto"],
+        respuestaCorrecta: 1,
+        explicacion: "La velocidad indica el cambio de posición por unidad de tiempo."
+    },
+    {
+        pregunta: "¿Qué órgano del cuerpo humano filtra la sangre?",
+        opciones: ["Pulmón", "Riñón", "Hígado", "Páncreas"],
+        respuestaCorrecta: 1,
+        explicacion: "Los riñones filtran los desechos de la sangre y forman la orina."
+    },
+    {
+        pregunta: "¿Cuál es el estado físico del agua a 0°C?",
+        opciones: ["Líquido", "Sólido", "Gaseoso", "Plasma"],
+        respuestaCorrecta: 1,
+        explicacion: "A 0°C el agua se congela y pasa al estado sólido."
+    },
+    {
+        pregunta: "¿Qué órgano permite el intercambio de oxígeno y dióxido de carbono?",
+        opciones: ["Estómago", "Corazón", "Pulmones", "Riñones"],
+        respuestaCorrecta: 2,
+        explicacion: "Los pulmones permiten el intercambio gaseoso durante la respiración."
+    },
+    {
+        pregunta: "¿Qué función tiene la clorofila en las plantas?",
+        opciones: ["Almacenar agua", "Absorber nutrientes", "Atrapar luz solar", "Eliminar desechos"],
+        respuestaCorrecta: 2,
+        explicacion: "La clorofila captura la luz solar para realizar la fotosíntesis."
+    },
+    {
+        pregunta: "¿Qué efecto tiene una fuerza no equilibrada sobre un objeto?",
+        opciones: ["Lo mantiene quieto", "Cambia su dirección o velocidad", "Lo rompe", "No tiene efecto"],
+        respuestaCorrecta: 1,
+        explicacion: "Una fuerza no equilibrada cambia el movimiento del objeto."
+    },
+    {
+        pregunta: "¿Qué tipo de célula tiene un solo núcleo y muchas funciones?",
+        opciones: ["Neurona", "Hepatocito", "Bacteria", "Glóbulo rojo"],
+        respuestaCorrecta: 1,
+        explicacion: "Los hepatocitos (células del hígado) tienen muchas funciones metabólicas."
+    },
+    {
+        pregunta: "¿Qué produce el movimiento de las placas tectónicas?",
+        opciones: ["Corrientes de agua", "Fuerza gravitacional", "Energía solar", "Corrientes del manto"],
+        respuestaCorrecta: 3,
+        explicacion: "Las corrientes de convección del manto causan el movimiento de placas tectónicas."
+    },
+    {
+        pregunta: "¿Qué es un ecosistema?",
+        opciones: ["Un tipo de planta", "Un grupo de animales", "Conjunto de organismos y su ambiente", "Una zona agrícola"],
+        respuestaCorrecta: 2,
+        explicacion: "Ecosistema es la interacción entre seres vivos y el ambiente."
+    },
+    {
+        pregunta: "¿Qué tipo de energía se produce al frotar dos objetos?",
+        opciones: ["Luminosa", "Nuclear", "Térmica", "Cinética"],
+        respuestaCorrecta: 2,
+        explicacion: "El rozamiento genera energía térmica (calor)."
+    }
+
         ], 
         'Personal Social': [
             {
