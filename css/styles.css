@@ -172,3 +172,128 @@ body {
         padding: 0.8rem;
     }
 }
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #f0f4f8, #dbe9f4);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Título principal */
+h1 {
+  color: #1a237e;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: aparecer 1s ease-in-out;
+}
+
+/* Tarjetas de grados o materias */
+.tarjeta {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h2 {
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(to right, #2196f3, #1e88e5);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #42a5f5, #1976d2);
+  transform: scale(1.05);
+}
+
+/* Preguntas y opciones */
+.pregunta {
+  font-size: 1.3rem;
+  color: #263238;
+  margin-bottom: 20px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opciones button {
+  background: #ffffff;
+  border: 2px solid #90caf9;
+  color: #0d47a1;
+}
+
+.opciones button:hover {
+  background: #e3f2fd;
+}
+
+/* Icono de respuesta */
+.respuesta-icono {
+  font-size: 4rem;
+  animation: vibrar 0.5s ease;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vibrar {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(0.9); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .tarjeta {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
