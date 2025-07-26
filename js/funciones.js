@@ -298,55 +298,118 @@ function volverAGrados() {
     volverAudioLobby(); // <-- Agrega esto aquí
 }
         
+            // Selección de materia: validación, puntaje y animación
+            function seleccionarMateria(materia) {
+                materiaSeleccionada = materia;
+                // Validar existencia de preguntas para el grado y materia
+                if (!bancoPreguntas[gradoSeleccionado] || !bancoPreguntas[gradoSeleccionado][materia] || bancoPreguntas[gradoSeleccionado][materia].length < 1) {
+                    mostrarModal('Sin preguntas', 'No hay preguntas disponibles para este curso en este grado.');
+                    return;
+                }
+                const todasPreguntas = bancoPreguntas[gradoSeleccionado][materia];
+                // Si ya completó, no dejar repetir
+                if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia] && jugadores[nickname].cursos[gradoSeleccionado][materia].completado) {
+                    mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
+                    return;
+                }
+                // Si ya tenía puntaje previo, restar del total antes de reiniciar
+                puntajeCursoPrevio = 0;
+                if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia]) {
+                    puntajeCursoPrevio = jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje || 0;
+                    jugadores[nickname].total = (jugadores[nickname].total || 0) - puntajeCursoPrevio;
+                    jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje = 0;
+                    guardarJugadores();
+                }
+                preguntas = seleccionarPreguntasAleatorias(todasPreguntas, Math.min(10, todasPreguntas.length));
+                preguntaActual = 0;
+                puntuacion = 0;
+                reproducirAudioResolve(materia); // <-- Agrega esto aquí
+                // Animación de entrada al quiz
+                document.getElementById('juego').classList.add('animate__animated','animate__fadeIn');
+                setTimeout(()=>{
+                    document.getElementById('juego').classList.remove('animate__animated','animate__fadeIn');
+                }, 1200);
+                document.getElementById('seleccion-materia').classList.add('hidden');
+                document.getElementById('juego').classList.remove('hidden');
+                document.getElementById('materia-actual').textContent = materia;
+                document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
+                document.getElementById('puntuacion').textContent = `${puntuacion} pts`;
+                document.getElementById('barra-progreso').style.width = '0%';
+                // Mostrar las competencias dinámicamente
+                mostrarCompetencias(materia);
+            }
+                    
+            // Función para volver a la selección de materias
+            function volverAMaterias() {
+                document.getElementById('juego').classList.add('hidden');
+                document.getElementById('seleccion-materia').classList.remove('hidden');
+                volverAudioLobby(); // <-- Agrega esto aquí
+            }
+            // Selección de competencia: validación, puntaje y animación
+            function seleccionarCompetencia(nombreComp) {
+                const preguntasCompetencia = bancoPreguntas[gradoSeleccionado]?.[materiaSeleccionada]?.[nombreComp];
 
-// Selección de materia: validación, puntaje y animación
-function seleccionarMateria(materia) {
-    materiaSeleccionada = materia;
-    // Validar existencia de preguntas para el grado y materia
-    if (!bancoPreguntas[gradoSeleccionado] || !bancoPreguntas[gradoSeleccionado][materia] || bancoPreguntas[gradoSeleccionado][materia].length < 1) {
-        mostrarModal('Sin preguntas', 'No hay preguntas disponibles para este curso en este grado.');
-        return;
-    }
-    const todasPreguntas = bancoPreguntas[gradoSeleccionado][materia];
-    // Si ya completó, no dejar repetir
-    if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia] && jugadores[nickname].cursos[gradoSeleccionado][materia].completado) {
-        mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
-        return;
-    }
-    // Si ya tenía puntaje previo, restar del total antes de reiniciar
-    puntajeCursoPrevio = 0;
-    if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia]) {
-        puntajeCursoPrevio = jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje || 0;
-        jugadores[nickname].total = (jugadores[nickname].total || 0) - puntajeCursoPrevio;
-        jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje = 0;
-        guardarJugadores();
-    }
-    preguntas = seleccionarPreguntasAleatorias(todasPreguntas, Math.min(10, todasPreguntas.length));
-    preguntaActual = 0;
-    puntuacion = 0;
-    reproducirAudioResolve(materia); // <-- Agrega esto aquí
-    // Animación de entrada al quiz
-    document.getElementById('juego').classList.add('animate__animated','animate__fadeIn');
-    setTimeout(()=>{
-        document.getElementById('juego').classList.remove('animate__animated','animate__fadeIn');
-    }, 1200);
-    document.getElementById('seleccion-materia').classList.add('hidden');
-    document.getElementById('juego').classList.remove('hidden');
-    document.getElementById('materia-actual').textContent = materia;
-    document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
-    document.getElementById('puntuacion').textContent = `${puntuacion} pts`;
-    document.getElementById('barra-progreso').style.width = '0%';
-    mostrarPregunta();
-}
-        
-// Función para volver a la selección de materias
-function volverAMaterias() {
-    document.getElementById('juego').classList.add('hidden');
-    document.getElementById('seleccion-materia').classList.remove('hidden');
-    volverAudioLobby(); // <-- Agrega esto aquí
-}
+                // Validar existencia de preguntas para el grado, materia y competencia
+                if (!preguntasCompetencia || preguntasCompetencia.length === 0) {
+                    mostrarModal("Sin preguntas", "No hay preguntas disponibles para esta competencia.");
+                    return;
+                }
 
-// Mostrar pregunta con animación
+                const claveCompetencia = `${materiaSeleccionada} - ${nombreComp}`;
+
+                // Si ya completó, no dejar repetir
+                if (
+                    jugadores[nickname]?.cursos?.[gradoSeleccionado]?.[claveCompetencia]?.completado
+                ) {
+                    mostrarModal("Curso completado", "¡Ya completaste esta competencia! Puedes elegir otra.");
+                    return;
+                }
+
+                // Si ya tenía puntaje previo, restar del total antes de reiniciar
+                puntajeCursoPrevio = jugadores[nickname]?.cursos?.[gradoSeleccionado]?.[claveCompetencia]?.puntaje || 0;
+                if (puntajeCursoPrevio > 0) {
+                    jugadores[nickname].total -= puntajeCursoPrevio;
+                    jugadores[nickname].cursos[gradoSeleccionado][claveCompetencia].puntaje = 0;
+                    guardarJugadores();
+                }
+
+                // Selección de preguntas
+                preguntas = seleccionarPreguntasAleatorias(preguntasCompetencia, Math.min(10, preguntasCompetencia.length));
+                preguntaActual = 0;
+                puntuacion = 0;
+
+                materiaSeleccionada = claveCompetencia;
+
+                // Animación de entrada al quiz
+                document.getElementById('pantalla-competencias').classList.add('hidden');
+                document.getElementById('juego').classList.remove('hidden');
+                document.getElementById('juego').classList.add('animate__animated','animate__fadeIn');
+                setTimeout(() => {
+                    document.getElementById('juego').classList.remove('animate__animated','animate__fadeIn');
+                }, 1200);
+
+                document.getElementById('materia-actual').textContent = materiaSeleccionada;
+                document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
+                document.getElementById('puntuacion').textContent = `0 pts`;
+                document.getElementById('barra-progreso').style.width = '0%';
+
+                // Mostrar primera pregunta
+                mostrarPregunta();
+            }
+                    
+            // Función para volver a la selección de materias
+                function volverACompetencias() {
+                document.getElementById('juego').classList.add('hidden');
+                document.getElementById('pantalla-competencias').classList.remove('hidden');
+            }
+
+            function volverAMaterias() {
+                document.getElementById('pantalla-competencias').classList.add('hidden');
+                document.getElementById('seleccion-materia').classList.remove('hidden');
+                volverAudioLobby();
+            }
+
+            // Mostrar pregunta con animación
 function mostrarPregunta() {
     respondido = false;
     // Animación de entrada
@@ -555,47 +618,56 @@ function mostrarPantallaErrorRespuesta() {
         window.repetirMateria = repetirMateria;
 
         // Avatar dinámico: listeners para inputs de avatar
-        document.addEventListener('DOMContentLoaded', function() {
-            const skinInput = document.getElementById('avatar-skin');
-            const hairInput = document.getElementById('avatar-hair');
-            const faceInput = document.getElementById('avatar-face');
-            const svg = document.getElementById('avatar-svg');
-            if (skinInput && hairInput && faceInput && svg) {
-                function renderAvatar() {
-                    const skin = skinInput.value;
-                    const hair = hairInput.value;
-                    const face = faceInput.value;
-                    let faceShape = '';
-                    if (face === 'gordo') faceShape = '<ellipse cx="40" cy="45" rx="26" ry="30" fill="'+skin+'"/>';
-                    else if (face === 'flaco') faceShape = '<ellipse cx="40" cy="45" rx="18" ry="28" fill="'+skin+'"/>';
-                    else if (face === 'femenino') faceShape = '<ellipse cx="40" cy="45" rx="22" ry="28" fill="'+skin+'"/>';
-                    else if (face === 'masculino') faceShape = '<ellipse cx="40" cy="45" rx="24" ry="32" fill="'+skin+'"/>';
-                    else faceShape = '<ellipse cx="40" cy="45" rx="22" ry="30" fill="'+skin+'"/>';
-                    // Pelo simple
-                    let hairShape = '<ellipse cx="40" cy="25" rx="22" ry="12" fill="'+hair+'"/>';
-                    svg.innerHTML = faceShape + hairShape + '<circle cx="32" cy="50" r="3" fill="#222"/><circle cx="48" cy="50" r="3" fill="#222"/>';
-                }
-                skinInput.addEventListener('input', renderAvatar);
-                hairInput.addEventListener('input', renderAvatar);
-                faceInput.addEventListener('change', renderAvatar);
-                renderAvatar();
-            }
-            // Cambiar icono de género si selecciona "otro"
-            const generoRadios = document.querySelectorAll('input[name="genero"]');
-            generoRadios.forEach(radio => {
-                radio.addEventListener('change', function() {
-                    if (this.value === 'otro') {
-                        document.getElementById('avatar-svg').innerHTML = '<text x="20" y="60" font-size="40">🦠</text>';
-                    } else {
-                        if (skinInput && hairInput && faceInput) {
-                            // Volver a renderizar el avatar normal
-                            skinInput.dispatchEvent(new Event('input'));
-                        }
-                    }
-                });
-            });
-        });
+        document.addEventListener('DOMContentLoaded', function () {
+    const skinInput = document.getElementById('avatar-skin');
+    const hairInput = document.getElementById('avatar-hair');
+    const faceInput = document.getElementById('avatar-face');
+    const itemInput = document.getElementById('avatar-item');
+    const generoRadios = document.querySelectorAll('input[name="genero"]');
+    const svg = document.getElementById('avatar-svg');
 
+    function renderAvatar() {
+        const skin = skinInput.value;
+        const hair = hairInput.value;
+        const face = faceInput.value;
+        const item = itemInput.value;
+        const genero = document.querySelector('input[name="genero"]:checked').value;
+
+        // Rostros por género
+        let faceShape = '';
+        if (face === 'gordo') faceShape = `<ellipse cx="40" cy="45" rx="26" ry="30" fill="${skin}"/>`;
+        else if (face === 'flaco') faceShape = `<ellipse cx="40" cy="45" rx="18" ry="28" fill="${skin}"/>`;
+        else if (face === 'femenino') faceShape = `<ellipse cx="40" cy="45" rx="22" ry="28" fill="${skin}"/>`;
+        else if (face === 'masculino') faceShape = `<ellipse cx="40" cy="45" rx="24" ry="32" fill="${skin}"/>`;
+        else faceShape = `<ellipse cx="40" cy="45" rx="22" ry="30" fill="${skin}"/>`;
+
+        // Pelo (ligeramente diferente según género)
+        let hairShape = `<ellipse cx="40" cy="25" rx="${genero === 'femenino' ? 22 : 20}" ry="12" fill="${hair}"/>`;
+
+        // Ojos
+        let eyes = '<circle cx="32" cy="50" r="3" fill="#222"/><circle cx="48" cy="50" r="3" fill="#222"/>';
+
+        // Aditamentos SVG
+        let itemShape = '';
+        if (item === 'gorro') itemShape = '<rect x="20" y="10" width="40" height="15" fill="#555" />';
+        if (item === 'audifonos') itemShape = '<circle cx="25" cy="40" r="5" fill="gray"/><circle cx="55" cy="40" r="5" fill="gray"/>';
+        if (item === 'lentes') itemShape = '<rect x="26" y="48" width="10" height="8" fill="black"/><rect x="44" y="48" width="10" height="8" fill="black"/><line x1="36" y1="52" x2="44" y2="52" stroke="black"/>';
+        if (item === 'alas') itemShape = '<polygon points="5,45 20,30 20,60" fill="lightblue"/><polygon points="75,45 60,30 60,60" fill="lightblue"/>';
+
+        // Mostrar avatar
+        svg.innerHTML = faceShape + hairShape + eyes + itemShape;
+    }
+
+    // Listeners
+    skinInput.addEventListener('input', renderAvatar);
+    hairInput.addEventListener('input', renderAvatar);
+    faceInput.addEventListener('change', renderAvatar);
+    itemInput.addEventListener('change', renderAvatar);
+    generoRadios.forEach(radio => radio.addEventListener('change', renderAvatar));
+
+    renderAvatar(); // Inicial
+});
+         
 // --- AUDIO DE LOBBY Y RESOLUCIÓN ---
 
 let audioLobby = null;

@@ -55,12 +55,20 @@
                             </label>
                             <label class="text-xs">Forma de cara:
                                 <select id="avatar-face" class="ml-2">
-                                    <option value="normal">Normal</option>
-                                    <option value="gordo">Gordo</option>
-                                    <option value="flaco">Flaco</option>
-                                    <option value="femenino">Más femenino</option>
-                                    <option value="masculino">Más masculino</option>
-                                </select>
+                                    <option value="masculino">Rostro masculino</option>
+                                    <option value="femenino">Rostro femenino</option>
+                                    <option value="flaco">Rostro flaco</option>
+                                    <option value="gordo">Rostro gordo</option>
+                                    </select><br>
+
+                                    <!-- Aditamentos -->
+                                    <select id="avatar-item">
+                                    <option value="">Ninguno</option>
+                                    <option value="gorro">Gorro</option>
+                                    <option value="audifonos">Audífonos</option>
+                                    <option value="lentes">Lentes</option>
+                                    <option value="alas">Alas</option>
+                                    </select>
                             </label>
                         </div>
                     </div>
@@ -182,11 +190,34 @@
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e0de5b8-070c-41c1-8d90-52b1b380cf19.png"  alt="Paleta de colores con pincel representando arte y cultura"  class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Arte y cultura</h3>
                     <p class="text-gray-700 text-center">Conoce sobre Musica, Danza y Artes Visuales</p>
+                   
+                 <!-- Fisica Cuantica -->
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Fisica Cuantica')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e0de5b8-070c-41c1-8d90-52b1b380cf19.png"  alt="Paleta de colores con pincel representando arte y cultura"  class="mx-auto mb-4 materia-icon">
+                    <h3 class="text-xl font-bold mb-2 text-center">Fisica Cuantica</h3>
+                    <p class="text-gray-700 text-center">Conoce sobre ciencias Avanzadas </p>
                 </div>
             </div> 
         </div>
     </div>
-    
+                    <!-- Pantalla de selección de competencias por materia -->
+                <div id="pantalla-competencias" class="hidden py-12 px-4">
+                <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+                    <button onclick="volverAMaterias()" class="mb-6 flex items-center text-indigo-600 hover:text-indigo-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Volver a materias
+                    </button>
+
+                    <h2 id="titulo-competencia" class="text-3xl font-bold text-center mb-6 text-indigo-700"></h2>
+                    <p class="text-lg text-gray-700 text-center mb-4">Selecciona una competencia específica:</p>
+
+                    <div id="lista-competencias" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Botones de competencias generados por JavaScript -->
+                    </div>
+                </div>
+                </div>
     <!-- Pantalla de juego -->
     <div id="juego" class="hidden py-12 px-4">
         <div class="max-w-4xl mx-auto">
