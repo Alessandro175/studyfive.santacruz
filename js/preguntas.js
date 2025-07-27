@@ -1,188 +1,57 @@
         // Base de datos de preguntas por grado y materia
-const bancoPreguntas = {
+const bancoPreguntas = {    
     1: {
-        'Inglés': [
-            {
-                pregunta: "¿Cómo se dice 'hola' en inglés?",
-                opciones: ["Hello", "Goodbye", "Thank you", "Apple"],
-                respuestaCorrecta: 0,
-                explicacion: "La palabra 'Hello' significa 'hola' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'perro'?",
-                opciones: ["Cat", "House", "Dog", "Book"],
-                respuestaCorrecta: 2,
-                explicacion: "'Dog' es la palabra correcta para 'perro' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'gato' en inglés?",
-                opciones: ["Dog", "Cat", "Bird", "Fish"],
-                respuestaCorrecta: 1,
-                explicacion: "'Cat' significa 'gato' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'casa'?",
-                opciones: ["Car", "Tree", "House", "Ball"],
-                respuestaCorrecta: 2,
-                explicacion: "'House' significa 'casa' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'libro' en inglés?",
-                opciones: ["Book", "Pen", "Apple", "Desk"],
-                respuestaCorrecta: 0,
-                explicacion: "'Book' significa 'libro' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'manzana'?",
-                opciones: ["Orange", "Apple", "Banana", "Grape"],
-                respuestaCorrecta: 1,
-                explicacion: "'Apple' significa 'manzana' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'adiós' en inglés?",
-                opciones: ["Hello", "Goodbye", "Please", "Thank you"],
-                respuestaCorrecta: 1,
-                explicacion: "'Goodbye' significa 'adiós' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'mamá'?",
-                opciones: ["Father", "Mother", "Sister", "Brother"],
-                respuestaCorrecta: 1,
-                explicacion: "'Mother' significa 'mamá' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'papá' en inglés?",
-                opciones: ["Father", "Mother", "Baby", "Family"],
-                respuestaCorrecta: 0,
-                explicacion: "'Father' significa 'papá' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'pelota'?",
-                opciones: ["Toy", "Ball", "Game", "Play"],
-                respuestaCorrecta: 1,
-                explicacion: "'Ball' significa 'pelota' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'agua' en inglés?",
-                opciones: ["Water", "Milk", "Juice", "Tea"],
-                respuestaCorrecta: 0,
-                explicacion: "'Water' significa 'agua' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'sol'?",
-                opciones: ["Moon", "Star", "Sun", "Sky"],
-                respuestaCorrecta: 2,
-                explicacion: "'Sun' significa 'sol' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'luna' en inglés?",
-                opciones: ["Sun", "Moon", "Star", "Cloud"],
-                respuestaCorrecta: 1,
-                explicacion: "'Moon' significa 'luna' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'flor'?",
-                opciones: ["Tree", "Flower", "Leaf", "Grass"],
-                respuestaCorrecta: 1,
-                explicacion: "'Flower' significa 'flor' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'árbol' en inglés?",
-                opciones: ["Tree", "Branch", "Root", "Leaf"],
-                respuestaCorrecta: 0,
-                explicacion: "'Tree' significa 'árbol' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'carro'?",
-                opciones: ["Bus", "Car", "Train", "Bike"],
-                respuestaCorrecta: 1,
-                explicacion: "'Car' significa 'carro' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'escuela' en inglés?",
-                opciones: ["House", "School", "Store", "Park"],
-                respuestaCorrecta: 1,
-                explicacion: "'School' significa 'escuela' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'niño'?",
-                opciones: ["Girl", "Boy", "Baby", "Man"],
-                respuestaCorrecta: 1,
-                explicacion: "'Boy' significa 'niño' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'niña' en inglés?",
-                opciones: ["Boy", "Girl", "Woman", "Baby"],
-                respuestaCorrecta: 1,
-                explicacion: "'Girl' significa 'niña' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'mesa'?",
-                opciones: ["Chair", "Table", "Desk", "Bed"],
-                respuestaCorrecta: 1,
-                explicacion: "'Table' significa 'mesa' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'silla' en inglés?",
-                opciones: ["Chair", "Table", "Sofa", "Bed"],
-                respuestaCorrecta: 0,
-                explicacion: "'Chair' significa 'silla' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'mano'?",
-                opciones: ["Foot", "Hand", "Arm", "Leg"],
-                respuestaCorrecta: 1,
-                explicacion: "'Hand' significa 'mano' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'pie' en inglés?",
-                opciones: ["Hand", "Foot", "Leg", "Arm"],
-                respuestaCorrecta: 1,
-                explicacion: "'Foot' significa 'pie' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'ojo'?",
-                opciones: ["Ear", "Eye", "Nose", "Mouth"],
-                respuestaCorrecta: 1,
-                explicacion: "'Eye' significa 'ojo' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'nariz' en inglés?",
-                opciones: ["Eye", "Ear", "Nose", "Mouth"],
-                respuestaCorrecta: 2,
-                explicacion: "'Nose' significa 'nariz' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'boca'?",
-                opciones: ["Eye", "Nose", "Ear", "Mouth"],
-                respuestaCorrecta: 3,
-                explicacion: "'Mouth' significa 'boca' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'rojo' en inglés?",
-                opciones: ["Red", "Blue", "Green", "Yellow"],
-                respuestaCorrecta: 0,
-                explicacion: "'Red' significa 'rojo' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'azul'?",
-                opciones: ["Red", "Blue", "Green", "Yellow"],
-                respuestaCorrecta: 1,
-                explicacion: "'Blue' significa 'azul' en inglés."
-            },
-            {
-                pregunta: "¿Cómo se dice 'verde' en inglés?",
-                opciones: ["Red", "Blue", "Green", "Yellow"],
-                respuestaCorrecta: 2,
-                explicacion: "'Green' significa 'verde' en inglés."
-            },
-            {
-                pregunta: "¿Cuál es la palabra en inglés para 'amarillo'?",
-                opciones: ["Red", "Blue", "Green", "Yellow"],
-                respuestaCorrecta: 3,
-                explicacion: "'Yellow' significa 'amarillo' en inglés."
-            }
-        ],
+      "Inglés": {
+      "Comprensión de vocabulario": [
+        {
+          pregunta: "¿De qué color es el cielo?",
+          opciones: ["Rojo", "Verde", "Azul", "Amarillo"],
+          respuesta: "Azul"
+        },
+        {
+          pregunta: "¿Cuál de estos es una fruta?",
+          opciones: ["Manzana", "Silla", "Zapato", "Mesa"],
+          respuesta: "Manzana"
+        }
+      ],
+      "Saludos y presentaciones": [
+        {
+          pregunta: "¿Cómo se dice 'hola' en inglés?",
+          opciones: ["Hola", "Hello", "Bonjour", "Ciao"],
+          respuesta: "Hello"
+        },
+        {
+          pregunta: "¿Qué dices cuando conoces a alguien?",
+          opciones: ["Adiós", "Gracias", "Hello", "Perdón"],
+          respuesta: "Hello"
+        }
+      ],
+      "Comprensión auditiva": [
+        {
+          pregunta: "¿Qué escuchas? (🔊 'Good night')",
+          opciones: ["Buenas noches", "Buenos días", "Adiós", "Hola"],
+          respuesta: "Buenas noches"
+        },
+        {
+          pregunta: "¿Qué dice la profesora? (🔊 'Sit down')",
+          opciones: ["Levántate", "Siéntate", "Salta", "Baila"],
+          respuesta: "Siéntate"
+        }
+      ],
+      "Seguir instrucciones simples": [
+        {
+          pregunta: "Si la profesora dice 'Open your book', ¿qué haces?",
+          opciones: ["Correr", "Dormir", "Abrir el libro", "Comer"],
+          respuesta: "Abrir el libro"
+        },
+        {
+          pregunta: "¿Qué haces cuando la profesora dice 'Stand up'?",
+          opciones: ["Sentarse", "Acostarse", "Pararse", "Saltar"],
+          respuesta: "Pararse"
+        }
+      ],
+    },
+
         'Matemática': [
             {pregunta:"Completa la secuencia: 2, 4, 6, __, 10",opciones:["7","8","9","5"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 2 en 2: 2+2=4, 4+2=6, 6+2=8, 8+2=10"},
             {pregunta:"Completa la operación: 3 + 2 = __",opciones:["4","5","6","1"],respuestaCorrecta:1,explicacion:"Si tienes 3 objetos y agregas 2 más, tendrás 5 objetos"},
@@ -697,66 +566,66 @@ const bancoPreguntas = {
             }
         ],
         'Arte y Cultura': [
-                    {
-      pregunta: "¿Qué usamos para dibujar líneas y formas?",
-      opciones: ["Pegamento", "Lápiz", "Tijera", "Goma"],
-      respuestaCorrecta: 1,
-      explicacion: "El lápiz nos ayuda a dibujar formas y líneas con facilidad."
-    },
-    {
-      pregunta: "¿Qué danza es típica de la selva peruana?",
-      opciones: ["Samba", "Marinera", "Danza de las tijeras", "Pandilla"],
-      respuestaCorrecta: 3,
-      explicacion: "La pandilla es una danza alegre de la región amazónica del Perú."
-    },
-    {
-      pregunta: "¿Qué usamos para borrar dibujos de lápiz?",
-      opciones: ["Goma", "Papel", "Tijera", "Lápiz de color"],
-      respuestaCorrecta: 0,
-      explicacion: "La goma sirve para borrar trazos de lápiz."
-    },
-    {
-      pregunta: "¿Qué instrumento musical tiene cuerdas?",
-      opciones: ["Cajón", "Zampoña", "Guitarra", "Tambor"],
-      respuestaCorrecta: 2,
-      explicacion: "La guitarra es un instrumento de cuerdas que se toca con los dedos o pua."
-    },
-    {
-      pregunta: "¿Qué color usamos para pintar el cielo?",
-      opciones: ["Rojo", "Azul", "Marrón", "Negro"],
-      respuestaCorrecta: 1,
-      explicacion: "El cielo suele representarse con el color azul en los dibujos."
-    },
-    {
-      pregunta: "¿Qué expresión usamos en el arte teatral?",
-      opciones: ["Silencio", "Voz y cuerpo", "Dormir", "Saltos altos"],
-      respuestaCorrecta: 1,
-      explicacion: "En el teatro se usan la voz y el cuerpo para expresar emociones."
-    },
-    {
-      pregunta: "¿Qué color es parte de la bandera del Perú?",
-      opciones: ["Verde", "Amarillo", "Rojo", "Azul"],
-      respuestaCorrecta: 2,
-      explicacion: "El rojo es uno de los colores principales de la bandera del Perú."
-    },
-    {
-      pregunta: "¿Qué es una pintura?",
-      opciones: ["Un baile", "Una canción", "Una imagen hecha con colores", "Un instrumento"],
-      respuestaCorrecta: 2,
-      explicacion: "Una pintura es una forma de arte visual creada con colores."
-    },
-    {
-      pregunta: "¿Qué usamos para pegar papeles en un collage?",
-      opciones: ["Tijera", "Pintura", "Goma", "Témpera"],
-      respuestaCorrecta: 2,
-      explicacion: "La goma o pegamento nos permite unir piezas de papel."
-    },
-    {
-      pregunta: "¿Qué danza tradicional se baila en Puno?",
-      opciones: ["Caporales", "Marinera", "Pandilla", "Diablada"],
-      respuestaCorrecta: 3,
-      explicacion: "La Diablada es una danza típica del altiplano peruano, especialmente en Puno."
-    },
+                {
+                pregunta: "¿Qué usamos para dibujar líneas y formas?",
+                opciones: ["Pegamento", "Lápiz", "Tijera", "Goma"],
+                respuestaCorrecta: 1,
+                explicacion: "El lápiz nos ayuda a dibujar formas y líneas con facilidad."
+                },
+                {
+                pregunta: "¿Qué danza es típica de la selva peruana?",
+                opciones: ["Samba", "Marinera", "Danza de las tijeras", "Pandilla"],
+                respuestaCorrecta: 3,
+                explicacion: "La pandilla es una danza alegre de la región amazónica del Perú."
+                },
+                {
+                pregunta: "¿Qué usamos para borrar dibujos de lápiz?",
+                opciones: ["Goma", "Papel", "Tijera", "Lápiz de color"],
+                respuestaCorrecta: 0,
+                explicacion: "La goma sirve para borrar trazos de lápiz."
+                },
+                {
+                pregunta: "¿Qué instrumento musical tiene cuerdas?",
+                opciones: ["Cajón", "Zampoña", "Guitarra", "Tambor"],
+                respuestaCorrecta: 2,
+                explicacion: "La guitarra es un instrumento de cuerdas que se toca con los dedos o pua."
+                },
+                {
+                pregunta: "¿Qué color usamos para pintar el cielo?",
+                opciones: ["Rojo", "Azul", "Marrón", "Negro"],
+                respuestaCorrecta: 1,
+                explicacion: "El cielo suele representarse con el color azul en los dibujos."
+                },
+                {
+                pregunta: "¿Qué expresión usamos en el arte teatral?",
+                opciones: ["Silencio", "Voz y cuerpo", "Dormir", "Saltos altos"],
+                respuestaCorrecta: 1,
+                explicacion: "En el teatro se usan la voz y el cuerpo para expresar emociones."
+                },
+                {
+                pregunta: "¿Qué color es parte de la bandera del Perú?",
+                opciones: ["Verde", "Amarillo", "Rojo", "Azul"],
+                respuestaCorrecta: 2,
+                explicacion: "El rojo es uno de los colores principales de la bandera del Perú."
+                },
+                {
+                pregunta: "¿Qué es una pintura?",
+                opciones: ["Un baile", "Una canción", "Una imagen hecha con colores", "Un instrumento"],
+                respuestaCorrecta: 2,
+                explicacion: "Una pintura es una forma de arte visual creada con colores."
+                },
+                {
+                pregunta: "¿Qué usamos para pegar papeles en un collage?",
+                opciones: ["Tijera", "Pintura", "Goma", "Témpera"],
+                respuestaCorrecta: 2,
+                explicacion: "La goma o pegamento nos permite unir piezas de papel."
+                },
+                {
+                pregunta: "¿Qué danza tradicional se baila en Puno?",
+                opciones: ["Caporales", "Marinera", "Pandilla", "Diablada"],
+                respuestaCorrecta: 3,
+                explicacion: "La Diablada es una danza típica del altiplano peruano, especialmente en Puno."
+                },
                 { pregunta: "¿Qué usamos para pintar un dibujo?",
                 opciones: ["Pincel", "Tenedor", "Regla", "Cepillo"],
                 respuestaCorrecta: 0,
@@ -1733,133 +1602,133 @@ const bancoPreguntas = {
             }
         ],
         'Arte y Cultura': [
-    {
-        pregunta: "¿Qué es una obra de arte?",
-        opciones: ["Una comida deliciosa", "Una creación artística que expresa ideas o emociones", "Una tarea del colegio", "Una película de acción"],
-        respuestaCorrecta: 1,
-        explicacion: "Una obra de arte es una creación artística que busca expresar ideas, emociones o belleza."
-    },
-    {
-        pregunta: "¿Qué es el teatro?",
-        opciones: ["Una técnica de dibujo", "Una danza típica", "Una forma de arte escénico", "Una pintura famosa"],
-        respuestaCorrecta: 2,
-        explicacion: "El teatro es una forma de arte escénico que representa historias frente a una audiencia."
-    },
-    {
-        pregunta: "¿Cuál de estos es un instrumento de viento?",
-        opciones: ["Guitarra", "Flauta", "Tambor", "Violín"],
-        respuestaCorrecta: 1,
-        explicacion: "La flauta es un instrumento de viento porque produce sonido al soplar aire en ella."
-    },
-    {
-        pregunta: "¿Qué es la danza negra o afroperuana?",
-        opciones: ["Una danza moderna", "Un estilo de teatro", "Una danza tradicional con raíces africanas", "Una técnica de pintura"],
-        respuestaCorrecta: 2,
-        explicacion: "La danza negra o afroperuana tiene raíces africanas y es típica de la costa del Perú."
-    },
-    {
-        pregunta: "¿Qué color se obtiene al mezclar azul y amarillo?",
-        opciones: ["Rojo", "Verde", "Naranja", "Marrón"],
-        respuestaCorrecta: 1,
-        explicacion: "Al mezclar azul y amarillo se obtiene el color verde."
-    },
-    {
-        pregunta: "¿Qué significa arte abstracto?",
-        opciones: ["Imita la realidad", "Usa formas reales", "No representa figuras reales", "Es una danza tradicional"],
-        respuestaCorrecta: 2,
-        explicacion: "El arte abstracto no representa figuras reales, sino formas y colores libres."
-    },
-    {
-        pregunta: "¿Cuál es una danza típica del altiplano boliviano?",
-        opciones: ["Caporales", "Marinera", "Saya", "Huayno"],
-        respuestaCorrecta: 0,
-        explicacion: "Los Caporales son una danza tradicional boliviana muy popular también en Perú."
-    },
-    {
-        pregunta: "¿Qué instrumento se usa en las danzas andinas?",
-        opciones: ["Piano", "Quena", "Saxofón", "Violonchelo"],
-        respuestaCorrecta: 1,
-        explicacion: "La quena es un instrumento de viento tradicional de los Andes."
-    },
-    {
-        pregunta: "¿Qué representan los colores cálidos?",
-        opciones: ["Tristeza", "Frialdad", "Alegría y energía", "Oscuridad"],
-        respuestaCorrecta: 2,
-        explicacion: "Los colores cálidos como el rojo, naranja y amarillo transmiten alegría y energía."
-    },
-    {
-        pregunta: "¿Qué es una pintura mural?",
-        opciones: ["Pintura sobre papel", "Pintura en tela", "Pintura hecha en una pared", "Pintura en cerámica"],
-        respuestaCorrecta: 2,
-        explicacion: "Una pintura mural es aquella que se realiza directamente sobre una pared."
-    },
-    {
-        pregunta: "¿Qué baile peruano representa el cortejo del gallo y la gallina?",
-        opciones: ["Marinera", "Huaylas", "Tondero", "Festejo"],
-        respuestaCorrecta: 0,
-        explicacion: "La marinera representa el galanteo entre el hombre y la mujer, como el gallo y la gallina."
-    },
-    {
-        pregunta: "¿Qué es la escultura?",
-        opciones: ["Un tipo de canto", "Una pintura", "Una forma de arte tridimensional", "Una danza"],
-        respuestaCorrecta: 2,
-        explicacion: "La escultura es una forma de arte que se realiza en tres dimensiones como piedra, madera o metal."
-    },
-    {
-        pregunta: "¿Qué es una coreografía?",
-        opciones: ["Un tipo de pintura", "Una secuencia de movimientos de baile", "Una melodía", "Un instrumento musical"],
-        respuestaCorrecta: 1,
-        explicacion: "La coreografía es la organización de los pasos y movimientos en una danza."
-    },
-    {
-        pregunta: "¿Qué son los colores fríos?",
-        opciones: ["Rojo, naranja, amarillo", "Azul, verde, violeta", "Negro y blanco", "Rosa y marrón"],
-        respuestaCorrecta: 1,
-        explicacion: "Los colores fríos como azul, verde y violeta transmiten calma y serenidad."
-    },
-    {
-        pregunta: "¿Qué significa ritmo en la música?",
-        opciones: ["El volumen de una canción", "La duración de los sonidos", "El tipo de voz", "La velocidad del viento"],
-        respuestaCorrecta: 1,
-        explicacion: "El ritmo es la organización de los sonidos y silencios en el tiempo."
-    },
-    {
-        pregunta: "¿Qué tipo de arte se usa en el carnaval?",
-        opciones: ["Arte digital", "Arte escénico y visual", "Arte culinario", "Arte fotográfico"],
-        respuestaCorrecta: 1,
-        explicacion: "En el carnaval se usa arte visual como disfraces y escénico como danzas y música."
-    },
-    {
-        pregunta: "¿Qué representa el Festejo?",
-        opciones: ["Fiestas europeas", "La vida en el campo", "La herencia africana", "Los incas"],
-        respuestaCorrecta: 2,
-        explicacion: "El festejo representa la alegría y tradición de la cultura afroperuana."
-    },
-    {
-        pregunta: "¿Qué es una paleta de colores?",
-        opciones: ["Una caja de crayones", "Una tabla donde se mezclan colores", "Una hoja para pintar", "Un dibujo"],
-        respuestaCorrecta: 1,
-        explicacion: "La paleta es donde los pintores mezclan sus colores."
-    },
-    {
-        pregunta: "¿Qué es un autorretrato?",
-        opciones: ["Pintura de otra persona", "Dibujo de un paisaje", "Pintura de uno mismo", "Foto grupal"],
-        respuestaCorrecta: 2,
-        explicacion: "El autorretrato es una representación de uno mismo hecha por el artista."
-    },
-    {
-        pregunta: "¿Qué es el arte popular?",
-        opciones: ["Arte moderno", "Arte de élite", "Arte de las comunidades y pueblos", "Arte de museos"],
-        respuestaCorrecta: 2,
-        explicacion: "El arte popular se hace en las comunidades y representa sus costumbres y creencias."
-    },
-    {
-        pregunta: "¿Qué representa la danza Los Shapis?",
-        opciones: ["La ciudad", "La selva", "El campo", "Los carnavales andinos"],
-        respuestaCorrecta: 3,
-        explicacion: "Los Shapis representan los carnavales de los Andes con colorido y alegría."
-    }
-]
+            {
+                pregunta: "¿Qué es una obra de arte?",
+                opciones: ["Una comida deliciosa", "Una creación artística que expresa ideas o emociones", "Una tarea del colegio", "Una película de acción"],
+                respuestaCorrecta: 1,
+                explicacion: "Una obra de arte es una creación artística que busca expresar ideas, emociones o belleza."
+            },
+            {
+                pregunta: "¿Qué es el teatro?",
+                opciones: ["Una técnica de dibujo", "Una danza típica", "Una forma de arte escénico", "Una pintura famosa"],
+                respuestaCorrecta: 2,
+                explicacion: "El teatro es una forma de arte escénico que representa historias frente a una audiencia."
+            },
+            {
+                pregunta: "¿Cuál de estos es un instrumento de viento?",
+                opciones: ["Guitarra", "Flauta", "Tambor", "Violín"],
+                respuestaCorrecta: 1,
+                explicacion: "La flauta es un instrumento de viento porque produce sonido al soplar aire en ella."
+            },
+            {
+                pregunta: "¿Qué es la danza negra o afroperuana?",
+                opciones: ["Una danza moderna", "Un estilo de teatro", "Una danza tradicional con raíces africanas", "Una técnica de pintura"],
+                respuestaCorrecta: 2,
+                explicacion: "La danza negra o afroperuana tiene raíces africanas y es típica de la costa del Perú."
+            },
+            {
+                pregunta: "¿Qué color se obtiene al mezclar azul y amarillo?",
+                opciones: ["Rojo", "Verde", "Naranja", "Marrón"],
+                respuestaCorrecta: 1,
+                explicacion: "Al mezclar azul y amarillo se obtiene el color verde."
+            },
+            {
+                pregunta: "¿Qué significa arte abstracto?",
+                opciones: ["Imita la realidad", "Usa formas reales", "No representa figuras reales", "Es una danza tradicional"],
+                respuestaCorrecta: 2,
+                explicacion: "El arte abstracto no representa figuras reales, sino formas y colores libres."
+            },
+            {
+                pregunta: "¿Cuál es una danza típica del altiplano boliviano?",
+                opciones: ["Caporales", "Marinera", "Saya", "Huayno"],
+                respuestaCorrecta: 0,
+                explicacion: "Los Caporales son una danza tradicional boliviana muy popular también en Perú."
+            },
+            {
+                pregunta: "¿Qué instrumento se usa en las danzas andinas?",
+                opciones: ["Piano", "Quena", "Saxofón", "Violonchelo"],
+                respuestaCorrecta: 1,
+                explicacion: "La quena es un instrumento de viento tradicional de los Andes."
+            },
+            {
+                pregunta: "¿Qué representan los colores cálidos?",
+                opciones: ["Tristeza", "Frialdad", "Alegría y energía", "Oscuridad"],
+                respuestaCorrecta: 2,
+                explicacion: "Los colores cálidos como el rojo, naranja y amarillo transmiten alegría y energía."
+            },
+            {
+                pregunta: "¿Qué es una pintura mural?",
+                opciones: ["Pintura sobre papel", "Pintura en tela", "Pintura hecha en una pared", "Pintura en cerámica"],
+                respuestaCorrecta: 2,
+                explicacion: "Una pintura mural es aquella que se realiza directamente sobre una pared."
+            },
+            {
+                pregunta: "¿Qué baile peruano representa el cortejo del gallo y la gallina?",
+                opciones: ["Marinera", "Huaylas", "Tondero", "Festejo"],
+                respuestaCorrecta: 0,
+                explicacion: "La marinera representa el galanteo entre el hombre y la mujer, como el gallo y la gallina."
+            },
+            {
+                pregunta: "¿Qué es la escultura?",
+                opciones: ["Un tipo de canto", "Una pintura", "Una forma de arte tridimensional", "Una danza"],
+                respuestaCorrecta: 2,
+                explicacion: "La escultura es una forma de arte que se realiza en tres dimensiones como piedra, madera o metal."
+            },
+            {
+                pregunta: "¿Qué es una coreografía?",
+                opciones: ["Un tipo de pintura", "Una secuencia de movimientos de baile", "Una melodía", "Un instrumento musical"],
+                respuestaCorrecta: 1,
+                explicacion: "La coreografía es la organización de los pasos y movimientos en una danza."
+            },
+            {
+                pregunta: "¿Qué son los colores fríos?",
+                opciones: ["Rojo, naranja, amarillo", "Azul, verde, violeta", "Negro y blanco", "Rosa y marrón"],
+                respuestaCorrecta: 1,
+                explicacion: "Los colores fríos como azul, verde y violeta transmiten calma y serenidad."
+            },
+            {
+                pregunta: "¿Qué significa ritmo en la música?",
+                opciones: ["El volumen de una canción", "La duración de los sonidos", "El tipo de voz", "La velocidad del viento"],
+                respuestaCorrecta: 1,
+                explicacion: "El ritmo es la organización de los sonidos y silencios en el tiempo."
+            },
+            {
+                pregunta: "¿Qué tipo de arte se usa en el carnaval?",
+                opciones: ["Arte digital", "Arte escénico y visual", "Arte culinario", "Arte fotográfico"],
+                respuestaCorrecta: 1,
+                explicacion: "En el carnaval se usa arte visual como disfraces y escénico como danzas y música."
+            },
+            {
+                pregunta: "¿Qué representa el Festejo?",
+                opciones: ["Fiestas europeas", "La vida en el campo", "La herencia africana", "Los incas"],
+                respuestaCorrecta: 2,
+                explicacion: "El festejo representa la alegría y tradición de la cultura afroperuana."
+            },
+            {
+                pregunta: "¿Qué es una paleta de colores?",
+                opciones: ["Una caja de crayones", "Una tabla donde se mezclan colores", "Una hoja para pintar", "Un dibujo"],
+                respuestaCorrecta: 1,
+                explicacion: "La paleta es donde los pintores mezclan sus colores."
+            },
+            {
+                pregunta: "¿Qué es un autorretrato?",
+                opciones: ["Pintura de otra persona", "Dibujo de un paisaje", "Pintura de uno mismo", "Foto grupal"],
+                respuestaCorrecta: 2,
+                explicacion: "El autorretrato es una representación de uno mismo hecha por el artista."
+            },
+            {
+                pregunta: "¿Qué es el arte popular?",
+                opciones: ["Arte moderno", "Arte de élite", "Arte de las comunidades y pueblos", "Arte de museos"],
+                respuestaCorrecta: 2,
+                explicacion: "El arte popular se hace en las comunidades y representa sus costumbres y creencias."
+            },
+            {
+                pregunta: "¿Qué representa la danza Los Shapis?",
+                opciones: ["La ciudad", "La selva", "El campo", "Los carnavales andinos"],
+                respuestaCorrecta: 3,
+                explicacion: "Los Shapis representan los carnavales de los Andes con colorido y alegría."
+            }
+        ],
     }, 
     3:{
         'Inglés': [

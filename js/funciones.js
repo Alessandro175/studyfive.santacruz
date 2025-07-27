@@ -298,46 +298,71 @@ function volverAGrados() {
     volverAudioLobby(); // <-- Agrega esto aquí
 }
         
-            // Selección de materia: validación, puntaje y animación
-            function seleccionarMateria(materia) {
-                materiaSeleccionada = materia;
-                // Validar existencia de preguntas para el grado y materia
-                if (!bancoPreguntas[gradoSeleccionado] || !bancoPreguntas[gradoSeleccionado][materia] || bancoPreguntas[gradoSeleccionado][materia].length < 1) {
-                    mostrarModal('Sin preguntas', 'No hay preguntas disponibles para este curso en este grado.');
-                    return;
+                // Selección de materia: validación, puntaje y animación
+                function seleccionarMateria(materia) {
+                    materiaSeleccionada = materia;
+                    // Validar existencia de preguntas para el grado y materia
+                    if (!bancoPreguntas[gradoSeleccionado] || !bancoPreguntas[gradoSeleccionado][materia] || bancoPreguntas[gradoSeleccionado][materia].length < 1) {
+                        mostrarModal('Sin preguntas', 'No hay preguntas disponibles para este curso en este grado.');
+                        return;
+                    }
+                    const todasPreguntas = bancoPreguntas[gradoSeleccionado][materia];
+                    // Si ya completó, no dejar repetir
+                    if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia] && jugadores[nickname].cursos[gradoSeleccionado][materia].completado) {
+                        mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
+                        return;
+                    }
+                    // Si ya tenía puntaje previo, restar del total antes de reiniciar
+                    puntajeCursoPrevio = 0;
+                    if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia]) {
+                        puntajeCursoPrevio = jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje || 0;
+                        jugadores[nickname].total = (jugadores[nickname].total || 0) - puntajeCursoPrevio;
+                        jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje = 0;
+                        guardarJugadores();
+                    }
+                    preguntas = seleccionarPreguntasAleatorias(todasPreguntas, Math.min(10, todasPreguntas.length));
+                    preguntaActual = 0;
+                    puntuacion = 0;
+                    reproducirAudioResolve(materia); // <-- Agrega esto aquí
+                    // Animación de entrada al quiz
+                    document.getElementById('juego').classList.add('animate__animated','animate__fadeIn');
+                    setTimeout(()=>{
+                        document.getElementById('juego').classList.remove('animate__animated','animate__fadeIn');
+                    }, 1200);
+                    document.getElementById('seleccion-materia').classList.add('hidden');
+                    document.getElementById('juego').classList.remove('hidden');
+                    document.getElementById('materia-actual').textContent = materia;
+                    document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
+                    document.getElementById('puntuacion').textContent = `${puntuacion} pts`;
+                    document.getElementById('barra-progreso').style.width = '0%';
+                    // Mostrar las competencias dinámicamente
+                    mostrarCompetencias(materia);
                 }
-                const todasPreguntas = bancoPreguntas[gradoSeleccionado][materia];
-                // Si ya completó, no dejar repetir
-                if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia] && jugadores[nickname].cursos[gradoSeleccionado][materia].completado) {
-                    mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
-                    return;
+                    function mostrarCompetencias(materia) {
+                    const pantallaCompetencias = document.getElementById("pantalla-competencias");
+                    const lista = document.getElementById("lista-competencias");
+                    const titulo = document.getElementById("titulo-competencia");
+
+                    pantallaCompetencias.classList.remove("hidden");
+                    lista.innerHTML = '';
+                    titulo.textContent = `Competencias de ${materia}`;
+
+                    const competencias = Object.keys(bancoPreguntas[gradoSeleccionado]?.[materia] || {});
+
+                    if (competencias.length === 0) {
+                        lista.innerHTML = `<p class="text-red-500">No hay competencias registradas.</p>`;
+                        return;
+                    }
+
+                competencias.forEach((comp) => {
+                const btn = document.createElement("button");
+                btn.className = "btn-jugar bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded";
+                btn.textContent = comp;
+                btn.onclick = () => seleccionarCompetencia(comp);
+                lista.appendChild(btn);
+                     });
                 }
-                // Si ya tenía puntaje previo, restar del total antes de reiniciar
-                puntajeCursoPrevio = 0;
-                if (jugadores[nickname] && jugadores[nickname].cursos && jugadores[nickname].cursos[gradoSeleccionado] && jugadores[nickname].cursos[gradoSeleccionado][materia]) {
-                    puntajeCursoPrevio = jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje || 0;
-                    jugadores[nickname].total = (jugadores[nickname].total || 0) - puntajeCursoPrevio;
-                    jugadores[nickname].cursos[gradoSeleccionado][materia].puntaje = 0;
-                    guardarJugadores();
-                }
-                preguntas = seleccionarPreguntasAleatorias(todasPreguntas, Math.min(10, todasPreguntas.length));
-                preguntaActual = 0;
-                puntuacion = 0;
-                reproducirAudioResolve(materia); // <-- Agrega esto aquí
-                // Animación de entrada al quiz
-                document.getElementById('juego').classList.add('animate__animated','animate__fadeIn');
-                setTimeout(()=>{
-                    document.getElementById('juego').classList.remove('animate__animated','animate__fadeIn');
-                }, 1200);
-                document.getElementById('seleccion-materia').classList.add('hidden');
-                document.getElementById('juego').classList.remove('hidden');
-                document.getElementById('materia-actual').textContent = materia;
-                document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
-                document.getElementById('puntuacion').textContent = `${puntuacion} pts`;
-                document.getElementById('barra-progreso').style.width = '0%';
-                // Mostrar las competencias dinámicamente
-                mostrarCompetencias(materia);
-            }
+
                     
             // Función para volver a la selección de materias
             function volverAMaterias() {
