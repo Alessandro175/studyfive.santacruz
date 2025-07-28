@@ -55,20 +55,12 @@
                             </label>
                             <label class="text-xs">Forma de cara:
                                 <select id="avatar-face" class="ml-2">
-                                    <option value="masculino">Rostro masculino</option>
-                                    <option value="femenino">Rostro femenino</option>
-                                    <option value="flaco">Rostro flaco</option>
-                                    <option value="gordo">Rostro gordo</option>
-                                    </select><br>
-
-                                    <!-- Aditamentos -->
-                                    <select id="avatar-item">
-                                    <option value="">Ninguno</option>
-                                    <option value="gorro">Gorro</option>
-                                    <option value="audifonos">Audífonos</option>
-                                    <option value="lentes">Lentes</option>
-                                    <option value="alas">Alas</option>
-                                    </select>
+                                    <option value="normal">Normal</option>
+                                    <option value="gordo">Gordo</option>
+             <option value="flaco">Flaco</option>
+                                    <option value="femenino">Más femenino</option>
+                                    <option value="masculino">Más masculino</option>
+                                </select>
                             </label>
                         </div>
                     </div>
@@ -151,78 +143,49 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Inglés -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Inglés')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Inglés')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7344f9e9-92b0-4866-83ec-e516c26697d5.png" alt="Globo terráqueo con marcadores de países de habla inglesa y banderas" class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Inglés</h3>
                     <p class="text-gray-700 text-center">Aprende vocabulario y gramática en inglés</p>
                 </div>
                 
                 <!-- Matemática -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Matemática')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Matemática')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44310e98-8556-42b5-bd9e-948d44db06f6.png" alt="Cálculos matemáticos con números grandes y coloridos, incluyendo sumas y restas" class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Matemática</h3>
                     <p class="text-gray-700 text-center">Resuelve problemas y ejercicios matemáticos</p>
                 </div>
                 
                 <!-- Comunicación -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Comunicación')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Comunicación')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/780030d2-ad72-4a0c-8056-f8adedc058e0.png" alt="Libro abierto con letras que salen como si estuvieran hablando" class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Comunicación</h3>
                     <p class="text-gray-700 text-center">Mejora tu lectura, escritura y expresión oral</p>
                 </div>
                 
                 <!-- Ciencia y Tecnología -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Ciencia y Tecnología')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Ciencia y Tecnología')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8654c946-2772-4be6-b915-8a6ca2b1cd6f.png" alt="Microscopio rodeado de tubos de ensayo y moléculas flotantes" class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Ciencia y Tecnología</h3>
                     <p class="text-gray-700 text-center">Descubre los misterios de la ciencia</p>
                 </div>
                 
                 <!-- Personal Social -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Personal Social')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Personal Social')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/46cdf4a7-6748-4e93-98df-73d1bda51860.png" alt="Grupo diverso de niños de diferentes culturas dándose las manos alrededor de un globo terráqueo" class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Personal Social</h3>
                     <p class="text-gray-700 text-center">Conoce sobre historia, geografía y valores</p>
                 </div>
-
                  <!-- Arte y Cultura -->
-                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="mostrarPantallaCompetencias('Arte y Cultura')">
+                <div class="card bg-white rounded-xl p-6 cursor-pointer" onclick="seleccionarMateria('Arte y Cultura')">
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e0de5b8-070c-41c1-8d90-52b1b380cf19.png"  alt="Paleta de colores con pincel representando arte y cultura"  class="mx-auto mb-4 materia-icon">
                     <h3 class="text-xl font-bold mb-2 text-center">Arte y cultura</h3>
                     <p class="text-gray-700 text-center">Conoce sobre Musica, Danza y Artes Visuales</p>
-                   
-                </div> 
+                </div>
+            </div> 
         </div>
     </div>
-                    <!-- Pantalla de selección de competencias por materia -->
-                <div id="pantalla-competencias" class="hidden py-12 px-4">
-                <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
-                    <button onclick="volverAMaterias()" class="mb-6 flex items-center text-indigo-600 hover:text-indigo-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    Volver a materias
-                    </button>
-
-                    <h2 id="titulo-competencia" class="text-3xl font-bold text-center mb-6 text-indigo-700"></h2>
-                    <p class="text-lg text-gray-700 text-center mb-4">Selecciona una competencia específica:</p>
-
-                    <div id="lista-competencias" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- Contenedor donde se mostrarán las preguntas -->
-                        <div id="contenedor-preguntas" class="hidden mt-6 space-y-6">
-                        <!-- Las preguntas se insertarán aquí con JavaScript -->
-                        </div>
-
-                  <!-- Botones de competencias generados por JavaScript -->
-                    </div>
-                </div>
-                </div>
-                
-                <!-- Contenedor de preguntas por competencia -->
-                    <div id="contenedor-preguntas" class="hidden mt-6 px-4">
-                    <!-- Aquí aparecerán las preguntas con JS -->
-                    </div>
-
+    
     <!-- Pantalla de juego -->
     <div id="juego" class="hidden py-12 px-4">
         <div class="max-w-4xl mx-auto">
@@ -296,4 +259,3 @@
     <script src="js/particulas.js"></script>
 </body>
 </html>
- 
