@@ -1,57 +1,193 @@
         // Base de datos de preguntas por grado y materia
 const bancoPreguntas = {    
     1: {
-      "Inglés": {
-      "Comprensión de vocabulario": [
-        {
-          pregunta: "¿De qué color es el cielo?",
-          opciones: ["Rojo", "Verde", "Azul", "Amarillo"],
-          respuesta: "Azul"
-        },
-        {
-          pregunta: "¿Cuál de estos es una fruta?",
-          opciones: ["Manzana", "Silla", "Zapato", "Mesa"],
-          respuesta: "Manzana"
-        }
-      ],
-      "Saludos y presentaciones": [
-        {
-          pregunta: "¿Cómo se dice 'hola' en inglés?",
-          opciones: ["Hola", "Hello", "Bonjour", "Ciao"],
-          respuesta: "Hello"
-        },
-        {
-          pregunta: "¿Qué dices cuando conoces a alguien?",
-          opciones: ["Adiós", "Gracias", "Hello", "Perdón"],
-          respuesta: "Hello"
-        }
-      ],
-      "Comprensión auditiva": [
-        {
-          pregunta: "¿Qué escuchas? (🔊 'Good night')",
-          opciones: ["Buenas noches", "Buenos días", "Adiós", "Hola"],
-          respuesta: "Buenas noches"
-        },
-        {
-          pregunta: "¿Qué dice la profesora? (🔊 'Sit down')",
-          opciones: ["Levántate", "Siéntate", "Salta", "Baila"],
-          respuesta: "Siéntate"
-        }
-      ],
-      "Seguir instrucciones simples": [
-        {
-          pregunta: "Si la profesora dice 'Open your book', ¿qué haces?",
-          opciones: ["Correr", "Dormir", "Abrir el libro", "Comer"],
-          respuesta: "Abrir el libro"
-        },
-        {
-          pregunta: "¿Qué haces cuando la profesora dice 'Stand up'?",
-          opciones: ["Sentarse", "Acostarse", "Pararse", "Saltar"],
-          respuesta: "Pararse"
-        }
-      ],
-    },
+      "Inglés": [
+  
+  {
+    pregunta: "¿Cómo se dice 'rojo' en inglés?",
+    alternativas: ["Blue", "Red", "Green", "Yellow"],
+    respuesta: "Red",
+    explicacion: "Red significa rojo en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'perro' en inglés?",
+    alternativas: ["Cat", "Dog", "Bird", "Fish"],
+    respuesta: "Dog",
+    explicacion: "Dog es perro en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'gato' en inglés?",
+    alternativas: ["Cat", "Dog", "Bird", "Fish"],
+    respuesta: "Cat",
+    explicacion: "Cat significa gato en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'azul' en inglés?",
+    alternativas: ["Blue", "Red", "Yellow", "Green"],
+    respuesta: "Blue",
+    explicacion: "Blue significa azul en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'gracias' en inglés?",
+    alternativas: ["Sorry", "Hello", "Thank you", "Bye"],
+    respuesta: "Thank you",
+    explicacion: "Thank you significa gracias en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'hola' en inglés?",
+    alternativas: ["Bye", "Hello", "Thanks", "Good"],
+    respuesta: "Hello",
+    explicacion: "Hello se usa para saludar: hola."
+  },
+  {
+    pregunta: "¿Cómo se dice 'adiós' en inglés?",
+    alternativas: ["Bye", "Hello", "Good", "Thanks"],
+    respuesta: "Bye",
+    explicacion: "Bye significa adiós en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'verde' en inglés?",
+    alternativas: ["Red", "Yellow", "Green", "Blue"],
+    respuesta: "Green",
+    explicacion: "Green significa verde en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'amarillo' en inglés?",
+    alternativas: ["Blue", "Yellow", "Red", "Black"],
+    respuesta: "Yellow",
+    explicacion: "Yellow significa amarillo en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'negro' en inglés?",
+    alternativas: ["Black", "White", "Brown", "Gray"],
+    respuesta: "Black",
+    explicacion: "Black significa negro en inglés."
+  },
 
+  // NIVEL INTERMEDIO (10)
+  {
+    pregunta: "¿Cómo se dice 'yo' en inglés?",
+    alternativas: ["Me", "You", "I", "We"],
+    respuesta: "I",
+    explicacion: "I significa yo en inglés y siempre va con mayúscula."
+  },
+  {
+    pregunta: "¿Cómo se dice 'tú' en inglés?",
+    alternativas: ["I", "We", "You", "They"],
+    respuesta: "You",
+    explicacion: "You significa tú o usted en inglés."
+  },
+  {
+    pregunta: "¿Cuál es el plural de 'cat'?",
+    alternativas: ["Cats", "Cates", "Cat's", "Cati"],
+    respuesta: "Cats",
+    explicacion: "Para plural se agrega -s: cat → cats."
+  },
+  {
+    pregunta: "¿Cómo se dice 'escuela' en inglés?",
+    alternativas: ["School", "House", "Class", "Book"],
+    respuesta: "School",
+    explicacion: "School significa escuela en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'libro' en inglés?",
+    alternativas: ["Book", "Pen", "Paper", "Desk"],
+    respuesta: "Book",
+    explicacion: "Book significa libro en inglés."
+  },
+  {
+    pregunta: "¿Qué significa 'house'?",
+    alternativas: ["Casa", "Carro", "Perro", "Escuela"],
+    respuesta: "Casa",
+    explicacion: "House en inglés significa casa."
+  },
+  {
+    pregunta: "¿Qué significa 'sun'?",
+    alternativas: ["Sol", "Luna", "Estrella", "Nube"],
+    respuesta: "Sol",
+    explicacion: "Sun en inglés significa sol."
+  },
+  {
+    pregunta: "¿Qué significa 'moon'?",
+    alternativas: ["Luna", "Sol", "Agua", "Fuego"],
+    respuesta: "Luna",
+    explicacion: "Moon en inglés significa luna."
+  },
+  {
+    pregunta: "¿Qué significa 'water'?",
+    alternativas: ["Tierra", "Agua", "Aire", "Fuego"],
+    respuesta: "Agua",
+    explicacion: "Water en inglés significa agua."
+  },
+  {
+    pregunta: "¿Qué significa 'mother'?",
+    alternativas: ["Padre", "Madre", "Hermano", "Abuelo"],
+    respuesta: "Madre",
+    explicacion: "Mother en inglés significa madre."
+  },
+
+  // NIVEL MÁS COMPLICADO (10)
+  {
+    pregunta: "¿Cuál es el plural de 'dog'?",
+    alternativas: ["Dogs", "Doges", "Dog's", "Dogies"],
+    respuesta: "Dogs",
+    explicacion: "Se agrega -s: dog → dogs."
+  },
+  {
+    pregunta: "¿Cómo se dice 'carro' en inglés?",
+    alternativas: ["Car", "Bus", "Bike", "Truck"],
+    respuesta: "Car",
+    explicacion: "Car significa carro en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'grande' en inglés?",
+    alternativas: ["Big", "Small", "Tall", "Short"],
+    respuesta: "Big",
+    explicacion: "Big significa grande en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'pequeño' en inglés?",
+    alternativas: ["Small", "Big", "Tall", "Fat"],
+    respuesta: "Small",
+    explicacion: "Small significa pequeño en inglés."
+  },
+  {
+    pregunta: "¿Qué significa 'apple'?",
+    alternativas: ["Naranja", "Pera", "Manzana", "Plátano"],
+    respuesta: "Manzana",
+    explicacion: "Apple en inglés significa manzana."
+  },
+  {
+    pregunta: "¿Qué significa 'banana'?",
+    alternativas: ["Plátano", "Manzana", "Sandía", "Pera"],
+    respuesta: "Plátano",
+    explicacion: "Banana en inglés significa plátano."
+  },
+  {
+    pregunta: "¿Qué significa 'teacher'?",
+    alternativas: ["Estudiante", "Profesor", "Doctor", "Amigo"],
+    respuesta: "Profesor",
+    explicacion: "Teacher en inglés significa profesor o maestro."
+  },
+  {
+    pregunta: "¿Qué significa 'student'?",
+    alternativas: ["Profesor", "Estudiante", "Amigo", "Niño"],
+    respuesta: "Estudiante",
+    explicacion: "Student en inglés significa estudiante."
+  },
+  {
+    pregunta: "¿Cómo se dice 'mesa' en inglés?",
+    alternativas: ["Chair", "Table", "Desk", "Board"],
+    respuesta: "Table",
+    explicacion: "Table significa mesa en inglés."
+  },
+  {
+    pregunta: "¿Cómo se dice 'silla' en inglés?",
+    alternativas: ["Chair", "Table", "Desk", "Board"],
+    respuesta: "Chair",
+    explicacion: "Chair significa silla en inglés."
+  }
+        ],      
         'Matemática': [
             {pregunta:"Completa la secuencia: 2, 4, 6, __, 10",opciones:["7","8","9","5"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 2 en 2: 2+2=4, 4+2=6, 6+2=8, 8+2=10"},
             {pregunta:"Completa la operación: 3 + 2 = __",opciones:["4","5","6","1"],respuestaCorrecta:1,explicacion:"Si tienes 3 objetos y agregas 2 más, tendrás 5 objetos"},
@@ -746,28 +882,6 @@ const bancoPreguntas = {
                 explicacion: "El dibujo permite representar historias o escenas con imágenes."
                 }     
         ],
-        'Fisica Cuantica': [
-            {
-                pregunta: "¿Qué es la física cuántica?",
-                opciones: ["Estudio de los planetas", "Estudio de partículas subatómicas", "Estudio de animales", "Estudio de plantas"],
-                respuestaCorrecta: 1,
-                explicacion: "La física cuántica estudia las partículas más pequeñas del universo, como electrones y fotones."
-            },
-            {
-                pregunta: "¿Qué es un fotón?",
-                opciones: ["Una partícula de luz", "Un tipo de animal", "Una planta", "Un planeta"],
-                respuestaCorrecta: 0,
-                explicacion: "Un fotón es una partícula elemental que representa la luz."
-            },
-            {
-               pregunta: "¿Qué significa 'superposición cuántica'?",
-                opciones: ["Un estado de reposo", "Partículas en múltiples estados al mismo tiempo", "Movimiento rápido", "Cambio de color"],
-                respuestaCorrecta: 1,
-                explicacion: "En superposición, una partícula puede estar en varios estados a la vez hasta que se mide."
-            },
-            
-        ],
-
     }, 
     2:{
         'Inglés': [
