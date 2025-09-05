@@ -1,7 +1,13 @@
         // Base de datos de preguntas por grado y materia
 const bancoPreguntas = {    
     1: {
-      "Inglés": [
+      'Inglés': [
+        {
+                pregunta: "¿Qué signo se usa al terminar una pregunta?",
+                opciones: ["Punto", "Signo de exclamación", "Coma", "Signo de interrogación"],
+                respuestaCorrecta: 3,
+                explicacion: "El signo de interrogación se usa al inicio y al final de una pregunta."
+            },
             {
                 pregunta: "¿Cómo se dice 'rojo' en inglés?",
                 opciones: ["Blue", "Red", "Green", "Yellow"],
