@@ -6084,6 +6084,213 @@ const bancoPreguntas = {
     }
 
         ], 
+        'Ciencia y Tecnología': [
+   {         
+    pregunta: "¿Qué planeta tiene anillos visibles desde la Tierra?",
+    opciones: ["Júpiter", "Venus", "Saturno", "Marte"],
+    respuestaCorrecta: 2,
+    explicacion: "Saturno es famoso por sus anillos que se pueden observar con telescopios."
+  },
+  {
+    pregunta: "¿Qué tipo de energía se obtiene del movimiento del viento?",
+    opciones: ["Hidráulica", "Eólica", "Solar", "Química"],
+    respuestaCorrecta: 1,
+    explicacion: "La energía eólica se produce a partir del movimiento del viento."
+  },
+  {
+    pregunta: "¿Qué sistema del cuerpo humano se encarga de la respiración?",
+    opciones: ["Circulatorio", "Digestivo", "Respiratorio", "Nervioso"],
+    respuestaCorrecta: 2,
+    explicacion: "El sistema respiratorio se encarga de captar oxígeno y expulsar dióxido de carbono."
+  },
+  {
+    pregunta: "¿Qué gas expulsamos al respirar?",
+    opciones: ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Helio"],
+    respuestaCorrecta: 1,
+    explicacion: "El cuerpo expulsa dióxido de carbono como desecho de la respiración."
+  },
+  {
+    pregunta: "¿Qué parte del cuerpo se conecta con el sistema nervioso para permitirnos pensar?",
+    opciones: ["Cerebro", "Corazón", "Estómago", "Hígado"],
+    respuestaCorrecta: 0,
+    explicacion: "El cerebro controla el pensamiento y las funciones corporales."
+  },
+  {
+    pregunta: "¿Qué planeta está más cerca del Sol?",
+    opciones: ["Venus", "Mercurio", "Tierra", "Marte"],
+    respuestaCorrecta: 1,
+    explicacion: "Mercurio es el planeta más cercano al Sol."
+  },
+  {
+    pregunta: "¿Qué animales producen leche para alimentar a sus crías?",
+    opciones: ["Aves", "Mamíferos", "Reptiles", "Peces"],
+    respuestaCorrecta: 1,
+    explicacion: "Los mamíferos producen leche para alimentar a sus crías."
+  },
+  {
+    pregunta: "¿Qué recurso natural es indispensable para la vida y cubre gran parte de la Tierra?",
+    opciones: ["Agua", "Petróleo", "Carbón", "Gas"],
+    respuestaCorrecta: 0,
+    explicacion: "El agua es esencial para todos los seres vivos."
+  },
+  {
+    pregunta: "¿Cómo se llama el satélite natural de la Tierra?",
+    opciones: ["Europa", "Luna", "Titán", "Io"],
+    respuestaCorrecta: 1,
+    explicacion: "La Luna es el único satélite natural de la Tierra."
+  },
+  {
+    pregunta: "¿Qué aparato usamos para medir la temperatura?",
+    opciones: ["Microscopio", "Barómetro", "Termómetro", "Telescopio"],
+    respuestaCorrecta: 2,
+    explicacion: "El termómetro mide la temperatura en grados Celsius o Fahrenheit."
+  },
+  {
+    pregunta: "¿Qué planeta es conocido como el planeta rojo?",
+    opciones: ["Saturno", "Venus", "Marte", "Urano"],
+    respuestaCorrecta: 2,
+    explicacion: "Marte recibe ese nombre por el color rojizo de su superficie."
+  },
+  {
+    pregunta: "¿Qué parte de la planta absorbe agua y nutrientes del suelo?",
+    opciones: ["Tallo", "Hojas", "Raíces", "Flores"],
+    respuestaCorrecta: 2,
+    explicacion: "Las raíces absorben agua y nutrientes del suelo."
+  },
+  {
+    pregunta: "¿Qué nombre recibe el movimiento de la Tierra sobre su propio eje?",
+    opciones: ["Rotación", "Traslación", "Órbita", "Revolución"],
+    respuestaCorrecta: 0,
+    explicacion: "La rotación es el giro de la Tierra sobre su propio eje y dura 24 horas."
+  },
+  {
+    pregunta: "¿Qué energía se obtiene del Sol?",
+    opciones: ["Solar", "Eléctrica", "Eólica", "Nuclear"],
+    respuestaCorrecta: 0,
+    explicacion: "La energía solar proviene directamente de la radiación del Sol."
+  },
+  {
+    pregunta: "¿Qué órgano humano bombea sangre al cuerpo?",
+    opciones: ["Cerebro", "Pulmones", "Corazón", "Riñones"],
+    respuestaCorrecta: 2,
+    explicacion: "El corazón bombea sangre y distribuye oxígeno al cuerpo."
+  },
+  {
+    pregunta: "¿Qué planeta tiene la mayor cantidad de lunas?",
+    opciones: ["Júpiter", "Tierra", "Venus", "Marte"],
+    respuestaCorrecta: 0,
+    explicacion: "Júpiter tiene más de 70 lunas registradas."
+  },
+  {
+    pregunta: "¿Qué gas respiramos para vivir?",
+    opciones: ["Nitrógeno", "Oxígeno", "Dióxido de carbono", "Helio"],
+    respuestaCorrecta: 1,
+    explicacion: "El oxígeno es el gas necesario para la respiración de los seres humanos."
+  },
+  {
+    pregunta: "¿Qué planeta es el más grande del sistema solar?",
+    opciones: ["Saturno", "Neptuno", "Júpiter", "Urano"],
+    respuestaCorrecta: 2,
+    explicacion: "Júpiter es el planeta más grande del sistema solar."
+  },
+  {
+    pregunta: "¿Cómo se llama el proceso en el que el agua se convierte en vapor?",
+    opciones: ["Evaporación", "Condensación", "Precipitación", "Solidificación"],
+    respuestaCorrecta: 0,
+    explicacion: "La evaporación es el paso del agua líquida a vapor."
+  },
+  {
+    pregunta: "¿Qué parte de la planta se encarga de realizar la fotosíntesis?",
+    opciones: ["Raíz", "Tallo", "Hojas", "Semillas"],
+    respuestaCorrecta: 2,
+    explicacion: "Las hojas realizan la fotosíntesis gracias a la clorofila."
+  },
+  {
+    pregunta: "¿Qué planeta está cubierto por nubes de ácido sulfúrico?",
+    opciones: ["Venus", "Marte", "Urano", "Saturno"],
+    respuestaCorrecta: 0,
+    explicacion: "Venus tiene una atmósfera muy densa con nubes de ácido sulfúrico."
+  },
+  {
+    pregunta: "¿Qué nombre recibe el proceso en el que las nubes producen lluvia?",
+    opciones: ["Evaporación", "Condensación", "Precipitación", "Infiltración"],
+    respuestaCorrecta: 2,
+    explicacion: "La precipitación es cuando el agua cae de las nubes en forma de lluvia, nieve o granizo."
+  },
+  {
+    pregunta: "¿Qué órganos permiten respirar a los peces?",
+    opciones: ["Pulmones", "Branquias", "Espiráculos", "Estómago"],
+    respuestaCorrecta: 1,
+    explicacion: "Los peces respiran oxígeno disuelto en el agua mediante branquias."
+  },
+  {
+    pregunta: "¿Qué planeta gira de lado, como si rodara?",
+    opciones: ["Urano", "Júpiter", "Mercurio", "Venus"],
+    respuestaCorrecta: 0,
+    explicacion: "Urano tiene un eje de rotación inclinado casi 90 grados."
+  },
+  {
+    pregunta: "¿Qué órgano humano se encarga de la digestión principal de los alimentos?",
+    opciones: ["Estómago", "Pulmones", "Intestino grueso", "Corazón"],
+    respuestaCorrecta: 0,
+    explicacion: "El estómago descompone los alimentos con jugos gástricos."
+  },
+  {
+    pregunta: "¿Cómo se llama el proceso en el que las plantas liberan oxígeno?",
+    opciones: ["Respiración", "Fotosíntesis", "Polinización", "Fermentación"],
+    respuestaCorrecta: 1,
+    explicacion: "Durante la fotosíntesis, las plantas producen oxígeno como desecho."
+  },
+  {
+    pregunta: "¿Qué aparato se utiliza para observar objetos muy pequeños?",
+    opciones: ["Telescopio", "Microscopio", "Periscopio", "Binoculares"],
+    respuestaCorrecta: 1,
+    explicacion: "El microscopio permite ver células y otros objetos diminutos."
+  },
+  {
+    pregunta: "¿Cuál es la estrella más cercana a la Tierra?",
+    opciones: ["Sirio", "La Luna", "El Sol", "Proxima Centauri"],
+    respuestaCorrecta: 2,
+    explicacion: "El Sol es la estrella más cercana a nuestro planeta."
+  },
+  {
+    pregunta: "¿Qué planeta tiene una gran mancha roja que es una tormenta gigante?",
+    opciones: ["Saturno", "Neptuno", "Júpiter", "Marte"],
+    respuestaCorrecta: 2,
+    explicacion: "Júpiter tiene la Gran Mancha Roja, una tormenta de más de 300 años."
+  },
+  {
+    pregunta: "¿Qué parte del cuerpo humano transporta la sangre?",
+    opciones: ["Arterias y venas", "Huesos", "Pulmones", "Intestinos"],
+    respuestaCorrecta: 0,
+    explicacion: "Las arterias y venas transportan la sangre en el sistema circulatorio."
+  },
+  {
+    pregunta: "¿Qué planeta es el segundo en orden desde el Sol?",
+    opciones: ["Venus", "Tierra", "Marte", "Mercurio"],
+    respuestaCorrecta: 0,
+    explicacion: "Venus es el segundo planeta en orden desde el Sol."
+  },
+  {
+    pregunta: "¿Qué aparato mide los movimientos de un terremoto?",
+    opciones: ["Sismógrafo", "Microscopio", "Barómetro", "Termómetro"],
+    respuestaCorrecta: 0,
+    explicacion: "El sismógrafo registra los movimientos sísmicos."
+  },
+  {
+    pregunta: "¿Qué planeta tarda 365 días en dar una vuelta al Sol?",
+    opciones: ["Venus", "Tierra", "Marte", "Urano"],
+    respuestaCorrecta: 1,
+    explicacion: "La Tierra tarda 365 días en completar su traslación alrededor del Sol."
+  },
+  {
+    pregunta: "¿Qué fenómeno natural ocurre cuando la Luna cubre al Sol?",
+    opciones: ["Eclipse lunar", "Eclipse solar", "Equinoccio", "Mareas"],
+    respuestaCorrecta: 1,
+    explicacion: "El eclipse solar ocurre cuando la Luna se interpone entre la Tierra y el Sol."
+  }
+        ],
+    
         'Personal Social': [
             {
                 pregunta: "¿Qué imperio fue conocido por sus conquistas y por haber extendido el cristianismo por Europa?",
