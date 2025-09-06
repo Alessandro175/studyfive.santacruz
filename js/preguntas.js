@@ -16,150 +16,150 @@ const bancoPreguntas = {
             },
             {
                 pregunta: "¿Cómo se dice 'perro' en inglés?",
-                alternativas: ["Cat", "Dog", "Bird", "Fish"],
-                respuesta: 1,
+                opciones: ["Cat", "Dog", "Bird", "Fish"],
+                respuestaCorrecta: 1,
                 explicacion: "Dog es perro en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'gato' en inglés?",
-                alternativas: ["Cat", "Dog", "Bird", "Fish"],
-                respuesta: 0,
+                opciones: ["Cat", "Dog", "Bird", "Fish"],
+                respuestaCorrecta: 0,
                 explicacion: "Cat significa gato en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'azul' en inglés?",
-                alternativas: ["Blue", "Red", "Yellow", "Green"],
-                respuesta: 0,
+                opciones: ["Blue", "Red", "Yellow", "Green"],
+                respuestaCorrecta: 0,
                 explicacion: "Blue significa azul en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'gracias' en inglés?",
-                alternativas: ["Sorry", "Hello", "Thank you", "Bye"],
-                respuesta: 2,
+                opciones: ["Sorry", "Hello", "Thank you", "Bye"],
+                respuestaCorrecta: 2,
                 explicacion: "Thank you significa gracias en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'hola' en inglés?",
-                alternativas: ["Bye", "Hello", "Thanks", "Good"],
-                respuesta: 1,
+                opciones: ["Bye", "Hello", "Thanks", "Good"],
+                respuestaCorrecta: 1,
                 explicacion: "Hello se usa para saludar: hola."
             },
             {
                 pregunta: "¿Cómo se dice 'adiós' en inglés?",
-                alternativas: ["Bye", "Hello", "Good", "Thanks"],
-                respuesta: 0,
+                opciones: ["Bye", "Hello", "Good", "Thanks"],
+                respuestaCorrecta: 0,
                 explicacion: "Bye significa adiós en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'verde' en inglés?",
-                alternativas: ["Red", "Yellow", "Green", "Blue"],
-                respuesta: 2,
+                opciones: ["Red", "Yellow", "Green", "Blue"],
+                respuestaCorrecta: 2,
                 explicacion: "Green significa verde en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'amarillo' en inglés?",
-                alternativas: ["Blue", "Yellow", "Red", "Black"],
-                respuesta: 1,
+                opciones: ["Blue", "Yellow", "Red", "Black"],
+                respuestaCorrecta: 1,
                 explicacion: "Yellow significa amarillo en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'negro' en inglés?",
-                alternativas: ["Black", "White", "Brown", "Gray"],
-                respuesta: 0,
+                opciones: ["Black", "White", "Brown", "Gray"],
+                respuestaCorrecta: 0,
                 explicacion: "Black significa negro en inglés."
             },
 
             // NIVEL INTERMEDIO (10)
             {
                 pregunta: "¿Cómo se dice 'yo' en inglés?",
-                alternativas: ["Me", "You", "I", "We"],
-                respuesta: 2,
+                opcioness: ["Me", "You", "I", "We"],
+                respuestaCorrecta: 2,
                 explicacion: "I significa yo en inglés y siempre va con mayúscula."
             },
             {
                 pregunta: "¿Cómo se dice 'tú' en inglés?",
-                alternativas: ["I", "We", "You", "They"],
-                respuesta: 2,
+                opciones: ["I", "We", "You", "They"],
+                respuestaCorrecta: 2,
                 explicacion: "You significa tú o usted en inglés."
             },
             {
                 pregunta: "¿Cuál es el plural de 'cat'?",
-                alternativas: [ "Cates","Cats", "Cat's", "Cati"],
-                respuesta: 1,
+                opcioness: [ "Cates","Cats", "Cat's", "Cati"],
+                respuestaCorrecta: 1,
                 explicacion: "Para plural se agrega -s: cat → cats."
             },
             {
                 pregunta: "¿Cómo se dice 'escuela' en inglés?",
-                alternativas: ["House", "Class", "Book", "School"],
-                respuesta: 3,
+                opciones: ["House", "Class", "Book", "School"],
+                respuestaCorrecta: 3,
                 explicacion: "School significa escuela en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'libro' en inglés?",
-                alternativas: ["Pen","Book",  "Paper", "Desk"],
-                respuesta: 1,
+                opciones: ["Pen","Book",  "Paper", "Desk"],
+                respuestaCorrecta: 1,
                 explicacion: "Book significa libro en inglés."
             },
             {
                 pregunta: "¿Qué significa 'house'?",
-                alternativas: ["Carro", "Perro","Casa", "Escuela"],
-                respuesta: 2,
+                opciones: ["Carro", "Perro","Casa", "Escuela"],
+                respuestaCorrecta: 2,
                 explicacion: "House en inglés significa casa."
             },
             {
                 pregunta: "¿Qué significa 'sun'?",
-                alternativas: ["Sol", "Luna", "Estrella", "Nube"],
-                respuesta: 0,
+                opciones: ["Sol", "Luna", "Estrella", "Nube"],
+                respuestaCorrecta: 0,
                 explicacion: "Sun en inglés significa sol."
             },
             {
                 pregunta: "¿Qué significa 'moon'?",
-                alternativas: ["Luna", "Sol", "Agua", "Fuego"],
-                respuesta: 0,
+                opciones: ["Luna", "Sol", "Agua", "Fuego"],
+                respuestaCorrecta: 0,
                 explicacion: "Moon en inglés significa luna."
             },
             {
                 pregunta: "¿Qué significa 'water'?",
-                alternativas: ["Tierra", "Agua", "Aire", "Fuego"],
-                respuesta: 1,
+                opciones: ["Tierra", "Agua", "Aire", "Fuego"],
+                respuestaCorrecta: 1,
                 explicacion: "Water en inglés significa agua."
             },
             {
                 pregunta: "¿Qué significa 'mother'?",
-                alternativas: ["Padre", "Madre", "Hermano", "Abuelo"],
-                respuesta: 1,
+                opcioness: ["Padre", "Madre", "Hermano", "Abuelo"],
+                respuestaCorrecta: 1,
                 explicacion: "Mother en inglés significa madre."
             },
 
             // NIVEL MÁS COMPLICADO (10)
             {
                 pregunta: "¿Cuál es el plural de 'dog'?",
-                alternativas: [ "Doges", "Dog's", "Dogs","Dogies"],
-                respuesta: 2,
+                opciones: [ "Doges", "Dog's", "Dogs","Dogies"],
+                respuestaCorrecta: 2,
                 explicacion: "Se agrega -s: dog → dogs."
             },
             {
                 pregunta: "¿Cómo se dice 'carro' en inglés?",
-                alternativas: ["Bus", "Bike", "Truck", "Car"],
-                respuesta: 3,
+                opciones: ["Bus", "Bike", "Truck", "Car"],
+                respuestaCorrecta: 3,
                 explicacion: "Car significa carro en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'grande' en inglés?",
-                alternativas: ["Big", "Small", "Tall", "Short"],
-                respuesta: 0,
+                opciones: ["Big", "Small", "Tall", "Short"],
+                respuestaCorrecta: 0,
                 explicacion: "Big significa grande en inglés."
             },
             {
                 pregunta: "¿Cómo se dice 'pequeño' en inglés?",
-                alternativas: ["Small", "Big", "Tall", "Fat"],
-                respuesta: 0,
+                opciones: ["Small", "Big", "Tall", "Fat"],
+                respuestaCorrecta: 0,
                 explicacion: "Small significa pequeño en inglés."
             },
             {
                 pregunta: "¿Qué significa 'apple'?",
-                alternativas: ["Naranja", "Pera", "Manzana", "Plátano"],
-                respuesta: 2,
+                opciones: ["Naranja", "Pera", "Manzana", "Plátano"],
+                respuestaCorrecta: 2,
                 explicacion: "Apple en inglés significa manzana."
             },
             {
