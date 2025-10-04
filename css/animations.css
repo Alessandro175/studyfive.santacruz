@@ -1,0 +1,384 @@
+/* animations.css - Animaciones y transiciones entre pantallas */
+
+/* Transiciones de pantallas */
+.screen {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de puntuación */
+.puntuacion-anim {
+    animation: pulseScore 0.5s ease-in-out;
+}
+
+@keyframes pulseScore {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+        color: #10b981;
+    }
+}
+
+/* Animación de respuestas */
+.opcion-btn {
+    transition: all 0.3s ease;
+}
+
+.opcion-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.opcion-btn.correcta {
+    background-color: #10b981 !important;
+    color: white !important;
+    animation: correctAnswer 0.5s ease-in-out;
+}
+
+.opcion-btn.incorrecta {
+    background-color: #ef4444 !important;
+    color: white !important;
+    animation: incorrectAnswer 0.5s ease-in-out;
+}
+
+@keyframes correctAnswer {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes incorrectAnswer {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+/* Icono de error flotante */
+#icono-error-respuesta {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 120px;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#icono-error-respuesta.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.sacudida-error {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+}
+
+/* Animación de tarjetas */
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de barra de progreso */
+#barra-progreso {
+    transition: width 0.5s ease-in-out;
+}
+
+/* Animación de entrada de pregunta */
+#pregunta-container {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de feedback */
+#feedback-container {
+    animation: slideInBottom 0.4s ease-out;
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de modal */
+#modal-mensaje > div,
+#modal-dificultad > div,
+#modal-video > div {
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación de botones */
+.btn-jugar {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-jugar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-jugar:active {
+    transform: scale(0.98);
+}
+
+/* Efecto ripple en botones */
+.btn-jugar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-jugar:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animación de avatares */
+#avatar-svg,
+#perfil-jugador svg {
+    transition: transform 0.3s ease;
+}
+
+#avatar-svg:hover,
+#perfil-jugador svg:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Animación de ranking */
+#lista-ranking li {
+    animation: fadeInLeft 0.5s ease-out backwards;
+}
+
+#lista-ranking li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#lista-ranking li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#lista-ranking li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#lista-ranking li:nth-child(n+4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación de trofeos */
+#perfil-jugador .text-2xl {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Overlay de felicitaciones */
+#felicitacion-overlay {
+    animation: overlayFadeIn 0.3s ease-out;
+}
+
+#felicitacion-overlay > div {
+    animation: checkPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes checkPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive: reducir animaciones en móviles */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Transiciones suaves para ocultar/mostrar opciones */
+.opcion-btn {
+    transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.opcion-btn[style*="display: none"] {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Ajustes móviles para opciones */
+@media (max-width: 768px) {
+    #opciones-container {
+        gap: 1rem;
+    }
+    
+    /* Cuando solo quedan 2 opciones visibles, centrarlas mejor */
+    #opciones-container:has(.opcion-btn[style*="display: none"]) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .opcion-btn.correcta,
+    .opcion-btn.incorrecta {
+        font-size: 1.1rem;
+        padding: 1.5rem 1rem;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    /* Animación especial para las opciones que permanecen */
+    .opcion-btn:not([style*="display: none"]) {
+        animation: expandOption 0.4s ease-out;
+    }
+}
+
+@keyframes expandOption {
+    from {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
