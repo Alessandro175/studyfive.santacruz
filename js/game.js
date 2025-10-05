@@ -2,6 +2,7 @@
 
 let gradoSeleccionado = 0;
 let materiaSeleccionada = '';
+let competenciaSeleccionada = '';
 let preguntas = [];
 let preguntaActual = 0;
 let puntuacion = 0;
@@ -25,8 +26,95 @@ function seleccionarGrado(grado) {
     mostrarPantallaSeleccionMateria(grado);
 }
 
-// Seleccionar materia e iniciar juego
-function seleccionarMateria(materia, dificultadForzada = null) {
+// Seleccionar materia (ahora lleva a competencias)
+function seleccionarMateria(materia) {
+    materiaSeleccionada = materia;
+    mostrarPantallaSeleccionCompetencia(materia);
+}
+
+// Seleccionar competencia
+function seleccionarCompetencia(competencia) {
+    competenciaSeleccionada = competencia;
+    
+    // Mostrar modal de dificultad
+    crearModalDificultadSiNoExiste();
+    const modal = document.getElementById('modal-dificultad');
+    if (!modal) return;
+    
+    // Pre-seleccionar dificultad guardada
+    const radios = modal.querySelectorAll('input[name="modal-dificultad"]');
+    radios.forEach(r => r.checked = false);
+    
+    let difGuardada = getDificultadGuardada(gradoSeleccionado, materiaSeleccionada) ||
+                      window.dificultadSeleccionada ||
+                      localStorage.getItem('dificultad');
+    
+    if (difGuardada) {
+        const radio = modal.querySelector(`input[name="modal-dificultad"][value="${difGuardada}"]`);
+        if (radio) radio.checked = true;
+    }
+    
+    const titulo = modal.querySelector('#modal-dificultad-titulo');
+    if (titulo) titulo.textContent = `Selecciona dificultad — ${competencia}`;
+    
+    modal.classList.remove('hidden');
+}
+
+// Iniciar juego con competencia y dificultad
+function iniciarJuegoConCompetencia(dificultad = null) {
+    if (!bancoPreguntas?.[gradoSeleccionado]?.[materiaSeleccionada]) {
+        mostrarModal('Sin preguntas', 'No hay preguntas disponibles para este curso.');
+        return;
+    }
+    
+    const todasPreguntas = bancoPreguntas[gradoSeleccionado][materiaSeleccionada];
+    
+    if (!Array.isArray(todasPreguntas) || todasPreguntas.length === 0) {
+        mostrarModal('Sin preguntas', 'No hay preguntas válidas en el banco para esta materia.');
+        return;
+    }
+    
+    // Filtrar por competencia
+    let preguntasFiltradas = todasPreguntas.filter(q => q.competencia === competenciaSeleccionada);
+    
+    if (preguntasFiltradas.length === 0) {
+        mostrarModal('Sin preguntas', 'No hay preguntas para esta competencia.');
+        return;
+    }
+    
+    // Filtrar por dificultad si se especifica
+    if (dificultad) {
+        const difLower = dificultad.toString().toLowerCase();
+        const preguntasPorDificultad = preguntasFiltradas.filter(q => {
+            const qdif = (q.dificultad || q.nivel || '').toString().toLowerCase();
+            return qdif === difLower;
+        });
+        
+        if (preguntasPorDificultad.length === 0) {
+            mostrarModal('Sin preguntas para ese nivel', 'No se encontraron preguntas para la dificultad seleccionada. Se usarán todas las de la competencia.');
+        } else {
+            preguntasFiltradas = preguntasPorDificultad;
+        }
+    }
+    
+    // Preparar juego
+    preguntas = seleccionarPreguntasAleatorias(preguntasFiltradas, Math.min(10, preguntasFiltradas.length));
+    preguntaActual = 0;
+    puntuacion = 0;
+    
+    reproducirAudioResolve(materiaSeleccionada);
+    mostrarPantallaJuego();
+    
+    document.getElementById('materia-actual').textContent = `${materiaSeleccionada} - ${competenciaSeleccionada}`;
+    document.getElementById('grado-actual').textContent = `${gradoSeleccionado}° Grado`;
+    document.getElementById('puntuacion').textContent = `${puntuacion} pts`;
+    document.getElementById('barra-progreso').style.width = '0%';
+    
+    mostrarPregunta();
+}
+
+// Seleccionar materia e iniciar juego (mantener compatibilidad con código antiguo)
+function seleccionarMateriaDirecta(materia, dificultadForzada = null) {
     materiaSeleccionada = materia;
     
     if (!bancoPreguntas?.[gradoSeleccionado]?.[materia]) {
@@ -109,7 +197,7 @@ function mostrarPregunta() {
     
     const q = preguntas[preguntaActual];
     
-    if (!q?.opciones || !Array.isArray(q.opciones)) {
+    if (!q) {
         mostrarModal('Pregunta inválida', 'La pregunta tiene formato incorrecto.');
         siguientePregunta();
         return;
@@ -118,14 +206,26 @@ function mostrarPregunta() {
     contPregunta.textContent = q.pregunta || 'Pregunta sin texto';
     contOpciones.innerHTML = '';
     
-    q.opciones.forEach((opt, i) => {
-        const btn = document.createElement('button');
-        btn.className = 'opcion-btn respuesta bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200 transition-all duration-200';
-        btn.textContent = opt;
-        btn.setAttribute('data-op-index', i);
-        btn.onclick = () => seleccionarRespuesta(i);
-        contOpciones.appendChild(btn);
-    });
+    // Verificar si es pregunta de texto
+    if (q.tipoRespuesta === 'texto') {
+        mostrarPreguntaTexto(q, contOpciones);
+    } else {
+        // Pregunta de opción múltiple normal
+        if (!Array.isArray(q.opciones)) {
+            mostrarModal('Pregunta inválida', 'La pregunta no tiene opciones válidas.');
+            siguientePregunta();
+            return;
+        }
+        
+        q.opciones.forEach((opt, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'opcion-btn respuesta bg-gray-100 p-4 rounded-lg cursor-pointer hover:bg-gray-200 transition-all duration-200';
+            btn.textContent = opt;
+            btn.setAttribute('data-op-index', i);
+            btn.onclick = () => seleccionarRespuesta(i);
+            contOpciones.appendChild(btn);
+        });
+    }
     
     if (feedbackContainer) {
         feedbackContainer.classList.add('hidden');
@@ -136,6 +236,249 @@ function mostrarPregunta() {
     }
     
     actualizarBarraProgreso();
+}
+
+// Mostrar pregunta de tipo texto
+function mostrarPreguntaTexto(pregunta, container) {
+    const tipoVal = pregunta.tipoVal || 'mayus';
+    
+    // Crear contenedor para input
+    const inputContainer = document.createElement('div');
+    inputContainer.className = 'flex flex-col gap-4 max-w-2xl mx-auto';
+    
+    // Determinar tipo de input según tipoVal
+    let inputType = 'text';
+    let placeholder = 'Escribe tu respuesta aquí...';
+    let pattern = '';
+    
+    if (tipoVal === 'number') {
+        inputType = 'number';
+        placeholder = 'Ingresa solo números...';
+    } else if (tipoVal === 'numbercaracter') {
+        placeholder = 'Ingresa números, letras y operadores (+, -, *, /, etc.)...';
+    }
+    
+    inputContainer.innerHTML = `
+        <div class="bg-indigo-50 p-4 rounded-lg">
+            <p class="text-sm text-indigo-700 mb-2 font-semibold">💡 Instrucciones:</p>
+            <p class="text-xs text-gray-600">${obtenerInstruccionTipoVal(tipoVal)}</p>
+        </div>
+        <input 
+            type="${inputType}" 
+            id="respuesta-texto-input" 
+            class="border-2 border-indigo-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 text-lg text-center"
+            placeholder="${placeholder}"
+            ${pattern ? `pattern="${pattern}"` : ''}
+            autocomplete="off"
+        />
+        <button 
+            id="btn-validar-respuesta" 
+            class="btn-jugar px-6 py-3 rounded-lg text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition-all"
+        >
+            Validar Respuesta
+        </button>
+    `;
+    
+    container.appendChild(inputContainer);
+    
+    // Focus automático en el input
+    setTimeout(() => {
+        const input = document.getElementById('respuesta-texto-input');
+        if (input) input.focus();
+    }, 100);
+    
+    // Event listener para validar
+    const btnValidar = document.getElementById('btn-validar-respuesta');
+    if (btnValidar) {
+        btnValidar.onclick = () => validarRespuestaTexto(pregunta);
+    }
+    
+    // Permitir validar con Enter
+    const input = document.getElementById('respuesta-texto-input');
+    if (input) {
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                validarRespuestaTexto(pregunta);
+            }
+        });
+    }
+}
+
+// Obtener instrucción según tipo de validación
+function obtenerInstruccionTipoVal(tipoVal) {
+    const instrucciones = {
+        'mayus': 'No se distingue entre mayúsculas y minúsculas',
+        'nomayus': 'Se distingue entre mayúsculas y minúsculas (exacto)',
+        'nomayuscaracter': 'Se distingue entre mayúsculas, minúsculas y caracteres especiales (exacto)',
+        'mayuscaracter': 'Se distingue caracteres especiales, pero no mayúsculas/minúsculas',
+        'number': 'Solo se permiten números',
+        'numbercaracter': 'Puedes usar números, letras y operadores matemáticos'
+    };
+    return instrucciones[tipoVal] || 'Escribe tu respuesta';
+}
+
+// Validar respuesta de texto
+function validarRespuestaTexto(pregunta) {
+    if (respondido) return;
+    
+    const input = document.getElementById('respuesta-texto-input');
+    if (!input) return;
+    
+    const respuestaUsuario = input.value.trim();
+    
+    if (!respuestaUsuario) {
+        mostrarModal('Respuesta vacía', 'Por favor ingresa una respuesta antes de validar.');
+        return;
+    }
+    
+    respondido = true;
+    
+    const respuestaCorrecta = pregunta.respuesta || '';
+    const tipoVal = pregunta.tipoVal || 'mayus';
+    
+    const esCorrecto = compararRespuestas(respuestaUsuario, respuestaCorrecta, tipoVal);
+    
+    const feedbackContainer = document.getElementById('feedback-container');
+    const feedbackTexto = document.getElementById('feedback-texto');
+    const feedbackImagen = document.getElementById('feedback-imagen');
+    
+    // Deshabilitar input y botón
+    input.disabled = true;
+    const btnValidar = document.getElementById('btn-validar-respuesta');
+    if (btnValidar) btnValidar.disabled = true;
+    
+    // Aplicar estilos según resultado
+    if (esCorrecto) {
+        input.classList.add('border-green-400', 'bg-green-50');
+        input.classList.remove('border-indigo-300');
+        if (btnValidar) {
+            btnValidar.classList.add('bg-green-500');
+            btnValidar.classList.remove('bg-indigo-500');
+        }
+        
+        if (feedbackTexto) feedbackTexto.textContent = "¡Correcto! " + (pregunta.explicacion || '');
+        if (feedbackImagen) feedbackImagen.src = "img/10280401.jpg";
+        puntuacion += 10;
+        mostrarPantallaFelicitacionesRespuesta();
+    } else {
+        input.classList.add('border-red-400', 'bg-red-50');
+        input.classList.remove('border-indigo-300');
+        if (btnValidar) {
+            btnValidar.classList.add('bg-red-500');
+            btnValidar.classList.remove('bg-indigo-500');
+        }
+        
+        if (feedbackTexto) {
+            feedbackTexto.textContent = `Incorrecto. La respuesta correcta es: "${respuestaCorrecta}". ` + (pregunta.explicacion || '');
+        }
+        if (feedbackImagen) feedbackImagen.src = "img/10280401.jpg";
+        mostrarPantallaErrorRespuesta();
+    }
+    
+    const puntuacionElement = document.getElementById('puntuacion');
+    if (puntuacionElement) {
+        puntuacionElement.textContent = `${puntuacion} pts`;
+        puntuacionElement.classList.add('puntuacion-anim');
+        setTimeout(() => puntuacionElement.classList.remove('puntuacion-anim'), 1000);
+    }
+    
+    if (feedbackContainer) feedbackContainer.classList.remove('hidden');
+    
+    actualizarBarraProgreso();
+    
+    // Crear botón siguiente
+    let btnSiguiente = document.getElementById('btn-siguiente-pregunta');
+    if (!btnSiguiente) {
+        btnSiguiente = document.createElement('button');
+        btnSiguiente.id = 'btn-siguiente-pregunta';
+        btnSiguiente.className = 'mt-4 px-4 py-2 bg-indigo-600 text-white rounded';
+        btnSiguiente.textContent = (preguntaActual < preguntas.length - 1) ? 'Siguiente pregunta' : 'Ver resultados';
+        
+        const contOpciones = document.getElementById('opciones-container');
+        if (contOpciones?.parentNode) {
+            contOpciones.parentNode.appendChild(btnSiguiente);
+        }
+    }
+    
+    btnSiguiente.onclick = () => {
+        respondido = false;
+        siguientePregunta();
+        btnSiguiente.remove();
+    };
+}
+
+// Comparar respuestas según tipo de validación
+function compararRespuestas(respUsuario, respCorrecta, tipoVal) {
+    switch (tipoVal) {
+        case 'mayus':
+            // No sensible a mayúsculas/minúsculas
+            return respUsuario.toLowerCase() === respCorrecta.toLowerCase();
+        
+        case 'nomayus':
+            // Sensible a mayúsculas/minúsculas
+            return respUsuario === respCorrecta;
+        
+        case 'nomayuscaracter':
+            // Sensible a todo (exacto)
+            return respUsuario === respCorrecta;
+        
+        case 'mayuscaracter':
+            // Sensible a caracteres pero no a mayúsculas/minúsculas
+            return respUsuario.toLowerCase() === respCorrecta.toLowerCase();
+        
+        case 'number':
+            // Solo números - comparar como números
+            const numUsuario = parseFloat(respUsuario);
+            const numCorrecto = parseFloat(respCorrecta);
+            return !isNaN(numUsuario) && !isNaN(numCorrecto) && numUsuario === numCorrecto;
+        
+        case 'numbercaracter':
+            // Fórmulas matemáticas - intentar evaluar si es posible
+            try {
+                // Intentar evaluar ambas expresiones
+                const resultUsuario = evaluarExpresion(respUsuario);
+                const resultCorrecto = evaluarExpresion(respCorrecta);
+                
+                // Si ambos son números, comparar
+                if (!isNaN(resultUsuario) && !isNaN(resultCorrecto)) {
+                    return Math.abs(resultUsuario - resultCorrecto) < 0.0001;
+                }
+                
+                // Si no se pueden evaluar, comparar como texto sin mayúsculas
+                return respUsuario.toLowerCase().replace(/\s/g, '') === 
+                       respCorrecta.toLowerCase().replace(/\s/g, '');
+            } catch (e) {
+                // Si falla la evaluación, comparar como texto
+                return respUsuario.toLowerCase().replace(/\s/g, '') === 
+                       respCorrecta.toLowerCase().replace(/\s/g, '');
+            }
+        
+        default:
+            return respUsuario.toLowerCase() === respCorrecta.toLowerCase();
+    }
+}
+
+// Evaluar expresión matemática de forma segura
+function evaluarExpresion(expr) {
+    try {
+        // Limpiar la expresión
+        expr = expr.replace(/\s/g, '');
+        
+        // Validar que solo contenga caracteres permitidos
+        if (!/^[0-9+\-*/().^√πe\s]+$/i.test(expr)) {
+            return NaN;
+        }
+        
+        // Reemplazar caracteres matemáticos
+        expr = expr.replace(/√/g, 'Math.sqrt');
+        expr = expr.replace(/π/gi, 'Math.PI');
+        expr = expr.replace(/\^/g, '**');
+        
+        // Evaluar de forma segura (solo operaciones matemáticas básicas)
+        return Function('"use strict"; return (' + expr + ')')();
+    } catch (e) {
+        return NaN;
+    }
 }
 
 // Seleccionar respuesta
@@ -264,7 +607,11 @@ function mostrarResultados() {
     const puntajeMaximo = preguntas.length * 10;
     const porcentaje = Math.round((puntuacion / puntajeMaximo) * 100);
     
-    document.getElementById('resultado-titulo').textContent = `Resultados de ${materiaSeleccionada}`;
+    const tituloTexto = competenciaSeleccionada 
+        ? `Resultados de ${materiaSeleccionada} - ${competenciaSeleccionada}`
+        : `Resultados de ${materiaSeleccionada}`;
+    
+    document.getElementById('resultado-titulo').textContent = tituloTexto;
     document.getElementById('resultado-puntuacion').textContent = `Puntuación: ${puntuacion} de ${puntajeMaximo} (${porcentaje}%)`;
     
     // Determinar si está completado
@@ -273,10 +620,14 @@ function mostrarResultados() {
         completado = true;
     }
     
-    // Guardar progreso
-    guardarProgresoCurso(gradoSeleccionado, materiaSeleccionada, puntuacion, completado);
-    actualizarPuntajeJugador(puntuacion);
+    // Guardar progreso (competencia o curso)
+    if (competenciaSeleccionada) {
+        guardarProgresoCompetencia(gradoSeleccionado, materiaSeleccionada, competenciaSeleccionada, puntuacion, completado);
+    } else {
+        guardarProgresoCurso(gradoSeleccionado, materiaSeleccionada, puntuacion, completado);
+    }
     
+    actualizarPuntajeJugador(puntuacion);
     renderRanking();
     
     // Mensaje según desempeño
@@ -296,21 +647,38 @@ function mostrarResultados() {
 
 // Repetir materia
 function repetirMateria(forceCheckCompletado = false) {
-    const progreso = getProgresoCurso(gradoSeleccionado, materiaSeleccionada);
-    
-    if (forceCheckCompletado && progreso.completado) {
-        mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
-        volverAMaterias();
-        return;
+    if (competenciaSeleccionada) {
+        const progreso = getProgresoCompetencia(gradoSeleccionado, materiaSeleccionada, competenciaSeleccionada);
+        
+        if (forceCheckCompletado && progreso.completado) {
+            mostrarModal('Competencia completada', '¡Ya completaste esta competencia! Puedes elegir otra.');
+            volverACompetencias();
+            return;
+        }
+        
+        seleccionarCompetencia(competenciaSeleccionada);
+    } else {
+        const progreso = getProgresoCurso(gradoSeleccionado, materiaSeleccionada);
+        
+        if (forceCheckCompletado && progreso.completado) {
+            mostrarModal('Curso completado', '¡Ya completaste este curso! Puedes elegir otro.');
+            volverAMaterias();
+            return;
+        }
+        
+        seleccionarMateriaDirecta(materiaSeleccionada);
     }
-    
-    seleccionarMateria(materiaSeleccionada);
 }
 
 // Exponer funciones globalmente
 window.gradoSeleccionado = gradoSeleccionado;
+window.materiaSeleccionada = materiaSeleccionada;
+window.competenciaSeleccionada = competenciaSeleccionada;
 window.seleccionarGrado = seleccionarGrado;
 window.seleccionarMateria = seleccionarMateria;
+window.seleccionarMateriaDirecta = seleccionarMateriaDirecta;
+window.seleccionarCompetencia = seleccionarCompetencia;
+window.iniciarJuegoConCompetencia = iniciarJuegoConCompetencia;
 window.mostrarPregunta = mostrarPregunta;
 window.seleccionarRespuesta = seleccionarRespuesta;
 window.siguientePregunta = siguientePregunta;

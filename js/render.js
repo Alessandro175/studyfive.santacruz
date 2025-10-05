@@ -29,6 +29,80 @@ function renderRanking() {
     });
 }
 
+// Extraer competencias únicas de un curso
+function extraerCompetenciasDeCurso(grado, materia) {
+    if (!bancoPreguntas?.[grado]?.[materia]) return [];
+    
+    const preguntas = bancoPreguntas[grado][materia];
+    const competenciasSet = new Set();
+    
+    preguntas.forEach(p => {
+        if (p.competencia) {
+            competenciasSet.add(p.competencia);
+        }
+    });
+    
+    return Array.from(competenciasSet).sort();
+}
+
+// Renderizar competencias disponibles
+function renderCompetencias(materia) {
+    const competencias = extraerCompetenciasDeCurso(gradoSeleccionado, materia);
+    const container = document.getElementById('competencias-container');
+    
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (competencias.length === 0) {
+        container.innerHTML = '<p class="text-center text-gray-600">No hay competencias disponibles para esta materia.</p>';
+        return;
+    }
+    
+    // Iconos por competencia
+    const iconosCompetencia = {
+        'competencia1': '📚',
+        'competencia2': '✏️',
+        'competencia3': '🎯',
+        'competencia4': '🌟',
+        'competencia5': '💡',
+        'competencia6': '🔬'
+    };
+    
+    competencias.forEach((comp, index) => {
+        const icon = iconosCompetencia[comp] || '📖';
+        const numeroCompetencia = index + 1;
+        
+        // Contar preguntas por competencia
+        const preguntasDeCompetencia = bancoPreguntas[gradoSeleccionado][materia].filter(
+            p => p.competencia === comp
+        );
+        const totalPreguntas = preguntasDeCompetencia.length;
+        
+        // Verificar si está completada
+        const progreso = getProgresoCompetencia(gradoSeleccionado, materia, comp);
+        const completado = progreso.completado;
+        const puntaje = progreso.puntaje || 0;
+        
+        const div = document.createElement('div');
+        div.className = `card ${completado ? 'bg-green-100 border-2 border-green-400' : 'bg-white'} rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative`;
+        div.onclick = () => seleccionarCompetencia(comp);
+        
+        div.innerHTML = `
+            <div class="text-center">
+                <div class="text-6xl mb-3">${icon}</div>
+                <h3 class="text-xl font-bold mb-2">Competencia ${numeroCompetencia}</h3>
+                <p class="text-sm text-gray-600 mb-2">${comp.replace('competencia', 'Competencia ')}</p>
+                <p class="text-xs text-gray-500">${totalPreguntas} preguntas disponibles</p>
+                ${puntaje > 0 ? `<p class="text-sm font-bold text-indigo-600 mt-2">Puntaje: ${puntaje} pts</p>` : ''}
+                ${completado ? '<span class="absolute top-2 right-2 bg-green-400 text-white px-2 py-1 rounded text-xs">¡Completado!</span>' : ''}
+            </div>
+        `;
+        
+        container.appendChild(div);
+    });
+}
+
 // Renderizar grados con progreso
 function renderGrados() {
     const grados = [1, 2, 3, 4, 5, 6];
@@ -38,7 +112,7 @@ function renderGrados() {
     container.innerHTML = '';
     
     grados.forEach(grado => {
-        let completados = 0, total = 6; // 6 materias
+        let completados = 0, total = 6;
         let puntaje = 0;
         let completado = false;
         
@@ -94,7 +168,7 @@ function renderMaterias() {
         
         const div = document.createElement('div');
         div.className = `card ${estado} rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative`;
-        div.onclick = () => abrirFlujoMateria(mat.nombre);
+        div.onclick = () => seleccionarMateria(mat.nombre);
         div.innerHTML = `
             <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/${mat.icon}.png" class="mx-auto mb-4 materia-icon">
             <h3 class="text-xl font-bold mb-2 text-center">${mat.nombre}</h3>
@@ -112,7 +186,6 @@ function renderPerfilJugador() {
     
     const avatar = jugadores[nickname].avatar || avatarJugador;
     
-    // Calcular trofeos y cursos completados
     let trofeos = 0;
     let cursosCompletados = 0;
     
@@ -125,7 +198,6 @@ function renderPerfilJugador() {
         }
     }
     
-    // Generar SVG del avatar
     const avatarSVG = generarAvatarSVG(avatar);
     
     perfil.innerHTML = `
@@ -188,6 +260,8 @@ function generarAvatarSVG(avatar) {
 
 // Exponer funciones globalmente
 window.renderRanking = renderRanking;
+window.extraerCompetenciasDeCurso = extraerCompetenciasDeCurso;
+window.renderCompetencias = renderCompetencias;
 window.renderGrados = renderGrados;
 window.renderMaterias = renderMaterias;
 window.renderPerfilJugador = renderPerfilJugador;

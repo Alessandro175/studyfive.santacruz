@@ -4,6 +4,7 @@ const PANTALLAS = {
     BIENVENIDA: 'pantalla-bienvenida',
     INICIO: 'inicio',
     SELECCION_MATERIA: 'seleccion-materia',
+    SELECCION_COMPETENCIA: 'seleccion-competencia',
     JUEGO: 'juego',
     RESULTADOS: 'resultados'
 };
@@ -16,10 +17,8 @@ function cambiarPantalla(pantallaDestino) {
         return el && !el.classList.contains('hidden');
     });
 
-    // Si ya estamos en la pantalla destino, no hacer nada
     if (pantallaActual === pantallaDestino) return;
 
-    // Animar salida de pantalla actual
     if (pantallaActual) {
         const elementoActual = document.getElementById(pantallaActual);
         elementoActual.classList.add('fade-out');
@@ -30,7 +29,6 @@ function cambiarPantalla(pantallaDestino) {
         }, 300);
     }
 
-    // Animar entrada de nueva pantalla
     setTimeout(() => {
         const elementoDestino = document.getElementById(pantallaDestino);
         elementoDestino.classList.remove('hidden');
@@ -62,6 +60,13 @@ function mostrarPantallaSeleccionMateria(grado) {
     renderMaterias();
 }
 
+// Mostrar pantalla de selección de competencia
+function mostrarPantallaSeleccionCompetencia(materia) {
+    cambiarPantalla(PANTALLAS.SELECCION_COMPETENCIA);
+    document.getElementById('titulo-materia-competencia').textContent = `${materia} - Selecciona Competencia`;
+    renderCompetencias(materia);
+}
+
 // Mostrar pantalla de juego
 function mostrarPantallaJuego() {
     cambiarPantalla(PANTALLAS.JUEGO);
@@ -82,6 +87,11 @@ function volverAGrados() {
 function volverAMaterias() {
     volverAudioLobby();
     mostrarPantallaSeleccionMateria(gradoSeleccionado);
+}
+
+// Navegación: Volver a competencias
+function volverACompetencias() {
+    mostrarPantallaSeleccionCompetencia(materiaSeleccionada);
 }
 
 // Modal personalizado
@@ -181,13 +191,17 @@ function mostrarPantallaErrorRespuesta() {
 }
 
 // Exponer funciones globalmente
+window.PANTALLAS = PANTALLAS;
+window.cambiarPantalla = cambiarPantalla;
 window.mostrarPantallaBienvenida = mostrarPantallaBienvenida;
 window.mostrarPantallaInicio = mostrarPantallaInicio;
 window.mostrarPantallaSeleccionMateria = mostrarPantallaSeleccionMateria;
+window.mostrarPantallaSeleccionCompetencia = mostrarPantallaSeleccionCompetencia;
 window.mostrarPantallaJuego = mostrarPantallaJuego;
 window.mostrarPantallaResultados = mostrarPantallaResultados;
 window.volverAGrados = volverAGrados;
 window.volverAMaterias = volverAMaterias;
+window.volverACompetencias = volverACompetencias;
 window.mostrarModal = mostrarModal;
 window.ocultarModal = ocultarModal;
 window.mostrarPantallaFelicitaciones = mostrarPantallaFelicitaciones;

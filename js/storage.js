@@ -89,3 +89,48 @@ function guardarDificultadMateria(grado, materia, dificultad) {
 function getDificultadGuardada(grado, materia) {
     return jugadores[nickname]?.dificultadPorGrado?.[grado]?.[materia] || null;
 }
+
+// Guardar progreso de competencia
+function guardarProgresoCompetencia(grado, materia, competencia, puntaje, completado) {
+    if (!jugadores[nickname]) return;
+    
+    if (!jugadores[nickname].competencias) {
+        jugadores[nickname].competencias = {};
+    }
+    if (!jugadores[nickname].competencias[grado]) {
+        jugadores[nickname].competencias[grado] = {};
+    }
+    if (!jugadores[nickname].competencias[grado][materia]) {
+        jugadores[nickname].competencias[grado][materia] = {};
+    }
+    
+    jugadores[nickname].competencias[grado][materia][competencia] = {
+        puntaje: puntaje,
+        completado: completado
+    };
+    
+    guardarJugadores();
+}
+
+// Obtener progreso de competencia
+function getProgresoCompetencia(grado, materia, competencia) {
+    if (!jugadores[nickname]?.competencias?.[grado]?.[materia]?.[competencia]) {
+        return { puntaje: 0, completado: false };
+    }
+    return jugadores[nickname].competencias[grado][materia][competencia];
+}
+
+// Exponer al scope global
+window.jugadores = jugadores;
+window.nickname = nickname;
+window.cargarJugadores = cargarJugadores;
+window.guardarJugadores = guardarJugadores;
+window.getJugadorActual = getJugadorActual;
+window.crearActualizarJugador = crearActualizarJugador;
+window.actualizarPuntajeJugador = actualizarPuntajeJugador;
+window.guardarProgresoCurso = guardarProgresoCurso;
+window.getProgresoCurso = getProgresoCurso;
+window.guardarDificultadMateria = guardarDificultadMateria;
+window.getDificultadGuardada = getDificultadGuardada;
+window.guardarProgresoCompetencia = guardarProgresoCompetencia;
+window.getProgresoCompetencia = getProgresoCompetencia;

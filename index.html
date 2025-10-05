@@ -117,6 +117,31 @@
         </div>
     </div>
 
+    <!-- Pantalla de selección de competencia (AÑADIR DESPUÉS DE seleccion-materia en el HTML principal) -->
+    <div id="seleccion-competencia" class="screen hidden py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <button onclick="volverAMaterias()" class="mb-6 flex items-center text-indigo-600 hover:text-indigo-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver a materias
+            </button>
+            
+            <h2 id="titulo-materia-competencia" class="titulo text-4xl mb-8 text-center"></h2>
+            
+            <div class="mb-6 p-4 bg-indigo-50 rounded-lg">
+                <p class="text-center text-gray-700">
+                    <span class="font-bold text-indigo-700">💡 Selecciona una competencia</span><br>
+                    Cada competencia agrupa preguntas relacionadas con un tema específico
+                </p>
+            </div>
+            
+            <div id="competencias-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Las competencias se renderizan dinámicamente aquí -->
+            </div>
+        </div>
+    </div>
+
     <!-- Pantalla de juego -->
     <div id="juego" class="screen hidden py-12 px-4">
         <div class="max-w-4xl mx-auto">

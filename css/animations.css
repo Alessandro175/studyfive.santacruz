@@ -382,3 +382,75 @@
         opacity: 1;
     }
 }
+
+/* Estilos para inputs de respuesta de texto */
+#respuesta-texto-input {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#respuesta-texto-input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+#respuesta-texto-input.border-green-400 {
+    animation: correctInputPulse 0.5s ease-in-out;
+}
+
+#respuesta-texto-input.border-red-400 {
+    animation: incorrectInputShake 0.5s ease-in-out;
+}
+
+@keyframes correctInputPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+    }
+}
+
+@keyframes incorrectInputShake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+/* Botón de validar respuesta */
+#btn-validar-respuesta {
+    transition: all 0.3s ease;
+}
+
+#btn-validar-respuesta:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+#btn-validar-respuesta:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Instrucciones de validación */
+.bg-indigo-50 {
+    animation: fadeInDown 0.4s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
