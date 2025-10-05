@@ -91,8 +91,8 @@ function renderCompetencias(materia) {
         div.innerHTML = `
             <div class="text-center">
                 <div class="text-6xl mb-3">${icon}</div>
-                <h3 class="text-xl font-bold mb-2">Competencia ${numeroCompetencia}</h3>
-                <p class="text-sm text-gray-600 mb-2">${comp.replace('competencia', 'Competencia ')}</p>
+                <h3 class="text-xl font-bold mb-2">${comp.replace('competencia', 'Competencia ')}</h3>
+                <p class="text-sm text-gray-600 mb-2">Competencia ${numeroCompetencia} </p>
                 <p class="text-xs text-gray-500">${totalPreguntas} preguntas disponibles</p>
                 ${puntaje > 0 ? `<p class="text-sm font-bold text-indigo-600 mt-2">Puntaje: ${puntaje} pts</p>` : ''}
                 ${completado ? '<span class="absolute top-2 right-2 bg-green-400 text-white px-2 py-1 rounded text-xs">¡Completado!</span>' : ''}

@@ -21,27 +21,58 @@ function crearModalDificultadSiNoExiste() {
     modal.id = 'modal-dificultad';
     modal.className = 'fixed inset-0 z-70 flex items-center justify-center bg-black bg-opacity-50 hidden';
     modal.innerHTML = `
-        <div class="bg-white rounded-xl p-6 max-w-lg w-full">
-            <h3 id="modal-dificultad-titulo" class="text-xl font-bold mb-3 text-center">Selecciona dificultad</h3>
-            <div id="modal-dificultad-opciones" class="flex gap-4 justify-center mb-4">
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="modal-dificultad" value="facil"> Fácil
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="modal-dificultad" value="intermedio"> Intermedio
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                    <input type="radio" name="modal-dificultad" value="dificil"> Difícil
-                </label>
+    <div class="bg-white rounded-xl p-6 max-w-lg w-full animate-fadeIn">
+        <h3 id="modal-dificultad-titulo" class="text-xl font-bold mb-6 text-center text-indigo-700">
+        Selecciona dificultad
+        </h3>
+
+        <!-- Opciones como cards -->
+        <div id="modal-dificultad-opciones" class="grid grid-cols-3 gap-4 mb-6">
+        
+        <label class="cursor-pointer">
+            <input type="radio" name="modal-dificultad" value="facil" class="hidden peer" />
+            <div class="flex flex-col items-center p-4 rounded-xl shadow transition transform duration-300 ease-in-out 
+            bg-green-50 hover:scale-105 hover:shadow-lg peer-checked:ring-4 peer-checked:ring-green-400 peer-checked:bg-green-100">
+            <div class="text-4xl mb-2">🌱</div>
+            <p class="text-sm font-medium text-gray-700">Fácil</p>
             </div>
-            <div class="flex justify-between">
-                <button id="btn-modal-dificultad-saltar" class="px-4 py-2 rounded border">Usar todas</button>
-                <div>
-                    <button id="btn-modal-dificultad-cancel" class="px-4 py-2 rounded mr-2">Cancelar</button>
-                    <button id="btn-modal-dificultad-confirm" class="px-4 py-2 rounded bg-indigo-600 text-white">Confirmar</button>
-                </div>
+        </label>
+
+        <label class="cursor-pointer">
+            <input type="radio" name="modal-dificultad" value="intermedio" class="hidden peer" />
+            <div class="flex flex-col items-center p-4 rounded-xl shadow transition transform duration-300 ease-in-out 
+            bg-yellow-50 hover:scale-105 hover:shadow-lg peer-checked:ring-4 peer-checked:ring-yellow-400 peer-checked:bg-yellow-100">
+            <div class="text-4xl mb-2">⚡</div>
+            <p class="text-sm font-medium text-gray-700">Intermedio</p>
             </div>
+        </label>
+
+        <label class="cursor-pointer">
+            <input type="radio" name="modal-dificultad" value="dificil" class="hidden peer" />
+            <div class="flex flex-col items-center p-4 rounded-xl shadow transition transform duration-300 ease-in-out 
+            bg-red-50 hover:scale-105 hover:shadow-lg peer-checked:ring-4 peer-checked:ring-red-400 peer-checked:bg-red-100">
+            <div class="text-4xl mb-2">🔥</div>
+            <p class="text-sm font-medium text-gray-700">Difícil</p>
+            </div>
+        </label>
+
         </div>
+
+        <!-- Botones -->
+        <div class="flex justify-between items-center">
+        <button id="btn-modal-dificultad-saltar" class="px-4 py-2 rounded border hover:bg-gray-100 transition">
+            Usar todas
+        </button>
+        <div class="flex gap-2">
+            <button id="btn-modal-dificultad-cancel" class="px-4 py-2 rounded hover:bg-gray-100 transition">
+            Cancelar
+            </button>
+            <button id="btn-modal-dificultad-confirm" class="px-4 py-2 rounded bg-indigo-600 text-white hover:bg-indigo-700 transition">
+            Confirmar
+            </button>
+        </div>
+        </div>
+    </div>
     `;
     document.body.appendChild(modal);
     
@@ -101,19 +132,14 @@ function confirmarDificultadModal(usarTodas = false) {
     
     window.dificultadSeleccionada = seleccion;
     modal.classList.add('hidden');
+
+    const src = videoTutoriales[materiaSeleccionada] || null;
+    mostrarVideoTutorial(materiaSeleccionada, src, seleccion);
     
-    // Si viene de una competencia, iniciar juego directamente
-    if (competenciaSeleccionada) {
-        iniciarJuegoConCompetencia(seleccion);
-    } else {
-        // Si no, abrir video tutorial (flujo original)
-        const src = videoTutoriales[materiaSeleccionada] || null;
-        mostrarVideoTutorial(materiaSeleccionada, src);
-    }
 }
 
 // Mostrar video tutorial
-function mostrarVideoTutorial(materia, videoSrc) {
+function mostrarVideoTutorial(materia, videoSrc, seleccion) {
     window.pendingMateria = materia || window.pendingMateria;
     
     let modal = document.getElementById('modal-video');
@@ -169,14 +195,14 @@ function mostrarVideoTutorial(materia, videoSrc) {
     const btnIniciar = modal.querySelector('#btn-iniciar-desde-video');
     if (btnIniciar) {
         btnIniciar.replaceWith(btnIniciar.cloneNode(true));
-        modal.querySelector('#btn-iniciar-desde-video').addEventListener('click', iniciarSeccionDesdeVideo);
+        modal.querySelector('#btn-iniciar-desde-video').addEventListener('click', () => iniciarSeccionDesdeVideo(seleccion));
     }
     
     modal.classList.remove('hidden');
 }
 
 // Iniciar sección desde video
-function iniciarSeccionDesdeVideo() {
+function iniciarSeccionDesdeVideo(seleccion) {
     const modal = document.getElementById('modal-video');
     if (modal) modal.classList.add('hidden');
     
@@ -185,7 +211,8 @@ function iniciarSeccionDesdeVideo() {
     
     if (typeof window.seleccionarMateria === 'function') {
         try {
-            window.seleccionarMateria(materia, dif);
+            iniciarJuegoConCompetencia(seleccion)
+            //window.seleccionarMateria(materia, dif);
         } catch (e) {
             console.error('Error al iniciar materia:', e);
         }
