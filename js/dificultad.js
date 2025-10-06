@@ -3,15 +3,40 @@
 window.dificultadSeleccionada = null;
 window.pendingMateria = null;
 
-// Mapa de videos por materia
-const videoTutoriales = {
-    "Inglés": "https://www.youtube.com/embed/ysz5S6PUM-U",
-    "Matemática": "https://www.youtube.com/embed/ysz5S6PUM-U",
-    "Comunicación": "https://www.youtube.com/embed/ysz5S6PUM-U",
-    "Ciencia y Tecnología": "https://www.youtube.com/embed/ysz5S6PUM-U",
-    "Personal Social": "https://www.youtube.com/embed/ysz5S6PUM-U",
-    "Arte y Cultura": "https://www.youtube.com/embed/ysz5S6PUM-U"
-};
+// Función para obtener la ruta del video local según materia, competencia y dificultad
+function obtenerRutaVideo(materia, competencia, dificultad , grado) {
+    if (!materia || !competencia || !dificultad || !grado) {
+        console.warn('Faltan parámetros:', { materia, competencia, dificultad, grado });
+        return null;
+    }
+    
+    // Extraer número de competencia (ej: "competencia1" -> "1")
+    const numeroCompetencia = competencia.replace(/\D/g, '');
+    
+    if (!numeroCompetencia) {
+        console.error('No se pudo extraer número de competencia:', competencia);
+        return null;
+    }
+    
+    // Normalizar dificultad para coincidir con nombres de carpetas
+    let carpetaDificultad;
+    if (dificultad === 'facil') {
+        carpetaDificultad = 'Facil';
+    } else if (dificultad === 'intermedio') {
+        carpetaDificultad = 'Intermedio';
+    } else if (dificultad === 'dificil') {
+        carpetaDificultad = 'Dificil';
+    } else {
+        console.error('Dificultad no válida:', dificultad);
+        return null;
+    }
+    
+    // Construir ruta: videos/Materia/competencia N/Dificultad/video.mp4
+    const ruta = `videos/${materia}/competencia ${numeroCompetencia}/${carpetaDificultad}/${grado}/video.mp4`;
+    
+    console.log('Ruta de video generada:', ruta);
+    return ruta;
+}
 
 // Crear modal de dificultad si no existe
 function crearModalDificultadSiNoExiste() {
@@ -133,17 +158,28 @@ function confirmarDificultadModal(usarTodas = false) {
     window.dificultadSeleccionada = seleccion;
     modal.classList.add('hidden');
 
-    const src = videoTutoriales[materiaSeleccionada] || null;
+    // Obtener competencia actualmente seleccionada
+    const competenciaActual = window.competenciavideo || null;
+    
+    // Obtener ruta del video local
+    const src = obtenerRutaVideo(materiaSeleccionada, competenciaActual, seleccion, window.gradoSeleccionado);
     mostrarVideoTutorial(materiaSeleccionada, src, seleccion);
     
 }
 
 // Mostrar video tutorial
 function mostrarVideoTutorial(materia, videoSrc, seleccion) {
+    // 🛑 Paso 1: Detener todo el audio de fondo al mostrar el tutorial
+    if (window.detenerTodoAudioFondo) {
+        window.detenerTodoAudioFondo();
+    }
+    //console.log('Mostrando video tutorial:', { materia, videoSrc, seleccion, grado });
+    
     window.pendingMateria = materia || window.pendingMateria;
     
     let modal = document.getElementById('modal-video');
     if (!modal) {
+        // ... (código de creación del modal, sin cambios aquí) ...
         modal = document.createElement('div');
         modal.id = 'modal-video';
         modal.className = 'fixed inset-0 z-60 flex items-center justify-center bg-black bg-opacity-60 hidden';
@@ -163,7 +199,13 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
             </div>
         `;
         document.body.appendChild(modal);
-        modal.querySelector('#modal-video-cerrar').addEventListener('click', cerrarVideo);
+        // También debes asegurar que al cerrar el modal, se reactive el audio de fondo
+        modal.querySelector('#modal-video-cerrar').addEventListener('click', () => {
+             cerrarVideo();
+             if (window.volverAudioLobby) {
+                 window.volverAudioLobby();
+             }
+        });
     }
     
     const titulo = modal.querySelector('#video-titulo');
@@ -171,31 +213,70 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
     
     if (titulo) titulo.textContent = materia ? `${materia} — Tutorial` : 'Tutorial';
     
-    // Limpiar y crear iframe
+    // Limpiar y crear elemento de video
     container.innerHTML = '';
     if (videoSrc) {
-        let src = videoSrc;
-        if (src.includes('watch?v=')) src = src.replace('watch?v=', 'embed/');
-        if (!src.includes('?')) src += '?autoplay=1&mute=1';
-        else src += '&autoplay=1&mute=1';
-        
-        const iframe = document.createElement('iframe');
-        iframe.width = '100%';
-        iframe.height = '100%';
-        iframe.src = src;
-        iframe.allow = 'autoplay; encrypted-media';
-        iframe.frameBorder = '0';
-        iframe.allowFullscreen = true;
-        container.appendChild(iframe);
+        // Verificar si es un video local (.mp4) o un embed de YouTube
+        if (videoSrc.endsWith('.mp4') || videoSrc.includes('/videos/')) {
+            // Video local
+            const video = document.createElement('video');
+            video.className = 'w-full h-full';
+            video.controls = true;
+            video.autoplay = true;
+            // ❌ REMOVIDO: video.muted = true; -> Esto permite que el video tenga sonido
+            
+            const source = document.createElement('source');
+            source.src = videoSrc;
+            source.type = 'video/mp4';
+            
+            video.appendChild(source);
+            video.innerHTML += '<p class="text-white text-center">Tu navegador no soporta videos HTML5.</p>';
+            
+            container.appendChild(video);
+
+            // También podemos asegurar que al terminar el video, vuelva el audio de fondo
+            video.onended = () => {
+                if (window.volverAudioLobby) {
+                    window.volverAudioLobby();
+                }
+            };
+            
+        } else {
+            // Video de YouTube (embed)
+            let src = videoSrc;
+            if (src.includes('watch?v=')) src = src.replace('watch?v=', 'embed/');
+            // ❌ MODIFICADO: Remover 'mute=1' para que el video tenga sonido
+            if (!src.includes('?')) src += '?autoplay=1';
+            else src = src.replace('&mute=1', '').replace('?mute=1', '') + '&autoplay=1'; // Limpiar por si acaso
+
+            const iframe = document.createElement('iframe');
+            iframe.width = '100%';
+            iframe.height = '100%';
+            iframe.src = src;
+            iframe.allow = 'autoplay; encrypted-media';
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            container.appendChild(iframe);
+        }
     } else {
         container.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-400">No hay tutorial disponible.</div>';
+        // Si no hay video, podríamos considerar no silenciar el fondo
+        if (window.volverAudioLobby) {
+             window.volverAudioLobby();
+         }
     }
     
     // Actualizar botón de iniciar
     const btnIniciar = modal.querySelector('#btn-iniciar-desde-video');
     if (btnIniciar) {
         btnIniciar.replaceWith(btnIniciar.cloneNode(true));
-        modal.querySelector('#btn-iniciar-desde-video').addEventListener('click', () => iniciarSeccionDesdeVideo(seleccion));
+        // 🛑 Paso 3: Al saltar, también reactivar el audio de fondo antes de iniciar la sección
+        modal.querySelector('#btn-iniciar-desde-video').addEventListener('click', () => {
+            if (window.volverAudioLobby) {
+                window.volverAudioLobby();
+            }
+            iniciarSeccionDesdeVideo(seleccion);
+        });
     }
     
     modal.classList.remove('hidden');
@@ -204,7 +285,35 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
 // Iniciar sección desde video
 function iniciarSeccionDesdeVideo(seleccion) {
     const modal = document.getElementById('modal-video');
+    
+    // 🛑 Paso 1: Pausar el video/iframe
+    if (modal) {
+        const videoElement = modal.querySelector('#video-container video, #video-container iframe');
+        
+        if (videoElement) {
+            if (videoElement.tagName === 'VIDEO') {
+                // Para el elemento <video> local, podemos usar el método pause()
+                videoElement.pause();
+            } else if (videoElement.tagName === 'IFRAME') {
+                // Para el iframe de YouTube, debemos detener la reproducción 
+                // estableciendo su fuente a un valor sin 'autoplay'.
+                // La forma más simple y compatible es recargar sin autoplay.
+                // Sin embargo, como el modal se oculta inmediatamente, 
+                // simplemente ocultarlo es suficiente, pero por seguridad, 
+                // podemos vaciar la fuente.
+                videoElement.src = ''; 
+            }
+        }
+    }
+    
+    // Ocultar el modal (ahora después de intentar pausar el video)
     if (modal) modal.classList.add('hidden');
+    
+    // 🛑 Paso 2: Reactivar el audio del juego
+    // La función 'volverAudioLobby' ya fue añadida a window en la respuesta anterior
+    if (window.volverAudioLobby) {
+        window.volverAudioLobby();
+    }
     
     const materia = window.pendingMateria;
     const dif = window.dificultadSeleccionada || localStorage.getItem('dificultad') || null;
@@ -231,3 +340,4 @@ window.confirmarDificultadModal = confirmarDificultadModal;
 window.mostrarVideoTutorial = mostrarVideoTutorial;
 window.iniciarSeccionDesdeVideo = iniciarSeccionDesdeVideo;
 window.cerrarVideo = cerrarVideo;
+window.obtenerRutaVideo = obtenerRutaVideo;

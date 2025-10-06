@@ -4,7 +4,7 @@ const bancoPreguntas = {
       'Inglés': [
 // INGLÉS - 1° PRIMARIA - MY WORLD (Saludos básicos)
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'hola' in English?",
     opciones: ["Goodbye", "Hi", "Thanks", "Please"],
@@ -12,7 +12,7 @@ const bancoPreguntas = {
     explicacion: "‘Hi’ significa ‘hola’ en inglés."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "Which word also means 'hola' in English?",
     opciones: ["Hello", "Bye", "Night", "Morning"],
@@ -20,7 +20,7 @@ const bancoPreguntas = {
     explicacion: "‘Hello’ también significa ‘hola’ en inglés."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What do you say in the morning to greet someone?",
     opciones: ["Good morning", "Good afternoon", "Good night", "Goodbye"],
@@ -28,7 +28,7 @@ const bancoPreguntas = {
     explicacion: "‘Good morning’ se usa para decir buenos días."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'buenas tardes' in English?",
     opciones: ["Good morning", "Good evening", "Good afternoon", "Goodbye"],
@@ -36,7 +36,7 @@ const bancoPreguntas = {
     explicacion: "‘Good afternoon’ significa ‘buenas tardes’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'buenas noches' (al saludar) in English?",
     opciones: ["Good night", "Good evening", "Good morning", "Hi"],
@@ -44,7 +44,7 @@ const bancoPreguntas = {
     explicacion: "‘Good evening’ se usa para saludar en la noche."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'buenas noches' (al despedirse) in English?",
     opciones: ["Good evening", "Good night", "Good morning", "Goodbye"],
@@ -52,7 +52,7 @@ const bancoPreguntas = {
     explicacion: "‘Good night’ se usa para despedirse en la noche."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What do you say to ask someone '¿Cómo estás?'",
     opciones: ["How are you?", "Who are you?", "Where are you?", "What is your name?"],
@@ -60,7 +60,7 @@ const bancoPreguntas = {
     explicacion: "‘How are you?’ significa ‘¿Cómo estás?’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "If someone says 'How are you?', what can you answer?",
     opciones: ["Fine, thanks", "Goodbye", "Hello", "Please"],
@@ -68,7 +68,7 @@ const bancoPreguntas = {
     explicacion: "Se responde ‘Fine, thanks’ (Bien, gracias)."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What do you say after 'Fine, thanks'?",
     opciones: [, "See you", "Hello", "And you?"],
@@ -76,7 +76,7 @@ const bancoPreguntas = {
     explicacion: "Se dice ‘And you?’ (¿Y tú?)."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'adiós' in English?",
     opciones: ["Hello", "Hi", "Goodbye", "Morning"],
@@ -84,7 +84,7 @@ const bancoPreguntas = {
     explicacion: "‘Goodbye’ significa ‘adiós’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What is another way to say 'Goodbye'?",
     opciones: ["Please", "Hi", "Thanks", "See you"],
@@ -92,7 +92,7 @@ const bancoPreguntas = {
     explicacion: "‘See you’ también significa ‘adiós’ o ‘nos vemos’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "When you meet a friend, what can you say?",
     opciones: ["Bye", "Good night","Hello", "Please"],
@@ -100,7 +100,7 @@ const bancoPreguntas = {
     explicacion: "‘Hello’ se usa para saludar a un amigo."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What do you say before sleeping?",
     opciones: ["Good night", "Good morning", "Good afternoon", "Hi"],
@@ -108,7 +108,7 @@ const bancoPreguntas = {
     explicacion: "‘Good night’ se dice antes de dormir."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "If your friend says 'Good morning', what do you answer?",
     opciones: ["Good morning", "Goodbye", "Good night", "Hello"],
@@ -116,7 +116,7 @@ const bancoPreguntas = {
     explicacion: "Puedes responder ‘Good morning’ también."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "If someone says 'Goodbye', you say:",
     opciones: ["Hi", "Goodbye", "Morning", "Thanks"],
@@ -124,7 +124,7 @@ const bancoPreguntas = {
     explicacion: "Respondes ‘Goodbye’ también al despedirte."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "How do you say 'buenos días' in English?",
     opciones: ["Good morning", "Good evening", "Goodbye", "Hi"],
@@ -132,7 +132,7 @@ const bancoPreguntas = {
     explicacion: "‘Good morning’ significa ‘buenos días’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What do you say when you meet someone at night?",
     opciones: ["Good evening", "Good morning", "Goodbye", "Hi"],
@@ -140,7 +140,7 @@ const bancoPreguntas = {
     explicacion: "‘Good evening’ se usa para saludar por la noche."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "Which phrase means 'Estoy bien, gracias'?",
     opciones: ["How are you?", "Fine, thanks", "Goodbye", "Please"],
@@ -148,7 +148,7 @@ const bancoPreguntas = {
     explicacion: "‘Fine, thanks’ significa ‘Estoy bien, gracias’."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "If someone says 'Fine, thanks and you?', what do you answer?",
     opciones: ["Fine, thanks", "Good night", "Goodbye", "See you"],
@@ -156,7 +156,7 @@ const bancoPreguntas = {
     explicacion: "Respondes ‘Fine, thanks’ (Bien, gracias)."
 },
 {
-    dificultad: "fácil",
+    dificultad: "facil",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "Which word means 'nos vemos'?",
     opciones: ["See you", "Good morning", "Hi", "Good night"],
@@ -3909,7 +3909,7 @@ const bancoPreguntas = {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Qué máquina simple nos ayuda a subir cosas pesadas?",
                 opciones: ["Palanca", "Rueda", "Tornillo", "Todas las anteriores"],
                 respuestaCorrecta: 3,
-                explicacion: "La palanca, la rueda y el tornillo son máquinas simples que nos ayudan a mover cosas pesadas más fácilmente."
+                explicacion: "La palanca, la rueda y el tornillo son máquinas simples que nos ayudan a mover cosas pesadas más facilmente."
             },
             {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Cuál es el estado del agua cuando está muy fría?",
@@ -3951,7 +3951,7 @@ const bancoPreguntas = {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Cuál es el metal más común que se usa para hacer monedas?",
                 opciones: ["Oro", "Plata", "Cobre", "Hierro"],
                 respuestaCorrecta: 2,
-                explicacion: "El cobre es muy usado para hacer monedas porque no se oxida fácilmente y es resistente."
+                explicacion: "El cobre es muy usado para hacer monedas porque no se oxida facilmente y es resistente."
             },
             {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Qué aparato nos permite ver cosas muy pequeñas?",
@@ -4930,7 +4930,7 @@ const bancoPreguntas = {
             },
             {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Qué significa biodegradable?",
-                opciones: ["Que se descompone de forma natural", "Que se quema fácilmente", "Que es muy fuerte", "Que es tóxico"],
+                opciones: ["Que se descompone de forma natural", "Que se quema facilmente", "Que es muy fuerte", "Que es tóxico"],
                 respuestaCorrecta: 0,
                 explicacion: "Los materiales biodegradables se descomponen con el tiempo sin contaminar."
             },

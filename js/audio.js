@@ -65,7 +65,21 @@ function volverAudioLobby() {
     }
 }
 
+// Nueva función para detener/silenciar ambos audios
+function detenerTodoAudioFondo() {
+    if (audioLobby) {
+        audioLobby.pause();
+        audioLobby.currentTime = 0;
+    }
+    if (audioResolve) {
+        audioResolve.pause();
+        audioResolve.currentTime = 0;
+    }
+}
+
+
 // Exponer funciones globalmente
 window.iniciarAudioLobby = iniciarAudioLobby;
 window.reproducirAudioResolve = reproducirAudioResolve;
 window.volverAudioLobby = volverAudioLobby;
+window.detenerTodoAudioFondo = detenerTodoAudioFondo; 

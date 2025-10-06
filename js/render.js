@@ -86,7 +86,13 @@ function renderCompetencias(materia) {
         
         const div = document.createElement('div');
         div.className = `card ${completado ? 'bg-green-100 border-2 border-green-400' : 'bg-white'} rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative`;
-        div.onclick = () => seleccionarCompetencia(comp);
+        div.onclick = () => {
+            // Guardar competencia seleccionada globalmente
+            window.competenciaSeleccionada = comp;
+            window.competenciavideo = "Competencia " + numeroCompetencia;
+            console.log('Competencia seleccionada:', comp);
+            seleccionarCompetencia(comp);
+        };
         
         div.innerHTML = `
             <div class="text-center">
@@ -165,7 +171,7 @@ function renderMaterias() {
     materias.forEach(mat => {
         const progreso = getProgresoCurso(gradoSeleccionado, mat.nombre);
         const estado = progreso.completado ? 'bg-green-100 border-2 border-green-400' : 'bg-white';
-        
+        window.gradoSeleccionado = gradoSeleccionado;
         const div = document.createElement('div');
         div.className = `card ${estado} rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative`;
         div.onclick = () => seleccionarMateria(mat.nombre);
