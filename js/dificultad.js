@@ -223,7 +223,7 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
     container.innerHTML = '';
     if (videoSrc) {
         // Verificar si es un video local (.mp4) o un embed de YouTube
-        if (videoSrc.endsWith('.mp4') || videoSrc.includes('/videos/')) {
+        if (videoSrc.endsWith('.mp4') || videoSrc.includes('/Videos/')) {
             // Video local
             const video = document.createElement('video');
             video.className = 'w-full h-full';
