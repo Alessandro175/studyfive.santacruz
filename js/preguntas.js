@@ -331,17 +331,7 @@ const bancoPreguntas = {
 
             // NIVEL MÁS COMPLICADO (10)
             
-            
-            {
-                dificultad: "facil",
-                competencia: "competencia2",
-                pregunta: "Digita el color rojo en inglés",
-                opciones: [],  // Vacío para preguntas de texto
-                tipoRespuesta: "texto",
-                tipoVal: "mayus",  // Tipo de validación
-                respuesta: "Red",  // Respuesta correcta
-                explicacion: "Red significa rojo en inglés."
-            },
+        
             {
     dificultad: "intermedio",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
@@ -502,39 +492,1490 @@ const bancoPreguntas = {
     respuestaCorrecta: 0,
     explicacion: "The zebra has stripes and looks like a horse."
 },
+        //COMPETENCIA 2:
+        // Competencia 2: Comprende textos escritos en inglés
+// Tema: My Family - Nivel Fácil (respuestas mezcladas)
+
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is she? 👩",
+    opciones: ["Mother", "Father", "Brother", "Uncle"],
+    respuestaCorrecta: 0,
+    explicacion: "She is the mother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is he? 👨",
+    opciones: ["Sister", "Father", "Aunt", "Cousin"],
+    respuestaCorrecta: 1,
+    explicacion: "He is the father."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is she? 👧",
+    opciones: ["Brother", "Sister", "Uncle", "Grandpa"],
+    respuestaCorrecta: 1,
+    explicacion: "She is the sister."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is he? 👦",
+    opciones: ["Cousin", "Father", "Brother", "Grandfather"],
+    respuestaCorrecta: 2,
+    explicacion: "He is the brother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is she? 👵",
+    opciones: ["Sister", "Mother", "Aunt", "Grandma"],
+    respuestaCorrecta: 3,
+    explicacion: "She is the grandmother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is he? 👴",
+    opciones: ["Uncle", "Father", "Grandpa", "Brother"],
+    respuestaCorrecta: 2,
+    explicacion: "He is the grandfather."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother's husband?",
+    opciones: ["Uncle", "Father", "Brother", "Cousin"],
+    respuestaCorrecta: 1,
+    explicacion: "Your mother's husband is your father."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's wife?",
+    opciones: ["Mother", "Sister", "Grandma", "Aunt"],
+    respuestaCorrecta: 0,
+    explicacion: "Your father's wife is your mother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's father?",
+    opciones: ["Brother", "Uncle", "Cousin", "Grandpa"],
+    respuestaCorrecta: 3,
+    explicacion: "Your father's father is your grandfather."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother's mother?",
+    opciones: ["Aunt", "Sister", "Grandma", "Cousin"],
+    respuestaCorrecta: 2,
+    explicacion: "Your mother's mother is your grandmother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your brother’s sister?",
+    opciones: ["Aunt", "You", "Mother", "Grandma"],
+    respuestaCorrecta: 1,
+    explicacion: "Your brother’s sister is you."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother’s brother?",
+    opciones: ["Father", "Grandpa", "Uncle", "Cousin"],
+    respuestaCorrecta: 2,
+    explicacion: "Your mother’s brother is your uncle."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your aunt’s child?",
+    opciones: ["Father", "Cousin", "Grandpa", "Brother"],
+    respuestaCorrecta: 1,
+    explicacion: "Your aunt’s child is your cousin."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's son?",
+    opciones: ["Uncle", "Cousin", "Brother", "Grandfather"],
+    respuestaCorrecta: 2,
+    explicacion: "Your father's son is your brother."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother’s daughter?",
+    opciones: ["Grandma", "Aunt", "Sister", "Cousin"],
+    respuestaCorrecta: 2,
+    explicacion: "Your mother’s daughter is your sister."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who takes care of you at home?",
+    opciones: ["Father", "Police", "Doctor", "Teacher"],
+    respuestaCorrecta: 0,
+    explicacion: "Your father takes care of you at home."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who cooks food at home?",
+    opciones: ["Mother", "Brother", "Uncle", "Friend"],
+    respuestaCorrecta: 0,
+    explicacion: "Usually, the mother cooks food at home."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who helps you with homework?",
+    opciones: ["Sister", "Mother", "Neighbor", "Grandpa"],
+    respuestaCorrecta: 1,
+    explicacion: "Your mother helps you with homework."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who drives you to school?",
+    opciones: ["Uncle", "Cousin", "Father", "Grandpa"],
+    respuestaCorrecta: 2,
+    explicacion: "Your father drives you to school."
+},
+{
+    dificultad: "facil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is part of your family?",
+    opciones: ["Dog", "Teacher", "Mother", "Police"],
+    respuestaCorrecta: 2,
+    explicacion: "Your mother is part of your family."
+},
+
+        //NIVEL AVANZADO
+        {
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's wife?",
+    opciones: ["Sister", "Mother", "Aunt", "Grandma"],
+    respuestaCorrecta: 1,
+    explicacion: "Your father's wife is your mother."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother's mother?",
+    opciones: ["Grandma", "Sister", "Aunt", "Mom"],
+    respuestaCorrecta: 0,
+    explicacion: "Your mother's mother is your grandma."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your brother's sister?",
+    opciones: ["Aunt", "You", "Cousin", "Mother"],
+    respuestaCorrecta: 1,
+    explicacion: "If you have a brother, you are his sister or brother."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your uncle's son?",
+    opciones: ["Cousin", "Father", "Nephew", "Brother"],
+    respuestaCorrecta: 0,
+    explicacion: "Your uncle’s son is your cousin."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your aunt's husband?",
+    opciones: ["Grandpa", "Brother", "Father", "Uncle"],
+    respuestaCorrecta: 3,
+    explicacion: "Your aunt's husband is your uncle."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's father?",
+    opciones: ["Cousin", "Grandpa", "Brother", "Uncle"],
+    respuestaCorrecta: 1,
+    explicacion: "Your father's father is your grandpa."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother's sister?",
+    opciones: ["Grandma", "Aunt", "Sister", "Cousin"],
+    respuestaCorrecta: 1,
+    explicacion: "Your mother's sister is your aunt."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who are your parents’ children?",
+    opciones: ["Cousins", "Aunts", "You and your siblings", "Uncles"],
+    respuestaCorrecta: 2,
+    explicacion: "Parents’ children are you and your siblings."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your brother’s father?",
+    opciones: ["Uncle", "Your father", "Cousin", "Grandpa"],
+    respuestaCorrecta: 1,
+    explicacion: "Your brother’s father is also your father."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your sister’s mother?",
+    opciones: ["Your mother", "Aunt", "Grandma", "Teacher"],
+    respuestaCorrecta: 0,
+    explicacion: "Your sister’s mother is your mother too."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your cousin’s mother?",
+    opciones: ["Mom", "Aunt", "Sister", "Grandma"],
+    respuestaCorrecta: 1,
+    explicacion: "Your cousin’s mother is your aunt."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father's brother?",
+    opciones: ["Grandpa", "Cousin", "Brother", "Uncle"],
+    respuestaCorrecta: 3,
+    explicacion: "Your father's brother is your uncle."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mom’s daughter?",
+    opciones: ["Cousin", "You or your sister", "Aunt", "Teacher"],
+    respuestaCorrecta: 1,
+    explicacion: "Your mom’s daughter is you or your sister."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your dad’s son?",
+    opciones: ["Cousin", "You or your brother", "Uncle", "Friend"],
+    respuestaCorrecta: 1,
+    explicacion: "Your dad’s son is you or your brother."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your grandma’s husband?",
+    opciones: ["Uncle", "Brother", "Grandpa", "Father"],
+    respuestaCorrecta: 2,
+    explicacion: "Your grandma’s husband is your grandpa."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your mother’s son?",
+    opciones: ["Uncle", "You or your brother", "Father", "Cousin"],
+    respuestaCorrecta: 1,
+    explicacion: "Your mother’s son is you or your brother."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your uncle’s daughter?",
+    opciones: ["Grandma", "Sister", "Aunt", "Cousin"],
+    respuestaCorrecta: 3,
+    explicacion: "Your uncle’s daughter is your cousin."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your father’s sister?",
+    opciones: ["Mom", "Aunt", "Grandma", "Sister"],
+    respuestaCorrecta: 1,
+    explicacion: "Your father’s sister is your aunt."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who is your aunt’s child?",
+    opciones: ["Cousin", "Brother", "Friend", "Uncle"],
+    respuestaCorrecta: 0,
+    explicacion: "Your aunt’s child is your cousin."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Who are your grandparents’ children?",
+    opciones: ["Teachers", "Cousins", "Your parents and uncles", "Friends"],
+    respuestaCorrecta: 2,
+    explicacion: "Grandparents’ children are your parents and uncles."
+},
+// NIVEL DIFICIL
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which meat is most common in Madre de Dios?",
+    opciones: ["Chicken", "Beef", "Monkey meat", "Pork"],
+    respuestaCorrecta: 0,
+    explicacion: "Chicken (pollo) is very common in Madre de Dios."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fruit is typical from Madre de Dios?",
+    opciones: ["Apple", "Camu camu", "Banana", "Orange"],
+    respuestaCorrecta: 1,
+    explicacion: "Camu camu is a fruit native to Madre de Dios."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "What fish is common in Madre de Dios rivers?",
+    opciones: ["Tuna", "Trout", "Paiche", "Salmon"],
+    respuestaCorrecta: 2,
+    explicacion: "Paiche is a typical fish of Madre de Dios rivers."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which vegetable is grown a lot in Madre de Dios?",
+    opciones: ["Potato", "Cassava", "Carrot", "Lettuce"],
+    respuestaCorrecta: 1,
+    explicacion: "Cassava (yuca) is widely grown in Madre de Dios."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which milk product is typical in Madre de Dios?",
+    opciones: ["Cheese", "Yogurt", "Butter", "Coconut milk"],
+    respuestaCorrecta: 3,
+    explicacion: "Coconut milk is used a lot in Madre de Dios cooking."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which egg type is common in Madre de Dios markets?",
+    opciones: ["Chicken egg", "Duck egg", "Goose egg", "Quail egg"],
+    respuestaCorrecta: 0,
+    explicacion: "Chicken eggs are the most common."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fruit is used for juice in Madre de Dios?",
+    opciones: ["Camu camu", "Pineapple", "Papaya", "Mango"],
+    respuestaCorrecta: 0,
+    explicacion: "Camu camu is popular for juices."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Paiche is a type of:",
+    opciones: ["Fruit", "Vegetable", "Fish", "Meat"],
+    respuestaCorrecta: 2,
+    explicacion: "Paiche is a fish."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which meat is eaten in stews in Madre de Dios?",
+    opciones: ["Beef", "Pork", "Chicken", "Fish"],
+    respuestaCorrecta: 3,
+    explicacion: "Fish, especially paiche, is used in stews."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fruit is native and high in vitamin C?",
+    opciones: ["Banana", "Camu camu", "Apple", "Orange"],
+    respuestaCorrecta: 1,
+    explicacion: "Camu camu has very high vitamin C."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which vegetable is made into chips in Madre de Dios?",
+    opciones: ["Potato", "Cassava", "Carrot", "Beetroot"],
+    respuestaCorrecta: 1,
+    explicacion: "Cassava chips are popular."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which milk is common in Madre de Dios desserts?",
+    opciones: ["Cow milk", "Goat milk", "Coconut milk", "Soy milk"],
+    respuestaCorrecta: 2,
+    explicacion: "Coconut milk is common in desserts."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fruit grows in Madre de Dios and is yellow inside?",
+    opciones: ["Banana", "Papaya", "Pineapple", "Camu camu"],
+    respuestaCorrecta: 1,
+    explicacion: "Papaya is yellow inside."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fish is the largest in Madre de Dios rivers?",
+    opciones: ["Paiche", "Trout", "Salmon", "Catfish"],
+    respuestaCorrecta: 0,
+    explicacion: "Paiche is the largest freshwater fish in the world."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which vegetable is used for making 'juane'?",
+    opciones: ["Cassava", "Rice", "Yucca leaves", "Corn"],
+    respuestaCorrecta: 2,
+    explicacion: "Yucca leaves are used to wrap juane."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which fruit in Madre de Dios is purple?",
+    opciones: ["Camu camu", "Blueberry", "Açaí", "Papaya"],
+    respuestaCorrecta: 2,
+    explicacion: "Açaí is a purple fruit."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which protein is eaten in Madre de Dios besides fish?",
+    opciones: ["Chicken", "Beef", "Pork", "All of them"],
+    respuestaCorrecta: 3,
+    explicacion: "People eat chicken, beef, and pork."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which milk product is used in Madre de Dios cooking?",
+    opciones: ["Coconut milk", "Evaporated milk", "Condensed milk", "Soy milk"],
+    respuestaCorrecta: 0,
+    explicacion: "Coconut milk is traditional in Madre de Dios."
+},
+{
+    dificultad: "difícil",
+    competencia: "Comprende textos escritos en inglés",
+    pregunta: "Which egg is popular in Madre de Dios street food?",
+    opciones: ["Chicken egg", "Duck egg", "Quail egg", "Goose egg"],
+    respuestaCorrecta: 0,
+    explicacion: "Chicken eggs are the most popular."
+},
+
+
+            // COMPETENCIA 3
+            {
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una biblioteca",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a library",
+    explicacion: "In my school there is a library significa En mi colegio hay una biblioteca."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay un patio de juegos",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a playground",
+    explicacion: "In my school there is a playground significa En mi colegio hay un patio de juegos."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay una pizarra",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a blackboard",
+    explicacion: "In my classroom there is a blackboard significa En mi aula hay una pizarra."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay mesas y sillas",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there are tables and chairs",
+    explicacion: "In my classroom there are tables and chairs significa En mi aula hay mesas y sillas."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay un baño",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a bathroom",
+    explicacion: "In my school there is a bathroom significa En mi colegio hay un baño."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay un laboratorio",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a laboratory",
+    explicacion: "In my school there is a laboratory significa En mi colegio hay un laboratorio."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay un profesor",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a teacher",
+    explicacion: "In my classroom there is a teacher significa En mi aula hay un profesor."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una sala de arte",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is an art room",
+    explicacion: "In my school there is an art room significa En mi colegio hay una sala de arte."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay una ventana",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a window",
+    explicacion: "In my classroom there is a window significa En mi aula hay una ventana."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay un comedor",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a dining room",
+    explicacion: "In my school there is a dining room significa En mi colegio hay un comedor."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay un reloj",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a clock",
+    explicacion: "In my classroom there is a clock significa En mi aula hay un reloj."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una cancha",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a sports field",
+    explicacion: "In my school there is a sports field significa En mi colegio hay una cancha."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay un mapa",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a map",
+    explicacion: "In my classroom there is a map significa En mi aula hay un mapa."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay un gimnasio",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a gym",
+    explicacion: "In my school there is a gym significa En mi colegio hay un gimnasio."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay un proyector",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there is a projector",
+    explicacion: "In my classroom there is a projector significa En mi aula hay un proyector."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una enfermería",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is an infirmary",
+    explicacion: "In my school there is an infirmary significa En mi colegio hay una enfermería."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi aula hay mochilas",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there are backpacks",
+    explicacion: "In my classroom there are backpacks significa En mi aula hay mochilas."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una oficina",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is an office",
+    explicacion: "In my school there is an office significa En mi colegio hay una oficina."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: Emi aula hay luces",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my classroom there are lights",
+    explicacion: "In my classroom there are lights significa En mi aula hay luces."
+},
+{
+    dificultad: "facil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita: En mi colegio hay una sala de música",
+    opciones: [], // Vacío para preguntas de texto
+    tipoRespuesta: "texto",
+    tipoVal: "minus",
+    respuesta: "in my school there is a music room",
+    explicacion: "In my school there is a music room significa En mi colegio hay una sala de música."
+},
+
+{
+                dificultad: "facil",
+                competencia: "competencia2",
+                pregunta: "Digita el color rojo en inglés",
+                opciones: [],  // Vacío para preguntas de texto
+                tipoRespuesta: "texto",
+                tipoVal: "mayus",  // Tipo de validación
+                respuesta: "Red",  // Respuesta correcta
+                explicacion: "Red significa rojo en inglés."
+            },
+            
+
+            //NIVEL INTERMEDIO
+           {
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita dormitorio en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Bedroom",
+    explicacion: "Bedroom significa dormitorio en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita cocina en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Kitchen",
+    explicacion: "Kitchen significa cocina en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita baño en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Bathroom",
+    explicacion: "Bathroom significa baño en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita sala en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Living room",
+    explicacion: "Living room significa sala en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita comedor en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Dining room",
+    explicacion: "Dining room significa comedor en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita garaje en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Garage",
+    explicacion: "Garage significa garaje en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita jardín en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Garden",
+    explicacion: "Garden significa jardín en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita balcón en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Balcony",
+    explicacion: "Balcony significa balcón en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita sótano en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Basement",
+    explicacion: "Basement significa sótano en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita techo en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Roof",
+    explicacion: "Roof significa techo en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita pasillo en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Hallway",
+    explicacion: "Hallway significa pasillo en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita puerta en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Door",
+    explicacion: "Door significa puerta en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita ventana en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Window",
+    explicacion: "Window significa ventana en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita techo en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Ceiling",
+    explicacion: "Ceiling significa techo interior en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita pared en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Wall",
+    explicacion: "Wall significa pared en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita alfombra en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Carpet",
+    explicacion: "Carpet significa alfombra en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita escalera en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Stairs",
+    explicacion: "Stairs significa escalera en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita techo exterior en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Roof",
+    explicacion: "Roof significa techo exterior en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita sala de estar en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Lounge",
+    explicacion: "Lounge significa sala de estar en inglés."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita ático en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Attic",
+    explicacion: "Attic significa ático en inglés."
+}, 
+
+
+            //NIVEL DIFIL
+            {
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita supermercado en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Supermarket",
+    explicacion: "Supermarket significa supermercado en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita hospital en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Hospital",
+    explicacion: "Hospital significa hospital en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita estación de policía en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Police Station",
+    explicacion: "Police Station significa estación de policía en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita parque en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Park",
+    explicacion: "Park significa parque en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita restaurante en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Restaurant",
+    explicacion: "Restaurant significa restaurante en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita cine en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Cinema",
+    explicacion: "Cinema significa cine en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita biblioteca en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Library",
+    explicacion: "Library significa biblioteca en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita estación de tren en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Train Station",
+    explicacion: "Train Station significa estación de tren en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita farmacia en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Pharmacy",
+    explicacion: "Pharmacy significa farmacia en inglés."
+},
+{
+    dificultad: "difil",
+    competencia: "Escribe textos breves en inglés",
+    pregunta: "Digita aeropuerto en inglés",
+    opciones: [],
+    tipoRespuesta: "texto",
+    tipoVal: "mayus",
+    respuesta: "Airport",
+    explicacion: "Airport significa aeropuerto en inglés."
+}
+
       ],   
         'Matemática': [
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 2, 4, 6, __, 10",opciones:["7","8","9","5"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 2 en 2: 2+2=4, 4+2=6, 6+2=8, 8+2=10"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 3 + 2 = __",opciones:["4","5","6","1"],respuestaCorrecta:1,explicacion:"Si tienes 3 objetos y agregas 2 más, tendrás 5 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 8 - 3 = __",opciones:["5","6","4","11"],respuestaCorrecta:0,explicacion:"Si tienes 8 objetos y quitas 3, te quedan 5 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 5, 10, 15, __",opciones:["18","20","16","25"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 5 en 5: 5+5=10, 10+5=15, 15+5=20"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 7 + 1 = __",opciones:["8","6","9","7"],respuestaCorrecta:0,explicacion:"Cuando agregas 1 a cualquier número, obtienes el siguiente número"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 10 - 2 = __",opciones:["7","8","9","12"],respuestaCorrecta:1,explicacion:"Si tienes 10 objetos y quitas 2, te quedan 8 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 5 + 3 - 2 = __",opciones:["6","7","5","10"],respuestaCorrecta:0,explicacion:"Primero sumas: 5+3=8, luego restas: 8-2=6"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 1, 3, 5, __, 9",opciones:["6","7","8","4"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 2 en 2: 1+2=3, 3+2=5, 5+2=7, 7+2=9"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 4 + 4 = __",opciones:["8","6","10","0"],respuestaCorrecta:0,explicacion:"4+4 es el doble de 4, que es igual a 8"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 7 - 4 = __",opciones:["2","3","4","11"],respuestaCorrecta:1,explicacion:"Si tienes 7 objetos y quitas 4, te quedan 3 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 10, 20, __, 40",opciones:["25","30","35","50"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 10 en 10: 10+10=20, 20+10=30, 30+10=40"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 6 + 2 = __",opciones:["8","4","7","10"],respuestaCorrecta:0,explicacion:"Si tienes 6 objetos y agregas 2 más, tendrás 8 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 9 - 5 = __",opciones:["3","4","5","14"],respuestaCorrecta:1,explicacion:"Si tienes 9 objetos y quitas 5, te quedan 4 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 4 - 1 + 3 = __",opciones:["6","5","7","2"],respuestaCorrecta:0,explicacion:"Primero restas: 4-1=3, luego sumas: 3+3=6"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 3, 6, 9, __, 15",opciones:["11","12","13","18"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 3 en 3: 3+3=6, 6+3=9, 9+3=12, 12+3=15"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 5 + 3 = __",opciones:["7","8","9","2"],respuestaCorrecta:1,explicacion:"Si tienes 5 objetos y agregas 3 más, tendrás 8 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 6 - 3 = __",opciones:["2","3","4","9"],respuestaCorrecta:1,explicacion:"Si tienes 6 objetos y quitas 3, te quedan 3 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 2, 5, 8, __",opciones:["10","11","12","13"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 3 en 3: 2+3=5, 5+3=8, 8+3=11"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 2 + 6 = __",opciones:["8","4","7","10"],respuestaCorrecta:0,explicacion:"Si tienes 2 objetos y agregas 6 más, tendrás 8 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 5 - 2 = __",opciones:["2","3","4","7"],respuestaCorrecta:1,explicacion:"Si tienes 5 objetos y quitas 2, te quedan 3 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 7 + 2 - 4 = __",opciones:["5","6","4","13"],respuestaCorrecta:0,explicacion:"Primero sumas: 7+2=9, luego restas: 9-4=5"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 4, 8, 12, __, 20",opciones:["14","16","15","24"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 4 en 4: 4+4=8, 8+4=12, 12+4=16, 16+4=20"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 1 + 8 = __",opciones:["9","7","10","8"],respuestaCorrecta:0,explicacion:"Si tienes 1 objeto y agregas 8 más, tendrás 9 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 8 - 1 = __",opciones:["6","7","9","8"],respuestaCorrecta:1,explicacion:"Si tienes 8 objetos y quitas 1, te quedan 7 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la secuencia: 1, 4, 7, __, 13",opciones:["9","10","11","8"],respuestaCorrecta:1,explicacion:"La secuencia aumenta de 3 en 3: 1+3=4, 4+3=7, 7+3=10, 10+3=13"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 9 + 1 = __",opciones:["10","8","11","9"],respuestaCorrecta:0,explicacion:"Si tienes 9 objetos y agregas 1 más, tendrás 10 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 10 - 7 = __",opciones:["2","3","4","17"],respuestaCorrecta:1,explicacion:"Si tienes 10 objetos y quitas 7, te quedan 3 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 8 - 3 + 1 = __",opciones:["5","6","4","12"],respuestaCorrecta:1,explicacion:"Primero restas: 8-3=5, luego sumas: 5+1=6"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 3 + 5 = __",opciones:["7","8","9","2"],respuestaCorrecta:1,explicacion:"Si tienes 3 objetos y agregas 5 más, tendrás 8 objetos"},
-            {dificultad: "facil", competencia: "competencia1",pregunta:"Completa la operación: 9 - 3 = __",opciones:["5","6","7","12"],respuestaCorrecta:1,explicacion:"Si tienes 9 objetos y quitas 3, te quedan 6 objetos"}
-        ],
+            {
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 1 manzana y te regalan 2 más, ¿cuántas tienes?",
+    opciones: ["2", "3", "4", "5"],
+    respuestaCorrecta: 1,
+    explicacion: "1 + 2 = 3 manzanas."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 2 + 2.",
+    opciones: ["3", "4", "5", "6"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 2 = 4."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Juan tiene 3 caramelos y compra 4 más. ¿Cuántos tiene?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "3 + 4 = 7 caramelos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 1 + 5.",
+    opciones: ["5", "6", "7", "8"],
+    respuestaCorrecta: 1,
+    explicacion: "1 + 5 = 6."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 7 globos y te dan 5 más, ¿cuántos tienes?",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "7 + 5 = 12 globos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 3 + 3.",
+    opciones: ["5", "6", "7", "8"],
+    respuestaCorrecta: 1,
+    explicacion: "3 + 3 = 6."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "María tiene 2 lápices y compra 2 más. ¿Cuántos lápices tiene?",
+    opciones: ["3", "4", "5", "6"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 2 = 4 lápices."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 5 + 4.",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "5 + 4 = 9."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 6 caramelos y te dan 3 más, ¿cuántos caramelos tienes?",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 3 = 9 caramelos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 4 + 4.",
+    opciones: ["7", "8", "9", "10"],
+    respuestaCorrecta: 1,
+    explicacion: "4 + 4 = 8."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Pedro tiene 1 pelota y compra 2 más. ¿Cuántas tiene ahora?",
+    opciones: ["2", "3", "4", "5"],
+    respuestaCorrecta: 1,
+    explicacion: "1 + 2 = 3 pelotas."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 2 + 5.",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 5 = 7."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "En un árbol hay 2 pájaros y llegan 4 más. ¿Cuántos hay?",
+    opciones: ["5", "6", "7", "8"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 4 = 6 pájaros."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 6 + 4.",
+    opciones: ["9", "10", "11", "12"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 4 = 10."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 1 caramelo y compras 7 más, ¿cuántos caramelos tienes?",
+    opciones: ["7", "8", "9", "10"],
+    respuestaCorrecta: 1,
+    explicacion: "1 + 7 = 8 caramelos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 8 + 2.",
+    opciones: ["9", "10", "11", "12"],
+    respuestaCorrecta: 1,
+    explicacion: "8 + 2 = 10."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Laura tiene 4 globos y su amigo le da 9 más. ¿Cuántos tiene?",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "4 + 9 = 13 globos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 5 + 6.",
+    opciones: ["10", "11", "12", "13"],
+    respuestaCorrecta: 1,
+    explicacion: "5 + 6 = 11."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 7 caramelos y compras 6 más, ¿cuántos caramelos tienes?",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "7 + 6 = 13 caramelos."
+},
+{
+    dificultad: "fácil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 2 + 7.",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 7 = 9."
+},
+
+                    //Nivel INtermedio
+
+            {
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 8 manzanas y comes 3, ¿cuántas manzanas quedan?",
+    opciones: ["4", "5", "6", "7"],
+    respuestaCorrecta: 1,
+    explicacion: "8 - 3 = 5 manzanas."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 7 + 5.",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "7 + 5 = 12."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Pedro tenía 10 caramelos y regaló 6. ¿Cuántos le quedan?",
+    opciones: ["3", "4", "5", "6"],
+    respuestaCorrecta: 1,
+    explicacion: "10 - 6 = 4 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 4 + 9.",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "4 + 9 = 13."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Ana tiene 15 caramelos y come 8. ¿Cuántos le quedan?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "15 - 8 = 7 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 6 + 7.",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 7 = 13."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 9 globos y 4 se rompen, ¿cuántos tienes?",
+    opciones: ["4", "5", "6", "7"],
+    respuestaCorrecta: 1,
+    explicacion: "9 - 4 = 5 globos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 5 + 8.",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "5 + 8 = 13."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Juan tenía 12 caramelos y regaló 7. ¿Cuántos le quedan?",
+    opciones: ["4", "5", "6", "7"],
+    respuestaCorrecta: 1,
+    explicacion: "12 - 7 = 5 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 3 + 11.",
+    opciones: ["13", "14", "15", "16"],
+    respuestaCorrecta: 1,
+    explicacion: "3 + 11 = 14."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 6 + 6.",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 6 = 12."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 14 caramelos y comes 5, ¿cuántos tienes?",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "14 - 5 = 9 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 7 + 6.",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 1,
+    explicacion: "7 + 6 = 13."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 11 galletas y comes 4, ¿cuántas quedan?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "11 - 4 = 7 galletas."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 4 + 8.",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "4 + 8 = 12."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 13 caramelos y das 6, ¿cuántos quedan?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "13 - 6 = 7 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 2 + 10.",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "2 + 10 = 12."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 15 caramelos y comes 9, ¿cuántos quedan?",
+    opciones: ["5", "6", "7", "8"],
+    respuestaCorrecta: 1,
+    explicacion: "15 - 9 = 6 caramelos."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma 8 + 7.",
+    opciones: ["14", "15", "16", "17"],
+    respuestaCorrecta: 1,
+    explicacion: "8 + 7 = 15."
+},
+{
+    dificultad: "intermedio",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 16 caramelos y das 8, ¿cuántos quedan?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 2,
+    explicacion: "16 - 8 = 8 caramelos."
+},
+//NIVEL DIFICL
+            
+  {
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Pedro tiene 5 caramelos, compra 2 más, luego recibe 4 de su amigo, pero come 6 y regala 1. ¿Cuántos caramelos tiene ahora?",
+    opciones: ["4", "3", "2", "5"],
+    respuestaCorrecta: 0,
+    explicacion: "5 + 2 + 4 - 6 - 1 = 4 caramelos."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Ana tenía 10 lápices, le dieron 3, luego perdió 5 y después encontró 2 más. ¿Cuántos lápices tiene ahora?",
+    opciones: ["9", "10", "8", "7"],
+    respuestaCorrecta: 1,
+    explicacion: "10 + 3 - 5 + 2 = 10 lápices."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "En una granja hay 6 vacas, llegan 5 más, se venden 3, luego llegan 4 terneros. ¿Cuántos animales hay en total?",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 5 - 3 + 4 = 12 animales."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Luis tiene 8 galletas, compra 7, regala 4, encuentra 2 más y luego pierde 1. ¿Cuántas galletas tiene?",
+    opciones: ["10", "12", "11", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "8 + 7 - 4 + 2 - 1 = 12 galletas."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "María tenía 9 flores, recibe 5 más, regala 3, compra 4 y da 2. ¿Cuántas flores tiene ahora?",
+    opciones: ["12", "13", "14", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "9 + 5 - 3 + 4 - 2 = 13 flores."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "En una fiesta había 7 niños, llegaron 6 más, se fueron 5, llegaron 4 y luego se fueron 2. ¿Cuántos niños quedaron?",
+    opciones: ["10", "11", "9", "8"],
+    respuestaCorrecta: 0,
+    explicacion: "7 + 6 - 5 + 4 - 2 = 10 niños."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Pedro tenía 4 canicas, compra 5, regala 3, encuentra 2 y pierde 1. ¿Cuántas canicas tiene ahora?",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "4 + 5 - 3 + 2 - 1 = 7 canicas."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Juan tenía 12 chocolates, come 4, recibe 3, regala 5 y luego compra 2 más. ¿Cuántos chocolates tiene ahora?",
+    opciones: ["7", "8", "9", "10"],
+    respuestaCorrecta: 1,
+    explicacion: "12 - 4 + 3 - 5 + 2 = 8 chocolates."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "En un parque había 5 bicicletas, llegaron 7 más, se retiraron 4, llegaron 3 y se llevaron 2. ¿Cuántas bicicletas hay?",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "5 + 7 - 4 + 3 - 2 = 9 bicicletas."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Luis tenía 6 caramelos, recibe 4, regala 3, compra 5 más y come 2. ¿Cuántos caramelos tiene?",
+    opciones: ["9", "10", "11", "12"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 4 - 3 + 5 - 2 = 10 caramelos."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma y resta: 5 + 4 + 2 - 3 - 1.",
+    opciones: ["6", "7", "8", "9"],
+    respuestaCorrecta: 1,
+    explicacion: "5 + 4 + 2 - 3 - 1 = 7."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 10 juguetes, compras 3 más, regalas 4, recibes 2 y pierdes 1. ¿Cuántos juguetes quedan?",
+    opciones: ["10", "11", "12", "13"],
+    respuestaCorrecta: 0,
+    explicacion: "10 + 3 - 4 + 2 - 1 = 10 juguetes."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "María tenía 8 chocolates, recibió 5 más, regaló 6, compró 2 y luego perdió 1. ¿Cuántos chocolates tiene?",
+    opciones: ["7", "8", "9", "10"],
+    respuestaCorrecta: 1,
+    explicacion: "8 + 5 - 6 + 2 - 1 = 8 chocolates."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma y resta: 7 + 6 - 4 + 2 - 1.",
+    opciones: ["9", "10", "11", "12"],
+    respuestaCorrecta: 1,
+    explicacion: "7 + 6 - 4 + 2 - 1 = 10."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "En un huerto hay 9 manzanas, llegan 4 más, se comen 5, caen 2 y luego se recogen 1. ¿Cuántas manzanas hay?",
+    opciones: ["10", "11", "12", "13"],
+    respuestaCorrecta: 0,
+    explicacion: "9 + 4 - 5 + 2 - 1 = 9 manzanas."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma y resta: 6 + 5 - 3 + 4 - 2.",
+    opciones: ["9", "10", "11", "12"],
+    respuestaCorrecta: 1,
+    explicacion: "6 + 5 - 3 + 4 - 2 = 10."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Juan tenía 14 canicas, le dieron 2 más, regaló 5, encontró 1 y perdió 3. ¿Cuántas tiene ahora?",
+    opciones: ["8", "9", "10", "11"],
+    respuestaCorrecta: 1,
+    explicacion: "14 + 2 - 5 + 1 - 3 = 9 canicas."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Suma y resta: 8 + 7 - 4 + 3 - 2.",
+    opciones: ["11", "12", "13", "14"],
+    respuestaCorrecta: 1,
+    explicacion: "8 + 7 - 4 + 3 - 2 = 12."
+},
+{
+    dificultad: "difícil",
+    competencia: "Resuelve problemas de cantidad",
+    pregunta: "Si tienes 16 caramelos, comes 5, recibes 4, regalas 3 y luego compras 2 más. ¿Cuántos caramelos tienes?",
+    opciones: ["12", "13", "14", "15"],
+    respuestaCorrecta: 2,
+    explicacion: "16 - 5 + 4 - 3 + 2 = 14 caramelos."
+}
+// COMPETENCIA 2
+
+
+
+                    ],
         'Comunicación': [
             {
                 dificultad: "facil", competencia: "competencia1",pregunta: "¿Qué signo se usa al terminar una pregunta?",
