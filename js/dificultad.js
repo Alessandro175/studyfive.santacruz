@@ -32,7 +32,7 @@ function obtenerRutaVideo(materia, competencia, dificultad , grado) {
     }
     
     // Construir ruta: videos/Materia/competencia N/Dificultad/video.mp4
-    const ruta = `videos/${normalizarMateria(materia)}/competencia${numeroCompetencia}/${carpetaDificultad}/${grado}/video.mp4`;
+    const ruta = `recursos/${normalizarMateria(materia)}/competencia${numeroCompetencia}/${carpetaDificultad}/${grado}/video.mp4`;
     
     console.log('Ruta de video generada:', ruta);
     return ruta;
@@ -223,7 +223,7 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
     container.innerHTML = '';
     if (videoSrc) {
         // Verificar si es un video local (.mp4) o un embed de YouTube
-        if (videoSrc.endsWith('.mp4') || videoSrc.includes('/Videos/')) {
+        if (videoSrc.endsWith('.mp4') || videoSrc.includes('/recursos/')) {
             // Video local
             const video = document.createElement('video');
             video.className = 'w-full h-full';
