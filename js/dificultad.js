@@ -191,7 +191,7 @@ function mostrarVideoTutorial(materia, videoSrc, seleccion) {
         modal.className = 'fixed inset-0 z-60 flex items-center justify-center bg-black bg-opacity-60 hidden';
         modal.innerHTML = `
             <div class="bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full relative">
-                
+                <button id="modal-video-cerrar" class="absolute right-3 top-3 text-gray-600 rounded-md px-2 py-1 hover:bg-gray-100"></button>
                 <h3 id="video-titulo" class="text-xl font-bold text-indigo-700 mb-2 text-center">Tutorial</h3>
                 <div class="w-full aspect-video mb-3">
                     <div id="video-container" class="w-full h-full bg-black rounded flex items-center justify-center"></div>
