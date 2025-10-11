@@ -164,11 +164,9 @@ const bancoPreguntas = {
     respuestaCorrecta: 0,
     explicacion: "‘See you’ significa ‘nos vemos’."
 },
-     ], 
-      
-            
+      ],          
       // NIVEL INTERMEDIO (10)
-            
+       [     
     {
         dificultad: "dificil",
         competencia: "Se comunica oralmente en inglés como lengua extranjera",
@@ -329,12 +327,10 @@ const bancoPreguntas = {
         respuestaCorrecta: 0,
         explicacion: "'Sharpener' significa 'tajador'."
     },
-                    
-
-            // NIVEL MÁS COMPLICADO (10)
-            
-        
-            {
+       ],
+      // NIVEL MÁS COMPLICADO (10)
+       [     
+     {
     dificultad: "intermedio",
     competencia: "Se comunica oralmente en inglés como lengua extranjera",
     pregunta: "What animal says 'meow'?",
@@ -494,6 +490,7 @@ const bancoPreguntas = {
     respuestaCorrecta: 0,
     explicacion: "The zebra has stripes and looks like a horse."
 },
+       ],
         //COMPETENCIA 2:
         // Competencia 2: Comprende textos escritos en inglés
 // Tema: My Family - Nivel Fácil (respuestas mezcladas)
