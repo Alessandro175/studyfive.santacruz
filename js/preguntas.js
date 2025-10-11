@@ -2,6 +2,7 @@
 const bancoPreguntas = {    
     1: {
       'Inglés': [
+      [
 // INGLÉS - 1° PRIMARIA - MY WORLD (Saludos básicos)
 {
     dificultad: "facil",
@@ -163,6 +164,7 @@ const bancoPreguntas = {
     respuestaCorrecta: 0,
     explicacion: "‘See you’ significa ‘nos vemos’."
 },
+     ], 
       
             
       // NIVEL INTERMEDIO (10)
