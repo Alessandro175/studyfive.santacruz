@@ -2,499 +2,499 @@
 const bancoPreguntas = {    
     1: {
       'Inglés': [
-      [
-// INGLÉS - 1° PRIMARIA - MY WORLD (Saludos básicos)
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'hola' in English?",
-    opciones: ["Goodbye", "Hi", "Thanks", "Please"],
-    respuestaCorrecta: 1,
-    explicacion: "‘Hi’ significa ‘hola’ en inglés."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which word also means 'hola' in English?",
-    opciones: ["Hello", "Bye", "Night", "Morning"],
-    respuestaCorrecta: 0,
-    explicacion: "‘Hello’ también significa ‘hola’ en inglés."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What do you say in the morning to greet someone?",
-    opciones: ["Good morning", "Good afternoon", "Good night", "Goodbye"],
-    respuestaCorrecta: 0,
-    explicacion: "‘Good morning’ se usa para decir buenos días."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'buenas tardes' in English?",
-    opciones: ["Good morning", "Good evening", "Good afternoon", "Goodbye"],
-    respuestaCorrecta: 2,
-    explicacion: "‘Good afternoon’ significa ‘buenas tardes’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'buenas noches' (al saludar) in English?",
-    opciones: ["Good night", "Good evening", "Good morning", "Hi"],
-    respuestaCorrecta: 1,
-    explicacion: "‘Good evening’ se usa para saludar en la noche."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'buenas noches' (al despedirse) in English?",
-    opciones: ["Good evening", "Good night", "Good morning", "Goodbye"],
-    respuestaCorrecta: 1,
-    explicacion: "‘Good night’ se usa para despedirse en la noche."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What do you say to ask someone '¿Cómo estás?'",
-    opciones: ["How are you?", "Who are you?", "Where are you?", "What is your name?"],
-    respuestaCorrecta: 0,
-    explicacion: "‘How are you?’ significa ‘¿Cómo estás?’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "If someone says 'How are you?', what can you answer?",
-    opciones: ["Fine, thanks", "Goodbye", "Hello", "Please"],
-    respuestaCorrecta: 0,
-    explicacion: "Se responde ‘Fine, thanks’ (Bien, gracias)."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What do you say after 'Fine, thanks'?",
-    opciones: [, "See you", "Hello", "And you?"],
-    respuestaCorrecta: 3,
-    explicacion: "Se dice ‘And you?’ (¿Y tú?)."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'adiós' in English?",
-    opciones: ["Hello", "Hi", "Goodbye", "Morning"],
-    respuestaCorrecta: 2,
-    explicacion: "‘Goodbye’ significa ‘adiós’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What is another way to say 'Goodbye'?",
-    opciones: ["Please", "Hi", "Thanks", "See you"],
-    respuestaCorrecta: 3,
-    explicacion: "‘See you’ también significa ‘adiós’ o ‘nos vemos’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "When you meet a friend, what can you say?",
-    opciones: ["Bye", "Good night","Hello", "Please"],
-    respuestaCorrecta: 2,
-    explicacion: "‘Hello’ se usa para saludar a un amigo."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What do you say before sleeping?",
-    opciones: ["Good night", "Good morning", "Good afternoon", "Hi"],
-    respuestaCorrecta: 0,
-    explicacion: "‘Good night’ se dice antes de dormir."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "If your friend says 'Good morning', what do you answer?",
-    opciones: ["Good morning", "Goodbye", "Good night", "Hello"],
-    respuestaCorrecta: 0,
-    explicacion: "Puedes responder ‘Good morning’ también."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "If someone says 'Goodbye', you say:",
-    opciones: ["Hi", "Goodbye", "Morning", "Thanks"],
-    respuestaCorrecta: 1,
-    explicacion: "Respondes ‘Goodbye’ también al despedirte."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "How do you say 'buenos días' in English?",
-    opciones: ["Good morning", "Good evening", "Goodbye", "Hi"],
-    respuestaCorrecta: 0,
-    explicacion: "‘Good morning’ significa ‘buenos días’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What do you say when you meet someone at night?",
-    opciones: ["Good evening", "Good morning", "Goodbye", "Hi"],
-    respuestaCorrecta: 0,
-    explicacion: "‘Good evening’ se usa para saludar por la noche."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which phrase means 'Estoy bien, gracias'?",
-    opciones: ["How are you?", "Fine, thanks", "Goodbye", "Please"],
-    respuestaCorrecta: 1,
-    explicacion: "‘Fine, thanks’ significa ‘Estoy bien, gracias’."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "If someone says 'Fine, thanks and you?', what do you answer?",
-    opciones: ["Fine, thanks", "Good night", "Goodbye", "See you"],
-    respuestaCorrecta: 0,
-    explicacion: "Respondes ‘Fine, thanks’ (Bien, gracias)."
-},
-{
-    dificultad: "facil",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which word means 'nos vemos'?",
-    opciones: ["See you", "Good morning", "Hi", "Good night"],
-    respuestaCorrecta: 0,
-    explicacion: "‘See you’ significa ‘nos vemos’."
-},
-      ],          
+       [
+        // INGLÉS - 1° PRIMARIA - MY WORLD (Saludos básicos)
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'hola' in English?",
+                        opciones: ["Goodbye", "Hi", "Thanks", "Please"],
+                        respuestaCorrecta: 1,
+                        explicacion: "‘Hi’ significa ‘hola’ en inglés."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "Which word also means 'hola' in English?",
+                        opciones: ["Hello", "Bye", "Night", "Morning"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘Hello’ también significa ‘hola’ en inglés."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What do you say in the morning to greet someone?",
+                        opciones: ["Good morning", "Good afternoon", "Good night", "Goodbye"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘Good morning’ se usa para decir buenos días."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'buenas tardes' in English?",
+                        opciones: ["Good morning", "Good evening", "Good afternoon", "Goodbye"],
+                        respuestaCorrecta: 2,
+                        explicacion: "‘Good afternoon’ significa ‘buenas tardes’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'buenas noches' (al saludar) in English?",
+                        opciones: ["Good night", "Good evening", "Good morning", "Hi"],
+                        respuestaCorrecta: 1,
+                        explicacion: "‘Good evening’ se usa para saludar en la noche."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'buenas noches' (al despedirse) in English?",
+                        opciones: ["Good evening", "Good night", "Good morning", "Goodbye"],
+                        respuestaCorrecta: 1,
+                        explicacion: "‘Good night’ se usa para despedirse en la noche."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What do you say to ask someone '¿Cómo estás?'",
+                        opciones: ["How are you?", "Who are you?", "Where are you?", "What is your name?"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘How are you?’ significa ‘¿Cómo estás?’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "If someone says 'How are you?', what can you answer?",
+                        opciones: ["Fine, thanks", "Goodbye", "Hello", "Please"],
+                        respuestaCorrecta: 0,
+                        explicacion: "Se responde ‘Fine, thanks’ (Bien, gracias)."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What do you say after 'Fine, thanks'?",
+                        opciones: [, "See you", "Hello", "And you?"],
+                        respuestaCorrecta: 3,
+                        explicacion: "Se dice ‘And you?’ (¿Y tú?)."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'adiós' in English?",
+                        opciones: ["Hello", "Hi", "Goodbye", "Morning"],
+                        respuestaCorrecta: 2,
+                        explicacion: "‘Goodbye’ significa ‘adiós’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What is another way to say 'Goodbye'?",
+                        opciones: ["Please", "Hi", "Thanks", "See you"],
+                        respuestaCorrecta: 3,
+                        explicacion: "‘See you’ también significa ‘adiós’ o ‘nos vemos’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "When you meet a friend, what can you say?",
+                        opciones: ["Bye", "Good night","Hello", "Please"],
+                        respuestaCorrecta: 2,
+                        explicacion: "‘Hello’ se usa para saludar a un amigo."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What do you say before sleeping?",
+                        opciones: ["Good night", "Good morning", "Good afternoon", "Hi"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘Good night’ se dice antes de dormir."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "If your friend says 'Good morning', what do you answer?",
+                        opciones: ["Good morning", "Goodbye", "Good night", "Hello"],
+                        respuestaCorrecta: 0,
+                        explicacion: "Puedes responder ‘Good morning’ también."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "If someone says 'Goodbye', you say:",
+                        opciones: ["Hi", "Goodbye", "Morning", "Thanks"],
+                        respuestaCorrecta: 1,
+                        explicacion: "Respondes ‘Goodbye’ también al despedirte."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "How do you say 'buenos días' in English?",
+                        opciones: ["Good morning", "Good evening", "Goodbye", "Hi"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘Good morning’ significa ‘buenos días’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "What do you say when you meet someone at night?",
+                        opciones: ["Good evening", "Good morning", "Goodbye", "Hi"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘Good evening’ se usa para saludar por la noche."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "Which phrase means 'Estoy bien, gracias'?",
+                        opciones: ["How are you?", "Fine, thanks", "Goodbye", "Please"],
+                        respuestaCorrecta: 1,
+                        explicacion: "‘Fine, thanks’ significa ‘Estoy bien, gracias’."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "If someone says 'Fine, thanks and you?', what do you answer?",
+                        opciones: ["Fine, thanks", "Good night", "Goodbye", "See you"],
+                        respuestaCorrecta: 0,
+                        explicacion: "Respondes ‘Fine, thanks’ (Bien, gracias)."
+                    },
+                    {
+                        dificultad: "facil",
+                        competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                        pregunta: "Which word means 'nos vemos'?",
+                        opciones: ["See you", "Good morning", "Hi", "Good night"],
+                        respuestaCorrecta: 0,
+                        explicacion: "‘See you’ significa ‘nos vemos’."
+                    },
+                ],          
       // NIVEL INTERMEDIO (10)
-       [     
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'lápiz' en inglés?",
-        opciones: ["Pen", "Eraser", "Pencil", "Ruler"],
-        respuestaCorrecta: 2,
-        explicacion: "'Pencil' significa 'lápiz'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'pen'?",
-        opciones: ["Lapicero", "Lápiz", "Libro", "Pegamento"],
-        respuestaCorrecta: 0,
-        explicacion: "'Pen' se traduce como 'lapicero'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'borrador' en inglés?",
-        opciones: ["Crayon", "Glue", "Ruler", "Eraser"],
-        respuestaCorrecta: 3,
-        explicacion: "'Eraser' significa 'borrador'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'glue'?",
-        opciones: ["Regla", "Pegamento", "Cuaderno", "Cartuchera"],
-        respuestaCorrecta: 1,
-        explicacion: "'Glue' significa 'pegamento'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'tijera' en inglés?",
-        opciones: ["Pen", "Scissors", "Book", "Glue"],
-        respuestaCorrecta: 1,
-        explicacion: "'Scissors' significa 'tijera'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'ruler'?",
-        opciones: ["Pegamento", "Crayón", "Regla", "Libro"],
-        respuestaCorrecta: 2,
-        explicacion: "'Ruler' se traduce como 'regla'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'tajador' en inglés?",
-        opciones: ["Sharpener", "Book", "Pen", "Crayon"],
-        respuestaCorrecta: 0,
-        explicacion: "'Sharpener' significa 'tajador'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'crayons'?",
-        opciones: ["Lapiceros", "Tijeras", "Lápices de color", "Reglas"],
-        respuestaCorrecta: 2,
-        explicacion: "'Crayons' significa 'lápices de color'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'cuaderno' en inglés?",
-        opciones: ["Book", "Crayon", "Notebook", "Sharpener"],
-        respuestaCorrecta: 2,
-        explicacion: "'Notebook' significa 'cuaderno'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'book'?",
-        opciones: ["Tajador", "Cuaderno", "Libro", "Pegamento"],
-        respuestaCorrecta: 2,
-        explicacion: "'Book' significa 'libro'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'cartuchera' en inglés?",
-        opciones: ["Ruler", "Pencil case", "Bag", "Pen"],
-        respuestaCorrecta: 1,
-        explicacion: "'Pencil case' significa 'cartuchera'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'bag'?",
-        opciones: ["Tajador", "Mochila", "Crayón", "Cuaderno"],
-        respuestaCorrecta: 1,
-        explicacion: "'Bag' se traduce como 'mochila'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'mochila' en inglés?",
-        opciones: ["Notebook", "Bag", "Pen", "Eraser"],
-        respuestaCorrecta: 1,
-        explicacion: "'Bag' significa 'mochila'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'eraser'?",
-        opciones: ["Borrador", "Regla", "Lapicero", "Crayón"],
-        respuestaCorrecta: 0,
-        explicacion: "'Eraser' significa 'borrador'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'pegamento' en inglés?",
-        opciones: ["Sharpener", "Glue", "Ruler", "Book"],
-        respuestaCorrecta: 1,
-        explicacion: "'Glue' significa 'pegamento'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'pencil'?",
-        opciones: ["Lápiz", "Lapicero", "Tijera", "Regla"],
-        respuestaCorrecta: 0,
-        explicacion: "'Pencil' se traduce como 'lápiz'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'regla' en inglés?",
-        opciones: ["Eraser", "Crayon", "Book", "Ruler"],
-        respuestaCorrecta: 3,
-        explicacion: "'Ruler' significa 'regla'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'scissors'?",
-        opciones: ["Tijeras", "Cuadernos", "Lapiceros", "Tajadores"],
-        respuestaCorrecta: 0,
-        explicacion: "'Scissors' significa 'tijeras'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Cómo se dice 'crayones' en inglés?",
-        opciones: ["Notebook", "Eraser", "Glue", "Crayons"],
-        respuestaCorrecta: 3,
-        explicacion: "'Crayons' significa 'crayones'."
-    },
-    {
-        dificultad: "dificil",
-        competencia: "Se comunica oralmente en inglés como lengua extranjera",
-        pregunta: "¿Qué significa 'sharpener'?",
-        opciones: ["Tajador", "Lapicero", "Libro", "Cartuchera"],
-        respuestaCorrecta: 0,
-        explicacion: "'Sharpener' significa 'tajador'."
-    },
-       ],
+                [     
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'lápiz' en inglés?",
+                            opciones: ["Pen", "Eraser", "Pencil", "Ruler"],
+                            respuestaCorrecta: 2,
+                            explicacion: "'Pencil' significa 'lápiz'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'pen'?",
+                            opciones: ["Lapicero", "Lápiz", "Libro", "Pegamento"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Pen' se traduce como 'lapicero'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'borrador' en inglés?",
+                            opciones: ["Crayon", "Glue", "Ruler", "Eraser"],
+                            respuestaCorrecta: 3,
+                            explicacion: "'Eraser' significa 'borrador'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'glue'?",
+                            opciones: ["Regla", "Pegamento", "Cuaderno", "Cartuchera"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Glue' significa 'pegamento'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'tijera' en inglés?",
+                            opciones: ["Pen", "Scissors", "Book", "Glue"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Scissors' significa 'tijera'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'ruler'?",
+                            opciones: ["Pegamento", "Crayón", "Regla", "Libro"],
+                            respuestaCorrecta: 2,
+                            explicacion: "'Ruler' se traduce como 'regla'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'tajador' en inglés?",
+                            opciones: ["Sharpener", "Book", "Pen", "Crayon"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Sharpener' significa 'tajador'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'crayons'?",
+                            opciones: ["Lapiceros", "Tijeras", "Lápices de color", "Reglas"],
+                            respuestaCorrecta: 2,
+                            explicacion: "'Crayons' significa 'lápices de color'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'cuaderno' en inglés?",
+                            opciones: ["Book", "Crayon", "Notebook", "Sharpener"],
+                            respuestaCorrecta: 2,
+                            explicacion: "'Notebook' significa 'cuaderno'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'book'?",
+                            opciones: ["Tajador", "Cuaderno", "Libro", "Pegamento"],
+                            respuestaCorrecta: 2,
+                            explicacion: "'Book' significa 'libro'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'cartuchera' en inglés?",
+                            opciones: ["Ruler", "Pencil case", "Bag", "Pen"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Pencil case' significa 'cartuchera'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'bag'?",
+                            opciones: ["Tajador", "Mochila", "Crayón", "Cuaderno"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Bag' se traduce como 'mochila'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'mochila' en inglés?",
+                            opciones: ["Notebook", "Bag", "Pen", "Eraser"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Bag' significa 'mochila'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'eraser'?",
+                            opciones: ["Borrador", "Regla", "Lapicero", "Crayón"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Eraser' significa 'borrador'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'pegamento' en inglés?",
+                            opciones: ["Sharpener", "Glue", "Ruler", "Book"],
+                            respuestaCorrecta: 1,
+                            explicacion: "'Glue' significa 'pegamento'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'pencil'?",
+                            opciones: ["Lápiz", "Lapicero", "Tijera", "Regla"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Pencil' se traduce como 'lápiz'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'regla' en inglés?",
+                            opciones: ["Eraser", "Crayon", "Book", "Ruler"],
+                            respuestaCorrecta: 3,
+                            explicacion: "'Ruler' significa 'regla'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'scissors'?",
+                            opciones: ["Tijeras", "Cuadernos", "Lapiceros", "Tajadores"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Scissors' significa 'tijeras'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Cómo se dice 'crayones' en inglés?",
+                            opciones: ["Notebook", "Eraser", "Glue", "Crayons"],
+                            respuestaCorrecta: 3,
+                            explicacion: "'Crayons' significa 'crayones'."
+                        },
+                        {
+                            dificultad: "dificil",
+                            competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                            pregunta: "¿Qué significa 'sharpener'?",
+                            opciones: ["Tajador", "Lapicero", "Libro", "Cartuchera"],
+                            respuestaCorrecta: 0,
+                            explicacion: "'Sharpener' significa 'tajador'."
+                        },
+                ],
       // NIVEL MÁS COMPLICADO (10)
-       [     
-     {
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal says 'meow'?",
-    opciones: ["Dog", "Cat", "Bird", "Duck"],
-    respuestaCorrecta: 1,
-    explicacion: "The cat says 'meow'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal is man's best friend?",
-    opciones: ["Cat", "Bird", "Dog", "Fish"],
-    respuestaCorrecta: 2,
-    explicacion: "The dog is known as man's best friend."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal can fly?",
-    opciones: ["Bird", "Dog", "Cow", "Horse"],
-    respuestaCorrecta: 0,
-    explicacion: "Birds can fly in the sky."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal lives in water?",
-    opciones: ["Fish", "Pig", "Duck", "Dog"],
-    respuestaCorrecta: 0,
-    explicacion: "Fish live in the water."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal says 'oink'?",
-    opciones: ["Cow", "Dog", "Pig", "Cat"],
-    respuestaCorrecta: 2,
-    explicacion: "The pig says 'oink'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal gives us milk?",
-    opciones: ["Duck", "Cow", "Dog", "Horse"],
-    respuestaCorrecta: 1,
-    explicacion: "Cows give us milk."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal can swim and has a beak?",
-    opciones: ["Duck", "Cat", "Pig", "Horse"],
-    respuestaCorrecta: 0,
-    explicacion: "The duck can swim and has a beak."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal says 'neigh'?",
-    opciones: ["Dog", "Horse", "Fish", "Cat"],
-    respuestaCorrecta: 1,
-    explicacion: "The horse says 'neigh'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal says 'moo'?",
-    opciones: ["Cow", "Bird", "Pig", "Cat"],
-    respuestaCorrecta: 0,
-    explicacion: "The cow says 'moo'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal is small and loves cheese?",
-    opciones: ["Mouse", "Dog", "Bird", "Fish"],
-    respuestaCorrecta: 0,
-    explicacion: "The mouse loves cheese."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal lives on a farm and says 'quack'?",
-    opciones: ["Duck", "Dog", "Cat", "Cow"],
-    respuestaCorrecta: 0,
-    explicacion: "The duck says 'quack'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal is big and gray with a trunk?",
-    opciones: ["Elephant", "Dog", "Cow", "Pig"],
-    respuestaCorrecta: 0,
-    explicacion: "The elephant is big and gray with a trunk."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal jumps and says 'ribbit'?",
-    opciones: ["Frog", "Cat", "Dog", "Fish"],
-    respuestaCorrecta: 0,
-    explicacion: "The frog jumps and says 'ribbit'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal gives wool?",
-    opciones: ["Sheep", "Cow", "Dog", "Pig"],
-    respuestaCorrecta: 0,
-    explicacion: "Sheep give us wool."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal has long ears and hops?",
-    opciones: ["Rabbit", "Cat", "Bird", "Duck"],
-    respuestaCorrecta: 0,
-    explicacion: "The rabbit has long ears and hops."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal says 'bark'?",
-    opciones: ["Cat", "Dog", "Bird", "Pig"],
-    respuestaCorrecta: 1,
-    explicacion: "The dog says 'bark'."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal can climb trees and loves bananas?",
-    opciones: ["Monkey", "Dog", "Cow", "Horse"],
-    respuestaCorrecta: 0,
-    explicacion: "The monkey climbs trees and eats bananas."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal lives in the jungle and roars?",
-    opciones: ["Lion", "Pig", "Duck", "Bird"],
-    respuestaCorrecta: 0,
-    explicacion: "The lion lives in the jungle and roars."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "What animal gives us eggs?",
-    opciones: ["Hen", "Dog", "Horse", "Fish"],
-    respuestaCorrecta: 0,
-    explicacion: "The hen gives us eggs."
-},
-{
-    dificultad: "intermedio",
-    competencia: "Se comunica oralmente en inglés como lengua extranjera",
-    pregunta: "Which animal has stripes and looks like a horse?",
-    opciones: ["Zebra", "Pig", "Dog", "Cat"],
-    respuestaCorrecta: 0,
-    explicacion: "The zebra has stripes and looks like a horse."
-},
-       ],
+                [     
+                {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal says 'meow'?",
+                opciones: ["Dog", "Cat", "Bird", "Duck"],
+                respuestaCorrecta: 1,
+                explicacion: "The cat says 'meow'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal is man's best friend?",
+                opciones: ["Cat", "Bird", "Dog", "Fish"],
+                respuestaCorrecta: 2,
+                explicacion: "The dog is known as man's best friend."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal can fly?",
+                opciones: ["Bird", "Dog", "Cow", "Horse"],
+                respuestaCorrecta: 0,
+                explicacion: "Birds can fly in the sky."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal lives in water?",
+                opciones: ["Fish", "Pig", "Duck", "Dog"],
+                respuestaCorrecta: 0,
+                explicacion: "Fish live in the water."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal says 'oink'?",
+                opciones: ["Cow", "Dog", "Pig", "Cat"],
+                respuestaCorrecta: 2,
+                explicacion: "The pig says 'oink'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal gives us milk?",
+                opciones: ["Duck", "Cow", "Dog", "Horse"],
+                respuestaCorrecta: 1,
+                explicacion: "Cows give us milk."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal can swim and has a beak?",
+                opciones: ["Duck", "Cat", "Pig", "Horse"],
+                respuestaCorrecta: 0,
+                explicacion: "The duck can swim and has a beak."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal says 'neigh'?",
+                opciones: ["Dog", "Horse", "Fish", "Cat"],
+                respuestaCorrecta: 1,
+                explicacion: "The horse says 'neigh'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal says 'moo'?",
+                opciones: ["Cow", "Bird", "Pig", "Cat"],
+                respuestaCorrecta: 0,
+                explicacion: "The cow says 'moo'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal is small and loves cheese?",
+                opciones: ["Mouse", "Dog", "Bird", "Fish"],
+                respuestaCorrecta: 0,
+                explicacion: "The mouse loves cheese."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal lives on a farm and says 'quack'?",
+                opciones: ["Duck", "Dog", "Cat", "Cow"],
+                respuestaCorrecta: 0,
+                explicacion: "The duck says 'quack'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal is big and gray with a trunk?",
+                opciones: ["Elephant", "Dog", "Cow", "Pig"],
+                respuestaCorrecta: 0,
+                explicacion: "The elephant is big and gray with a trunk."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal jumps and says 'ribbit'?",
+                opciones: ["Frog", "Cat", "Dog", "Fish"],
+                respuestaCorrecta: 0,
+                explicacion: "The frog jumps and says 'ribbit'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal gives wool?",
+                opciones: ["Sheep", "Cow", "Dog", "Pig"],
+                respuestaCorrecta: 0,
+                explicacion: "Sheep give us wool."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal has long ears and hops?",
+                opciones: ["Rabbit", "Cat", "Bird", "Duck"],
+                respuestaCorrecta: 0,
+                explicacion: "The rabbit has long ears and hops."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal says 'bark'?",
+                opciones: ["Cat", "Dog", "Bird", "Pig"],
+                respuestaCorrecta: 1,
+                explicacion: "The dog says 'bark'."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal can climb trees and loves bananas?",
+                opciones: ["Monkey", "Dog", "Cow", "Horse"],
+                respuestaCorrecta: 0,
+                explicacion: "The monkey climbs trees and eats bananas."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal lives in the jungle and roars?",
+                opciones: ["Lion", "Pig", "Duck", "Bird"],
+                respuestaCorrecta: 0,
+                explicacion: "The lion lives in the jungle and roars."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "What animal gives us eggs?",
+                opciones: ["Hen", "Dog", "Horse", "Fish"],
+                respuestaCorrecta: 0,
+                explicacion: "The hen gives us eggs."
+            },
+            {
+                dificultad: "intermedio",
+                competencia: "Se comunica oralmente en inglés como lengua extranjera",
+                pregunta: "Which animal has stripes and looks like a horse?",
+                opciones: ["Zebra", "Pig", "Dog", "Cat"],
+                respuestaCorrecta: 0,
+                explicacion: "The zebra has stripes and looks like a horse."
+            },
+                ],
         //COMPETENCIA 2:
-        // Competencia 2: Comprende textos escritos en inglés
-// Tema: My Family - Nivel Fácil (respuestas mezcladas)
-
+            // Competencia 2: Comprende textos escritos en inglés
+    // Tema: My Family - Nivel Fácil (respuestas mezcladas)
+[
 {
     dificultad: "facil",
     competencia: "Comprende textos escritos en inglés",
@@ -655,8 +655,10 @@ const bancoPreguntas = {
     respuestaCorrecta: 2,
     explicacion: "Your mother is part of your family."
 },
+],
 
         //NIVEL AVANZADO
+        [
         {
     dificultad: "intermedio",
     competencia: "Comprende textos escritos en inglés",
@@ -817,7 +819,9 @@ const bancoPreguntas = {
     respuestaCorrecta: 2,
     explicacion: "Grandparents’ children are your parents and uncles."
 },
+],
 // NIVEL DIFICIL
+[
 {
     dificultad: "difícil",
     competencia: "Comprende textos escritos en inglés",
@@ -970,7 +974,8 @@ const bancoPreguntas = {
     respuestaCorrecta: 0,
     explicacion: "Chicken eggs are the most popular."
 },
-
+],
+[
 
             // COMPETENCIA 3
             {
@@ -1186,6 +1191,8 @@ const bancoPreguntas = {
             },
             
 
+],
+[
             //NIVEL INTERMEDIO
            {
     dificultad: "intermedio",
@@ -1388,9 +1395,11 @@ const bancoPreguntas = {
     explicacion: "Attic significa ático en inglés."
 }, 
 
-
-            //NIVEL DIFIL
-            {
+],
+            
+//NIVEL DIFIL
+      [  
+{
     dificultad: "difil",
     competencia: "Escribe textos breves en inglés",
     pregunta: "Digita supermercado en inglés",
@@ -1490,6 +1499,7 @@ const bancoPreguntas = {
     respuesta: "Airport",
     explicacion: "Airport significa aeropuerto en inglés."
 }
+],    
 
       ],   
         'Matemática': [
