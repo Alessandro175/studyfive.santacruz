@@ -56,14 +56,14 @@ import { CommonModule } from '@angular/common';
   styles: [
     `
       :host {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.2);
         padding: 1rem;
-        z-index: 1000;
+        z-index: 20;
         // animation: fadeIn 0.3s ease;
       }
 
@@ -77,6 +77,7 @@ import { CommonModule } from '@angular/common';
       }
 
       .modal-content {
+        padding: 1rem;
         background: white;
         border-radius: 20px;
         max-width: 600px;

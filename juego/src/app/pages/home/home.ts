@@ -1,10 +1,10 @@
 import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
 import { GameService } from '../../services/game.service';
+import { NavigationService } from '../../services/navigation.service';
 import { MateriasComponent } from '../../components/materias.component';
 import { ModalComponent } from '../../components/modal.component';
 import { JuegoComponent } from '../../components/juego.component';
@@ -204,7 +204,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
 export class HomeComponent {
   private userService = inject(UserService);
   private toastService = inject(ToastService);
-  private router = inject(Router);
+  private navigationService = inject(NavigationService);
   gameService = inject(GameService);
 
   currentUser = this.userService.currentUser;
@@ -289,6 +289,6 @@ export class HomeComponent {
     this.userService.logout();
     this.gameService.resetear(); // Resetear estado del juego
     this.toastService.info(`Hasta luego, ${nickname}!`);
-    this.router.navigate(['/login']);
+    this.navigationService.goToLogin();
   }
 }

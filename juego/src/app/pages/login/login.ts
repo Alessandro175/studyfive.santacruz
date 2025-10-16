@@ -1,14 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   template: `
     <div
       class="relative z-10 p-4 sm:p-6 md:p-8 w-full flex flex-col items-center"
@@ -43,8 +43,8 @@ import { ToastService } from '../../services/toast.service';
       <div class="text-center text-sm text-gray-600">
         <p>¿No tienes cuenta?</p>
         <a 
-          routerLink="/registro" 
-          class="text-indigo-600 hover:text-indigo-800 font-semibold underline"
+          (click)="goToRegistro()"
+          class="text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
         >
           Regístrate aquí
         </a>
@@ -83,10 +83,14 @@ import { ToastService } from '../../services/toast.service';
 export class LoginComponent {
   private userService = inject(UserService);
   private toastService = inject(ToastService);
-  private router = inject(Router);
+  private navigationService = inject(NavigationService);
 
   nickname = signal('');
   ranking = signal(this.userService.getRanking());
+
+  goToRegistro() {
+    this.navigationService.goToRegistro();
+  }
 
   onSubmit(event: Event) {
     event.preventDefault();
@@ -116,7 +120,7 @@ export class LoginComponent {
     
     this.toastService.success(`¡Bienvenido de vuelta, ${user.nickname}!`);
     
-    // Redirigir al home (juego)
-    this.router.navigate(['/home']);
+    // Navegar al dashboard
+    this.navigationService.goToDashboard();
   }
 }

@@ -1,12 +1,26 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal, inject } from '@angular/core';
 import { ToastComponent } from './components/toast.component';
+import { LoginComponent } from './pages/login/login';
+import { RegistroComponent } from './pages/registro/registro';
+import { HomeComponent } from './pages/home/home';
+import { NavigationService } from './services/navigation.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ToastComponent],
+  imports: [ToastComponent, LoginComponent, RegistroComponent, HomeComponent],
   template: `
-      <router-outlet />
+    <!-- Mostrar vista según el estado de navegación -->
+    @switch (navigationService.currentView()) {
+      @case ('login') {
+        <app-login />
+      }
+      @case ('registro') {
+        <app-registro />
+      }
+      @case ('dashboard') {
+        <app-home />
+      }
+    }
     <app-toast />
   `,
   styles: `
@@ -23,4 +37,5 @@ import { ToastComponent } from './components/toast.component';
 })
 export class App {
   protected readonly title = signal('juego');
+  protected navigationService = inject(NavigationService);
 }

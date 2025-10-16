@@ -1,15 +1,15 @@
 import { Component, inject, signal, effect, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
+import { NavigationService } from '../../services/navigation.service';
 import { UserCreate } from '../../models/user.model';
 
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink],
+  imports: [CommonModule, FormsModule],
   host: {
     class: 'p-8',
   },
@@ -105,7 +105,10 @@ import { UserCreate } from '../../models/user.model';
 
     <div class="text-center text-sm text-gray-600 mb-4">
       <p>¿Ya tienes cuenta?</p>
-      <a routerLink="/login" class="text-indigo-600 hover:text-indigo-800 font-semibold underline">
+      <a 
+        (click)="goToLogin()"
+        class="text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
+      >
         Inicia sesión aquí
       </a>
     </div>
@@ -142,7 +145,7 @@ import { UserCreate } from '../../models/user.model';
 export class RegistroComponent implements OnInit {
   private userService = inject(UserService);
   private toastService = inject(ToastService);
-  private router = inject(Router);
+  private navigationService = inject(NavigationService);
 
   // Campos del formulario
   nickname = signal('');
@@ -168,6 +171,10 @@ export class RegistroComponent implements OnInit {
     if (currentUser) {
       this.toastService.info(`¡Bienvenido de nuevo, ${currentUser.nickname}!`);
     }
+  }
+
+  goToLogin() {
+    this.navigationService.goToLogin();
   }
 
   onSubmit(event: Event) {
@@ -210,8 +217,8 @@ export class RegistroComponent implements OnInit {
     if (newUser) {
       this.toastService.success(`¡Bienvenido ${newUser.nickname}! Tu cuenta ha sido creada.`);
 
-      // Redirigir al home (juego)
-      this.router.navigate(['/home']);
+      // Navegar al dashboard
+      this.navigationService.goToDashboard();
     } else {
       this.toastService.error('Error al crear el usuario. Intenta nuevamente.');
     }
