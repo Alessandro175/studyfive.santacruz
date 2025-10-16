@@ -10,6 +10,7 @@ export interface Pregunta {
 }
 
 export interface Competencia {
+  id: string; // competencia_01, competencia_02, etc.
   nombre: string;
   descripcion: string;
   objetivo: string;
@@ -17,11 +18,9 @@ export interface Competencia {
 }
 
 export interface MateriaData {
-  competencias: {
-    competencia1: Competencia;
-    competencia2: Competencia;
-    competencia3: Competencia;
-  };
+  competencias: Competencia[]; // Array escalable de competencias
+  frase: string; // Frase motivacional de la materia
+  mision_logro: string; // Descripción del logro al completar todas las competencias
 }
 
 export type GradoData = Record<MateriaKey, MateriaData>;

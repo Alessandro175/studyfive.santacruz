@@ -18,15 +18,15 @@ export interface UserCreate {
 
 /**
  * Registro de una competencia completada por un usuario
- * Key format: "userId_grado_materia_competencia"
- * Ejemplo: "abc123_1_ingles_competencia1"
+ * Key format: "userId_grado_materia_competenciaId"
+ * Ejemplo: "abc123_1_ingles_competencia_01"
  */
 export interface CompetenciaRegistro {
-  id: string; // userId_grado_materia_competencia
+  id: string; // userId_grado_materia_competenciaId
   userId: string;
   grado: number;
   materia: string; // key normalizada (ingles, matematica, etc.)
-  competencia: string; // competencia1, competencia2, competencia3
+  competencia: string; // competenciaId dinámico (competencia_01, competencia_02, etc.)
   puntaje: number; // 0-5 respuestas correctas
   totalPreguntas: number; // normalmente 5
   porcentaje: number; // 0-100
@@ -42,7 +42,7 @@ export interface CompetenciaRegistro {
 export interface CompetenciaRegistroData {
   grado: number;
   materia: string;
-  competencia: string;
+  competencia: string; // competenciaId dinámico (competencia_01, competencia_02, etc.)
   puntaje: number;
   totalPreguntas: number;
 }

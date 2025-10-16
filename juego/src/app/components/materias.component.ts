@@ -146,7 +146,7 @@ export class MateriasComponent {
   seleccionarMateria(materia: string) {
     const label = getMateriaLabel(materia);
     this.toastService.info(`Has seleccionado ${label}`);
-    // Por defecto selecciona la competencia1
-    this.gameService.seleccionarMateria(materia, 'competencia1');
+    // Selecciona la materia (GameService cargará la primera competencia automáticamente)
+    this.gameService.seleccionarMateria(materia);
   }
 }

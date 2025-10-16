@@ -2,6 +2,7 @@ import { Component, inject, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
+import { getCompetenciasPorMateria } from '../data/preguntas.data';
 
 @Component({
   selector: 'app-resultados',
@@ -384,14 +385,20 @@ export class ResultadosComponent implements OnInit {
    * Determina el texto del botón según si hay más competencias
    */
   textoBotonSiguiente(): string {
-    const competenciaActual = this.gameService.competenciaSeleccionada();
+    const grado = this.gameService.gradoSeleccionado();
+    const materia = this.gameService.materiaSeleccionada();
+    const currentIndex = this.gameService.competenciaIndex();
     
-    if (competenciaActual === 'competencia3') {
+    if (!grado || !materia) return 'Finalizar';
+    
+    const competencias = getCompetenciasPorMateria(grado, materia);
+    
+    // Si es la última competencia
+    if (currentIndex >= competencias.length - 1) {
       return 'Finalizar';
-    } else if (competenciaActual === 'competencia2') {
-      return 'Ir a Competencia 3';
     } else {
-      return 'Ir a Competencia 2';
+      const siguiente = competencias[currentIndex + 1];
+      return `Ir a ${siguiente.nombre}`;
     }
   }
 
@@ -399,29 +406,14 @@ export class ResultadosComponent implements OnInit {
    * Avanza a la siguiente competencia o vuelve a materias
    */
   siguienteCompetencia() {
-    const competenciaActual = this.gameService.competenciaSeleccionada();
-    const materia = this.gameService.materiaSeleccionada();
+    // Usar el método del GameService que maneja la navegación
+    const haySiguiente = this.gameService.siguienteCompetencia();
     
-    if (!materia) {
+    if (!haySiguiente) {
+      // No hay más competencias, volver a materias
       this.volverAMaterias();
-      return;
     }
-
-    // Determinar la siguiente competencia
-    let siguienteComp: 'competencia1' | 'competencia2' | 'competencia3';
-    
-    if (competenciaActual === 'competencia1') {
-      siguienteComp = 'competencia2';
-    } else if (competenciaActual === 'competencia2') {
-      siguienteComp = 'competencia3';
-    } else {
-      // Ya terminó todas las competencias, volver a materias
-      this.volverAMaterias();
-      return;
-    }
-
-    // Cargar la siguiente competencia
-    this.gameService.seleccionarMateria(materia, siguienteComp);
+    // Si hay siguiente, el GameService ya cargó la competencia y mostró el modal
   }
 
   volverAMaterias() {

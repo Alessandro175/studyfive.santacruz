@@ -1,28 +1,28 @@
-// Importar todos los grados
-import { grado1 } from './grados/grado1.data';
-import { grado2 } from './grados/grado2.data';
-import { grado3 } from './grados/grado3.data';
-import { grado4 } from './grados/grado4.data';
-import { grado5 } from './grados/grado5.data';
-import { grado6 } from './grados/grado6.data';
+// Importar todos los grados (versión 2 con estructura escalable)
+import { grado1v2 } from './grados/grado1-v2.data';
+import { grado2v2 } from './grados/grado2-v2.data';
+import { grado3v2 } from './grados/grado3-v2.data';
+import { grado4v2 } from './grados/grado4-v2.data';
+import { grado5v2 } from './grados/grado5-v2.data';
+import { grado6v2 } from './grados/grado6-v2.data';
 import type { GradoData, MateriaKey, Pregunta, Competencia } from './preguntas.types';
 import { getMateriaLabel, getMateriaKey, MATERIAS_KEYS } from './materias.constants';
 
 // Base de datos de preguntas por grado
 export const preguntasDB: Record<number, GradoData> = {
-  1: grado1,
-  2: grado2,
-  3: grado3,
-  4: grado4,
-  5: grado5,
-  6: grado6
+  1: grado1v2,
+  2: grado2v2,
+  3: grado3v2,
+  4: grado4v2,
+  5: grado5v2,
+  6: grado6v2
 };
 
-// Función helper para obtener preguntas de una materia y competencia específica
+// Función helper para obtener preguntas de una materia y competencia específica (por ID)
 export function getPreguntasPorMateriaYCompetencia(
   grado: number,
   materiaKey: string,
-  competencia: 'competencia1' | 'competencia2' | 'competencia3'
+  competenciaId: string
 ): Pregunta[] {
   // Normalizar la materia key si viene con el formato antiguo
   const normalizedKey = getMateriaKey(materiaKey);
@@ -44,20 +44,21 @@ export function getPreguntasPorMateriaYCompetencia(
     return [];
   }
 
-  const competenciaData = materiaData.competencias[competencia];
+  // Buscar la competencia por ID en el array
+  const competenciaData = materiaData.competencias.find(c => c.id === competenciaId);
   if (!competenciaData) {
-    console.error(`Competencia ${competencia} no encontrada`);
+    console.error(`Competencia ${competenciaId} no encontrada`);
     return [];
   }
 
   return competenciaData.preguntas;
 }
 
-// Función helper para obtener información de una competencia
+// Función helper para obtener información de una competencia (por ID)
 export function getCompetenciaInfo(
   grado: number,
   materiaKey: string,
-  competencia: 'competencia1' | 'competencia2' | 'competencia3'
+  competenciaId: string
 ): Competencia | null {
   const normalizedKey = getMateriaKey(materiaKey);
   
@@ -75,17 +76,37 @@ export function getCompetenciaInfo(
     return null;
   }
 
-  const competenciaData = materiaData.competencias[competencia];
+  // Buscar la competencia por ID en el array
+  const competenciaData = materiaData.competencias.find(c => c.id === competenciaId);
   if (!competenciaData) {
     return null;
   }
 
-  return {
-    nombre: competenciaData.nombre,
-    descripcion: competenciaData.descripcion,
-    objetivo: competenciaData.objetivo,
-    preguntas: competenciaData.preguntas
-  };
+  return competenciaData;
+}
+
+// Función helper para obtener todas las competencias de una materia
+export function getCompetenciasPorMateria(
+  grado: number,
+  materiaKey: string
+): Competencia[] {
+  const normalizedKey = getMateriaKey(materiaKey);
+  
+  if (!normalizedKey) {
+    return [];
+  }
+
+  const gradoData = preguntasDB[grado];
+  if (!gradoData) {
+    return [];
+  }
+
+  const materiaData = gradoData[normalizedKey as MateriaKey];
+  if (!materiaData) {
+    return [];
+  }
+
+  return materiaData.competencias;
 }
 
 // Función helper para obtener todas las materias disponibles (con labels para UI)

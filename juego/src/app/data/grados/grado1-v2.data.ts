@@ -1,9 +1,12 @@
 import { GradoData } from '../preguntas.types';
 
-export const grado1: GradoData = {
+export const grado1v2: GradoData = {
   ingles: {
-    competencias: {
-      competencia1: {
+    frase: 'Learning English opens doors to the world! 🌍',
+    mision_logro: 'Dominar los fundamentos del inglés básico',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'Saludos y Presentaciones',
         descripcion: 'Aprende a saludar y presentarte en inglés',
         objetivo: 'Dominar los saludos básicos y cómo presentarse',
@@ -35,7 +38,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Colores y Números',
         descripcion: 'Identifica colores y números del 1 al 10',
         objetivo: 'Reconocer y nombrar colores básicos y números',
@@ -67,7 +71,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Animales y Familia',
         descripcion: 'Vocabulario de animales y miembros de la familia',
         objetivo: 'Identificar animales comunes y miembros de la familia',
@@ -99,11 +104,14 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   },
   matematica: {
-    competencias: {
-      competencia1: {
+    frase: '¡Las matemáticas son divertidas y fáciles! 🔢',
+    mision_logro: 'Dominar los números y operaciones básicas',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'Números y Conteo',
         descripcion: 'Aprende a contar del 1 al 20',
         objetivo: 'Dominar el conteo básico y reconocer números',
@@ -135,7 +143,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Sumas Básicas',
         descripcion: 'Resuelve sumas sencillas hasta el 10',
         objetivo: 'Realizar operaciones de suma básicas',
@@ -167,7 +176,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Formas Geométricas',
         descripcion: 'Identifica círculos, cuadrados y triángulos',
         objetivo: 'Reconocer formas geométricas básicas',
@@ -199,11 +209,14 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   },
   comunicacion: {
-    competencias: {
-      competencia1: {
+    frase: '¡Comunicarte bien es súper importante! 📖',
+    mision_logro: 'Dominar la lectura y escritura básica',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'Vocales y Consonantes',
         descripcion: 'Reconoce las vocales y algunas consonantes',
         objetivo: 'Identificar y diferenciar vocales de consonantes',
@@ -235,7 +248,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Lectura de Palabras',
         descripcion: 'Lee palabras simples y cortas',
         objetivo: 'Desarrollar la lectura de palabras básicas',
@@ -267,7 +281,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Expresión Oral',
         descripcion: 'Expresa ideas y sentimientos',
         objetivo: 'Comunicarse de forma clara y ordenada',
@@ -299,11 +314,14 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   },
   ciencia_tecnologia: {
-    competencias: {
-      competencia1: {
+    frase: '¡Descubre el mundo científico! 🔬',
+    mision_logro: 'Explorar los conceptos básicos de ciencia',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'El Cuerpo Humano',
         descripcion: 'Identifica las partes del cuerpo',
         objetivo: 'Reconocer las partes principales del cuerpo',
@@ -335,7 +353,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Los Sentidos',
         descripcion: 'Conoce los cinco sentidos',
         objetivo: 'Identificar y usar los sentidos',
@@ -367,7 +386,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Plantas y Animales',
         descripcion: 'Diferencia seres vivos de no vivos',
         objetivo: 'Clasificar seres vivos y reconocer sus características',
@@ -399,11 +419,14 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   },
   personal_social: {
-    competencias: {
-      competencia1: {
+    frase: '¡Conoce tu familia y tu comunidad! 👨‍👩‍👧‍👦',
+    mision_logro: 'Comprender tu entorno social',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'La Familia',
         descripcion: 'Identifica los miembros de la familia',
         objetivo: 'Reconocer y valorar a la familia',
@@ -435,7 +458,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Mi Comunidad',
         descripcion: 'Conoce tu comunidad y sus lugares',
         objetivo: 'Identificar lugares importantes de la comunidad',
@@ -467,7 +491,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Normas de Convivencia',
         descripcion: 'Aprende normas para vivir en sociedad',
         objetivo: 'Practicar el respeto y la convivencia',
@@ -499,11 +524,14 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   },
   arte_cultura: {
-    competencias: {
-      competencia1: {
+    frase: '¡Crea y expresa tu arte! 🎨',
+    mision_logro: 'Desarrollar tu creatividad artística',
+    competencias: [
+      {
+        id: 'competencia_01',
         nombre: 'Colores Primarios',
         descripcion: 'Identifica los colores básicos',
         objetivo: 'Reconocer y usar colores primarios',
@@ -535,7 +563,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia2: {
+      {
+        id: 'competencia_02',
         nombre: 'Música y Sonidos',
         descripcion: 'Reconoce sonidos y ritmos',
         objetivo: 'Desarrollar el oído musical',
@@ -567,7 +596,8 @@ export const grado1: GradoData = {
           }
         ]
       },
-      competencia3: {
+      {
+        id: 'competencia_03',
         nombre: 'Expresión Artística',
         descripcion: 'Crea y expresa a través del arte',
         objetivo: 'Desarrollar la creatividad artística',
@@ -599,6 +629,6 @@ export const grado1: GradoData = {
           }
         ]
       }
-    }
+    ]
   }
 };

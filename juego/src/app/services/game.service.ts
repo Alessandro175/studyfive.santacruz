@@ -4,6 +4,7 @@ import {
   Competencia, 
   getCompetenciaInfo, 
   getPreguntasPorMateriaYCompetencia,
+  getCompetenciasPorMateria,
   getMateriaLabel,
   getMateriaKey,
   getMateriasDisponibles
@@ -36,8 +37,11 @@ export class GameService {
   // Materia seleccionada
   materiaSeleccionada = signal<string | null>(null);
 
-  // Competencia seleccionada (competencia1, competencia2, competencia3)
+  // Competencia seleccionada (ID dinámico: competencia_01, competencia_02, etc.)
   competenciaSeleccionada = signal<string | null>(null);
+  
+  // Índice de la competencia actual en el array
+  competenciaIndex = signal<number>(0);
 
   // Estado del quiz
   preguntaActual = signal<number>(0);
@@ -103,21 +107,32 @@ export class GameService {
 
   /**
    * Selecciona una materia y muestra el modal de selección de competencia
+   * Por defecto carga la primera competencia del array
    */
-  seleccionarMateria(materia: string, competencia: 'competencia1' | 'competencia2' | 'competencia3' = 'competencia1') {
+  seleccionarMateria(materia: string, competenciaId?: string) {
     this.materiaSeleccionada.set(materia);
-    this.competenciaSeleccionada.set(competencia);
+    
+    const grado = this.gradoSeleccionado();
+    if (!grado) return;
+    
+    // Obtener todas las competencias de la materia
+    const competencias = getCompetenciasPorMateria(grado, materia);
+    if (competencias.length === 0) return;
+    
+    // Si no se especifica competenciaId, usar la primera
+    const competenciaIdFinal = competenciaId || competencias[0].id;
+    const index = competencias.findIndex(c => c.id === competenciaIdFinal);
+    
+    this.competenciaSeleccionada.set(competenciaIdFinal);
+    this.competenciaIndex.set(index >= 0 ? index : 0);
     
     // Cargar datos de la competencia
-    const grado = this.gradoSeleccionado();
-    if (grado) {
-      const competenciaInfo = getCompetenciaInfo(grado, materia, competencia);
-      this.competenciaActual.set(competenciaInfo);
-      
-      if (competenciaInfo) {
-        const preguntas = getPreguntasPorMateriaYCompetencia(grado, materia, competencia);
-        this.preguntasActuales.set(preguntas);
-      }
+    const competenciaInfo = getCompetenciaInfo(grado, materia, competenciaIdFinal);
+    this.competenciaActual.set(competenciaInfo);
+    
+    if (competenciaInfo) {
+      const preguntas = getPreguntasPorMateriaYCompetencia(grado, materia, competenciaIdFinal);
+      this.preguntasActuales.set(preguntas);
     }
     
     this.vistaActual.set('modal-competencia');
@@ -129,6 +144,7 @@ export class GameService {
   volverAMaterias() {
     this.materiaSeleccionada.set(null);
     this.competenciaSeleccionada.set(null);
+    this.competenciaIndex.set(0);
     this.reiniciarQuiz();
     this.vistaActual.set('seleccion-materias');
   }
@@ -225,6 +241,31 @@ export class GameService {
     this.reiniciarQuiz();
     // Mostrar el modal de competencia en lugar de ir directo al juego
     this.vistaActual.set('modal-competencia');
+  }
+
+  /**
+   * Navega a la siguiente competencia si existe
+   * Retorna true si hay siguiente competencia, false si era la última
+   */
+  siguienteCompetencia(): boolean {
+    const grado = this.gradoSeleccionado();
+    const materia = this.materiaSeleccionada();
+    
+    if (!grado || !materia) return false;
+    
+    // Obtener todas las competencias de la materia
+    const competencias = getCompetenciasPorMateria(grado, materia);
+    const currentIndex = this.competenciaIndex();
+    
+    // Si hay siguiente competencia
+    if (currentIndex + 1 < competencias.length) {
+      const siguienteComp = competencias[currentIndex + 1];
+      this.seleccionarMateria(materia, siguienteComp.id);
+      return true;
+    }
+    
+    // No hay más competencias
+    return false;
   }
 
   /**
