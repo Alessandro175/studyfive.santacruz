@@ -13,23 +13,20 @@ import { ToastComponent } from './components/toast.component';
   `,
   styles: `
     :host {
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
+      display: block;
+      height: 100dvh;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 700px;
       background: #f0f4f8;
       
     }
-    main{
-
-      width: 100%;
-      max-width: 700px;
+    main{      
       height: 100%;
       background: white;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
   `,
 })
