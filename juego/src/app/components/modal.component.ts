@@ -61,12 +61,12 @@ import { CommonModule } from '@angular/common';
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 1000;
-        animation: fadeIn 0.3s ease;
+        // animation: fadeIn 0.3s ease;
       }
 
       @keyframes fadeIn {
@@ -86,8 +86,7 @@ import { CommonModule } from '@angular/common';
         max-height: 80vh;
         overflow-y: auto;
         position: relative;
-        animation: slideIn 0.3s ease;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        // animation: slideIn 0.3s ease;
       }
 
       @keyframes slideIn {
