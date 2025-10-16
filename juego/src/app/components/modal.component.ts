@@ -62,9 +62,7 @@ import { CommonModule } from '@angular/common';
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 1rem;
         z-index: 1000;
         // animation: fadeIn 0.3s ease;
       }
@@ -86,6 +84,7 @@ import { CommonModule } from '@angular/common';
         max-height: 80vh;
         overflow-y: auto;
         position: relative;
+        margin: 0 auto;
         // animation: slideIn 0.3s ease;
       }
 
