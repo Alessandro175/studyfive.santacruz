@@ -1,7 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { ToastService } from '../services/toast.service';
+import { UserService } from '../services/user.service';
+import { getMateriaLabel } from '../data/preguntas.data';
 
 @Component({
   selector: 'app-materias',
@@ -34,6 +36,13 @@ import { ToastService } from '../services/toast.service';
         Materias de {{ gameService.gradoSeleccionado() }}° Grado
       </h2>
 
+      <div class="puntaje-grado-container mb-6">
+        <div class="puntaje-grado-card">
+          <span class="puntaje-label">Puntaje Total del Grado:</span>
+          <span class="puntaje-valor">{{ puntajeGrado() }} puntos</span>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         @for (materia of materias; track materia.nombre) {
           <div 
@@ -43,11 +52,11 @@ import { ToastService } from '../services/toast.service';
             <img 
               [src]="materia.imagen" 
               class="mx-auto mb-4 materia-icon"
-              [alt]="materia.nombre"
+              [alt]="getMateriaLabel(materia.nombre)"
             />
-            <h3 class="text-xl font-bold mb-2 text-center">{{ materia.nombre }}</h3>
+            <h3 class="text-xl font-bold mb-2 text-center">{{ getMateriaLabel(materia.nombre) }}</h3>
             <p class="text-gray-700 text-center mb-2">
-              Puntaje: <span class="font-bold">{{ materia.puntaje }}</span>
+              Puntaje: <span class="font-bold">{{ obtenerPuntajeMateria(materia.nombre) }}</span>
             </p>
           </div>
         }
@@ -72,21 +81,72 @@ import { ToastService } from '../services/toast.service';
     .titulo {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    .puntaje-grado-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .puntaje-grado-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .puntaje-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .puntaje-valor {
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
   `]
 })
 export class MateriasComponent {
   gameService = inject(GameService);
   private toastService = inject(ToastService);
+  private userService = inject(UserService);
 
   materias = this.gameService.getMateriasDelGrado();
+
+  // Computed para obtener el puntaje del grado actual
+  puntajeGrado = computed(() => {
+    const grado = this.gameService.gradoSeleccionado();
+    return grado ? this.userService.obtenerPuntajePorGrado(grado) : 0;
+  });
+
+  // Función helper para obtener el label de la materia
+  getMateriaLabel(key: string): string {
+    return getMateriaLabel(key);
+  }
+
+  // Obtener puntaje acumulado de una materia específica
+  obtenerPuntajeMateria(materiaKey: string): number {
+    const grado = this.gameService.gradoSeleccionado();
+    if (!grado) return 0;
+    return this.userService.obtenerPuntajePorMateria(grado, materiaKey);
+  }
 
   volverAGrados() {
     this.gameService.volverAGrados();
   }
 
   seleccionarMateria(materia: string) {
-    this.toastService.info(`Has seleccionado ${materia}`);
-    this.gameService.seleccionarMateria(materia);
-    // Aquí se cambiaría a la vista de juego
+    const label = getMateriaLabel(materia);
+    this.toastService.info(`Has seleccionado ${label}`);
+    // Por defecto selecciona la competencia1
+    this.gameService.seleccionarMateria(materia, 'competencia1');
   }
 }

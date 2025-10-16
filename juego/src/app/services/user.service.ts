@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { User, UserCreate } from '../models/user.model';
+import { User, UserCreate, CompetenciaRegistro, CompetenciaRegistroData } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,7 @@ import { User, UserCreate } from '../models/user.model';
 export class UserService {
   private readonly STORAGE_KEY = 'studyfive_users';
   private readonly CURRENT_USER_KEY = 'studyfive_current_user';
+  private readonly COMPETENCIAS_KEY = 'studyfive_competencias';
   
   // Señal para el usuario actual
   currentUser = signal<User | null>(null);
@@ -258,5 +259,214 @@ export class UserService {
     }
 
     return updatedUser;
+  }
+
+  // ==================== GESTIÓN DE COMPETENCIAS ====================
+
+  /**
+   * Genera la key única para una competencia
+   */
+  private generarCompetenciaKey(userId: string, grado: number, materia: string, competencia: string): string {
+    return `${userId}_${grado}_${materia}_${competencia}`;
+  }
+
+  /**
+   * Carga todos los registros de competencias desde localStorage
+   */
+  private loadCompetencias(): Record<string, CompetenciaRegistro> {
+    try {
+      const stored = localStorage.getItem(this.COMPETENCIAS_KEY);
+      if (stored) {
+        const competencias = JSON.parse(stored);
+        // Convertir fechas de string a Date
+        Object.keys(competencias).forEach(key => {
+          competencias[key].fechaPrimerIntento = new Date(competencias[key].fechaPrimerIntento);
+          competencias[key].fechaUltimoIntento = new Date(competencias[key].fechaUltimoIntento);
+        });
+        return competencias;
+      }
+    } catch (error) {
+      console.error('Error al cargar competencias:', error);
+    }
+    return {};
+  }
+
+  /**
+   * Guarda todos los registros de competencias en localStorage
+   */
+  private saveCompetencias(competencias: Record<string, CompetenciaRegistro>): void {
+    try {
+      localStorage.setItem(this.COMPETENCIAS_KEY, JSON.stringify(competencias));
+    } catch (error) {
+      console.error('Error al guardar competencias:', error);
+    }
+  }
+
+  /**
+   * Guarda o actualiza el registro de una competencia
+   */
+  guardarCompetencia(data: CompetenciaRegistroData): CompetenciaRegistro | null {
+    const user = this.currentUser();
+    if (!user) {
+      console.error('No hay usuario actual');
+      return null;
+    }
+
+    const competencias = this.loadCompetencias();
+    const key = this.generarCompetenciaKey(user.id, data.grado, data.materia, data.competencia);
+    const porcentaje = Math.round((data.puntaje / data.totalPreguntas) * 100);
+    const ahora = new Date();
+
+    let registro: CompetenciaRegistro;
+
+    if (competencias[key]) {
+      // Actualizar registro existente
+      const existente = competencias[key];
+      registro = {
+        ...existente,
+        puntaje: data.puntaje,
+        totalPreguntas: data.totalPreguntas,
+        porcentaje,
+        intentos: existente.intentos + 1,
+        mejorPuntaje: Math.max(existente.mejorPuntaje, data.puntaje),
+        fechaUltimoIntento: ahora
+      };
+    } else {
+      // Crear nuevo registro
+      registro = {
+        id: key,
+        userId: user.id,
+        grado: data.grado,
+        materia: data.materia,
+        competencia: data.competencia,
+        puntaje: data.puntaje,
+        totalPreguntas: data.totalPreguntas,
+        porcentaje,
+        intentos: 1,
+        mejorPuntaje: data.puntaje,
+        fechaPrimerIntento: ahora,
+        fechaUltimoIntento: ahora
+      };
+    }
+
+    competencias[key] = registro;
+    this.saveCompetencias(competencias);
+
+    // Actualizar el puntaje total del usuario
+    this.actualizarPuntajeTotal();
+
+    return registro;
+  }
+
+  /**
+   * Obtiene el registro de una competencia específica
+   */
+  obtenerCompetencia(grado: number, materia: string, competencia: string): CompetenciaRegistro | null {
+    const user = this.currentUser();
+    if (!user) return null;
+
+    const competencias = this.loadCompetencias();
+    const key = this.generarCompetenciaKey(user.id, grado, materia, competencia);
+    
+    return competencias[key] || null;
+  }
+
+  /**
+   * Calcula el puntaje total acumulado del usuario actual
+   */
+  calcularPuntajeAcumulado(): number {
+    const user = this.currentUser();
+    if (!user) return 0;
+
+    const competencias = this.loadCompetencias();
+    let total = 0;
+
+    Object.values(competencias).forEach(registro => {
+      if (registro.userId === user.id) {
+        // Usar el mejor puntaje de cada competencia
+        total += registro.mejorPuntaje * 10; // 10 puntos por respuesta correcta
+      }
+    });
+
+    return total;
+  }
+
+  /**
+   * Obtiene el puntaje acumulado por grado
+   */
+  obtenerPuntajePorGrado(grado: number): number {
+    const user = this.currentUser();
+    if (!user) return 0;
+
+    const competencias = this.loadCompetencias();
+    let total = 0;
+
+    Object.values(competencias).forEach(registro => {
+      if (registro.userId === user.id && registro.grado === grado) {
+        total += registro.mejorPuntaje * 10;
+      }
+    });
+
+    return total;
+  }
+
+  /**
+   * Obtiene el puntaje acumulado por materia de un grado
+   */
+  obtenerPuntajePorMateria(grado: number, materia: string): number {
+    const user = this.currentUser();
+    if (!user) return 0;
+
+    const competencias = this.loadCompetencias();
+    let total = 0;
+
+    Object.values(competencias).forEach(registro => {
+      if (registro.userId === user.id && registro.grado === grado && registro.materia === materia) {
+        total += registro.mejorPuntaje * 10;
+      }
+    });
+
+    return total;
+  }
+
+  /**
+   * Actualiza el puntaje total del usuario actual
+   */
+  private actualizarPuntajeTotal(): void {
+    const user = this.currentUser();
+    if (!user) return;
+
+    const puntajeTotal = this.calcularPuntajeAcumulado();
+    
+    // Actualizar en la lista de usuarios
+    const users = this.users();
+    const userIndex = users.findIndex(u => u.id === user.id);
+    
+    if (userIndex !== -1) {
+      const updatedUser: User = {
+        ...users[userIndex],
+        puntuacion: puntajeTotal,
+        ultimaActualizacion: new Date()
+      };
+
+      const updatedUsers = [...users];
+      updatedUsers[userIndex] = updatedUser;
+      
+      this.users.set(updatedUsers);
+      this.saveUsers();
+      this.saveCurrentUser(updatedUser);
+    }
+  }
+
+  /**
+   * Obtiene todas las competencias del usuario actual
+   */
+  obtenerTodasLasCompetencias(): CompetenciaRegistro[] {
+    const user = this.currentUser();
+    if (!user) return [];
+
+    const competencias = this.loadCompetencias();
+    
+    return Object.values(competencias).filter(registro => registro.userId === user.id);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,11 +6,14 @@ import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
 import { GameService } from '../../services/game.service';
 import { MateriasComponent } from '../../components/materias.component';
+import { ModalComponent } from '../../components/modal.component';
+import { JuegoComponent } from '../../components/juego.component';
+import { ResultadosComponent } from '../../components/resultados.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, MateriasComponent],
+  imports: [CommonModule, FormsModule, MateriasComponent, ModalComponent, JuegoComponent, ResultadosComponent],
   template: `
     @if (currentUser()) {
       <!-- Vista según el estado del juego -->
@@ -92,7 +95,7 @@ import { MateriasComponent } from '../../components/materias.component';
                 />
                 <h2 class="text-2xl font-bold mb-2">{{ grado.numero }}° Grado</h2>
                 <p class="text-gray-700 mb-2">
-                  Puntaje: <span class="font-bold">{{ grado.puntaje }}</span>
+                  Puntaje: <span class="font-bold">{{ obtenerPuntajeGrado()(grado.numero) }}</span>
                 </p>
                 <div class="flex justify-center gap-2 mb-2">
                   @for (medalla of [1,2,3,4,5,6]; track medalla) {
@@ -110,21 +113,24 @@ import { MateriasComponent } from '../../components/materias.component';
       } @else if (gameService.vistaActual() === 'seleccion-materias') {
         <!-- Vista de selección de materias -->
         <app-materias />
+      } @else if (gameService.vistaActual() === 'modal-competencia') {
+        <!-- Modal de competencia -->
+        <app-modal
+          [titulo]="gameService.competenciaActual()?.nombre || 'Competencia'"
+          [descripcion]="gameService.competenciaActual()?.descripcion || ''"
+          [objetivo]="gameService.competenciaActual()?.objetivo || ''"
+          [puntajeAnterior]="obtenerPuntajeAnterior()"
+          [totalPreguntas]="5"
+          [textoBoton]="'¡Comenzar!'"
+          (close)="gameService.cerrarModal()"
+          (accept)="gameService.iniciarQuiz()"
+        />
       } @else if (gameService.vistaActual() === 'jugando') {
-        <!-- Vista del juego (próximamente) -->
-        <div class="text-center py-8">
-          <h2 class="text-2xl font-bold text-gray-700 mb-4">Jugando...</h2>
-          <p class="text-gray-600">
-            Grado: {{ gameService.gradoSeleccionado() }}° - 
-            Materia: {{ gameService.materiaSeleccionada() }}
-          </p>
-          <button
-            (click)="gameService.volverAMaterias()"
-            class="mt-4 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded"
-          >
-            Volver a materias
-          </button>
-        </div>
+        <!-- Vista del juego -->
+        <app-juego />
+      } @else if (gameService.vistaActual() === 'resultados') {
+        <!-- Vista de resultados -->
+        <app-resultados />
       }
     } @else {
       <div class="text-center py-8">
@@ -192,6 +198,11 @@ export class HomeComponent {
 
   currentUser = this.userService.currentUser;
 
+  // Computed para obtener puntaje por grado dinámicamente
+  obtenerPuntajeGrado = computed(() => {
+    return (grado: number) => this.userService.obtenerPuntajePorGrado(grado);
+  });
+
   // Datos de los grados
   grados = [
     {
@@ -240,6 +251,22 @@ export class HomeComponent {
 
   // Computed para cursos completados
   cursosCompletados = signal(0);
+
+  /**
+   * Obtiene el puntaje anterior de la competencia actual
+   */
+  obtenerPuntajeAnterior(): number | null {
+    const grado = this.gameService.gradoSeleccionado();
+    const materia = this.gameService.materiaSeleccionada();
+    const competencia = this.gameService.competenciaSeleccionada();
+
+    if (!grado || !materia || !competencia) {
+      return null;
+    }
+
+    const registro = this.userService.obtenerCompetencia(grado, materia, competencia);
+    return registro ? registro.mejorPuntaje : null;
+  }
 
   seleccionarGrado(numero: number) {
     this.gameService.seleccionarGrado(numero);
