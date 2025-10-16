@@ -7,7 +7,7 @@ let audioResolve = null;
 function iniciarAudioLobby() {
     if (audioLobby) return; // Evitar múltiples instancias
     
-    audioLobby = new Audio('song/lobby.mp3');
+    audioLobby = new Audio('original/song/lobby.mp3');
     audioLobby.loop = true;
     audioLobby.volume = 0.25;
     audioLobby.play().catch(() => {}); // Por si el navegador bloquea autoplay

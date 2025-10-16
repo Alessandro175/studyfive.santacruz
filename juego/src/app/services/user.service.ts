@@ -135,7 +135,6 @@ export class UserService {
       genero: userData.genero,
       colorPiel: userData.colorPiel,
       colorPelo: userData.colorPelo,
-      formaCara: userData.formaCara,
       puntuacion: 0,
       fechaCreacion: new Date(),
       ultimaActualizacion: new Date()

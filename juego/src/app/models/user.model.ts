@@ -4,7 +4,6 @@ export interface User {
   genero: 'masculino' | 'femenino' | 'otro';
   colorPiel: string;
   colorPelo: string;
-  formaCara?: string;
   puntuacion: number;
   fechaCreacion: Date;
   ultimaActualizacion: Date;
@@ -15,5 +14,4 @@ export interface UserCreate {
   genero: 'masculino' | 'femenino' | 'otro';
   colorPiel: string;
   colorPelo: string;
-  formaCara?: string;
 }
