@@ -14,7 +14,7 @@ import { ToastComponent } from './components/toast.component';
   styles: `
     :host {
       display: block;
-      height: 100dvh;
+      height: 100vh;
       margin: 0 auto;
       width: 100%;
       max-width: 700px;
