@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@use "tailwindcss";
+
+/* Variables de Color - Sistema de Diseño */
+:root {
+  /* Primary Colors */
+  --primary: #6366f1;
+  --primary-rgb: 99, 102, 241;
+  --primary-dark: #4f46e5;
+  --text-on-primary: #ffffff;
+
+  /* Secondary Colors */
+  --secondary: #8b5cf6;
+  --secondary-rgb: 139, 92, 246;
+  --secondary-dark: #7c3aed;
+  --text-on-secondary: #ffffff;
+
+  /* Success Colors */
+  --success: #10b981;
+  --success-rgb: 16, 185, 129;
+  --success-dark: #059669;
+  --text-on-success: #ffffff;
+
+  /* Error Colors */
+  --error: #ef4444;
+  --error-rgb: 239, 68, 68;
+  --error-dark: #dc2626;
+  --text-on-error: #ffffff;
+
+  /* Warning Colors */
+  --warning: #f59e0b;
+  --warning-rgb: 245, 158, 11;
+  --warning-dark: #d97706;
+  --text-on-warning: #ffffff;
+
+  /* Info Colors (usando primary) */
+  --info: var(--primary);
+  --info-rgb: var(--primary-rgb);
+  --info-dark: var(--primary-dark);
+  --text-on-info: var(--text-on-primary);
+}
