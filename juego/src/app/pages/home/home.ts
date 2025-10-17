@@ -6,7 +6,7 @@ import { ToastService } from '../../services/toast.service';
 import { GameService } from '../../services/game.service';
 import { NavigationService } from '../../services/navigation.service';
 import { MateriasComponent } from '../../components/materias.component';
-import { ModalComponent } from '../../components/modal.component';
+import { CompetenciasComponent } from '../../components/competencias.component';
 import { JuegoComponent } from '../../components/juego.component';
 import { getAvatarPath } from '../../data/avatars.constants';
 import { ResultadosComponent } from '../../components/resultados.component';
@@ -14,7 +14,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
 @Component({
     selector: 'app-home',
     standalone: true,
-    imports: [CommonModule, FormsModule, MateriasComponent, ModalComponent, JuegoComponent, ResultadosComponent],
+    imports: [CommonModule, FormsModule, MateriasComponent, CompetenciasComponent, JuegoComponent, ResultadosComponent],
     template: `
         @if (currentUser()) {
             <!-- Vista según el estado del juego -->
@@ -67,18 +67,9 @@ import { ResultadosComponent } from '../../components/resultados.component';
             } @else if (gameService.vistaActual() === 'seleccion-materias') {
                 <!-- Vista de selección de materias -->
                 <app-materias />
-            } @else if (gameService.vistaActual() === 'modal-competencia') {
-                <!-- Modal de competencia -->
-                <app-modal
-                    [titulo]="gameService.competenciaActual()?.nombre || 'Competencia'"
-                    [descripcion]="gameService.competenciaActual()?.descripcion || ''"
-                    [objetivo]="gameService.competenciaActual()?.objetivo || ''"
-                    [puntajeAnterior]="obtenerPuntajeAnterior()"
-                    [totalPreguntas]="5"
-                    [textoBoton]="'¡Comenzar!'"
-                    (close)="gameService.cerrarModal()"
-                    (accept)="gameService.iniciarQuiz()"
-                />
+            } @else if (gameService.vistaActual() === 'seleccion-competencias') {
+                <!-- Vista de selección de competencias -->
+                <app-competencias />
             } @else if (gameService.vistaActual() === 'jugando') {
                 <!-- Vista del juego -->
                 <app-juego />
@@ -373,25 +364,8 @@ export class HomeComponent {
      */
     getAvatarPath = getAvatarPath;
 
-    /**
-     * Obtiene el puntaje anterior de la competencia actual
-     */
-    obtenerPuntajeAnterior(): number | null {
-        const grado = this.gameService.gradoSeleccionado();
-        const materia = this.gameService.materiaSeleccionada();
-        const competencia = this.gameService.competenciaSeleccionada();
-
-        if (!grado || !materia || !competencia) {
-            return null;
-        }
-
-        const registro = this.userService.obtenerCompetencia(grado, materia, competencia);
-        return registro ? registro.mejorPuntaje : null;
-    }
-
     seleccionarGrado(numero: number) {
         this.gameService.seleccionarGrado(numero);
-        this.toastService.info(`Has seleccionado ${numero}° Grado`);
     }
 
     logout() {

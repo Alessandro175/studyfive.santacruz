@@ -10,11 +10,11 @@ import { UserService } from '../services/user.service';
     template: `
         <!-- Header con botón volver, puntuación y progreso -->
         <div class="flex justify-between items-start mb-4">
-            <button (click)="volverAMaterias()" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
+            <button (click)="volverACompetencias()" class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-                Cambiar materia
+                Ver Competencias
             </button>
 
             <div class="flex items-center gap-4 flex-col">
@@ -120,8 +120,8 @@ export class JuegoComponent {
         return preguntas[index] || undefined;
     });
 
-    volverAMaterias() {
-        this.gameService.volverAMaterias();
+    volverACompetencias() {
+        this.gameService.volverACompetencias();
     }
 
     responder(opcionIndex: number) {

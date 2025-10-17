@@ -61,18 +61,18 @@ import { getCompetenciasPorMateria } from '../data/preguntas.data';
 
                 <!-- Botones de acción -->
                 <div class="actions-container">
-                    <button class="btn btn-secondary" (click)="volverAMaterias()">
+                    <button class="btn btn-secondary" (click)="volverACompetencias()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M19 12H5M12 19l-7-7 7-7" />
                         </svg>
-                        Volver a Materias
+                        Ver Competencias
                     </button>
 
-                    <button class="btn btn-primary" (click)="siguienteCompetencia()">
+                    <button class="btn btn-primary" (click)="volverAJugar()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
+                            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
-                        {{ textoBotonSiguiente() }}
+                        Jugar de Nuevo
                     </button>
                 </div>
             </div>
@@ -378,43 +378,8 @@ export class ResultadosComponent implements OnInit {
         }
     }
 
-    /**
-     * Determina el texto del botón según si hay más competencias
-     */
-    textoBotonSiguiente(): string {
-        const grado = this.gameService.gradoSeleccionado();
-        const materia = this.gameService.materiaSeleccionada();
-        const currentIndex = this.gameService.competenciaIndex();
-
-        if (!grado || !materia) return 'Finalizar';
-
-        const competencias = getCompetenciasPorMateria(grado, materia);
-
-        // Si es la última competencia
-        if (currentIndex >= competencias.length - 1) {
-            return 'Finalizar';
-        } else {
-            const siguiente = competencias[currentIndex + 1];
-            return `Ir a ${siguiente.nombre}`;
-        }
-    }
-
-    /**
-     * Avanza a la siguiente competencia o vuelve a materias
-     */
-    siguienteCompetencia() {
-        // Usar el método del GameService que maneja la navegación
-        const haySiguiente = this.gameService.siguienteCompetencia();
-
-        if (!haySiguiente) {
-            // No hay más competencias, volver a materias
-            this.volverAMaterias();
-        }
-        // Si hay siguiente, el GameService ya cargó la competencia y mostró el modal
-    }
-
-    volverAMaterias() {
-        this.gameService.volverAMaterias();
+    volverACompetencias() {
+        this.gameService.volverACompetencias();
     }
 
     volverAJugar() {
