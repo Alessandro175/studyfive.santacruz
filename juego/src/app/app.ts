@@ -24,15 +24,14 @@ import { NavigationService } from './services/navigation.service';
   styles: `
     div {
       display: block;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       max-width: 700px;
       display: flex;
       flex-direction: column;
       background: brown;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto;
+      min-height: 800px;
     }
   `,
 })
