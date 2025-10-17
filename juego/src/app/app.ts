@@ -30,7 +30,7 @@ import { NavigationService } from './services/navigation.service';
       margin: 0 auto;
       width: 100%;
       max-width: 700px;
-      background: #f0f4f8;
+      background: gray;
     }
   `,
 })

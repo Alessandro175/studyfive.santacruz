@@ -10,9 +10,6 @@ import { UserCreate } from '../../models/user.model';
   selector: 'app-registro',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  host: {
-    class: 'p-8',
-  },
   template: `
     <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4 text-center titulo">
       ¡Bienvenido a la Aventura Educativa!
@@ -146,6 +143,8 @@ import { UserCreate } from '../../models/user.model';
       display: block;
       height: 100%;
       overflow-y: auto;
+      background-color: purple;
+      padding: 2rem;
     }`,
 })
 export class RegistroComponent implements OnInit {
