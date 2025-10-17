@@ -24,13 +24,13 @@ import { NavigationService } from './services/navigation.service';
   styles: `
     div {
       display: block;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      background: gray;
+      background: green;
     }
   `,
 })
