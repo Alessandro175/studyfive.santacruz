@@ -10,26 +10,26 @@ import { NavigationService } from './services/navigation.service';
   imports: [ToastComponent, LoginComponent, RegistroComponent, HomeComponent],
   template: `
     <!-- Mostrar vista según el estado de navegación -->
-    @switch (navigationService.currentView()) {
-      @case ('login') {
-        <app-login />
-      }
-      @case ('registro') {
-        <app-registro />
-      }
-      @case ('dashboard') {
-        <app-home />
-      }
-    }
-    <app-toast />
+    <div>
+      @switch (navigationService.currentView()) { @case ('login') {
+      <app-login />
+      } @case ('registro') {
+      <app-registro />
+      } @case ('dashboard') {
+      <app-home />
+      } }
+      <app-toast />
+    </div>
   `,
   styles: `
-    :host {
+    div {
       display: block;
       height: 100vh;
-      margin: 0 auto;
       width: 100%;
       max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       background: gray;
     }
   `,
