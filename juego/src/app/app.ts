@@ -22,20 +22,17 @@ import { NavigationService } from './services/navigation.service';
     </div>
   `,
   styles: `
-  :host{
-    display: block;
-    height: 100%;
-    width: 100%;
-  }
     div {
       display: block;
       height: 100%;
       width: 100%;
       max-width: 700px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      background: green;
+      background: brown;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
   `,
 })
