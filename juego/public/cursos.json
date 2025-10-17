@@ -1,0 +1,50 @@
+[
+    {
+        "id": "matematica",
+        "nombre": "Matemática",
+        "descripcion": "Desarrolla el pensamiento matemático y la capacidad de resolver problemas mediante el razonamiento lógico, la representación y la comunicación matemática.",
+        "imgUrl": "/img/cursos/matematica.png",
+        "color": "#4A90E2",
+        "icono": "➗"
+    },
+    {
+        "id": "comunicacion",
+        "nombre": "Comunicación",
+        "descripcion": "Desarrolla competencias comunicativas para interactuar con diversas personas, comprender y construir textos orales y escritos en diversas situaciones comunicativas.",
+        "imgUrl": "/img/cursos/comunicacion.png",
+        "color": "#E74C3C",
+        "icono": "📚"
+    },
+    {
+        "id": "ingles",
+        "nombre": "Inglés",
+        "descripcion": "Desarrolla la capacidad de comunicarse en inglés como lengua extranjera, comprendiendo y produciendo textos orales y escritos en diversos contextos.",
+        "imgUrl": "/img/cursos/ingles.png",
+        "color": "#9B59B6",
+        "icono": "🌍"
+    },
+    {
+        "id": "ciencia_tecnologia",
+        "nombre": "Ciencia y Tecnología",
+        "descripcion": "Desarrolla la comprensión del mundo natural y artificial mediante la indagación, la explicación científica y el diseño de soluciones tecnológicas.",
+        "imgUrl": "/img/cursos/ciencia-tecnologia.png",
+        "color": "#27AE60",
+        "icono": "🔬"
+    },
+    {
+        "id": "personal_social",
+        "nombre": "Personal Social",
+        "descripcion": "Desarrolla la comprensión de sí mismo, la convivencia democrática y la construcción de interpretaciones históricas sobre el Perú y el mundo.",
+        "imgUrl": "/img/cursos/personal-social.png",
+        "color": "#F39C12",
+        "icono": "👥"
+    },
+    {
+        "id": "arte_cultura",
+        "nombre": "Arte y Cultura",
+        "descripcion": "Desarrolla la sensibilidad, la creatividad y el pensamiento crítico mediante la apreciación y creación artística en diversas manifestaciones culturales.",
+        "imgUrl": "/img/cursos/arte-cultura.png",
+        "color": "#E91E63",
+        "icono": "🎨"
+    }
+]

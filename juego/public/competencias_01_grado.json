@@ -1,0 +1,492 @@
+[
+    {
+        "id": "com1_1",
+        "curso_id": "comunicacion",
+        "nombre": "Reconozco letras y sílabas",
+        "descripcion_corta": "Identifico las letras iniciales de palabras cotidianas y del Perú",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué palabra empieza con la letra M?",
+                "opciones": ["Mesa", "Sapo", "Oso", "Rana"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué palabra empieza con la letra L?",
+                "opciones": ["León", "Silla", "Gato", "Niño"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué palabra empieza con la letra C?",
+                "opciones": ["Casa", "Vaca", "Sol", "Uva"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué palabra empieza con la letra P?",
+                "opciones": ["Pato", "Loro", "Tigre", "Mono"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué palabra empieza con la letra S?",
+                "opciones": ["Sapo", "Gallo", "Toro", "Rana"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué palabra empieza con la letra Q?",
+                "opciones": ["Quena", "Zampoña", "Charango", "Cajón"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué palabra empieza con la letra C y es un animal del Perú?",
+                "opciones": ["Cuy", "Perro", "Gato", "Pato"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué palabra empieza con la letra L y es una fruta?",
+                "opciones": ["Limón", "Papaya", "Fresa", "Melón"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué palabra empieza con la letra M y es una ciudad del Perú?",
+                "opciones": ["Moquegua", "Arequipa", "Piura", "Puno"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué palabra empieza con la letra C y es un baile?",
+                "opciones": ["Caporal", "Huayno", "Festejo", "Marinera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué palabra empieza con la letra A?",
+                "opciones": ["Alpaca", "Mono", "Tigre", "Cóndor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué palabra empieza con la letra T y es una comida peruana?",
+                "opciones": ["Tacacho", "Papa rellena", "Ceviche", "Juane"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué palabra empieza con la letra J?",
+                "opciones": ["Jirafa", "Juane", "Jaguar", "Jugo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué palabra empieza con la letra H y es una danza?",
+                "opciones": ["Huayno", "Festejo", "Saya", "Tondero"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué palabra empieza con la letra C y es un instrumento?",
+                "opciones": ["Cajón", "Tambor", "Quena", "Guitarra"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "com1_2",
+        "curso_id": "comunicacion",
+        "nombre": "Formo palabras",
+        "descripcion_corta": "Uno sílabas para formar palabras relacionadas con el Perú",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"PA – TO\"?",
+                "opciones": ["Pato", "Tapo", "Tapa", "Pata"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"CU – Y\"?",
+                "opciones": ["Cuy", "Ycu", "Ycuu", "Cuyo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"CE – VI – CHE\"?",
+                "opciones": ["Ceviche", "Checevi", "Chevi", "Cevico"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"LI – MA\"?",
+                "opciones": ["Lima", "Mali", "Lami", "Limaa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"CO – NDO – R\"?",
+                "opciones": ["Cóndor", "Ndocor", "Condro", "Codor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"MA – RI – NE – RA\"?",
+                "opciones": ["Marinera", "Remarina", "Marira", "Marin"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"CHA – RA – NGO\"?",
+                "opciones": ["Charango", "Rachango", "Chanago", "Charaga"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"TA – CA – CHO\"?",
+                "opciones": ["Tacacho", "Chataco", "Cachato", "Tacaco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"SA – YA\"?",
+                "opciones": ["Saya", "Yasa", "Sya", "Sayya"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"PA – PA – YA\"?",
+                "opciones": ["Papaya", "Papay", "Payapa", "Paya"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"MO – NO\"?",
+                "opciones": ["Mono", "Nomó", "Nomo", "Monoo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"TO – DE – RO\"?",
+                "opciones": ["Tondero", "Deronto", "Dontero", "Tondor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"JU – A – NE\"?",
+                "opciones": ["Juane", "Enjua", "Juena", "Juna"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"CE – NA\"?",
+                "opciones": ["Cena", "Nace", "Cane", "Cenaa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué palabra se forma con las sílabas \"MA – TE\"?",
+                "opciones": ["Mate", "Tema", "Meto", "Mote"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "com1_3",
+        "curso_id": "comunicacion",
+        "nombre": "Leo y entiendo frases",
+        "descripcion_corta": "Comprendo el significado de oraciones simples",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "\"El cóndor vuela alto.\" ¿Quién vuela alto?",
+                "opciones": ["El cóndor", "El gato", "El perro", "El niño"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "\"La niña come una manzana.\" ¿Qué come la niña?",
+                "opciones": ["Una manzana", "Una pera", "Una naranja", "Un mango"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "\"El zorro vive en el bosque.\" ¿Dónde vive el zorro?",
+                "opciones": ["En el bosque", "En el mar", "En la casa", "En la plaza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "\"El cuy come pasto.\" ¿Qué come el cuy?",
+                "opciones": ["Pasto", "Pan", "Pescado", "Pollo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "\"El sol calienta la tierra.\" ¿Qué calienta la tierra?",
+                "opciones": ["El sol", "La luna", "La lluvia", "El río"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "\"El niño baila huayno.\" ¿Qué baila el niño?",
+                "opciones": ["Huayno", "Marinera", "Festejo", "Saya"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "\"La llama camina por el cerro.\" ¿Dónde camina la llama?",
+                "opciones": ["En el cerro", "En el mar", "En el bosque", "En la ciudad"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "\"La mamá cocina un juane.\" ¿Qué cocina la mamá?",
+                "opciones": ["Juane", "Ceviche", "Arroz", "Lomo saltado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "\"El pescador navega en su bote.\" ¿Qué hace el pescador?",
+                "opciones": ["Navega", "Duerme", "Canta", "Salta"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "\"El niño bebe agua.\" ¿Qué bebe el niño?",
+                "opciones": ["Agua", "Leche", "Jugo", "Café"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "\"El maestro enseña en la escuela.\" ¿Dónde enseña el maestro?",
+                "opciones": ["En la escuela", "En el mercado", "En la casa", "En el río"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "\"La alpaca tiene lana.\" ¿Qué tiene la alpaca?",
+                "opciones": ["Lana", "Plumas", "Piel dura", "Escamas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "\"El cóndor observa desde arriba.\" ¿Desde dónde observa?",
+                "opciones": ["Desde arriba", "Desde el suelo", "Desde el agua", "Desde el bosque"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "\"La niña pinta con colores.\" ¿Con qué pinta?",
+                "opciones": ["Con colores", "Con tijeras", "Con agua", "Con plastilina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "\"El niño come papa a la huancaína.\" ¿Qué come?",
+                "opciones": ["Papa a la huancaína", "Ceviche", "Arroz con pollo", "Juane"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "com1_4",
+        "curso_id": "comunicacion",
+        "nombre": "Ordeno ideas y palabras",
+        "descripcion_corta": "Organizo palabras para formar oraciones con sentido",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál es el orden correcto?",
+                "opciones": ["El gato corre", "Corre gato el", "Gato corre el", "El corre gato"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "Ordena: \"come niño el pan.\"",
+                "opciones": ["El niño come pan", "Come el niño pan", "Niño pan come el", "Pan niño el come"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "Ordena: \"sol el brilla.\"",
+                "opciones": ["El sol brilla", "Brilla sol el", "El brilla sol", "Sol el brilla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "Ordena: \"la canta niña.\"",
+                "opciones": ["La niña canta", "Canta la niña", "Niña la canta", "Canta niña la"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "Ordena: \"el cuy corre.\"",
+                "opciones": ["El cuy corre", "Corre el cuy", "Cuy corre el", "El corre cuy"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "Ordena: \"pinta la niña.\"",
+                "opciones": ["La niña pinta", "Pinta la niña", "Niña pinta la", "Pinta niña la"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "Ordena: \"el niño baila marinera.\"",
+                "opciones": ["El niño baila marinera", "Baila el niño marinera", "Marinera baila el niño", "Niño baila marinera el"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "Ordena: \"la cocina mamá el ceviche.\"",
+                "opciones": ["La mamá cocina el ceviche", "Cocina mamá el ceviche la", "Ceviche cocina la mamá el", "La ceviche cocina mamá"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "Ordena: \"corre perro el rápido.\"",
+                "opciones": ["El perro corre rápido", "Corre el rápido perro", "El rápido corre perro", "Rápido el perro corre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "Ordena: \"la niña bebe agua.\"",
+                "opciones": ["La niña bebe agua", "Agua bebe la niña", "Bebe la agua niña", "Niña agua bebe"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "Ordena: \"come alpaca pasto.\"",
+                "opciones": ["La alpaca come pasto", "Come pasto alpaca la", "Alpaca come la pasto", "Pasto come alpaca"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "Ordena: \"baila el niño saya.\"",
+                "opciones": ["El niño baila saya", "Saya baila el niño", "Niño baila el saya", "El saya baila niño"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "Ordena: \"anda llama la por el cerro.\"",
+                "opciones": ["La llama anda por el cerro", "Anda la por cerro llama", "Llama anda cerro por la", "Por anda cerro la llama"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "Ordena: \"la niña come papa rellena.\"",
+                "opciones": ["La niña come papa rellena", "Come la papa rellena niña", "Papa niña come rellena", "La come rellena niña papa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "Ordena: \"pinta niño el dibujo.\"",
+                "opciones": ["El niño pinta el dibujo", "Niño dibujo el pinta", "El dibujo pinta niño", "Pinta el dibujo niño"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "com1_5",
+        "curso_id": "comunicacion",
+        "nombre": "Cuentos del Perú",
+        "descripcion_corta": "Comprendo historias tradicionales peruanas",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Dónde vivían el zorro y el sapo?",
+                "opciones": ["En la selva", "En los cerros del Perú", "En el mar", "En la ciudad"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué pensaba el zorro de sí mismo?",
+                "opciones": ["Que era el más rápido", "Que era lento", "Que era débil", "Que era amigo del sapo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué hizo el sapo cuando el zorro se burló?",
+                "opciones": ["Se escondió", "Lo retó a una carrera", "Se fue del cerro", "Se enojó y lloró"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cómo ganó el sapo la carrera?",
+                "opciones": ["Corrió más rápido", "Puso a sus amigos sapos en el camino", "Se subió al zorro", "Voló"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué sintió el zorro al final?",
+                "opciones": ["Tristeza", "Sorpresa", "Alegría", "Miedo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué enseña el cuento?",
+                "opciones": ["Que hay que ser orgulloso", "Que el zorro es fuerte", "Que gana el más grande", "Que la inteligencia vale más que la fuerza"],
+                "respuesta_correcta": 3
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué animal era pequeño pero listo?",
+                "opciones": ["El zorro", "El sapo", "El cóndor", "El cuy"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Quién ganó la carrera?",
+                "opciones": ["El zorro", "El sapo", "Nadie", "Los dos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Dónde vivía la vicuña?",
+                "opciones": ["En la selva", "En la puna del Perú", "En el mar", "En la ciudad"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué les pasó a los animales?",
+                "opciones": ["Tenían hambre", "Tenían frío", "Tenían sed", "Estaban dormidos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué hizo la vicuña al verlos?",
+                "opciones": ["Los ignoró", "Les dio su lana", "Corrió", "Se escondió"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Para qué sirvió la lana?",
+                "opciones": ["Para jugar", "Para abrigarse", "Para vender", "Para hacer comida"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué valor enseña el cuento?",
+                "opciones": ["Compartir y ayudar", "No prestar nada", "Guardar todo", "Ser egoísta"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cómo se sintieron los animales después?",
+                "opciones": ["Enojados", "Felices y agradecidos", "Cansados", "Dormidos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué aprendemos de la vicuña?",
+                "opciones": ["Que es orgullosa", "Que comparte con amor", "Que no ayuda", "Que no tiene lana"],
+                "respuesta_correcta": 1
+            }
+        ]
+    }
+]
