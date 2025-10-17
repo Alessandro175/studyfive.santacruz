@@ -1,0 +1,50 @@
+[
+    {
+        "id": "matematica",
+        "nombre": "Matemática",
+        "descripcion": "Desarrolla el pensamiento matemático y la capacidad de resolver problemas mediante el razonamiento lógico, la representación y la comunicación matemática.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44310e98-8556-42b5-bd9e-948d44db06f6.png",
+        "color": "#4A90E2",
+        "icono": "➗"
+    },
+    {
+        "id": "comunicacion",
+        "nombre": "Comunicación",
+        "descripcion": "Desarrolla competencias comunicativas para interactuar con diversas personas, comprender y construir textos orales y escritos en diversas situaciones comunicativas.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/780030d2-ad72-4a0c-8056-f8adedc058e0.png",
+        "color": "#E74C3C",
+        "icono": "📚"
+    },
+    {
+        "id": "ingles",
+        "nombre": "Inglés",
+        "descripcion": "Desarrolla la capacidad de comunicarse en inglés como lengua extranjera, comprendiendo y produciendo textos orales y escritos en diversos contextos.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7344f9e9-92b0-4866-83ec-e516c26697d5.png",
+        "color": "#9B59B6",
+        "icono": "🌍"
+    },
+    {
+        "id": "ciencia_tecnologia",
+        "nombre": "Ciencia y Tecnología",
+        "descripcion": "Desarrolla la comprensión del mundo natural y artificial mediante la indagación, la explicación científica y el diseño de soluciones tecnológicas.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8654c946-2772-4be6-b915-8a6ca2b1cd6f.png",
+        "color": "#27AE60",
+        "icono": "🔬"
+    },
+    {
+        "id": "personal_social",
+        "nombre": "Personal Social",
+        "descripcion": "Desarrolla la comprensión de sí mismo, la convivencia democrática y la construcción de interpretaciones históricas sobre el Perú y el mundo.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/46cdf4a7-6748-4e93-98df-73d1bda51860.png",
+        "color": "#F39C12",
+        "icono": "👥"
+    },
+    {
+        "id": "arte_cultura",
+        "nombre": "Arte y Cultura",
+        "descripcion": "Desarrolla la sensibilidad, la creatividad y el pensamiento crítico mediante la apreciación y creación artística en diversas manifestaciones culturales.",
+        "imgUrl": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e0de5b8-070c-41c1-8d90-52b1b380cf19.png",
+        "color": "#E91E63",
+        "icono": "🎨"
+    }
+]
