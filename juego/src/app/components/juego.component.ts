@@ -145,6 +145,6 @@ export class JuegoComponent {
     getRespuestaCorrecta(): string {
         const pregunta = this.preguntaActual();
         if (!pregunta) return '';
-        return pregunta.opciones[pregunta.respuesta];
+        return pregunta.opciones[pregunta.respuesta_correcta];
     }
 }

@@ -364,8 +364,8 @@ export class HomeComponent {
      */
     getAvatarPath = getAvatarPath;
 
-    seleccionarGrado(numero: number) {
-        this.gameService.seleccionarGrado(numero);
+    async seleccionarGrado(numero: number) {
+        await this.gameService.seleccionarGrado(numero);
     }
 
     logout() {

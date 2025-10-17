@@ -1,8 +1,7 @@
-import { Component, inject, computed, OnInit } from '@angular/core';
+import { Component, computed, effect, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
-import { getCompetenciasPorMateria } from '../data/preguntas.data';
 
 @Component({
     selector: 'app-resultados',

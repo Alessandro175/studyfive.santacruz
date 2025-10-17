@@ -1,7 +1,31 @@
 import { Injectable, signal } from '@angular/core';
-import { Pregunta, Competencia, getCompetenciaInfo, getPreguntasPorMateriaYCompetencia, getCompetenciasPorMateria, getMateriaLabel, getMateriaKey, getMateriasDisponibles } from '../data/preguntas.data';
+import { RepositorioService } from './repositorio.service';
+import { ToastService } from './toast.service';
 
 export type VistaJuego = 'seleccion-grados' | 'seleccion-materias' | 'seleccion-competencias' | 'jugando' | 'resultados';
+
+// Interfaces para el nuevo sistema
+export interface Pregunta {
+    id: number;
+    pregunta: string;
+    opciones: string[];
+    respuesta_correcta: number;
+}
+
+export interface Competencia {
+    id: string;
+    curso_id: string;
+    nombre: string;
+    descripcion_corta: string;
+    preguntas: Pregunta[];
+}
+
+export interface Curso {
+    id: string;
+    nombre: string;
+    descripcion: string;
+    imgUrl: string;
+}
 
 export interface Materia {
     nombre: string;
@@ -25,10 +49,10 @@ export class GameService {
     // Grado seleccionado (1-6)
     gradoSeleccionado = signal<number | null>(null);
 
-    // Materia seleccionada
+    // Materia seleccionada (curso_id)
     materiaSeleccionada = signal<string | null>(null);
 
-    // Competencia seleccionada (ID dinámico: competencia_01, competencia_02, etc.)
+    // Competencia seleccionada
     competenciaSeleccionada = signal<string | null>(null);
 
     // Índice de la competencia actual en el array
@@ -44,46 +68,64 @@ export class GameService {
     preguntasActuales = signal<Pregunta[]>([]);
     competenciaActual = signal<Competencia | null>(null);
 
-    // Materias por grado (con keys normalizadas y labels para UI)
-    materias: Materia[] = [
-        {
-            nombre: 'ingles',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7344f9e9-92b0-4866-83ec-e516c26697d5.png',
-            puntaje: 0,
-        },
-        {
-            nombre: 'matematica',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44310e98-8556-42b5-bd9e-948d44db06f6.png',
-            puntaje: 0,
-        },
-        {
-            nombre: 'comunicacion',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/780030d2-ad72-4a0c-8056-f8adedc058e0.png',
-            puntaje: 0,
-        },
-        {
-            nombre: 'ciencia_tecnologia',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8654c946-2772-4be6-b915-8a6ca2b1cd6f.png',
-            puntaje: 0,
-        },
-        {
-            nombre: 'personal_social',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/46cdf4a7-6748-4e93-98df-73d1bda51860.png',
-            puntaje: 0,
-        },
-        {
-            nombre: 'arte_cultura',
-            imagen: 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e0de5b8-070c-41c1-8d90-52b1b380cf19.png',
-            puntaje: 0,
-        },
-    ];
+    // Competencias cargadas del grado actual
+    competenciasCargadas = signal<Competencia[]>([]);
+
+    // Cursos disponibles (se cargarán desde el JSON)
+    cursos = signal<Curso[]>([]);
+
+    constructor(
+        private repositorio: RepositorioService,
+        private toastService: ToastService
+    ) {
+        this.cargarCursos();
+    }
+
+    /**
+     * Carga los cursos desde el repositorio
+     */
+    private async cargarCursos() {
+        try {
+            const cursos = await this.repositorio.getCursos();
+            this.cursos.set(cursos);
+        } catch (error) {
+            console.error('Error al cargar cursos:', error);
+        }
+    }
 
     /**
      * Selecciona un grado y cambia a la vista de materias
+     * Carga las competencias del grado seleccionado
+     * Retorna true si se cargó exitosamente, false si hubo error
      */
-    seleccionarGrado(grado: number) {
-        this.gradoSeleccionado.set(grado);
-        this.vistaActual.set('seleccion-materias');
+    async seleccionarGrado(grado: number): Promise<boolean> {
+        try {
+            // Cargar competencias del grado seleccionado
+            const competencias = await this.repositorio.getCompetenciasPorGrado(grado);
+
+            // Validar que existan competencias
+            if (!competencias || competencias.length === 0) {
+                this.toastService.warning(`⚠️ No hay recursos disponibles para el grado ${grado}`, 5000);
+                console.warn(`⚠️ No hay competencias disponibles para el grado ${grado}`);
+                return false;
+            }
+
+            // Todo OK - Guardar datos y cambiar vista
+            this.gradoSeleccionado.set(grado);
+            this.competenciasCargadas.set(competencias);
+            console.log(`✅ Cargadas ${competencias.length} competencias para el grado ${grado}`);
+            this.vistaActual.set('seleccion-materias');
+
+            this.toastService.success(`✅ Grado ${grado} cargado exitosamente`, 3000);
+
+            return true;
+        } catch (error) {
+            console.error(`❌ Error al cargar competencias del grado ${grado}:`, error);
+
+            this.toastService.error(`❌ Error al cargar recursos del grado ${grado}. Por favor, intenta nuevamente.`, 5000);
+
+            return false;
+        }
     }
 
     /**
@@ -93,14 +135,15 @@ export class GameService {
         this.gradoSeleccionado.set(null);
         this.materiaSeleccionada.set(null);
         this.competenciaSeleccionada.set(null);
+        this.competenciasCargadas.set([]);
         this.vistaActual.set('seleccion-grados');
     }
 
     /**
      * Selecciona una materia y muestra la vista de competencias
      */
-    seleccionarMateria(materia: string) {
-        this.materiaSeleccionada.set(materia);
+    seleccionarMateria(cursoId: string) {
+        this.materiaSeleccionada.set(cursoId);
         this.vistaActual.set('seleccion-competencias');
     }
 
@@ -109,25 +152,24 @@ export class GameService {
      */
     seleccionarCompetencia(competenciaId: string) {
         const grado = this.gradoSeleccionado();
-        const materia = this.materiaSeleccionada();
+        const competencias = this.competenciasCargadas();
 
-        if (!grado || !materia) return;
+        if (!grado || competencias.length === 0) return;
 
-        // Obtener todas las competencias de la materia
-        const competencias = getCompetenciasPorMateria(grado, materia);
+        // Buscar la competencia en las competencias cargadas
+        const competencia = competencias.find((c) => c.id === competenciaId);
+
+        if (!competencia) {
+            console.error(`Competencia ${competenciaId} no encontrada`);
+            return;
+        }
+
         const index = competencias.findIndex((c) => c.id === competenciaId);
 
         this.competenciaSeleccionada.set(competenciaId);
         this.competenciaIndex.set(index >= 0 ? index : 0);
-
-        // Cargar datos de la competencia
-        const competenciaInfo = getCompetenciaInfo(grado, materia, competenciaId);
-        this.competenciaActual.set(competenciaInfo);
-
-        if (competenciaInfo) {
-            const preguntas = getPreguntasPorMateriaYCompetencia(grado, materia, competenciaId);
-            this.preguntasActuales.set(preguntas);
-        }
+        this.competenciaActual.set(competencia);
+        this.preguntasActuales.set(competencia.preguntas);
 
         // Iniciar directamente el quiz
         this.iniciarQuiz();
@@ -171,7 +213,7 @@ export class GameService {
         if (preguntaIndex >= preguntas.length) return;
 
         const pregunta = preguntas[preguntaIndex];
-        const esCorrecta = pregunta.respuesta === respuestaIndex;
+        const esCorrecta = pregunta.respuesta_correcta === respuestaIndex;
 
         // Guardar respuesta
         const respuestas = this.respuestasUsuario();
@@ -248,11 +290,42 @@ export class GameService {
     }
 
     /**
-     * Obtiene las materias del grado actual
+     * Obtiene las materias del grado actual desde las competencias cargadas
      */
     getMateriasDelGrado(): Materia[] {
-        // Por ahora todas los grados tienen las mismas materias
-        // Podrías filtrar o modificar según el grado si lo necesitas
-        return this.materias;
+        const competencias = this.competenciasCargadas();
+        const cursos = this.cursos();
+
+        // Obtener cursos únicos de las competencias cargadas
+        const cursosIds = Array.from(new Set(competencias.map((c) => c.curso_id)));
+
+        // Mapear a la estructura de Materia
+        return cursosIds
+            .map((cursoId) => {
+                const curso = cursos.find((c) => c.id === cursoId);
+                return curso
+                    ? {
+                          nombre: curso.id,
+                          imagen: curso.imgUrl,
+                          puntaje: 0,
+                      }
+                    : null;
+            })
+            .filter((m): m is Materia => m !== null);
+    }
+
+    /**
+     * Obtiene las competencias de una materia específica
+     */
+    getCompetenciasPorMateria(cursoId: string): Competencia[] {
+        return this.competenciasCargadas().filter((c) => c.curso_id === cursoId);
+    }
+
+    /**
+     * Obtiene el nombre legible de una materia
+     */
+    getNombreMateria(cursoId: string): string {
+        const curso = this.cursos().find((c) => c.id === cursoId);
+        return curso?.nombre || cursoId;
     }
 }

@@ -48,7 +48,7 @@ export class RepositorioService {
 
         try {
             console.log('🌐 Obteniendo cursos desde el servidor...');
-            const response = await fetch('/img/cursos.json');
+            const response = await fetch('data/cursos.json');
 
             if (!response.ok) {
                 throw new Error(`Error al cargar cursos: ${response.status}`);
@@ -87,7 +87,7 @@ export class RepositorioService {
 
         try {
             console.log(`🌐 Obteniendo competencias del grado ${grado} desde el servidor...`);
-            const response = await fetch(`/img/competencias_0${grado}_grado.json`);
+            const response = await fetch(`data/competencias_0${grado}_grado.json`);
 
             if (!response.ok) {
                 throw new Error(`Error al cargar competencias del grado ${grado}: ${response.status}`);

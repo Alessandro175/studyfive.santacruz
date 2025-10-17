@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { ToastService } from '../services/toast.service';
 import { UserService } from '../services/user.service';
-import { getMateriaLabel } from '../data/preguntas.data';
 
 @Component({
     selector: 'app-materias',
@@ -118,23 +117,22 @@ export class MateriasComponent {
     });
 
     // Función helper para obtener el label de la materia
-    getMateriaLabel(key: string): string {
-        return getMateriaLabel(key);
+    getMateriaLabel(cursoId: string): string {
+        return this.gameService.getNombreMateria(cursoId);
     }
 
     // Obtener puntaje acumulado de una materia específica
-    obtenerPuntajeMateria(materiaKey: string): number {
+    obtenerPuntajeMateria(cursoId: string): number {
         const grado = this.gameService.gradoSeleccionado();
         if (!grado) return 0;
-        return this.userService.obtenerPuntajePorMateria(grado, materiaKey);
+        return this.userService.obtenerPuntajePorMateria(grado, cursoId);
     }
 
     volverAGrados() {
         this.gameService.volverAGrados();
     }
 
-    seleccionarMateria(materia: string) {
-        const label = getMateriaLabel(materia);
-        this.gameService.seleccionarMateria(materia);
+    seleccionarMateria(cursoId: string) {
+        this.gameService.seleccionarMateria(cursoId);
     }
 }

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { ToastService } from '../services/toast.service';
 import { UserService } from '../services/user.service';
-import { getMateriaLabel, getCompetenciasPorMateria } from '../data/preguntas.data';
 import { CompetenciaRegistro } from '../models/user.model';
 
 @Component({
@@ -21,7 +20,7 @@ import { CompetenciaRegistro } from '../models/user.model';
 
         <!-- Título -->
         <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-3 text-indigo-700 drop-shadow-lg">
-            {{ getMateriaLabel(gameService.materiaSeleccionada() || '') }}
+            {{ gameService.getNombreMateria(gameService.materiaSeleccionada() || '') }}
         </h2>
         <p class="text-center text-gray-600 mb-8 text-lg">{{ gameService.gradoSeleccionado() }}° Grado</p>
 
@@ -37,7 +36,7 @@ import { CompetenciaRegistro } from '../models/user.model';
                     <!-- Contenido de la competencia -->
                     <div class="competencia-card" [class.completada]="completada" (click)="seleccionarCompetencia(competencia.id)">
                         <h3 class="competencia-titulo">{{ competencia.nombre }}</h3>
-                        <p class="competencia-objetivo">{{ competencia.objetivo }}</p>
+                        <p class="competencia-objetivo">{{ competencia.descripcion_corta }}</p>
 
                         <!-- Progreso -->
                         @if (registro) {
@@ -271,16 +270,13 @@ export class CompetenciasComponent {
     private toastService = inject(ToastService);
     private userService = inject(UserService);
 
-    getMateriaLabel = getMateriaLabel;
-
     // Computed para obtener las competencias de la materia seleccionada
     competencias = computed(() => {
-        const grado = this.gameService.gradoSeleccionado();
         const materia = this.gameService.materiaSeleccionada();
 
-        if (!grado || !materia) return [];
+        if (!materia) return [];
 
-        return getCompetenciasPorMateria(grado, materia);
+        return this.gameService.getCompetenciasPorMateria(materia);
     });
 
     volverAMaterias() {
