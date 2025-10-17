@@ -168,6 +168,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
 
       .titulo {
@@ -335,6 +336,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
         }
         .header-left {
           align-items: flex-start;
+          text-align: left;
         }
         .titulo {
           font-size: 3rem;

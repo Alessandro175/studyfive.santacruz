@@ -10,81 +10,57 @@ import { NavigationService } from '../../services/navigation.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div class="container">
-      <h1 class="titulo">
-        ¡Bienvenido de vuelta!
-      </h1>
-      <p class="subtitle">
-        Ingresa tu nickname para continuar jugando
-      </p>
+    <h1 class="titulo">¡Bienvenido de vuelta!</h1>
+    <p class="subtitle">Ingresa tu nickname para continuar jugando</p>
 
-      <form (submit)="onSubmit($event)" class="form">
-        <input
-          [(ngModel)]="nickname"
-          name="nickname"
-          type="text"
-          maxlength="16"
-          placeholder="Tu nickname"
-          class="input"
-          required
-          autofocus
-        />
+    <form (submit)="onSubmit($event)" class="form">
+      <input
+        [(ngModel)]="nickname"
+        name="nickname"
+        type="text"
+        maxlength="16"
+        placeholder="Tu nickname"
+        class="input"
+        required
+        autofocus
+      />
 
-        <button
-          type="submit"
-          class="button"
-        >
-          Entrar
-        </button>
-      </form>
+      <button type="submit" class="button">Entrar</button>
+    </form>
 
-      <div class="register">
-        <p>¿No tienes cuenta?</p>
-        <a
-          (click)="goToRegistro()"
-          class="link"
-        >
-          Regístrate aquí
-        </a>
-      </div>
+    <div class="register">
+      <p>¿No tienes cuenta?</p>
+      <a (click)="goToRegistro()" class="link"> Regístrate aquí </a>
+    </div>
 
-      <div class="ranking">
-        <h2 class="ranking-title">Ranking de Jugadores</h2>
-        <div class="ranking-list">
-          @if (ranking().length === 0) {
-          <div class="no-players">No hay jugadores registrados aún</div>
-          } @else {
-          <ul class="ranking-ul">
-            @for (user of ranking(); track user.id; let idx = $index) {
-            <li class="ranking-li" [ngClass]="{'top-player': idx < 3, 'first-place': idx === 0}">
-              <span class="player-name">
-                @if (idx === 0) { 🏆 } @else if (idx === 1) { 🥈 } @else if (idx === 2) { 🥉 } @else
-                { ⭐ }
-                {{ user.nickname }}
-              </span>
-              <span>{{ user.puntuacion }} pts</span>
-            </li>
-            }
-          </ul>
+    <div class="ranking">
+      <h2 class="ranking-title">Ranking de Jugadores</h2>
+      <div class="ranking-list">
+        @if (ranking().length === 0) {
+        <div class="no-players">No hay jugadores registrados aún</div>
+        } @else {
+        <ul class="ranking-ul">
+          @for (user of ranking(); track user.id; let idx = $index) {
+          <li class="ranking-li" [ngClass]="{ 'top-player': idx < 3, 'first-place': idx === 0 }">
+            <span class="player-name">
+              @if (idx === 0) { 🏆 } @else if (idx === 1) { 🥈 } @else if (idx === 2) { 🥉 } @else {
+              ⭐ }
+              {{ user.nickname }}
+            </span>
+            <span>{{ user.puntuacion }} pts</span>
+          </li>
           }
-        </div>
+        </ul>
+        }
       </div>
     </div>
   `,
   styles: `
     :host {
       display: block;
+      padding: 3rem 1rem;
     }
 
-    .container {
-      position: relative;
-      z-index: 10;
-      padding: 1rem;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
     .titulo {
       font-size: 2.5rem;

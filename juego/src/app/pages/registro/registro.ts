@@ -141,10 +141,7 @@ import { UserCreate } from '../../models/user.model';
   styles: `
     :host {
       display: block;
-      height: 100%;
-      overflow-y: auto;
-      background-color: purple;
-      padding: 2rem;
+      padding: 3rem 1rem;
     }`,
 })
 export class RegistroComponent implements OnInit {
