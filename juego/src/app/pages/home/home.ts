@@ -146,15 +146,13 @@ import { ResultadosComponent } from '../../components/resultados.component';
     `
       :host {
         display: block;
-        padding: 2rem;
       }
 
       .main-container {
-        max-width: 80rem;
         margin: 0 auto;
         position: relative;
         z-index: 10;
-        width: 100%;
+        padding: 3rem 1rem;
       }
 
       .header {

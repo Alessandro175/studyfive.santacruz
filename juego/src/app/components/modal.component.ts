@@ -77,10 +77,9 @@ import { CommonModule } from '@angular/common';
       }
 
       .modal-content {
-        padding: 1rem;
         background: white;
-        border-radius: 20px;
-        max-width: 600px;
+        border-radius: 1rem;
+        max-width: 700px;
         width: 90%;
         max-height: 80%;
         overflow-y: auto;

@@ -112,6 +112,10 @@ import { getMateriaLabel } from '../data/preguntas.data';
       color: white;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+    :host{
+      display: block;
+      padding: 3rem 1rem;
+    }
   `]
 })
 export class MateriasComponent {

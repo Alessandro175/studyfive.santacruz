@@ -84,7 +84,7 @@ import { getCompetenciasPorMateria } from '../data/preguntas.data';
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 3rem 1rem;
     }
 
     .resultados-card {
@@ -276,26 +276,20 @@ import { getCompetenciasPorMateria } from '../data/preguntas.data';
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      background: var(--primary);
       color: white;
-      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-    }
-
+  
     .btn-secondary {
       background: white;
-      color: var(--color-primary);
-      border: 2px solid var(--color-primary);
+      color: var(--primary);
+      border: 2px solid var(--primary);
     }
 
     .btn-secondary:hover {
-      background: var(--color-primary);
-      color: white;
-      transform: translateY(-3px);
+      background: var(--primary);
+      color: var(--text-on-primary);
     }
 
     @media (max-width: 768px) {
