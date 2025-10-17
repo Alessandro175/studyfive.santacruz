@@ -74,7 +74,6 @@ import { NavigationService } from '../../services/navigation.service';
   styles: `
     :host {
       display: block;
-      background-color: blue;
     }
 
     .container {

@@ -26,10 +26,10 @@ import { NavigationService } from './services/navigation.service';
       max-width: 700px;
       display: flex;
       flex-direction: column;
-      background: brown;
       margin: 0 auto;
       height: 100vh;
       overflow-y: auto;
+      background: white;
     }
   `,
 })
