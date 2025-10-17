@@ -1708,5 +1708,1835 @@
                 "respuesta_correcta": 0
             }
         ]
+    },
+    {
+        "id": "art1_1",
+        "curso_id": "arte_cultura",
+        "nombre": "Colores",
+        "descripcion_corta": "Reconozco y mezclo colores básicos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué color se obtiene al mezclar rojo y azul?",
+                "opciones": ["Verde", "Morado", "Naranja", "Amarillo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué color resulta de mezclar rojo y amarillo?",
+                "opciones": ["Verde", "Morado", "Naranja", "Azul"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué color es el cielo en un día claro?",
+                "opciones": ["Verde", "Azul", "Rojo", "Negro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué color es una hoja típica?",
+                "opciones": ["Rojo", "Amarillo", "Verde", "Azul"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué color tiene la nieve?",
+                "opciones": ["Blanca", "Negra", "Roja", "Verde"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué color se asocia con el sol?",
+                "opciones": ["Azul", "Amarillo", "Morado", "Negro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué color tiene una naranja?",
+                "opciones": ["Azul", "Verde", "Naranja", "Morado"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué color resulta al mezclar azul y amarillo?",
+                "opciones": ["Verde", "Morado", "Naranja", "Rojo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿De qué color es una manzana roja?",
+                "opciones": ["Amarilla", "Roja", "Azul", "Verde"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué color es típico de la noche?",
+                "opciones": ["Rosa", "Negro/oscuro", "Amarillo", "Naranja"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué color tiene el limón?",
+                "opciones": ["Verde/amarillo", "Azul", "Negro", "Rosa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué color es el mar profundo?",
+                "opciones": ["Azul", "Amarillo", "Blanco", "Morado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué color se usa mucho en el día de la bandera?",
+                "opciones": ["Depende del país", "Solo amarillo", "Solo verde", "Solo morado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué color queda con pintura mezclada de rojo+blanco?",
+                "opciones": ["Rosa", "Marrón", "Negro", "Verde"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué color tiene un plátano maduro?",
+                "opciones": ["Verde", "Amarillo", "Azul", "Rojo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué color indica peligro en señales?",
+                "opciones": ["Rojo", "Verde", "Azul", "Blanco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué color suele representar la paz?",
+                "opciones": ["Negro", "Blanco", "Rojo", "Naranja"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué color es el bronce?",
+                "opciones": ["Metal oscuro con tonos marrones", "Azul", "Verde", "Rosa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué color tiene la flor típica de la rosa roja?",
+                "opciones": ["Roja", "Azul", "Verde", "Amarilla"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "art1_2",
+        "curso_id": "arte_cultura",
+        "nombre": "Formas en el arte",
+        "descripcion_corta": "Identifico formas geométricas en el arte",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué forma tiene una pelota?",
+                "opciones": ["Cuadrada", "Redonda", "Triangular", "Rectángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué forma tiene una hoja rectangular?",
+                "opciones": ["Circular", "Rectangular", "Triangular", "Ovalada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué forma tiene una pirámide vista de frente?",
+                "opciones": ["Triangular", "Circular", "Rectangular", "Cuadrada"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué forma usamos para dibujar una puerta?",
+                "opciones": ["Triángulo", "Rectángulo", "Círculo", "Esfera"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué forma tiene un huevo?",
+                "opciones": ["Circular", "Ovalada", "Cuadrada", "Triangular"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué forma tiene una señal de stop (alto) en muchas calles?",
+                "opciones": ["Círculo", "Octágono", "Triángulo", "Rectángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué forma tiene un reloj de pared redondo?",
+                "opciones": ["Circular", "Cuadrado", "Triangular", "Rectángulo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué forma tiene un libro cerrado?",
+                "opciones": ["Rectángulo", "Círculo", "Triángulo", "Esfera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué forma tiene una ventana con cuatro lados iguales?",
+                "opciones": ["Rectángulo", "Cuadrado", "Círculo", "Triángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué forma tiene un triángulo equilátero?",
+                "opciones": ["Tres lados iguales", "Cuatro lados", "Dos lados", "Ninguno"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué forma usas para una cara en dibujo simple?",
+                "opciones": ["Círculo u óvalo", "Triángulo", "Rectángulo", "Esfera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué forma tiene un paraguas visto desde arriba?",
+                "opciones": ["Círculo", "Rectángulo", "Triángulo", "Óvalo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué forma tiene una moneda?",
+                "opciones": ["Circular", "Cuadrada", "Triangular", "Rectángulo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué forma es buena para un cartel alto?",
+                "opciones": ["Rectángulo", "Círculo", "Triángulo", "Esfera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué forma tiene una señal de dirección (flecha)?",
+                "opciones": ["Flecha", "Círculo", "Triángulo", "Cuadrado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué forma usamos para una estrella simple?",
+                "opciones": ["Polígono con puntas", "Círculo", "Rectángulo", "Triángulo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué forma es simétrica por ambos lados?",
+                "opciones": ["Corazón", "Rectángulo", "Triángulo isósceles", "Todas pueden ser simétricas"],
+                "respuesta_correcta": 3
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué forma tiene una caja cerrada?",
+                "opciones": ["Cubo (3D) / cuadrado (2D)", "Círculo", "Triángulo", "Esfera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué forma es buena para un marco de foto horizontal?",
+                "opciones": ["Rectángulo (horizontal)", "Círculo", "Triángulo", "Esfera"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "art1_3",
+        "curso_id": "arte_cultura",
+        "nombre": "Expresión artística",
+        "descripcion_corta": "Exploro diferentes formas de expresión artística",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué usamos para pintar?",
+                "opciones": ["Pincel", "Regla", "Tijera", "Cuchara"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué usamos para colorear en la escuela?",
+                "opciones": ["Lápices de colores", "Martillo", "Tenis", "Taza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es música?",
+                "opciones": ["Sonidos organizados", "Solo ruido", "Silencio", "Comer"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué usamos para recortar papel?",
+                "opciones": ["Tijeras", "Lápiz", "Pincel", "Regla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué hacemos en teatro escolar?",
+                "opciones": ["Actuar", "Nadar", "Comer", "Dormir"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es dibujo?",
+                "opciones": ["Crear imágenes con lápiz o pintura", "Cantar", "Bailar", "Cocinar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué nos expresa sentimientos en arte?",
+                "opciones": ["Pintura, música, danza", "Ropa sucia", "Basura", "Comida podrida"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué necesitamos para modelar con plastilina?",
+                "opciones": ["Plastilina", "Agua caliente", "Fuego", "Martillo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué expresa la danza?",
+                "opciones": ["Emociones mediante movimiento", "Lectura", "Escritura", "Silencio"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es una galería?",
+                "opciones": ["Lugar donde se muestran obras de arte", "Taller mecánico", "Escuela", "Estadio"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es una obra de teatro?",
+                "opciones": ["Representación en escena", "Comida", "Examen", "Baile"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué usamos para pegar papel?",
+                "opciones": ["Pegamento", "Agua", "Zapatos", "Tijeras"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es el ritmo en música?",
+                "opciones": ["Organización del tiempo en sonidos", "Color de la pintura", "Forma geométrica", "Tamaño de carpeta"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es una melodía?",
+                "opciones": ["Sucesión de notas agradables", "Ruido fuerte", "Silencio", "Comida"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué actividad artística se hace con voz?",
+                "opciones": ["Cantar", "Pintar", "Bailar", "Dibujar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué necesitas para hacer una máscara de carnaval?",
+                "opciones": ["Papel, pintura y tijeras", "Agua", "Ropa interior", "Zapatos"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué es ilustrar un cuento?",
+                "opciones": ["Dibujar imágenes que acompañan la historia", "Dormir", "Comer", "Esconder"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué muestra una escultura?",
+                "opciones": ["Forma en tres dimensiones", "Pintura", "Canción", "Poema"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué es creatividad?",
+                "opciones": ["Usar ideas nuevas para crear algo", "Copiar siempre", "Romper cosas", "Ignorar"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "art1_4",
+        "curso_id": "arte_cultura",
+        "nombre": "Creo con materiales",
+        "descripcion_corta": "Uso diferentes materiales para crear arte",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué material sirve para hacer una máscara?",
+                "opciones": ["Papel", "Agua", "Arena", "Aire"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué usamos para pegar cartulina?",
+                "opciones": ["Pegamento", "Arena", "Sal", "Piedra"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué material sirve para hacer un títere?",
+                "opciones": ["Tela y botones", "Piedras", "Agua", "Aire"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué se usa para colorear una cartulina?",
+                "opciones": ["Pintura o lápices de colores", "Motor", "Llave inglesa", "Cuchillo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué material es seguro para niños para manualidades?",
+                "opciones": ["Papel, cartón y pegamento sin tóxicos", "Ácido", "Pintura tóxica", "Fuego"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué se usa para hacer una escultura pequeña?",
+                "opciones": ["Plastilina", "Arena mojada", "Piedras pesadas", "Gasolina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué necesitas para hacer un collage?",
+                "opciones": ["Revistas, papel, pegamento", "Arena", "Pintura de aceite", "Gasolina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué material es reciclable para manualidades?",
+                "opciones": ["Cartón", "Aceite", "Pilas", "Gasolina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué se usa para hacer un móvil decorativo?",
+                "opciones": ["Hilo y papel", "Piedra", "Agua", "Metal pesado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué material se pinta con acuarelas?",
+                "opciones": ["Papel especial", "Metal", "Piedra", "Arena"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué se utiliza para dar brillo a una tarjeta?",
+                "opciones": ["Purpurina o brillantina", "Arena", "Sal", "Barro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué material es flexible y sirve para pulseras?",
+                "opciones": ["Cuerda o hilo", "Piedra", "Metal macizo", "Vidrio"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué pega rápido para manualidades sencillas?",
+                "opciones": ["Pegamento en barra", "Cemento", "Gasolina", "Pintura"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué material usas para hacer un marco de foto simple?",
+                "opciones": ["Cartón rígido", "Aceite", "Gasolina", "Arena"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué herramienta se usa para cortar papel?",
+                "opciones": ["Tijeras", "Martillo", "Llave inglesa", "Tenaza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué material puedes pintar con témpera?",
+                "opciones": ["Papel y cartón", "Metal caliente", "Aceite", "Gasolina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué sirve para colgar una manualidad en la pared?",
+                "opciones": ["Cinta adhesiva o cuerda", "Agua", "Arena", "Sal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué material reciclado sirve para hacer macetas?",
+                "opciones": ["Botellas de plástico cortadas", "Piedra", "Metal fundido", "Gasolina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué material ayuda a dar estructura a una maqueta?",
+                "opciones": ["Cartón duro", "Agua", "Aceite", "Arena"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "art1_5",
+        "curso_id": "arte_cultura",
+        "nombre": "Arte peruano",
+        "descripcion_corta": "Descubro las danzas, música y arte tradicional del Perú",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué danza es del altiplano?",
+                "opciones": ["Marinera", "Diablada", "Festejo", "Zapateo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué danza es típica de la costa norte peruana?",
+                "opciones": ["Marinera", "Huayno", "Diablada", "Saya"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué instrumento es típico en la costa: cajón, charango, zampoña?",
+                "opciones": ["Cajón", "Charango", "Zampoña", "Violín"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué instrumento Andino tiene tubos?",
+                "opciones": ["Zampoña", "Guitarra", "Piano", "Batería"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es el traje típico de la marinera?",
+                "opciones": ["Falda amplia y vestido elegante", "Pantalón corto", "Mono", "Casco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Dónde se baila el huayno?",
+                "opciones": ["Sierra/Andes", "Océano", "Desierto", "Bosque"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué dulce típico es de Perú?",
+                "opciones": ["Picarones", "Sushi", "Pizza", "Croissant"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué instrumento es pequeño y de cuerda andino?",
+                "opciones": ["Charango", "Piano", "Violonchelo", "Trompeta"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué artista popular canta criolla?",
+                "opciones": ["Arturo Moreno", "Eva Ayllón", "Beethoven", "Mozart"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué celebración peruana incluye danzas y colores en Puno?",
+                "opciones": ["Fiesta de la Candelaria", "Navidad", "Halloween", "Año Nuevo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué ciudad es famosa por la marinera?",
+                "opciones": ["Trujillo", "Cusco", "Puno", "Iquitos"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué danza muestra máscaras y diablos en el altiplano?",
+                "opciones": ["Diablada", "Marinera", "Festejo", "Tango"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué se come en la costa peruana frecuentemente?",
+                "opciones": ["Pescado y ceviche", "Solo papa", "Solo choclo", "Solo frutas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué cultura preincaica es conocida en la costa norte?",
+                "opciones": ["Moche", "Inca", "Maya", "Azteca"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué tejido tradicional usan los andinos?",
+                "opciones": ["Textiles de lana", "Plástico", "Vidrio", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué instrumento de viento andino suena con aire soplado?",
+                "opciones": ["Zampoña", "Piano", "Guitarra", "Cajón"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué fiesta reúne música, danza y devoción en Puno?",
+                "opciones": ["Fiesta de la Candelaria", "Carnaval", "Halloween", "Día de la Madre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué baile costeño tiene zapateo y pañuelos?",
+                "opciones": ["Marinera", "Huayno", "Salsa", "Tango"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué elemento es clave en la artesanía peruana?",
+                "opciones": ["Textiles y colores tradicionales", "Solo plástico", "Solo vidrio", "Solo metal"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ing1_1",
+        "curso_id": "ingles",
+        "nombre": "Numbers and counting",
+        "descripcion_corta": "Aprendo a contar y usar números en inglés",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "What number is after 3?",
+                "opciones": ["Two", "Three", "Four", "Five"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 2,
+                "pregunta": "How many fingers on one hand?",
+                "opciones": ["3", "4", "5", "6"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "What is 1 + 1?",
+                "opciones": ["One", "Two", "Three", "Four"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "What number is seven in English?",
+                "opciones": ["Seven", "Seis", "Ocho", "Nueve"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "How many days in a week?",
+                "opciones": ["Five", "Six", "Seven", "Eight"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "What is number 10 in English?",
+                "opciones": ["Ten", "Nine", "Eleven", "Twelve"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "Count: 2,4,6, __ ?",
+                "opciones": ["7", "8", "9", "10"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "What is zero?",
+                "opciones": ["Nothing", "One", "Ten", "Five"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "What comes before five?",
+                "opciones": ["Four", "Six", "Seven", "Three"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "What is 3 + 2?",
+                "opciones": ["4", "5", "6", "3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "How many months in a year?",
+                "opciones": ["12", "10", "11", "8"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "What number is 'twelve'?",
+                "opciones": ["11", "12", "13", "14"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "What is the biggest: 1, 10, 5?",
+                "opciones": ["1", "5", "10", "0"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "Which is even: 3 or 4?",
+                "opciones": ["3", "4", "Both", "None"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "What is 6 - 1?",
+                "opciones": ["4", "5", "6", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "What is 2 + 2?",
+                "opciones": ["3", "4", "5", "2"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "What is nine in English?",
+                "opciones": ["Eight", "Nine", "Ten", "Seven"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "What number is smallest: 2,4,6?",
+                "opciones": ["6", "4", "2", "None"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 19,
+                "pregunta": "Count fruits: one, two, __ ?",
+                "opciones": ["Four", "Three", "Five", "Six"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ing1_2",
+        "curso_id": "ingles",
+        "nombre": "Basic arithmetic",
+        "descripcion_corta": "Resuelvo operaciones matemáticas básicas en inglés",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "5 + 4 = ?",
+                "opciones": ["8", "9", "10", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "7 - 3 = ?",
+                "opciones": ["3", "4", "5", "2"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "2 + 6 = ?",
+                "opciones": ["7", "8", "9", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "10 - 5 = ?",
+                "opciones": ["4", "5", "6", "3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "3 + 3 = ?",
+                "opciones": ["5", "6", "7", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "8 - 2 = ?",
+                "opciones": ["5", "6", "7", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "4 + 7 = ?",
+                "opciones": ["10", "11", "12", "9"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "9 - 4 = ?",
+                "opciones": ["6", "5", "4", "3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "1 + 9 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "6 + 6 = ?",
+                "opciones": ["11", "12", "13", "10"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "0 + 7 = ?",
+                "opciones": ["6", "7", "8", "5"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "12 - 6 = ?",
+                "opciones": ["5", "6", "7", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "5 + 5 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "7 + 2 = ?",
+                "opciones": ["8", "9", "10", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "4 - 1 = ?",
+                "opciones": ["2", "3", "4", "1"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "3 + 7 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "2 + 8 = ?",
+                "opciones": ["9", "10", "8", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "11 - 1 = ?",
+                "opciones": ["9", "10", "11", "12"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "14 - 4 = ?",
+                "opciones": ["9", "10", "11", "12"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ing1_3",
+        "curso_id": "ingles",
+        "nombre": "Colors and shapes",
+        "descripcion_corta": "Identifico colores y formas en inglés",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "What color is the sky?",
+                "opciones": ["Blue", "Red", "Green", "Black"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "What shape is a ball?",
+                "opciones": ["Square", "Round", "Triangle", "Rectangle"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "What color is grass?",
+                "opciones": ["Green", "Blue", "Red", "Yellow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "What shape is a window usually?",
+                "opciones": ["Circle", "Rectangle", "Triangle", "Star"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "What color is a banana?",
+                "opciones": ["Yellow", "Blue", "Red", "Black"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "What shape is a slice of pizza often?",
+                "opciones": ["Triangle", "Square", "Circle", "Oval"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "What color is the sun?",
+                "opciones": ["Yellow", "Purple", "Black", "Green"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "What shape is a clock face?",
+                "opciones": ["Circle", "Square", "Triangle", "Star"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "What color is a rose red?",
+                "opciones": ["Red", "Blue", "Green", "Yellow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "What shape has three sides?",
+                "opciones": ["Triangle", "Square", "Circle", "Rectangle"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "What color is snow?",
+                "opciones": ["White", "Red", "Blue", "Green"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "What shape is a table top often?",
+                "opciones": ["Rectangle", "Triangle", "Circle", "Star"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "What color is an orange?",
+                "opciones": ["Orange", "Blue", "Purple", "Black"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "What shape is a door?",
+                "opciones": ["Rectangle", "Circle", "Triangle", "Star"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "What color is the ocean?",
+                "opciones": ["Blue", "Red", "Yellow", "Pink"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "What shape is a stop sign (octagon) typically?",
+                "opciones": ["Octagon", "Circle", "Triangle", "Square"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "What color do you get mixing red + white?",
+                "opciones": ["Pink", "Green", "Blue", "Yellow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "What shape has four equal sides?",
+                "opciones": ["Square", "Triangle", "Circle", "Oval"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "What color is a lemon?",
+                "opciones": ["Yellow", "Red", "Green", "Blue"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ing1_4",
+        "curso_id": "ingles",
+        "nombre": "Classroom phrases",
+        "descripcion_corta": "Aprendo frases útiles para el salón de clases",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "How do you say \"hola\" in English?",
+                "opciones": ["Bye", "Hello", "Thanks", "Please"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "How do you say \"gracias\"?",
+                "opciones": ["Sorry", "Please", "Thank you", "Hello"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "How to ask for permission: \"Can I __?\" means:",
+                "opciones": ["I can", "May I", "I cannot", "I won't"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "How do you say \"adiós\" en inglés?",
+                "opciones": ["Hello", "Bye", "Thanks", "Sorry"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "How to say \"por favor\" en inglés?",
+                "opciones": ["Please", "Thanks", "Sorry", "Hello"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "Teacher asks \"Are you ready?\" You answer:",
+                "opciones": ["Yes, I am", "No, I am not", "Maybe", "Later"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "How to say \"silencio\" en inglés?",
+                "opciones": ["Noise", "Quiet", "Loud", "Run"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "How to ask \"¿Cómo te llamas?\" en inglés?",
+                "opciones": ["Where are you?", "How old are you?", "What is your name?", "What is this?"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 9,
+                "pregunta": "How to say \"abran el libro\" en inglés?",
+                "opciones": ["Close the book", "Open the book", "Throw the book", "Read later"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "How to say \"levántate\" en inglés?",
+                "opciones": ["Sit down", "Stand up", "Sleep", "Run"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "How to say \"escucha\" en inglés?",
+                "opciones": ["Look", "Listen", "Speak", "Jump"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "How to say \"repite\" en inglés?",
+                "opciones": ["Repeat", "Stop", "Sit", "Sleep"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "Teacher says \"Good job!\" What means?",
+                "opciones": ["Mal hecho", "Buen trabajo", "Dormir", "Correr"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "How to say \"por favor, ayuda\" en inglés?",
+                "opciones": ["Please help", "Please stop", "Please go", "Please run"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "How to say \"¿Puedo ir al baño?\" en inglés?",
+                "opciones": ["Can I go to the bathroom?", "Can I eat?", "Can I run?", "Can I sleep?"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "How to say \"siéntate\" en inglés?",
+                "opciones": ["Sit down", "Stand up", "Jump", "Sing"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "How to say \"muchas gracias\" en inglés?",
+                "opciones": ["Many thanks", "Thank you very much", "Hello", "Bye"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "How to say \"lo siento\" en inglés?",
+                "opciones": ["Sorry", "Thank you", "Hello", "Goodbye"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "How to ask \"¿Qué es esto?\" en inglés?",
+                "opciones": ["Where is this?", "What is this?", "Who is this?", "When is this?"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ing1_5",
+        "curso_id": "ingles",
+        "nombre": "Animals and nature",
+        "descripcion_corta": "Aprendo sobre animales y la naturaleza en inglés",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "Which one lives in water?",
+                "opciones": ["Fish", "Cat", "Bird", "Dog"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "Which animal says \"woof\"?",
+                "opciones": ["Cat", "Dog", "Fish", "Bird"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "Which animal flies?",
+                "opciones": ["Dog", "Bird", "Fish", "Horse"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "Which is a plant?",
+                "opciones": ["Tree", "Car", "House", "Book"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "Which animal gives milk?",
+                "opciones": ["Cow", "Fish", "Bird", "Snake"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "What color is grass?",
+                "opciones": ["Blue", "Green", "Red", "Yellow"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "Which animal is small and chirps?",
+                "opciones": ["Bird", "Elephant", "Horse", "Cow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "Which is a forest?",
+                "opciones": ["Area with many trees", "Desert", "City", "River"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "Which animal is big and grey?",
+                "opciones": ["Mouse", "Elephant", "Ant", "Bee"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "Which animal has stripes?",
+                "opciones": ["Tiger", "Sheep", "Cow", "Pig"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "Which animal hops and is small?",
+                "opciones": ["Frog or rabbit", "Elephant", "Horse", "Fish"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "What do trees give us?",
+                "opciones": ["Oxygen", "Stones", "Water", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "Which animal lives in a hive?",
+                "opciones": ["Bees", "Dogs", "Cats", "Fish"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "Which animal has a shell?",
+                "opciones": ["Turtle", "Bird", "Horse", "Cow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "Which animal is known to be man's friend?",
+                "opciones": ["Dog", "Shark", "Snake", "Spider"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "Which animal says \"meow\"?",
+                "opciones": ["Dog", "Cat", "Cow", "Horse"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "Which is a natural water body?",
+                "opciones": ["River", "Road", "House", "School"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "Which animal is nocturnal often?",
+                "opciones": ["Owl", "Chicken", "Cow", "Sheep"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "What helps flowers grow?",
+                "opciones": ["Sun, water and soil", "Radio", "TV", "Shoes"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps1_1",
+        "curso_id": "personal_social",
+        "nombre": "Nuestras culturas del Perú",
+        "descripcion_corta": "Conozco sobre los incas y culturas peruanas",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Quiénes fueron los incas?",
+                "opciones": ["Personas del Perú", "Animales", "Robots", "Extraterrestres"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Dónde vivieron los incas?",
+                "opciones": ["En Cusco", "En Lima", "En el mar", "En el cielo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué hacían los incas?",
+                "opciones": ["Trabajaban", "Dormían", "Gritaban", "Jugaban"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué comían los incas?",
+                "opciones": ["Papa", "Helado", "Pollo frito", "Pan"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué idioma hablaban los incas?",
+                "opciones": ["Quechua", "Inglés", "Francés", "Alemán"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué construyeron los incas?",
+                "opciones": ["Machu Picchu", "Una casa moderna", "Un carro", "Un parque"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué usaban los incas para contar?",
+                "opciones": ["Quipus", "Cuerda", "Papel", "Roca"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué usaban los incas para vestirse?",
+                "opciones": ["Lana", "Plástico", "Papel", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué cultura hizo dibujos en la arena?",
+                "opciones": ["Nazca", "Inca", "Chavín", "Moche"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué cultura vivió antes de los incas?",
+                "opciones": ["Chavín", "Inca", "Nazca", "Paracas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué cultura pintaba cerámicas?",
+                "opciones": ["Moche", "Inca", "Nazca", "Chavín"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué cultura hacía telas de colores?",
+                "opciones": ["Paracas", "Moche", "Inca", "Nazca"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué adoraban los incas?",
+                "opciones": ["Al Sol", "A los autos", "A los juguetes", "A las piedras"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué animales cuidaban los incas?",
+                "opciones": ["Llamas", "Gatos", "Perros", "Ratones"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cómo viajaban los incas?",
+                "opciones": ["Caminando", "En avión", "En carro", "En tren"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué cultivaban los incas?",
+                "opciones": ["Maíz", "Fideos", "Manzana", "Helado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué usaban los incas en la cabeza?",
+                "opciones": ["Sombrero de plumas", "Casco", "Gorro moderno", "Toalla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué cuidaban los incas?",
+                "opciones": ["La tierra", "El dinero", "Los juguetes", "La ropa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué país fue de los incas?",
+                "opciones": ["Perú", "Chile", "Brasil", "España"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps1_2",
+        "curso_id": "personal_social",
+        "nombre": "Mi familia",
+        "descripcion_corta": "Aprendo sobre mi familia y cómo cuidarla",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Quién es la mamá de tu papá?",
+                "opciones": ["Abuela", "Hermana", "Prima", "Tía"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Quién es tu hermano?",
+                "opciones": ["Persona que comparte padres", "Vecino", "Profesor", "Doctor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Quién es tu papá?",
+                "opciones": ["Hombre de la familia", "Maestro", "Amigo", "Doctor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué hacemos en la familia?",
+                "opciones": ["Vivir juntos y ayudarnos", "Pelear siempre", "Ignorar", "Jugar solo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Quién cuida a los niños?",
+                "opciones": ["Madre o padre", "Perro", "Árbol", "Zapato"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cómo debemos tratar a la familia?",
+                "opciones": ["Con respeto", "Con desprecio", "Ignorando", "Gritando"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es un abuelo?",
+                "opciones": ["Padre de tu padre o madre", "Tu amigo", "Tu maestro", "Tu vecino"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué hace la familia en la comida?",
+                "opciones": ["Compartir", "Pelear", "Romper", "Correr"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Quién es tu primo?",
+                "opciones": ["Hijo del tío o tía", "Tu profesor", "Tu vecino", "Tu mascota"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es importante en la familia?",
+                "opciones": ["Amor", "Odio", "Pelea", "Soledad"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué se celebra en familia?",
+                "opciones": ["Cumpleaños", "Silencio", "Tristeza", "Conflicto"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Quién es la hermana de tu mamá?",
+                "opciones": ["Tía", "Prima", "Abuela", "Hija"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué hacemos cuando alguien está enfermo en casa?",
+                "opciones": ["Ayudarlo", "Ignorarlo", "Reir", "Jugar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cómo se llama la casa de tu familia?",
+                "opciones": ["Hogar", "Escuela", "Trabajo", "Mercado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es compartir?",
+                "opciones": ["Dar y recibir con otros", "Guardarlo todo", "Romper", "Ignorar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Quién enseña en casa muchas veces?",
+                "opciones": ["Padre o madre", "Perro", "Vecino", "Árbol"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué debemos decir a mamá/papá?",
+                "opciones": ["Gracias", "Nada", "Gritar", "Chillar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué se hace en reuniones familiares?",
+                "opciones": ["Compartir comida y charlas", "Pelear", "Dormir todo el día", "Nadar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué significa cuidar a alguien?",
+                "opciones": ["Ayudar y proteger", "Ignorar", "Molestar", "Romper"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps1_3",
+        "curso_id": "personal_social",
+        "nombre": "Mi escuela",
+        "descripcion_corta": "Aprendo sobre la escuela y cómo comportarme",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué debemos hacer en clase?",
+                "opciones": ["Gritar", "Escuchar", "Dormir", "Jugar todo el tiempo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Quién enseña en la escuela?",
+                "opciones": ["Profesor", "Médico", "Panadero", "Policía"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué llevas en la mochila?",
+                "opciones": ["Libros y cuadernos", "Silla", "Mesa", "Televisor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Dónde se aprende?",
+                "opciones": ["Escuela", "Cueva", "Cielo", "Jardín"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué hora es de recreo?",
+                "opciones": ["Cuando se juega y descansa", "Cuando se estudia", "Cuando se duerme", "Cuando se pelea"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué debes hacer con la tarea?",
+                "opciones": ["Hacerla", "Romperla", "Tirarla", "Ignorarla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué se usa para escribir en clase?",
+                "opciones": ["Lápiz o bolígrafo", "Cuchillo", "Piedra", "Agua"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué debes decir si no entiendes?",
+                "opciones": ["Preguntar al profesor", "Callar siempre", "Correr afuera", "Reírse"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es la biblioteca?",
+                "opciones": ["Lugar con libros", "Lugar para nadar", "Lugar para comer", "Lugar para dormir"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué se hace en arte en la escuela?",
+                "opciones": ["Pintar y crear", "Dormir", "Correr", "Comer solo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es puntualidad?",
+                "opciones": ["Llegar a tiempo", "Llegar tarde", "Irse temprano", "No venir"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué se debe usar en educación física?",
+                "opciones": ["Ropa deportiva", "Traje de gala", "Pijama", "Zapatos de tacón"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué son normas escolares?",
+                "opciones": ["Reglas para convivir", "Juego", "Comida", "Música"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué haces en ciencias?",
+                "opciones": ["Aprender sobre la naturaleza", "Dormir", "Cantar", "Pintar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué debes hacer con tus útiles?",
+                "opciones": ["Cuidarlos", "Romperlos", "Tirarlos", "Comerlos"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué es respeto en la escuela?",
+                "opciones": ["Tratar bien a todos", "Gritar", "Pelear", "Ignorar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué debes hacer si ves basura en la escuela?",
+                "opciones": ["Recogerla o decir a un adulto", "Tirarla más", "Quemarla", "Romperla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué es un compañero?",
+                "opciones": ["Amigo de clase", "Profesor", "Vecino", "Familiar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué debes hacer cuando suena la campana de inicio?",
+                "opciones": ["Ir a clase", "Jugar", "Comer", "Dormir"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps1_4",
+        "curso_id": "personal_social",
+        "nombre": "Mi comunidad",
+        "descripcion_corta": "Conozco mi comunidad y los servicios que ofrece",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Quién cuida la ciudad?",
+                "opciones": ["Policía", "Panadero", "Doctor", "Maestro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Dónde vas a comprar comida?",
+                "opciones": ["Mercado", "Escuela", "Parque", "Casa de amigo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué servicio apaga incendios?",
+                "opciones": ["Policía", "Bomberos", "Doctor", "Maestro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es un parque?",
+                "opciones": ["Lugar para jugar", "Escuela", "Casa", "Hospital"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué debemos hacer en la plaza?",
+                "opciones": ["Cuidarla y no tirar basura", "Tirar basura", "Romper cosas", "Pintar paredes"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Dónde cuida la salud la comunidad?",
+                "opciones": ["Hospital o posta de salud", "Escuela", "Parque", "Cine"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Quién ayuda cuando te pierdes?",
+                "opciones": ["Policía", "Cocinero", "Árbol", "Banco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un banco?",
+                "opciones": ["Lugar para ahorrar dinero", "Restaurante", "Escuela", "Hospital"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué necesitas para cruzar la calle seguro?",
+                "opciones": ["Mirar y esperar el paso peatonal", "Correr sin mirar", "Dormir", "Gritar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es una iglesia?",
+                "opciones": ["Lugar de culto", "Tienda", "Hospital", "Escuela"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es un mercado?",
+                "opciones": ["Lugar donde se venden alimentos y cosas", "Un cine", "Un parque", "Un hospital"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué hace un alcalde?",
+                "opciones": ["Dirigir la ciudad", "Cantar", "Pintar casas", "Cocinar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es servicio público?",
+                "opciones": ["Servicios para la comunidad (agua, luz)", "Servicio privado", "Juguetes", "Muebles"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué ayuda a la comunidad a educarse?",
+                "opciones": ["Escuela", "Basura", "Ropa", "Zapatos"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué hacemos para ayudar a nuestra comunidad?",
+                "opciones": ["Cuidar áreas y no ensuciar", "Romper cosas", "Tirar basura", "Gritar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué profesión ayuda con la salud?",
+                "opciones": ["Doctor", "Panadero", "Mecánico", "Electricista"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué lugar protege animales en la ciudad?",
+                "opciones": ["Parque zoológico o refugio", "Hospital", "Escuela", "Banco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué debes hacer si encuentras a alguien que necesita ayuda?",
+                "opciones": ["Avisar a un adulto o autoridad", "Ignorar", "Burlarse", "Alejarse"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué medio de transporte público ves en la ciudad?",
+                "opciones": ["Bus o colectivo", "Barco grande", "Avión", "Televisión"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps1_5",
+        "curso_id": "personal_social",
+        "nombre": "Cuidemos el entorno",
+        "descripcion_corta": "Aprendo a cuidar el medio ambiente y mi comunidad",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué pasa si botamos basura al río?",
+                "opciones": ["Se ensucia", "Se limpia", "Nada", "Mejora"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué hacemos con el reciclaje?",
+                "opciones": ["Separarlo", "Mezclarlo", "Tirarlo a la calle", "Quemarlo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Por qué es importante no tirar plástico al mar?",
+                "opciones": ["Daña animales marinos", "No pasa nada", "Los peces lo comen y mejoran", "A los árboles les gusta"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es una campaña de limpieza?",
+                "opciones": ["Actividad para recoger basura", "Fiesta", "Juego", "Comer"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué debemos plantar en la comunidad?",
+                "opciones": ["Árboles y plantas", "Basura", "Piedras", "Ropa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué no debes hacer en un parque?",
+                "opciones": ["Tirar basura", "Jugar", "Caminar", "Cuidar plantas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es cuidar el agua?",
+                "opciones": ["No desperdiciarla", "Tirarla", "Quemarla", "Pintarla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué hacemos con las pilas usadas?",
+                "opciones": ["Llevarlas a reciclaje", "Tirarlas al suelo", "Comerlas", "Guardarlas en casa para siempre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es energía renovable?",
+                "opciones": ["Solar o eólica", "Petróleo", "Humo", "Plástico"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué problema causa la contaminación?",
+                "opciones": ["Enfermedades y daño a animales", "Mejora la salud", "Hace crecer árboles", "Limpia el agua"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué debes hacer si ves basura en la vereda?",
+                "opciones": ["Recogerla o avisar a un adulto", "Dejarla", "Esconderla", "Quemarla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué ayuda a reducir basura?",
+                "opciones": ["Reutilizar y reciclar", "Comprar más", "Romper cosas", "Ignorar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué material sufre más en el mar?",
+                "opciones": ["Plástico", "Madera", "Piedra", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué actividad escolar ayuda al entorno?",
+                "opciones": ["Huerto escolar", "Romper ventanas", "Tirar basura", "Pintar paredes con basura"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué podemos hacer para ahorrar energía en casa?",
+                "opciones": ["Apagar luces cuando no se usan", "Dejar todo encendido", "Abrir la llave siempre", "Encender la tele todo el día"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué es compost?",
+                "opciones": ["Abono hecho de restos orgánicos", "Basura plástica", "Agua sucia", "Piedras"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué debemos evitar en zonas naturales?",
+                "opciones": ["Hacer fuego sin permiso", "Caminar", "Observar animales", "Respirar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué se planta para evitar erosión del suelo?",
+                "opciones": ["Plantas y árboles", "Basura", "Ladrillos", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué transmisión evita enfermedades?",
+                "opciones": ["Mantener limpio el entorno e higiene", "Tirar basura", "No lavarse", "Comer basura"],
+                "respuesta_correcta": 0
+            }
+        ]
     }
 ]
