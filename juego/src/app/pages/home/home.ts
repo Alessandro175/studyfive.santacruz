@@ -151,7 +151,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
     `
       :host {
         display: block;
-        height: 100vh;
+        height: 100%;
         overflow-y: auto;
         padding: 2rem;
       }

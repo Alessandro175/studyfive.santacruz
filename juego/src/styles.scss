@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@use "tailwindcss";
+@use 'tailwindcss';
 
 /* Variables de Color - Sistema de Diseño */
 :root {
@@ -40,6 +40,11 @@
   --text-on-info: var(--text-on-primary);
 }
 
-.titulo{
-    font-family: 'Fredoka One', cursive;
+.titulo {
+  font-family: 'Fredoka One', cursive;
+}
+
+body,
+html {
+  height: 100%;
 }

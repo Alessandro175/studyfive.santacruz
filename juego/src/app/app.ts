@@ -26,13 +26,12 @@ import { NavigationService } from './services/navigation.service';
   styles: `
     :host {
       display: block;
-      height: 100vh;
+      height: 100%;
       overflow-y: auto;
       margin: 0 auto;
       width: 100%;
       max-width: 700px;
       background: #f0f4f8;
-      overflow-y: auto;
     }
   `,
 })
