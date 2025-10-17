@@ -1098,5 +1098,615 @@
                 "respuesta_correcta": 2
             }
         ]
+    },
+    {
+        "id": "cyt1_1",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Mi cuerpo",
+        "descripcion_corta": "Conozco las partes de mi cuerpo y sus funciones",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Con qué parte vemos?",
+                "opciones": ["Oídos", "Ojos", "Manos", "Pies"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Con qué parte oímos?",
+                "opciones": ["Ojos", "Nariz", "Oídos", "Boca"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué usamos para agarrar cosas?",
+                "opciones": ["Pies", "Manos", "Ojos", "Oídos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Con qué respiramos?",
+                "opciones": ["Ojos", "Nariz", "Manos", "Orejas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué parte usamos para caminar?",
+                "opciones": ["Manos", "Cabeza", "Pies", "Ojos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Dónde está el corazón?",
+                "opciones": ["En la cabeza", "En el pecho", "En la mano", "En el pie"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cuál órgano nos ayuda a pensar?",
+                "opciones": ["Corazón", "Estómago", "Cerebro", "Mano"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué usamos para sonreír?",
+                "opciones": ["Piernas", "Boca", "Oídos", "Ojos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué parte se usa para oler?",
+                "opciones": ["Ojos", "Nariz", "Boca", "Manos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué parte protege el cerebro?",
+                "opciones": ["Hueso del brazo", "Cráneo", "Estómago", "Pierna"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué comemos para tener energía?",
+                "opciones": ["Ropa", "Comida", "Agua", "Juguetes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué parte usamos para escribir?",
+                "opciones": ["Pies", "Manos", "Ojos", "Oídos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué parte usamos para oír música?",
+                "opciones": ["Pies", "Oídos", "Manos", "Nariz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué parte ayuda a masticar?",
+                "opciones": ["Dientes", "Ojos", "Oídos", "Pies"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué parte usamos para abrazar?",
+                "opciones": ["Codos", "Manos y brazos", "Ojos", "Orejas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué parte protege los dientes?",
+                "opciones": ["Labios", "Encías", "Lengua", "Ojos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué parte ayuda a mantener el equilibrio?",
+                "opciones": ["Oídos internos", "Boca", "Manos", "Nariz"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué parte ayuda a saborear?",
+                "opciones": ["Nariz", "Lengua", "Ojos", "Manos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué parte nos permite oír y hablar?",
+                "opciones": ["Oídos y boca", "Ojos y manos", "Pies y manos", "Nariz y ojos"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "cyt1_2",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Animales y plantas",
+        "descripcion_corta": "Aprendo sobre seres vivos y sus características",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál vive en el agua?",
+                "opciones": ["Pez", "Gato", "Loro", "Gallo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué planta da frutas como manzanas?",
+                "opciones": ["Cactus", "Manzano", "Pino", "Alga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué animal tiene plumas?",
+                "opciones": ["Perro", "Pescado", "Pájaro", "Caballo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué animal dice \"miau\"?",
+                "opciones": ["Perro", "Gato", "Vaca", "Oveja"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué planta necesita sol para crecer?",
+                "opciones": ["Hongos", "Planta común", "Bacteria", "Todos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué animal pone huevos y nada?",
+                "opciones": ["Gallina", "Pato", "Perro", "Conejo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué animal tiene cuatro patas y corre rápido?",
+                "opciones": ["Pez", "Pájaro", "Perro", "Serpiente"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Cuál es una planta medicinal común?",
+                "opciones": ["Rosa", "Aloe vera", "Coche", "Lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué necesita una planta para vivir?",
+                "opciones": ["Juguetes", "Agua, sol y tierra", "TV", "Zapatos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuál animal es mamífero y da leche?",
+                "opciones": ["Gallina", "Vaca", "Pez", "Pájaro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué come una vaca?",
+                "opciones": ["Carne", "Pasto", "Pescado", "Agua salada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué planta nos da papa?",
+                "opciones": ["Árbol", "Planta de papa", "Cactus", "Alga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué animal vive en la selva y es grande?",
+                "opciones": ["Elefante", "León", "Mono", "Tigre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cuál animal vuela?",
+                "opciones": ["Perro", "Pájaro", "Pez", "Elefante"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué parte de la planta absorbe agua?",
+                "opciones": ["Hojas", "Flores", "Raíces", "Frutos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué animal tiene caparazón?",
+                "opciones": ["Cangrejo", "Gato", "Caballo", "Pato"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué planta tiene flores y da aroma?",
+                "opciones": ["Rosa", "Piedra", "Arena", "Tierra"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué animal vive en la granja y da huevos?",
+                "opciones": ["Vaca", "Gallina", "Oveja", "Perro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué es un ser vivo?",
+                "opciones": ["Una roca", "Una planta", "Un juguete", "Una silla"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt1_3",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "El clima y el día",
+        "descripcion_corta": "Entiendo los fenómenos del clima y las estaciones",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué aparece de noche?",
+                "opciones": ["Sol", "Luna", "Nubes", "Lluvia"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué ocurre cuando llueve mucho?",
+                "opciones": ["Hay sol fuerte", "Hay lluvia", "Nieve", "Arena"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué hace el sol?",
+                "opciones": ["Apagar", "Calentar", "Congelar", "Llover"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué trae el viento?",
+                "opciones": ["Aire moviéndose", "Agua", "Fuego", "Tierra"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué usamos cuando llueve para no mojarnos?",
+                "opciones": ["Paraguas", "Gafas", "Tenis", "Sombrero de sol"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué estación es fría?",
+                "opciones": ["Verano", "Invierno", "Primavera", "Otoño"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué vemos en el cielo de día?",
+                "opciones": ["Estrellas", "Luna", "Sol", "Lombrices"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es una nube?",
+                "opciones": ["Agua en el cielo", "Fuego", "Piedra", "Silla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué cae en invierno en lugares fríos?",
+                "opciones": ["Arena", "Nieve", "Agua caliente", "Sol"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué usamos cuando hace mucho sol?",
+                "opciones": ["Paraguas", "Gorro o gorra", "Botas de lluvia", "Abrigo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cómo está el clima cuando hace calor y sol?",
+                "opciones": ["Soleado", "Nevado", "Lluvioso", "Ventoso"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué produce la lluvia?",
+                "opciones": ["Agua del cielo", "Papel", "Ropa", "Caramelos"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es el arcoíris?",
+                "opciones": ["Sombra", "Colores en el cielo después de la lluvia", "Una nube", "Un animal"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué pasa cuando hay mucho viento?",
+                "opciones": ["Todo se calma", "Las hojas se mueven", "Nadan los árboles", "Se vuelve oscuro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué usamos en invierno para abrigarnos?",
+                "opciones": ["Chaleco", "Sombrero de paja", "Sandalias", "Gafas de sol"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué tiempo hace cuando hay pocas nubes y hace calor?",
+                "opciones": ["Soleado", "Lluvioso", "Nevado", "Nublado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué ocurre al amanecer?",
+                "opciones": ["Aparece la noche", "Amanece y sale el sol", "Empieza a nevar", "Apagan las luces"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué ocurre cuando el cielo está gris y llueve?",
+                "opciones": ["Está soleado", "Está lluvioso", "Está nevando", "Está seco"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué instrumento mide la lluvia o la precipitación?",
+                "opciones": ["Termómetro", "Pluviómetro", "Regla", "Cronómetro"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt1_4",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Los materiales",
+        "descripcion_corta": "Identifico diferentes materiales y sus propiedades",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué material es duro?",
+                "opciones": ["Madera", "Papel", "Algodón", "Tela"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué material flota en agua normalmente?",
+                "opciones": ["Piedra", "Madera", "Metal", "Plomo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué material usamos para escribir en papel?",
+                "opciones": ["Metal", "Lápiz (grafito)", "Agua", "Tierra"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué material es transparente?",
+                "opciones": ["Madera", "Vidrio", "Tela", "Papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué material se dobla fácilmente?",
+                "opciones": ["Papel", "Piedra", "Metal pesado", "Hormigón"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué material usamos para cocinar ollas resistentes?",
+                "opciones": ["Plástico", "Metal", "Tela", "Papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué material es blando para ropa?",
+                "opciones": ["Algodón", "Piedra", "Metal", "Madera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué material evita que entre el agua?",
+                "opciones": ["Tela", "Plástico impermeable", "Arena", "Nube"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué material se derrite con calor alto?",
+                "opciones": ["Metal", "Hielo", "Papel", "Cartón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué material es natural?",
+                "opciones": ["Plástico", "Madera", "Metal", "Vidrio"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué material usamos para construir casas resistentes?",
+                "opciones": ["Cartón", "Hormigón", "Papel", "Tela"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué material es flexible y se usa en ropa?",
+                "opciones": ["Tela", "Piedra", "Vidrio", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué material se quema fácilmente?",
+                "opciones": ["Papel", "Metal", "Vidrio", "Agua"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué material conduce electricidad?",
+                "opciones": ["Madera", "Metal", "Tela", "Plástico"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué material usamos para ventanas?",
+                "opciones": ["Papel", "Vidrio", "Tela", "Tierra"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué material se encuentra en árboles?",
+                "opciones": ["Madera", "Plástico", "Hierro", "Vidrio"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué material usamos para hacer vasos desechables?",
+                "opciones": ["Papel o plástico", "Piedra", "Vidrio resistente", "Metal"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué material protege del frío cuando usamos abrigo?",
+                "opciones": ["Tela", "Arena", "Vidrio", "Madera"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué material es reciclable y viene de plantas?",
+                "opciones": ["Plástico", "Cartón", "Metal", "Vidrio"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt1_5",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Cuidemos la naturaleza",
+        "descripcion_corta": "Aprendo a cuidar el medio ambiente y reciclar",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Dónde tiramos la basura?",
+                "opciones": ["En el suelo", "En el tacho", "En el río", "En la mesa"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué debemos plantar para cuidar la Tierra?",
+                "opciones": ["Árboles", "Papeles", "Basura", "Juguetes"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué pasa si echamos basura al río?",
+                "opciones": ["Se ensucia", "Se limpia", "Nada", "Mejora"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué reducimos si reciclamos plástico?",
+                "opciones": ["Agua", "Basura", "Árboles", "Animales"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué no debemos tirar en la calle?",
+                "opciones": ["Basura", "Juguetes", "Comida", "Ropa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué ayuda a los insectos polinizadores?",
+                "opciones": ["Plantar flores", "Echar basura", "Pintar la calle", "Romper ramas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué energía no contamina: solar, carbón, petróleo, humo?",
+                "opciones": ["Carbón", "Petróleo", "Solar", "Humo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué debemos ahorrar para cuidar agua?",
+                "opciones": ["Usar más", "Desperdiciarla", "Ahorrar", "Tirarla al suelo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué material reciclas en el contenedor azul (generalmente)?",
+                "opciones": ["Plástico y papel", "Comida", "Basura tóxica", "Aceite usado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué animal sufre si tiramos plástico al mar?",
+                "opciones": ["Peces", "Árboles", "Gatos", "Perros"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es importante antes de tirar algo al tacho?",
+                "opciones": ["Revisar si se puede reciclar", "Romperlo", "Tirarlo a la calle", "Quemarlo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué hacemos en una limpieza de playa?",
+                "opciones": ["Recoger basura", "Comprar más botellas", "Dejar todo", "Nadar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué alimento viene de plantas?",
+                "opciones": ["Manzana", "Carne", "Pescado", "Leche"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué debemos evitar para no contaminar el aire?",
+                "opciones": ["Plantar árboles", "Quemar basura", "Cuidar autos", "Caminar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué producto puede reciclarse fácilmente?",
+                "opciones": ["Plástico PET", "Arena", "Tierra", "Agua"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué debemos hacer con las pilas usadas?",
+                "opciones": ["Tirarlas en cualquier lado", "Llevarlas a punto de reciclaje", "Comerlas", "Quemarlas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Por qué es importante cuidar los bosques?",
+                "opciones": ["Dan casa a animales", "No sirven", "Son basura", "Son caros"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué causa la contaminación del agua?",
+                "opciones": ["Basura y químicos", "Árboles", "Flores", "Nubes"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué actividad ayuda al medio ambiente?",
+                "opciones": ["Reciclar", "Tirar basura", "Romper plantas", "Quemar hojas"],
+                "respuesta_correcta": 0
+            }
+        ]
     }
 ]
