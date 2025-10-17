@@ -56,11 +56,11 @@ import { CommonModule } from '@angular/common';
   styles: [
     `
       :host {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.2);
         padding: 1rem;
         z-index: 20;

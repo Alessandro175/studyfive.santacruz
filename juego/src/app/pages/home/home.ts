@@ -151,7 +151,8 @@ import { ResultadosComponent } from '../../components/resultados.component';
     `
       :host {
         display: block;
-        min-height: 100vh;
+        height: 100vh;
+        overflow-y: auto;
         padding: 2rem;
       }
       .card {
