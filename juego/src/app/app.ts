@@ -6,51 +6,77 @@ import { HomeComponent } from './pages/home/home';
 import { NavigationService } from './services/navigation.service';
 
 @Component({
-  selector: 'app-root',
-  imports: [ToastComponent, LoginComponent, RegistroComponent, HomeComponent],
-  template: `
-    <!-- Mostrar vista según el estado de navegación -->
-    @switch (navigationService.currentView()) { @case ('login') {
-    <app-login />
-    } @case ('registro') {
-    <app-registro />
-    } @case ('dashboard') {
-    <app-home />
-    } }
-    <app-toast />
-  `,
-  styles: `
-    :host {
-      display: block;
-      width: 100%;
-      max-width: 700px;
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      height: 100vh;
-      overflow-y: auto;
-      background: white;
-    }
-  `,
+    selector: 'app-root',
+    imports: [ToastComponent, LoginComponent, RegistroComponent, HomeComponent],
+    template: `
+        <!-- Mostrar vista según el estado de navegación -->
+        <div>
+            @switch (navigationService.currentView()) {
+                @case ('login') {
+                    <app-login />
+                }
+                @case ('registro') {
+                    <app-registro />
+                }
+                @case ('dashboard') {
+                    <app-home />
+                }
+            }
+        </div>
+        <app-toast />
+    `,
+    styles: `
+        :host {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            height: 100vh;
+
+            padding: 0;
+            div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+                background: white;
+            }
+        }
+
+        @media (min-width: 720px) {
+            :host {
+                padding: 3rem 0;
+            }
+            div {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0.5rem;
+                border: 4px solid var(--primary);
+            }
+        }
+    `,
 })
 export class App implements AfterViewInit, OnDestroy {
-  protected readonly title = signal('juego');
-  protected navigationService = inject(NavigationService);
-  private resizeListener!: () => void;
+    protected readonly title = signal('juego');
+    protected navigationService = inject(NavigationService);
+    private resizeListener!: () => void;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+    constructor(
+        private el: ElementRef,
+        private renderer: Renderer2
+    ) {}
 
-  ngAfterViewInit() {
-    this.resizeListener = () => {
-      this.renderer.setStyle(this.el.nativeElement, 'height', window.innerHeight + 'px');
-    };
-    this.resizeListener();
-    window.addEventListener('resize', this.resizeListener);
-  }
-
-  ngOnDestroy() {
-    if (this.resizeListener) {
-      window.removeEventListener('resize', this.resizeListener);
+    ngAfterViewInit() {
+        this.resizeListener = () => {
+            this.renderer.setStyle(this.el.nativeElement, 'height', window.innerHeight + 'px');
+        };
+        this.resizeListener();
+        window.addEventListener('resize', this.resizeListener);
     }
-  }
+
+    ngOnDestroy() {
+        if (this.resizeListener) {
+            window.removeEventListener('resize', this.resizeListener);
+        }
+    }
 }

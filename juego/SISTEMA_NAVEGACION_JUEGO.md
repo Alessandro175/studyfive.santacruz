@@ -3,6 +3,7 @@
 ## 🎮 Resumen de la Implementación
 
 Se ha implementado un sistema completo de navegación interna en el componente Home que permite:
+
 - Seleccionar grados (1° a 6°)
 - Ver materias por grado
 - Sistema de estados para controlar las vistas
@@ -10,21 +11,24 @@ Se ha implementado un sistema completo de navegación interna en el componente H
 ## 📁 Archivos Creados/Modificados
 
 ### 1. **GameService** (`services/game.service.ts`)
+
 Servicio central que controla el estado del juego y la navegación entre vistas.
 
 #### Signals del Servicio:
+
 ```typescript
-vistaActual = signal<VistaJuego>('seleccion-grados')
+vistaActual = signal<VistaJuego>('seleccion-grados');
 // Posibles valores: 'seleccion-grados' | 'seleccion-materias' | 'jugando'
 
-gradoSeleccionado = signal<number | null>(null)
+gradoSeleccionado = signal<number | null>(null);
 // Grado actual (1-6) o null
 
-materiaSeleccionada = signal<string | null>(null)
+materiaSeleccionada = signal<string | null>(null);
 // Materia actual o null
 ```
 
 #### Métodos Principales:
+
 - `seleccionarGrado(grado: number)` - Selecciona un grado y cambia a vista de materias
 - `volverAGrados()` - Vuelve a la selección de grados
 - `seleccionarMateria(materia: string)` - Selecciona una materia y cambia a vista de juego
@@ -33,7 +37,9 @@ materiaSeleccionada = signal<string | null>(null)
 - `getMateriasDelGrado()` - Obtiene las materias del grado actual
 
 #### Materias Disponibles:
+
 Todas los grados tienen las mismas 6 materias:
+
 1. **Inglés**
 2. **Matemática**
 3. **Comunicación**
@@ -42,9 +48,11 @@ Todas los grados tienen las mismas 6 materias:
 6. **Arte y Cultura**
 
 ### 2. **MateriasComponent** (`components/materias.component.ts`)
+
 Componente que muestra las materias disponibles para el grado seleccionado.
 
 #### Características:
+
 - ✅ Grid responsive (1 columna en móvil, 2 en tablet, 3 en desktop)
 - ✅ Botón "Volver a grados" con icono SVG
 - ✅ Título dinámico con el número de grado
@@ -54,9 +62,11 @@ Componente que muestra las materias disponibles para el grado seleccionado.
 - ✅ Click handler para seleccionar materia
 
 ### 3. **HomeComponent** (`pages/home/home.ts`) - Actualizado
+
 Componente principal que controla las vistas según el estado del juego.
 
 #### Sistema de Vistas:
+
 El componente usa `@if` para mostrar diferentes vistas:
 
 ```typescript
@@ -74,6 +84,7 @@ El componente usa `@if` para mostrar diferentes vistas:
 ## 🔄 Flujo de Navegación
 
 ### Vista 1: Selección de Grados
+
 ```
 Usuario ve:
 - Título "¡Elige tu Grado!"
@@ -88,6 +99,7 @@ Usuario hace click en un grado →
 ```
 
 ### Vista 2: Selección de Materias
+
 ```
 Usuario ve:
 - Botón "Volver a grados"
@@ -108,6 +120,7 @@ Usuario hace click en una materia →
 ```
 
 ### Vista 3: Jugando (Pendiente)
+
 ```
 Usuario ve:
 - Vista del juego (a implementar)
@@ -122,6 +135,7 @@ Usuario hace click en "Volver a materias" →
 ## 🎨 Diseño Visual
 
 ### Cards de Grados:
+
 - Gradientes de color únicos por grado
 - Hover effect (scale 105%)
 - Sombras suaves
@@ -129,6 +143,7 @@ Usuario hace click en "Volver a materias" →
 - Imágenes representativas
 
 ### Cards de Materias:
+
 - Fondo blanco
 - Hover effect (scale 105%)
 - Imágenes de 80x80px
@@ -138,6 +153,7 @@ Usuario hace click en "Volver a materias" →
 ## 💾 Estado Persistente
 
 El GameService mantiene el estado del juego en memoria:
+
 - **gradoSeleccionado**: Qué grado eligió el usuario
 - **materiaSeleccionada**: Qué materia eligió
 - **vistaActual**: En qué pantalla está
@@ -168,10 +184,12 @@ export class MiComponente {
 ## 📱 Responsive Design
 
 ### Grados (Home):
+
 - **Desktop**: Grid auto-fit con mínimo 200px
 - **Tablet/Móvil**: Se ajusta automáticamente
 
 ### Materias:
+
 - **Desktop (>= 1024px)**: 3 columnas
 - **Tablet (>= 640px)**: 2 columnas
 - **Móvil (< 640px)**: 1 columna
@@ -181,22 +199,24 @@ export class MiComponente {
 Para implementar el juego completo:
 
 1. **Crear componente de Juego**:
-   ```typescript
-   // components/juego.component.ts
-   export class JuegoComponent {
-     gameService = inject(GameService);
-     
-     grado = this.gameService.gradoSeleccionado();
-     materia = this.gameService.materiaSeleccionada();
-   }
-   ```
+
+    ```typescript
+    // components/juego.component.ts
+    export class JuegoComponent {
+        gameService = inject(GameService);
+
+        grado = this.gameService.gradoSeleccionado();
+        materia = this.gameService.materiaSeleccionada();
+    }
+    ```
 
 2. **Agregar en HomeComponent**:
-   ```typescript
-   @else if (gameService.vistaActual() === 'jugando') {
-     <app-juego />
-   }
-   ```
+
+    ```typescript
+    @else if (gameService.vistaActual() === 'jugando') {
+      <app-juego />
+    }
+    ```
 
 3. **Implementar lógica de preguntas** según grado y materia
 

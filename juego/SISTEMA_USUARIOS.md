@@ -5,6 +5,7 @@ Este proyecto incluye un sistema completo de gestión de usuarios con persistenc
 ## 🎯 Características Implementadas
 
 ### 1. **Modelo de Usuario** (`models/user.model.ts`)
+
 - Interfaz `User` con todos los campos necesarios
 - ID único generado con crypto nativo del navegador
 - Campos: nickname, género, colores (piel/pelo), forma de cara, puntuación
@@ -12,14 +13,15 @@ Este proyecto incluye un sistema completo de gestión de usuarios con persistenc
 ### 2. **Servicio de Usuario** (`services/user.service.ts`)
 
 #### Funcionalidades principales:
+
 ```typescript
 // Crear un nuevo usuario
 const user = userService.createUser({
-  nickname: 'PlayerOne',
-  genero: 'masculino',
-  colorPiel: '#fcd7b6',
-  colorPelo: '#3e2723',
-  formaCara: 'normal'
+    nickname: 'PlayerOne',
+    genero: 'masculino',
+    colorPiel: '#fcd7b6',
+    colorPelo: '#3e2723',
+    formaCara: 'normal',
 });
 
 // Actualizar puntuación (incrementar)
@@ -48,6 +50,7 @@ const allUsers = userService.users();
 ```
 
 #### Características especiales:
+
 - ✅ Generación de UUID con `crypto.randomUUID()` nativo
 - ✅ Validación de nickname único
 - ✅ Persistencia automática en localStorage
@@ -57,6 +60,7 @@ const allUsers = userService.users();
 ### 3. **Servicio de Toast** (`services/toast.service.ts`)
 
 #### Uso:
+
 ```typescript
 // Diferentes tipos de notificaciones
 toastService.success('¡Operación exitosa!');
@@ -76,12 +80,14 @@ toastService.clear();
 ```
 
 #### Tipos de toast:
+
 - `success` - Verde (operaciones exitosas)
 - `error` - Rojo (errores)
 - `warning` - Naranja (advertencias)
 - `info` - Azul/Primary (información general)
 
 ### 4. **Componente Toast** (`components/toast.component.ts`)
+
 - Componente standalone que se muestra automáticamente
 - Animaciones suaves de entrada
 - Auto-cierre configurable
@@ -133,6 +139,7 @@ Se han agregado las siguientes variables CSS:
 ## 💾 Persistencia de Datos
 
 Todos los datos se guardan en localStorage:
+
 - `studyfive_users` - Array de todos los usuarios
 - `studyfive_current_user` - Usuario con sesión activa
 
@@ -146,6 +153,7 @@ Todos los datos se guardan en localStorage:
 ## 📱 Responsive
 
 El sistema es completamente responsive:
+
 - Formulario adaptable
 - Toast optimizado para móviles
 - Ranking con scroll en dispositivos pequeños
@@ -160,42 +168,44 @@ import { UserService } from './services/user.service';
 import { ToastService } from './services/toast.service';
 
 export class GameComponent {
-  private userService = inject(UserService);
-  private toastService = inject(ToastService);
+    private userService = inject(UserService);
+    private toastService = inject(ToastService);
 
-  onCorrectAnswer() {
-    // Incrementar puntuación
-    this.userService.updateScore(10);
-    this.toastService.success('¡Respuesta correcta! +10 puntos');
-  }
+    onCorrectAnswer() {
+        // Incrementar puntuación
+        this.userService.updateScore(10);
+        this.toastService.success('¡Respuesta correcta! +10 puntos');
+    }
 
-  onWrongAnswer() {
-    this.toastService.error('Respuesta incorrecta. Intenta de nuevo.');
-  }
+    onWrongAnswer() {
+        this.toastService.error('Respuesta incorrecta. Intenta de nuevo.');
+    }
 
-  getCurrentPlayer() {
-    return this.userService.currentUser();
-  }
+    getCurrentPlayer() {
+        return this.userService.currentUser();
+    }
 
-  getTopPlayers() {
-    return this.userService.getRanking().slice(0, 10); // Top 10
-  }
+    getTopPlayers() {
+        return this.userService.getRanking().slice(0, 10); // Top 10
+    }
 }
 ```
 
 ## 🎨 Personalización
 
 ### Cambiar colores del toast
+
 Edita las variables CSS en `styles.scss`:
 
 ```scss
 :root {
-  --primary: #tu-color;
-  --primary-dark: #tu-color-oscuro;
+    --primary: #tu-color;
+    --primary-dark: #tu-color-oscuro;
 }
 ```
 
 ### Cambiar duración por defecto
+
 En `toast.service.ts`:
 
 ```typescript
@@ -213,6 +223,7 @@ private readonly DEFAULT_DURATION = 5000; // 5 segundos
 ## 🔄 Reactividad
 
 Todo el sistema usa Signals de Angular para máxima reactividad:
+
 - El ranking se actualiza automáticamente cuando cambia la puntuación
 - Los toasts aparecen y desaparecen de forma reactiva
 - El usuario actual se sincroniza con localStorage

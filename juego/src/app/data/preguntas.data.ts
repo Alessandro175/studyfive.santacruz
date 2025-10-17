@@ -10,111 +10,100 @@ import { getMateriaLabel, getMateriaKey, MATERIAS_KEYS } from './materias.consta
 
 // Base de datos de preguntas por grado
 export const preguntasDB: Record<number, GradoData> = {
-  1: grado1v2,
-  2: grado2v2,
-  3: grado3v2,
-  4: grado4v2,
-  5: grado5v2,
-  6: grado6v2
+    1: grado1v2,
+    2: grado2v2,
+    3: grado3v2,
+    4: grado4v2,
+    5: grado5v2,
+    6: grado6v2,
 };
 
 // Función helper para obtener preguntas de una materia y competencia específica (por ID)
-export function getPreguntasPorMateriaYCompetencia(
-  grado: number,
-  materiaKey: string,
-  competenciaId: string
-): Pregunta[] {
-  // Normalizar la materia key si viene con el formato antiguo
-  const normalizedKey = getMateriaKey(materiaKey);
-  
-  if (!normalizedKey) {
-    console.error(`Materia inválida: ${materiaKey}`);
-    return [];
-  }
+export function getPreguntasPorMateriaYCompetencia(grado: number, materiaKey: string, competenciaId: string): Pregunta[] {
+    // Normalizar la materia key si viene con el formato antiguo
+    const normalizedKey = getMateriaKey(materiaKey);
 
-  const gradoData = preguntasDB[grado];
-  if (!gradoData) {
-    console.error(`Grado ${grado} no encontrado`);
-    return [];
-  }
+    if (!normalizedKey) {
+        console.error(`Materia inválida: ${materiaKey}`);
+        return [];
+    }
 
-  const materiaData = gradoData[normalizedKey as MateriaKey];
-  if (!materiaData) {
-    console.error(`Materia ${normalizedKey} no encontrada en grado ${grado}`);
-    return [];
-  }
+    const gradoData = preguntasDB[grado];
+    if (!gradoData) {
+        console.error(`Grado ${grado} no encontrado`);
+        return [];
+    }
 
-  // Buscar la competencia por ID en el array
-  const competenciaData = materiaData.competencias.find(c => c.id === competenciaId);
-  if (!competenciaData) {
-    console.error(`Competencia ${competenciaId} no encontrada`);
-    return [];
-  }
+    const materiaData = gradoData[normalizedKey as MateriaKey];
+    if (!materiaData) {
+        console.error(`Materia ${normalizedKey} no encontrada en grado ${grado}`);
+        return [];
+    }
 
-  return competenciaData.preguntas;
+    // Buscar la competencia por ID en el array
+    const competenciaData = materiaData.competencias.find((c) => c.id === competenciaId);
+    if (!competenciaData) {
+        console.error(`Competencia ${competenciaId} no encontrada`);
+        return [];
+    }
+
+    return competenciaData.preguntas;
 }
 
 // Función helper para obtener información de una competencia (por ID)
-export function getCompetenciaInfo(
-  grado: number,
-  materiaKey: string,
-  competenciaId: string
-): Competencia | null {
-  const normalizedKey = getMateriaKey(materiaKey);
-  
-  if (!normalizedKey) {
-    return null;
-  }
+export function getCompetenciaInfo(grado: number, materiaKey: string, competenciaId: string): Competencia | null {
+    const normalizedKey = getMateriaKey(materiaKey);
 
-  const gradoData = preguntasDB[grado];
-  if (!gradoData) {
-    return null;
-  }
+    if (!normalizedKey) {
+        return null;
+    }
 
-  const materiaData = gradoData[normalizedKey as MateriaKey];
-  if (!materiaData) {
-    return null;
-  }
+    const gradoData = preguntasDB[grado];
+    if (!gradoData) {
+        return null;
+    }
 
-  // Buscar la competencia por ID en el array
-  const competenciaData = materiaData.competencias.find(c => c.id === competenciaId);
-  if (!competenciaData) {
-    return null;
-  }
+    const materiaData = gradoData[normalizedKey as MateriaKey];
+    if (!materiaData) {
+        return null;
+    }
 
-  return competenciaData;
+    // Buscar la competencia por ID en el array
+    const competenciaData = materiaData.competencias.find((c) => c.id === competenciaId);
+    if (!competenciaData) {
+        return null;
+    }
+
+    return competenciaData;
 }
 
 // Función helper para obtener todas las competencias de una materia
-export function getCompetenciasPorMateria(
-  grado: number,
-  materiaKey: string
-): Competencia[] {
-  const normalizedKey = getMateriaKey(materiaKey);
-  
-  if (!normalizedKey) {
-    return [];
-  }
+export function getCompetenciasPorMateria(grado: number, materiaKey: string): Competencia[] {
+    const normalizedKey = getMateriaKey(materiaKey);
 
-  const gradoData = preguntasDB[grado];
-  if (!gradoData) {
-    return [];
-  }
+    if (!normalizedKey) {
+        return [];
+    }
 
-  const materiaData = gradoData[normalizedKey as MateriaKey];
-  if (!materiaData) {
-    return [];
-  }
+    const gradoData = preguntasDB[grado];
+    if (!gradoData) {
+        return [];
+    }
 
-  return materiaData.competencias;
+    const materiaData = gradoData[normalizedKey as MateriaKey];
+    if (!materiaData) {
+        return [];
+    }
+
+    return materiaData.competencias;
 }
 
 // Función helper para obtener todas las materias disponibles (con labels para UI)
 export function getMateriasDisponibles() {
-  return MATERIAS_KEYS.map(key => ({
-    key,
-    label: getMateriaLabel(key)
-  }));
+    return MATERIAS_KEYS.map((key) => ({
+        key,
+        label: getMateriaLabel(key),
+    }));
 }
 
 // Re-exportar types y constantes para uso en otros módulos

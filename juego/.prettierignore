@@ -1,0 +1,21 @@
+# Dependencias
+node_modules
+
+# Build outputs
+dist
+.angular
+
+# Archivos de configuración que no deben ser formateados
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage
+coverage
+
+# IDE
+.vscode
+.idea
+
+# Logs
+*.log

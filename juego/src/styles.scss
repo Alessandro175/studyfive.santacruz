@@ -3,46 +3,67 @@
 
 /* Variables de Color - Sistema de Diseño */
 :root {
-  /* Primary Colors */
-  --primary: #6366f1;
-  --primary-rgb: 99, 102, 241;
-  --primary-dark: #4f46e5;
-  --text-on-primary: #ffffff;
+    /* Primary Colors */
+    --primary: #6366f1;
+    --primary-rgb: 99, 102, 241;
+    --primary-dark: #4f46e5;
+    --text-on-primary: #ffffff;
 
-  /* Secondary Colors */
-  --secondary: #8b5cf6;
-  --secondary-rgb: 139, 92, 246;
-  --secondary-dark: #7c3aed;
-  --text-on-secondary: #ffffff;
+    /* Secondary Colors */
+    --secondary: #8b5cf6;
+    --secondary-rgb: 139, 92, 246;
+    --secondary-dark: #7c3aed;
+    --text-on-secondary: #ffffff;
 
-  /* Success Colors */
-  --success: #10b981;
-  --success-rgb: 16, 185, 129;
-  --success-dark: #059669;
-  --text-on-success: #ffffff;
+    /* Success Colors */
+    --success: #10b981;
+    --success-rgb: 16, 185, 129;
+    --success-dark: #059669;
+    --text-on-success: #ffffff;
 
-  /* Error Colors */
-  --error: #ef4444;
-  --error-rgb: 239, 68, 68;
-  --error-dark: #dc2626;
-  --text-on-error: #ffffff;
+    /* Error Colors */
+    --error: #ef4444;
+    --error-rgb: 239, 68, 68;
+    --error-dark: #dc2626;
+    --text-on-error: #ffffff;
 
-  /* Warning Colors */
-  --warning: #f59e0b;
-  --warning-rgb: 245, 158, 11;
-  --warning-dark: #d97706;
-  --text-on-warning: #ffffff;
+    /* Warning Colors */
+    --warning: #f59e0b;
+    --warning-rgb: 245, 158, 11;
+    --warning-dark: #d97706;
+    --text-on-warning: #ffffff;
 
-  /* Info Colors (usando primary) */
-  --info: var(--primary);
-  --info-rgb: var(--primary-rgb);
-  --info-dark: var(--primary-dark);
-  --text-on-info: var(--text-on-primary);
+    /* Info Colors (usando primary) */
+    --info: var(--primary);
+    --info-rgb: var(--primary-rgb);
+    --info-dark: var(--primary-dark);
+    --text-on-info: var(--text-on-primary);
 }
 
 .titulo {
-  font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka One', cursive;
 }
-body{
-  background-color: rgb(229, 248, 255);
+
+.emerald-glow {
+    background: radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #10b981 100%);
+}
+
+body {
+    background:
+        linear-gradient(to right, rgba(229, 231, 235, 0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(229, 231, 235, 0.8) 1px, transparent 1px), radial-gradient(circle 500px at 0% 20%, rgba(139, 92, 246, 0.3), transparent),
+        radial-gradient(circle 500px at 100% 0%, rgba(59, 130, 246, 0.3), transparent);
+    background-size:
+        48px 48px,
+        48px 48px,
+        100% 100%,
+        100% 100%;
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Estilo para hacer el placeholder más transparente */
+input::placeholder {
+    color: rgba(0, 0, 0, 0.4); /* Color negro con 40% de opacidad */
 }
