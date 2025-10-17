@@ -9,7 +9,7 @@ import { UserService } from '../services/user.service';
   imports: [CommonModule],
   template: `
     <!-- Header con botón volver, puntuación y progreso -->
-    <div class="flex justify-between items-center mb-8">
+    <div class="flex justify-between items-start mb-4">
       <button
         (click)="volverAMaterias()"
         class="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors"
@@ -31,7 +31,7 @@ import { UserService } from '../services/user.service';
         Cambiar materia
       </button>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-4 flex-col">
         <span class="text-2xl font-bold text-indigo-700">
           {{ userService.currentUser()?.puntuacion || 0 }} pts
         </span>

@@ -62,7 +62,7 @@ import { CommonModule } from '@angular/common';
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.2);
-        padding: 1rem;
+        padding: 3rem 1rem;
         z-index: 20;
         // animation: fadeIn 0.3s ease;
       }
@@ -80,8 +80,7 @@ import { CommonModule } from '@angular/common';
         background: white;
         border-radius: 1rem;
         max-width: 700px;
-        width: 90%;
-        max-height: 80%;
+        // max-height: 96%;
         overflow-y: auto;
         position: relative;
         margin: 0 auto;
@@ -121,7 +120,7 @@ import { CommonModule } from '@angular/common';
       }
 
       .modal-body {
-        padding: 40px 30px 30px;
+        padding:  1rem ;
       }
 
       .modal-title {
