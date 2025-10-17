@@ -10,16 +10,14 @@ import { NavigationService } from '../../services/navigation.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div
-      class="relative z-10 p-4 sm:p-6 md:p-8 w-full flex flex-col items-center"
-    >
+    <div class="relative z-10 p-4 sm:p-6 md:p-8 w-full flex flex-col items-center">
       <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4 text-center">
         ¡Bienvenido de vuelta!
       </h1>
       <p class="text-lg text-gray-700 mb-6 text-center">
         Ingresa tu nickname para continuar jugando
       </p>
-      
+
       <form (submit)="onSubmit($event)" class="flex flex-col items-center gap-4 mb-6 w-full">
         <input
           [(ngModel)]="nickname"
@@ -31,7 +29,7 @@ import { NavigationService } from '../../services/navigation.service';
           required
           autofocus
         />
-        
+
         <button
           type="submit"
           class="px-6 py-2 rounded-lg text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition-all w-full"
@@ -42,7 +40,7 @@ import { NavigationService } from '../../services/navigation.service';
 
       <div class="text-center text-sm text-gray-600">
         <p>¿No tienes cuenta?</p>
-        <a 
+        <a
           (click)="goToRegistro()"
           class="text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
         >
@@ -56,29 +54,36 @@ import { NavigationService } from '../../services/navigation.service';
           class="max-h-40 sm:max-h-56 md:max-h-64 overflow-y-auto rounded-lg border border-indigo-100 bg-indigo-50/40 shadow-inner"
         >
           @if (ranking().length === 0) {
-            <div class="text-center py-4 text-gray-500">
-              No hay jugadores registrados aún
-            </div>
+          <div class="text-center py-4 text-gray-500">No hay jugadores registrados aún</div>
           } @else {
-            <ul class="divide-y divide-indigo-100 text-lg">
-              @for (user of ranking(); track user.id; let idx = $index) {
-                <li class="flex justify-between items-center py-1 px-2">
-                  <span class="flex items-center gap-1" [class.font-bold]="idx < 3" [class.text-yellow-500]="idx === 0">
-                    @if (idx === 0) { 🏆 }
-                    @else if (idx === 1) { 🥈 }
-                    @else if (idx === 2) { 🥉 }
-                    @else { ⭐ }
-                    {{ user.nickname }}
-                  </span>
-                  <span>{{ user.puntuacion }} pts</span>
-                </li>
-              }
-            </ul>
+          <ul class="divide-y divide-indigo-100 text-lg">
+            @for (user of ranking(); track user.id; let idx = $index) {
+            <li class="flex justify-between items-center py-1 px-2">
+              <span
+                class="flex items-center gap-1"
+                [class.font-bold]="idx < 3"
+                [class.text-yellow-500]="idx === 0"
+              >
+                @if (idx === 0) { 🏆 } @else if (idx === 1) { 🥈 } @else if (idx === 2) { 🥉 } @else
+                { ⭐ }
+                {{ user.nickname }}
+              </span>
+              <span>{{ user.puntuacion }} pts</span>
+            </li>
+            }
+          </ul>
           }
         </div>
       </div>
     </div>
-  `
+  `,
+  styles: `
+    :host {
+      display: block;
+      height: 100%;
+      overflow-y: auto;
+    }
+  `,
 })
 export class LoginComponent {
   private userService = inject(UserService);
@@ -105,9 +110,7 @@ export class LoginComponent {
 
     // Buscar el usuario por nickname
     const users = this.userService.users();
-    const user = users.find(
-      u => u.nickname.toLowerCase() === nicknameValue.toLowerCase()
-    );
+    const user = users.find((u) => u.nickname.toLowerCase() === nicknameValue.toLowerCase());
 
     if (!user) {
       this.toastService.error('Nickname no encontrado. ¿Quieres registrarte?');
@@ -117,9 +120,9 @@ export class LoginComponent {
     // Establecer el usuario actual
     this.userService.currentUser.set(user);
     localStorage.setItem('studyfive_current_user', JSON.stringify(user));
-    
+
     this.toastService.success(`¡Bienvenido de vuelta, ${user.nickname}!`);
-    
+
     // Navegar al dashboard
     this.navigationService.goToDashboard();
   }

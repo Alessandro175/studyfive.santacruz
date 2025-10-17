@@ -105,7 +105,7 @@ import { UserCreate } from '../../models/user.model';
 
     <div class="text-center text-sm text-gray-600 mb-4">
       <p>¿Ya tienes cuenta?</p>
-      <a 
+      <a
         (click)="goToLogin()"
         class="text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
       >
@@ -141,6 +141,12 @@ import { UserCreate } from '../../models/user.model';
       </div>
     </div>
   `,
+  styles: `
+    :host {
+      display: block;
+      height: 100%;
+      overflow-y: auto;
+    }`,
 })
 export class RegistroComponent implements OnInit {
   private userService = inject(UserService);

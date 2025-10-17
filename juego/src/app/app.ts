@@ -27,7 +27,6 @@ import { NavigationService } from './services/navigation.service';
     :host {
       display: block;
       height: 100%;
-      overflow-y: auto;
       margin: 0 auto;
       width: 100%;
       max-width: 700px;
