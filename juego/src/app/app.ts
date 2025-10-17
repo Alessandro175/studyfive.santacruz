@@ -22,9 +22,14 @@ import { NavigationService } from './services/navigation.service';
     </div>
   `,
   styles: `
+  :host{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
     div {
       display: block;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
