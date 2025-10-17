@@ -24,7 +24,7 @@ import { NavigationService } from './services/navigation.service';
   styles: `
     div {
       display: block;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
