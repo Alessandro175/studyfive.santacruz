@@ -488,5 +488,615 @@
                 "respuesta_correcta": 1
             }
         ]
+    },
+    {
+        "id": "mat1_1",
+        "curso_id": "matematica",
+        "nombre": "Conteo y números",
+        "descripcion_corta": "Reconozco y ordeno números del 0 al 100",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué número viene después del 9?",
+                "opciones": ["8", "9", "10", "11"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuál es el número anterior al 5?",
+                "opciones": ["4", "6", "3", "5"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Cuántos dedos tiene una mano?",
+                "opciones": ["4", "5", "6", "3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuál es el número que viene después del 19?",
+                "opciones": ["18", "20", "21", "17"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cuántos días tiene una semana?",
+                "opciones": ["5", "6", "7", "8"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué número falta: 1, 2, __, 4?",
+                "opciones": ["5", "3", "6", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cuál es el número par más pequeño mayor que 0?",
+                "opciones": ["1", "2", "3", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Cuántos ojos tiene una persona normalmente?",
+                "opciones": ["1", "2", "3", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué número es mayor: 8 o 6?",
+                "opciones": ["6", "8", "son iguales", "ninguno"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuál es el número que viene antes del 30?",
+                "opciones": ["29", "31", "28", "32"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cuántas horas hay en un día?",
+                "opciones": ["12", "24", "48", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué número es uno más que 14?",
+                "opciones": ["13", "14", "15", "16"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Cuántas patas tiene una araña?",
+                "opciones": ["6", "8", "4", "10"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cuál es el número 0?",
+                "opciones": ["Nada", "Uno", "Dos", "Tres"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cuál es el siguiente: 2, 4, 6, __?",
+                "opciones": ["7", "8", "9", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Cuántas estaciones tiene el año?",
+                "opciones": ["2", "3", "4", "5"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Cuántas ruedas tiene una bicicleta normal?",
+                "opciones": ["1", "2", "3", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Cuál es el menor: 2, 5, 9?",
+                "opciones": ["9", "5", "2", "0"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué número redondo es 100?",
+                "opciones": ["Cien", "Diez", "Mil", "Cincuenta"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "mat1_2",
+        "curso_id": "matematica",
+        "nombre": "Sumas y restas",
+        "descripcion_corta": "Resuelvo operaciones básicas de suma y resta",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "2 + 3 = ?",
+                "opciones": ["4", "5", "6", "3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "5 - 2 = ?",
+                "opciones": ["2", "3", "4", "1"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "1 + 1 = ?",
+                "opciones": ["1", "2", "3", "0"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "4 + 4 = ?",
+                "opciones": ["7", "8", "9", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "10 - 5 = ?",
+                "opciones": ["4", "5", "6", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "3 + 6 = ?",
+                "opciones": ["8", "9", "7", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "7 - 3 = ?",
+                "opciones": ["4", "3", "5", "2"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "2 + 7 = ?",
+                "opciones": ["8", "9", "10", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "9 - 1 = ?",
+                "opciones": ["7", "8", "9", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "6 + 2 = ?",
+                "opciones": ["7", "8", "9", "10"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "5 + 5 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "8 - 4 = ?",
+                "opciones": ["2", "3", "4", "5"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 13,
+                "pregunta": "0 + 5 = ?",
+                "opciones": ["0", "5", "6", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "11 - 1 = ?",
+                "opciones": ["9", "10", "11", "12"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "3 + 3 = ?",
+                "opciones": ["5", "6", "7", "4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "12 - 2 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "4 + 5 = ?",
+                "opciones": ["8", "9", "10", "7"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "7 + 7 = ?",
+                "opciones": ["13", "14", "12", "11"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "15 - 5 = ?",
+                "opciones": ["9", "10", "11", "8"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "mat1_3",
+        "curso_id": "matematica",
+        "nombre": "Figuras y geometría",
+        "descripcion_corta": "Identifico formas geométricas y sus características",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál tiene 3 lados?",
+                "opciones": ["Círculo", "Triángulo", "Cuadrado", "Rectángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuál tiene 4 lados iguales?",
+                "opciones": ["Rectángulo", "Triángulo", "Cuadrado", "Círculo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué forma es redonda?",
+                "opciones": ["Triángulo", "Círculo", "Cuadrado", "Rectángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué figura tiene 4 lados y 4 esquinas?",
+                "opciones": ["Triángulo", "Círculo", "Rectángulo", "Línea"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cómo se llama un polígono de 5 lados?",
+                "opciones": ["Triángulo", "Cuadrado", "Pentágono", "Hexágono"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuántos lados tiene un hexágono?",
+                "opciones": ["4", "5", "6", "8"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué figura no tiene lados?",
+                "opciones": ["Triángulo", "Círculo", "Cuadrado", "Rectángulo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Cómo se llama una figura con 3 lados iguales?",
+                "opciones": ["Triángulo equilátero", "Cuadrado", "Rectángulo", "Trapecio"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cuál tiene lados paralelos?",
+                "opciones": ["Rectángulo", "Triángulo", "Círculo", "Línea"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué figura se usa para una pelota?",
+                "opciones": ["Cuadrado", "Triángulo", "Círculo", "Rectángulo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cuántas esquinas tiene un triángulo?",
+                "opciones": ["2", "3", "4", "5"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Cuál tiene dos pares de lados iguales?",
+                "opciones": ["Cuadrado", "Rectángulo", "Triángulo", "Círculo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué figura tiene 8 lados?",
+                "opciones": ["Heptágono", "Octágono", "Hexágono", "Pentágono"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué forma es una puerta típica?",
+                "opciones": ["Triángulo", "Rectángulo", "Círculo", "Pentágono"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué figura tiene 4 lados pero no todos iguales?",
+                "opciones": ["Cuadrado", "Triángulo", "Rectángulo", "Círculo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué figura tiene 6 lados?",
+                "opciones": ["Hexágono", "Pentágono", "Octágono", "Triángulo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Cuál tiene solo una cara curva?",
+                "opciones": ["Círculo", "Triángulo", "Cuadrado", "Rectángulo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué figura es como una caja vista de frente?",
+                "opciones": ["Triángulo", "Rectángulo", "Círculo", "Línea"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué figura tiene 4 lados y 4 ángulos rectos?",
+                "opciones": ["Cuadrado", "Triángulo", "Círculo", "Ninguna"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "mat1_4",
+        "curso_id": "matematica",
+        "nombre": "Series y patrones",
+        "descripcion_corta": "Identifico y continúo secuencias y patrones",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "Serie: 🔴🔵🔴🔵🔴 ¿Qué sigue?",
+                "opciones": ["🔴", "🔵", "🟢", "⚫"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "1,2,3,4, __ ¿Qué número falta?",
+                "opciones": ["5", "6", "3", "0"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "2,4,6, __ ¿Qué sigue?",
+                "opciones": ["7", "8", "9", "6"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "Patrón: ◼︎ ◻︎ ◼︎ ◻︎ ¿Qué sigue?",
+                "opciones": ["◼︎", "◻︎", "○", "△"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "5,10,15, __ ¿Qué sigue?",
+                "opciones": ["20", "25", "30", "15"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "Patrón: rojo, azul, rojo, __ ¿Qué sigue?",
+                "opciones": ["rojo", "azul", "verde", "amarillo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "1,1,2,3,5, __ ¿Qué sigue? (serie simple)",
+                "opciones": ["6", "7", "8", "5"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "Serie: 10,9,8, __ ¿Qué sigue?",
+                "opciones": ["7", "6", "9", "8"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "Patrón: círculo, triángulo, círculo, __ ¿Qué sigue?",
+                "opciones": ["círculo", "triángulo", "cuadrado", "nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "2,3,5,7, __ ¿Qué sigue? (números pequeños)",
+                "opciones": ["9", "11", "10", "8"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "Patrón: 1 estrella, 2 estrellas, 3 estrellas, __ ¿Qué sigue?",
+                "opciones": ["1", "2", "4", "3"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "Serie: 0,2,4,6, __ ¿Qué sigue?",
+                "opciones": ["7", "8", "6", "9"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "Patrón: ABABAB ¿Qué letra sigue?",
+                "opciones": ["A", "B", "C", "D"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "3,6,9, __ ¿Qué sigue?",
+                "opciones": ["10", "11", "12", "13"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 15,
+                "pregunta": "Patrón: chico, grande, chico, __ ¿Qué sigue?",
+                "opciones": ["chico", "grande", "mediano", "ninguno"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 16,
+                "pregunta": "Serie: 1,3,5,7, __ ¿Qué sigue?",
+                "opciones": ["8", "9", "10", "11"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 17,
+                "pregunta": "Patrón: rojo, rojo, azul, rojo, rojo, __ ¿Qué sigue?",
+                "opciones": ["azul", "rojo", "verde", "amarillo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 18,
+                "pregunta": "4,8,12, __ ¿Qué sigue?",
+                "opciones": ["14", "16", "18", "20"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "Patrón: lunes, martes, miércoles, __ ¿Qué sigue?",
+                "opciones": ["jueves", "viernes", "sábado", "domingo"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "mat1_5",
+        "curso_id": "matematica",
+        "nombre": "Medidas y comparación",
+        "descripcion_corta": "Comparo tamaños, pesos y medidas de objetos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué objeto es más largo? Lápiz, goma, tiza.",
+                "opciones": ["Lápiz", "Goma", "Tiza", "Igual"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué pesa más normalmente: una pluma o una piedra pequeña?",
+                "opciones": ["Pluma", "Piedra", "Igual", "Ninguno"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es más alto: un árbol o una flor pequeña?",
+                "opciones": ["Flor", "Árbol", "Igual", "Ambos son bajos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es más frío: hielo o fuego?",
+                "opciones": ["Hielo", "Fuego", "Igual", "No se sabe"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué objeto es más grande: casa o mochila?",
+                "opciones": ["Mochila", "Casa", "Auto", "Lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué medida usamos para medir longitud?",
+                "opciones": ["Litros", "Metros", "Gramos", "Horas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué usamos para pesar cosas?",
+                "opciones": ["Regla", "Balanza", "Cuchillo", "Lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es más pesado: 1 kg de plumas o 1 kg de arena?",
+                "opciones": ["Plumas", "Arena", "Ambos pesan igual", "No se puede saber"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué usamos para medir volumen de líquido?",
+                "opciones": ["Kilogramo", "Litro", "Metro", "Segundo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es más corto: un dedo o un brazo?",
+                "opciones": ["Dedo", "Brazo", "Igual", "Cabeza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué objeto es más ancho: puerta o lápiz?",
+                "opciones": ["Puerta", "Lápiz", "Goma", "Taza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué unidad mide tiempo?",
+                "opciones": ["Litro", "Metro", "Segundo", "Gramo"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es más frío: la sombra o el sol?",
+                "opciones": ["Sombra", "Sol", "Igual", "Depende"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "Si comparas dos objetos, ¿cómo dices cuál es mayor?",
+                "opciones": ["Más pequeño", "Más grande", "Igual", "Peor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es más largo: una cuerda de 2 m o una de 150 cm?",
+                "opciones": ["2 m", "150 cm", "Son iguales", "No se sabe"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 16,
+                "pregunta": "¿Qué usamos para medir la temperatura?",
+                "opciones": ["Termómetro", "Regla", "Balanza", "Cronómetro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 17,
+                "pregunta": "¿Qué pesa más: 500 g o 1 kg?",
+                "opciones": ["500 g", "1 kg", "Son iguales", "Ninguno"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 18,
+                "pregunta": "¿Qué es más alto normalmente: una persona adulta o un niño?",
+                "opciones": ["Niño", "Adulto", "Igual", "Depende"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 19,
+                "pregunta": "¿Qué es más largo: un camino de 100 m o uno de 0.1 km?",
+                "opciones": ["100 m", "0.1 km", "Son iguales", "Ninguno"],
+                "respuesta_correcta": 2
+            }
+        ]
     }
 ]
