@@ -10,60 +10,54 @@ import { NavigationService } from '../../services/navigation.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <div class="relative z-10 p-4 sm:p-6 md:p-8 w-full flex flex-col items-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4 text-center">
+    <div class="container">
+      <h1 class="titulo">
         ¡Bienvenido de vuelta!
       </h1>
-      <p class="text-lg text-gray-700 mb-6 text-center">
+      <p class="subtitle">
         Ingresa tu nickname para continuar jugando
       </p>
 
-      <form (submit)="onSubmit($event)" class="flex flex-col items-center gap-4 mb-6 w-full">
+      <form (submit)="onSubmit($event)" class="form">
         <input
           [(ngModel)]="nickname"
           name="nickname"
           type="text"
           maxlength="16"
           placeholder="Tu nickname"
-          class="border-2 border-indigo-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 text-center text-lg"
+          class="input"
           required
           autofocus
         />
 
         <button
           type="submit"
-          class="px-6 py-2 rounded-lg text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition-all w-full"
+          class="button"
         >
           Entrar
         </button>
       </form>
 
-      <div class="text-center text-sm text-gray-600">
+      <div class="register">
         <p>¿No tienes cuenta?</p>
         <a
           (click)="goToRegistro()"
-          class="text-indigo-600 hover:text-indigo-800 font-semibold underline cursor-pointer"
+          class="link"
         >
           Regístrate aquí
         </a>
       </div>
 
-      <div class="mt-8 w-full">
-        <h2 class="text-2xl font-bold text-indigo-700 mb-2 text-center">Ranking de Jugadores</h2>
-        <div
-          class="max-h-40 sm:max-h-56 md:max-h-64 overflow-y-auto rounded-lg border border-indigo-100 bg-indigo-50/40 shadow-inner"
-        >
+      <div class="ranking">
+        <h2 class="ranking-title">Ranking de Jugadores</h2>
+        <div class="ranking-list">
           @if (ranking().length === 0) {
-          <div class="text-center py-4 text-gray-500">No hay jugadores registrados aún</div>
+          <div class="no-players">No hay jugadores registrados aún</div>
           } @else {
-          <ul class="divide-y divide-indigo-100 text-lg">
+          <ul class="ranking-ul">
             @for (user of ranking(); track user.id; let idx = $index) {
-            <li class="flex justify-between items-center py-1 px-2">
-              <span
-                class="flex items-center gap-1"
-                [class.font-bold]="idx < 3"
-                [class.text-yellow-500]="idx === 0"
-              >
+            <li class="ranking-li" [ngClass]="{'top-player': idx < 3, 'first-place': idx === 0}">
+              <span class="player-name">
                 @if (idx === 0) { 🏆 } @else if (idx === 1) { 🥈 } @else if (idx === 2) { 🥉 } @else
                 { ⭐ }
                 {{ user.nickname }}
@@ -82,6 +76,171 @@ import { NavigationService } from '../../services/navigation.service';
       display: block;
       height: 100%;
       overflow-y: auto;
+      // background-color: blue;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .titulo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4f46e5;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    .input {
+      border: 2px solid #a5b4fc;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1.125rem;
+      outline: none;
+    }
+
+    .input:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 2px #6366f1;
+    }
+
+    .button {
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      background-color: #6366f1;
+      color: white;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .button:hover {
+      background-color: #4338ca;
+    }
+
+    .register {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+
+    .link {
+      color: #4f46e5;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      color: #3730a3;
+    }
+
+    .ranking {
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .ranking-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4338ca;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .ranking-list {
+      max-height: 10rem;
+      overflow-y: auto;
+      border-radius: 0.5rem;
+      border: 1px solid #e0e7ff;
+      background-color: rgba(238, 242, 255, 0.4);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .no-players {
+      text-align: center;
+      padding: 1rem;
+      color: #6b7280;
+    }
+
+    .ranking-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #e0e7ff;
+    }
+
+    .ranking-ul li {
+      border-bottom: 1px solid #e0e7ff;
+      font-size: 1.125rem;
+    }
+
+    .ranking-li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .player-name {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .top-player {
+      font-weight: bold;
+    }
+
+    .first-place {
+      color: #eab308;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        padding: 1.5rem;
+      }
+      .ranking-list {
+        max-height: 14rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 2rem;
+      }
+      .titulo {
+        font-size: 3rem;
+      }
+      .ranking-list {
+        max-height: 16rem;
+      }
     }
   `,
 })

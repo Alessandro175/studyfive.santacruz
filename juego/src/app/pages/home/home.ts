@@ -26,20 +26,18 @@ import { ResultadosComponent } from '../../components/resultados.component';
     <!-- Vista según el estado del juego -->
     @if (gameService.vistaActual() === 'seleccion-grados') {
     <!-- Vista de selección de grados -->
-    <div class="max-w-5xl mx-auto relative z-10 w-full">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex-1 flex flex-col items-center md:items-start">
-          <h1
-            class="titulo text-4xl md:text-5xl mb-4 text-indigo-700 font-extrabold drop-shadow-lg"
-          >
+    <div class="main-container">
+      <div class="header">
+        <div class="header-left">
+          <h1 class="titulo">
             ¡Elige tu Grado!
           </h1>
-          <p class="text-xl text-gray-700 font-semibold">
+          <p class="subtitle">
             Cada grado es un mundo de aventuras. ¡Desbloquea logros y colecciona medallas!
           </p>
         </div>
-        <div id="perfil-jugador" class="mb-4">
-          <div class="flex flex-col items-center gap-2">
+        <div id="perfil-jugador" class="perfil-container">
+          <div class="perfil">
             <!-- Avatar del jugador -->
             <svg width="60" height="60" viewBox="0 0 80 80">
               <ellipse
@@ -64,8 +62,8 @@ import { ResultadosComponent } from '../../components/resultados.component';
               <ellipse cx="49" cy="48" rx="1" ry="1.5" fill="#fff"></ellipse>
               <ellipse cx="40" cy="62" rx="5" ry="2.5" fill="#e57373"></ellipse>
             </svg>
-            <span class="font-bold text-indigo-700">{{ currentUser()!.nickname }}</span>
-            <span class="text-xs text-gray-500">
+            <span class="nickname">{{ currentUser()!.nickname }}</span>
+            <span class="genero">
               {{
                 currentUser()!.genero === 'masculino'
                   ? 'Masculino'
@@ -74,15 +72,15 @@ import { ResultadosComponent } from '../../components/resultados.component';
                   : 'Otro'
               }}
             </span>
-            <span class="text-sm text-gray-700">
-              Puntos: <span class="font-bold">{{ currentUser()!.puntuacion }}</span>
+            <span class="puntos">
+              Puntos: <span class="puntos-value">{{ currentUser()!.puntuacion }}</span>
             </span>
-            <span class="text-sm text-gray-700">
-              Cursos completados: <span class="font-bold">{{ cursosCompletados() }}</span>
+            <span class="cursos">
+              Cursos completados: <span class="cursos-value">{{ cursosCompletados() }}</span>
             </span>
             <button
               (click)="logout()"
-              class="mt-2 px-3 py-1 text-xs bg-red-500 hover:bg-red-600 text-white rounded transition-all"
+              class="logout-btn"
             >
               Cerrar Sesión
             </button>
@@ -92,26 +90,23 @@ import { ResultadosComponent } from '../../components/resultados.component';
       <div id="grados-container">
         @for (grado of grados; track grado.numero) {
         <div
-          class="card grado-{{
-            grado.numero
-          }} rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative bg-white"
+          class="card grado-{{ grado.numero }}"
           (click)="seleccionarGrado(grado.numero)"
         >
           <img
             [src]="grado.imagen"
-            class="mx-auto mb-4 materia-icon"
+            class="materia-icon"
             alt="Grado {{ grado.numero }}"
           />
-          <h2 class="text-2xl font-bold mb-2">{{ grado.numero }}° Grado</h2>
-          <p class="text-gray-700 mb-2">
-            Puntaje: <span class="font-bold">{{ obtenerPuntajeGrado()(grado.numero) }}</span>
+          <h2 class="card-title">{{ grado.numero }}° Grado</h2>
+          <p class="card-puntaje">
+            Puntaje: <span class="puntaje-value">{{ obtenerPuntajeGrado()(grado.numero) }}</span>
           </p>
-          <div class="flex justify-center gap-2 mb-2">
+          <div class="medallas">
             @for (medalla of [1,2,3,4,5,6]; track medalla) {
             <span
-              class="w-3 h-3 rounded-full inline-block"
-              [class.bg-yellow-400]="medalla <= grado.medallasObtenidas"
-              [class.bg-gray-300]="medalla > grado.medallasObtenidas"
+              class="medalla"
+              [class.obtenida]="medalla <= grado.medallasObtenidas"
             ></span>
             }
           </div>
@@ -141,9 +136,9 @@ import { ResultadosComponent } from '../../components/resultados.component';
     <!-- Vista de resultados -->
     <app-resultados />
     } } @else {
-    <div class="text-center py-8">
-      <h2 class="text-2xl font-bold text-gray-700 mb-4">No hay sesión activa</h2>
-      <p class="text-gray-600">Redirigiendo al login...</p>
+    <div class="no-session">
+      <h2 class="no-session-title">No hay sesión activa</h2>
+      <p class="no-session-text">Redirigiendo al login...</p>
     </div>
     }
   `,
@@ -155,12 +150,104 @@ import { ResultadosComponent } from '../../components/resultados.component';
         overflow-y: auto;
         padding: 2rem;
       }
+
+      .main-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .header-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .titulo {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #4338ca;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: #374151;
+        font-weight: 600;
+      }
+
+      .perfil-container {
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+
+      .perfil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nickname {
+        font-weight: bold;
+        color: #4338ca;
+      }
+
+      .genero {
+        font-size: 0.75rem;
+        color: #6b7280;
+      }
+
+      .puntos, .cursos {
+        font-size: 0.875rem;
+        color: #374151;
+      }
+
+      .puntos-value, .cursos-value {
+        font-weight: bold;
+      }
+
+      .logout-btn {
+        margin-top: 0.5rem;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        background-color: #ef4444;
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .logout-btn:hover {
+        background-color: #dc2626;
+      }
+
       .card {
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+        background-color: white;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         text-align: center;
       }
 
       .card:hover {
+        transform: scale(1.05);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       }
 
@@ -168,19 +255,65 @@ import { ResultadosComponent } from '../../components/resultados.component';
         width: 80px;
         height: 80px;
         object-fit: contain;
+        margin: 0 auto 1rem;
       }
 
-      .titulo {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
       }
+
+      .card-puntaje {
+        color: #374151;
+        margin-bottom: 0.5rem;
+      }
+
+      .puntaje-value {
+        font-weight: bold;
+      }
+
+      .medallas {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .medalla {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #d1d5db;
+      }
+
+      .medalla.obtenida {
+        background-color: #fbbf24;
+      }
+
+      .no-session {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .no-session-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #374151;
+        margin-bottom: 1rem;
+      }
+
+      .no-session-text {
+        color: #4b5563;
+      }
+
       #grados-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1.5rem;
       }
-      #perfil-jugador {
-        padding: 1rem;
-      }
+
       .grado-1 {
         background: linear-gradient(135deg, #fee2e2, #fecaca);
       }
@@ -198,6 +331,18 @@ import { ResultadosComponent } from '../../components/resultados.component';
       }
       .grado-6 {
         background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+      }
+
+      @media (min-width: 768px) {
+        .header {
+          flex-direction: row;
+        }
+        .header-left {
+          align-items: flex-start;
+        }
+        .titulo {
+          font-size: 3rem;
+        }
       }
     `,
   ],
