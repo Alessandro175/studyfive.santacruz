@@ -64,6 +64,10 @@ export function getAvatarPath(avatarName: AvatarName): string {
     return `img/avatars/${avatarName}-avatar.png`;
 }
 
+export function getCharacterPath(avatarName: AvatarName): string {
+    return `img/avatars/${avatarName}-character.png`;
+}
+
 /**
  * Obtiene los nombres de todos los avatares disponibles
  */

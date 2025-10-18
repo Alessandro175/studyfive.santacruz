@@ -5,7 +5,7 @@ import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
 import { NavigationService } from '../../services/navigation.service';
 import { UserCreate } from '../../models/user.model';
-import { AvatarName, AVATARS_DISPONIBLES, getAvatarPath, DEFAULT_AVATAR } from '../../data/avatars.constants';
+import { AvatarName, AVATARS_DISPONIBLES, getAvatarPath, DEFAULT_AVATAR, getCharacterPath } from '../../data/avatars.constants';
 
 @Component({
     selector: 'app-registro',
@@ -47,7 +47,7 @@ import { AvatarName, AVATARS_DISPONIBLES, getAvatarPath, DEFAULT_AVATAR } from '
                             [class.border-gray-300]="avatarSeleccionado() !== avatar.name"
                             [class.bg-indigo-100]="avatarSeleccionado() === avatar.name"
                         >
-                            <img [src]="getAvatarPath(avatar.name)" [alt]="avatar.displayName" class="w-full h-auto rounded-lg" />
+                            <img [src]="getCharacterPath(avatar.name)" [alt]="avatar.displayName" class="w-full h-auto rounded-lg" />
                             <p class="text-xs text-center mt-1 font-semibold">
                                 {{ avatar.displayName }}
                             </p>
@@ -148,6 +148,9 @@ export class RegistroComponent implements OnInit {
 
     getAvatarPath(avatarName: AvatarName): string {
         return getAvatarPath(avatarName);
+    }
+    getCharacterPath(avatarName: AvatarName): string {
+        return getCharacterPath(avatarName);
     }
 
     getAvatarDisplayName(): string {
