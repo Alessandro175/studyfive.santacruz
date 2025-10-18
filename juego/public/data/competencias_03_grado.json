@@ -1,0 +1,2942 @@
+[
+    {
+        "id": "com3_1",
+        "curso_id": "comunicacion",
+        "nombre": "Comprensión de Textos Narrativos y Descriptivos",
+        "descripcion_corta": "Lee diversos tipos de textos escritos en su lengua materna",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál es la idea principal de un texto?",
+                "opciones": ["El título del texto", "El mensaje o tema más importante", "La última oración", "El nombre del autor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es un texto narrativo?",
+                "opciones": ["Un texto que da instrucciones", "Un texto que cuenta una historia con inicio, nudo y desenlace", "Un texto con solo datos", "Un texto con números"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué elementos tiene una narración?",
+                "opciones": ["Solo personajes", "Personajes, lugar, tiempo y acontecimientos", "Solo el lugar", "Solo el título"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es un texto descriptivo?",
+                "opciones": ["Cuenta una historia", "Explica las características de algo o alguien", "Da órdenes", "Solo tiene diálogos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué significa hacer una inferencia al leer?",
+                "opciones": ["Copiar el texto", "Deducir información que no está escrita claramente", "Leer en voz alta", "Saltarse párrafos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuál es el propósito de leer un cuento?",
+                "opciones": ["Solo pasar el tiempo", "Entretenernos y aprender valores", "Dormirnos", "No tiene propósito"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es el ambiente en una narración?",
+                "opciones": ["Los personajes", "El lugar y tiempo donde ocurre la historia", "El título", "El autor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Cómo identificas al personaje principal?",
+                "opciones": ["Es el más alto", "Es quien participa más en la historia", "Es el primero que aparece", "Es el autor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué son las palabras desconocidas en un texto?",
+                "opciones": ["Palabras que debemos ignorar", "Palabras cuyo significado debemos buscar o deducir", "Palabras sin importancia", "Errores del texto"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es una secuencia de eventos?",
+                "opciones": ["Leer al revés", "El orden en que suceden los hechos", "Solo el final", "Los personajes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Para qué sirven las imágenes en un texto?",
+                "opciones": ["Solo para decorar", "Para ayudarnos a entender mejor el contenido", "Para ocupar espacio", "No sirven para nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es el nudo o conflicto en un cuento?",
+                "opciones": ["El inicio", "El problema o situación difícil que enfrentan los personajes", "El final feliz", "El título"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué diferencia hay entre un hecho y una opinión?",
+                "opciones": ["No hay diferencia", "El hecho es comprobable, la opinión es lo que alguien piensa", "Son lo mismo", "Solo la ortografía"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es parafrasear un texto?",
+                "opciones": ["Copiarlo exactamente", "Explicarlo con tus propias palabras", "Borrarlo", "Inventar algo diferente"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cuál es la moraleja de una fábula?",
+                "opciones": ["El título", "La enseñanza o lección que deja", "Los personajes", "El autor"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "com3_2",
+        "curso_id": "comunicacion",
+        "nombre": "Producción de Textos y Ortografía",
+        "descripcion_corta": "Escribe diversos tipos de textos en su lengua materna",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuándo se usa la mayúscula?",
+                "opciones": ["En todas las palabras", "Al inicio de oración, en nombres propios y después de punto", "Solo al final", "Nunca"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es un párrafo?",
+                "opciones": ["Una sola palabra", "Un conjunto de oraciones sobre una misma idea", "Un título", "Una letra"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Para qué se usan las comas?",
+                "opciones": ["Para terminar oraciones", "Para separar elementos de una lista o hacer pausas", "Solo para decorar", "No tienen uso"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuál es la estructura de una carta?",
+                "opciones": ["Solo saludo", "Fecha, saludo, cuerpo, despedida y firma", "Solo mensaje", "No tiene estructura"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es un borrador?",
+                "opciones": ["El texto final", "La primera versión que se puede corregir", "Un error", "Una hoja en blanco"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuándo usamos el punto seguido?",
+                "opciones": ["Al final del texto", "Para separar oraciones dentro de un mismo párrafo", "Al inicio", "Nunca"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es una descripción?",
+                "opciones": ["Contar una historia", "Decir cómo es algo o alguien detalladamente", "Dar órdenes", "Hacer preguntas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Para qué sirve revisar tu texto?",
+                "opciones": ["Para perder tiempo", "Para corregir errores y mejorar la escritura", "Para borrarlo todo", "No sirve para nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué son los conectores?",
+                "opciones": ["Palabras sin sentido", "Palabras que unen ideas: entonces, pero, porque, además", "Solo verbos", "Solo sustantivos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuándo se usa \"b\" en vez de \"v\"?",
+                "opciones": ["Siempre al azar", "En palabras con \"br\", \"bl\" y verbos terminados en -bir", "Nunca", "Solo en mayúsculas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es el sujeto en una oración?",
+                "opciones": ["La acción", "Quien realiza la acción", "El lugar", "El tiempo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es el predicado?",
+                "opciones": ["El sujeto", "Lo que se dice del sujeto", "El título", "El autor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Para qué sirven los signos de interrogación?",
+                "opciones": ["Para afirmar", "Para hacer preguntas", "Para exclamar", "Para terminar oraciones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es un sinónimo?",
+                "opciones": ["Palabra opuesta", "Palabra con significado similar", "Palabra sin sentido", "Palabra larga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cómo se escribe correctamente el plural de \"lápiz\"?",
+                "opciones": ["Lápizes", "Lápices", "Lapizes", "Lápis"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "com3_3",
+        "curso_id": "comunicacion",
+        "nombre": "Expresión Oral y Escucha Activa",
+        "descripcion_corta": "Se comunica oralmente en su lengua materna",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es exponer un tema?",
+                "opciones": ["Leer rápido", "Presentar información sobre un tema de forma clara", "Gritar", "No hablar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué debes hacer para ser un buen oyente?",
+                "opciones": ["Interrumpir constantemente", "Prestar atención y no interrumpir", "Hablar al mismo tiempo", "Mirar al techo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es el tono de voz?",
+                "opciones": ["El volumen o forma como hablamos", "El color de voz", "Solo gritar", "No existe"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuándo debes usar un lenguaje formal?",
+                "opciones": ["Con tus amigos en el recreo", "En exposiciones, con autoridades o situaciones serias", "Nunca", "Siempre con todos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué son los gestos al hablar?",
+                "opciones": ["Errores al hablar", "Movimientos del cuerpo que ayudan a comunicar", "Solo palabras", "Equivocaciones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es argumentar tu opinión?",
+                "opciones": ["Solo decir lo que piensas", "Dar razones que apoyen lo que dices", "Gritar más fuerte", "No explicar nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Para qué sirve hacer preguntas en una conversación?",
+                "opciones": ["Para interrumpir", "Para entender mejor y mostrar interés", "Para molestar", "No sirven"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es una anécdota?",
+                "opciones": ["Un cuento inventado", "Una historia breve y personal que te pasó", "Una mentira", "Un poema"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cómo debes presentarte ante un grupo?",
+                "opciones": ["Con miedo y sin hablar", "Con seguridad, diciendo tu nombre y tema", "Gritando", "Dando la espalda"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué significa respetar el turno de palabra?",
+                "opciones": ["Hablar cuando quieras", "Esperar tu turno para hablar sin interrumpir", "No hablar nunca", "Gritar más fuerte"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Para qué usamos ejemplos al explicar algo?",
+                "opciones": ["Para confundir", "Para que los demás entiendan mejor", "Para alargar el tiempo", "No sirven"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es el contacto visual al hablar?",
+                "opciones": ["No mirar a nadie", "Mirar a los ojos de quien escucha", "Mirar al piso", "Cerrar los ojos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Cómo inicias una exposición?",
+                "opciones": ["Sin saludar", "Saludando y presentando el tema", "Hablando de otra cosa", "En silencio"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es un debate?",
+                "opciones": ["Una pelea", "Intercambio de ideas sobre un tema con argumentos", "Un juego", "Una canción"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Por qué es importante modular la voz?",
+                "opciones": ["No es importante", "Para que todos escuchen y entiendan bien", "Para cantar", "Para gritar"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "com3_4",
+        "curso_id": "comunicacion",
+        "nombre": "Gramática y Uso del Lenguaje",
+        "descripcion_corta": "Reflexiona y evalúa la forma, el contenido y contexto del texto",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es un sustantivo?",
+                "opciones": ["Una acción", "Palabra que nombra personas, animales, cosas o lugares", "Una cualidad", "Un número"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es un adjetivo calificativo?",
+                "opciones": ["Un verbo", "Palabra que describe características del sustantivo", "Un sustantivo", "Un artículo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué son los verbos?",
+                "opciones": ["Nombres de cosas", "Palabras que expresan acciones o estados", "Cualidades", "Lugares"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuántas sílabas tiene la palabra \"mariposa\"?",
+                "opciones": ["2 sílabas", "3 sílabas", "4 sílabas", "5 sílabas"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es una palabra aguda?",
+                "opciones": ["Palabra que no tiene acento", "Palabra con acento en la última sílaba", "Palabra con acento en la penúltima", "Palabra larga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuál es el artículo definido masculino singular?",
+                "opciones": ["La", "El", "Los", "Las"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es un antónimo?",
+                "opciones": ["Palabra con significado similar", "Palabra con significado opuesto", "Palabra inventada", "Palabra larga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es el género en los sustantivos?",
+                "opciones": ["El tamaño", "Si es masculino o femenino", "El color", "La forma"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cómo se forma el aumentativo de \"casa\"?",
+                "opciones": ["Casita", "Casota o casona", "Casa", "Casilla"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué son las palabras compuestas?",
+                "opciones": ["Palabras cortas", "Palabras formadas por dos o más palabras", "Palabras con tilde", "Palabras extranjeras"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es el número en los sustantivos?",
+                "opciones": ["El tamaño", "Si está en singular o plural", "El color", "El peso"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Cuál es el diminutivo de \"perro\"?",
+                "opciones": ["Perrazo", "Perrito", "Perro", "Perrón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es una oración?",
+                "opciones": ["Una palabra sola", "Conjunto de palabras con sentido completo", "Una letra", "Un párrafo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué son los pronombres personales?",
+                "opciones": ["Sustantivos", "Palabras que reemplazan al sustantivo: yo, tú, él, ella", "Verbos", "Adjetivos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué tipo de palabra es \"hermoso\"?",
+                "opciones": ["Sustantivo", "Verbo", "Adjetivo", "Artículo"],
+                "respuesta_correcta": 2
+            }
+        ]
+    },
+    {
+        "id": "com3_5",
+        "curso_id": "comunicacion",
+        "nombre": "Tipos de Textos y Propósitos Comunicativos",
+        "descripcion_corta": "Lee diversos tipos de textos escritos en su lengua materna",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál es el propósito de un texto instructivo?",
+                "opciones": ["Entretener", "Dar pasos o indicaciones para hacer algo", "Opinar", "Describir personas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es una noticia?",
+                "opciones": ["Un cuento", "Un texto que informa sobre hechos recientes", "Un poema", "Una carta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué partes tiene una noticia?",
+                "opciones": ["Solo el título", "Titular, bajada, cuerpo y a veces imagen", "Solo texto", "No tiene partes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Para qué sirve un afiche?",
+                "opciones": ["Para contar cuentos", "Para informar o anunciar algo visualmente", "Para dar instrucciones", "Para describir"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es una rima?",
+                "opciones": ["Un texto largo", "Cuando dos palabras terminan con sonidos iguales o parecidos", "Un color", "Una letra"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es un poema?",
+                "opciones": ["Un texto en prosa", "Un texto escrito en versos con ritmo y expresión", "Una noticia", "Un instructivo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Para qué sirve un diccionario?",
+                "opciones": ["Para dibujar", "Para buscar el significado de palabras", "Para jugar", "Para hacer cuentas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un texto informativo?",
+                "opciones": ["Solo cuentos", "Texto que proporciona datos y conocimientos", "Solo poemas", "Solo cartas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es una leyenda?",
+                "opciones": ["Una noticia actual", "Narración tradicional que mezcla realidad y fantasía", "Un instructivo", "Un texto científico"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Para qué se escribe una receta de cocina?",
+                "opciones": ["Para contar una historia", "Para explicar cómo preparar un platillo", "Para hacer poesía", "Para dar noticias"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es un trabalenguas?",
+                "opciones": ["Un poema triste", "Frase difícil de pronunciar, para jugar con palabras", "Una noticia", "Una carta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Cuál es la diferencia entre cuento y fábula?",
+                "opciones": ["No hay diferencia", "La fábula tiene animales que hablan y deja enseñanza", "El cuento es más corto", "La fábula no tiene personajes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es un texto expositivo?",
+                "opciones": ["Cuenta historias ficticias", "Explica o desarrolla un tema de manera clara", "Da instrucciones", "Solo tiene diálogos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Para qué sirve un cartel?",
+                "opciones": ["Para leer cuentos largos", "Para comunicar un mensaje breve y visual", "Para escribir cartas", "Para hacer operaciones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es un mito?",
+                "opciones": ["Una noticia moderna", "Relato tradicional que explica el origen de algo", "Un instructivo", "Una receta"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "mat3_1",
+        "curso_id": "matematica",
+        "nombre": "Números y Operaciones hasta 1000",
+        "descripcion_corta": "Resuelve problemas de cantidad",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuánto es 345 + 287?",
+                "opciones": ["532", "622", "632", "642"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuál es el resultado de 500 - 236?",
+                "opciones": ["254", "264", "274", "284"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué número tiene 7 centenas, 4 decenas y 8 unidades?",
+                "opciones": ["748", "784", "847", "874"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuál es el número anterior a 600?",
+                "opciones": ["598", "599", "601", "700"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cuánto es 9 × 6?",
+                "opciones": ["45", "48", "54", "63"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuánto es 72 ÷ 8?",
+                "opciones": ["7", "8", "9", "10"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué número es mayor: 689 o 698?",
+                "opciones": ["689", "698", "Son iguales", "600"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "Si redondeas 456 a la centena más cercana, ¿qué número obtienes?",
+                "opciones": ["400", "450", "500", "600"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cuánto es el triple de 15?",
+                "opciones": ["30", "45", "50", "60"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuál es el valor posicional del 5 en el número 523?",
+                "opciones": ["5 unidades", "5 decenas", "5 centenas", "5 millares"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cuánto es 7 × 8?",
+                "opciones": ["48", "54", "56", "63"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "Si cuentas de 100 en 100 desde 200, ¿qué número sigue después de 500?",
+                "opciones": ["550", "600", "700", "800"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Cuánto es 144 ÷ 12?",
+                "opciones": ["10", "11", "12", "13"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué propiedad se cumple: 5 + 8 = 8 + 5?",
+                "opciones": ["Propiedad asociativa", "Propiedad conmutativa", "Propiedad distributiva", "Ninguna propiedad"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cuánto es 250 + 250 + 250?",
+                "opciones": ["500", "650", "750", "850"],
+                "respuesta_correcta": 2
+            }
+        ]
+    },
+    {
+        "id": "mat3_2",
+        "curso_id": "matematica",
+        "nombre": "Problemas Matemáticos y Razonamiento",
+        "descripcion_corta": "Resuelve problemas de cantidad",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "Una tienda tiene 156 pelotas. Si vende 89, ¿cuántas pelotas le quedan?",
+                "opciones": ["57", "67", "77", "87"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "María compra 6 paquetes de galletas. Si cada paquete tiene 8 galletas, ¿cuántas galletas tiene en total?",
+                "opciones": ["40 galletas", "42 galletas", "48 galletas", "54 galletas"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "En una granja hay 245 gallinas y 178 patos. ¿Cuántas aves hay en total?",
+                "opciones": ["413 aves", "423 aves", "433 aves", "443 aves"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "Pedro tiene 360 soles. Si gasta 125 soles en un juguete y 80 soles en un libro, ¿cuánto dinero le queda?",
+                "opciones": ["145 soles", "155 soles", "165 soles", "175 soles"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "Un autobús tiene capacidad para 45 pasajeros. Si hay 4 autobuses, ¿cuántos pasajeros pueden transportar en total?",
+                "opciones": ["160 pasajeros", "170 pasajeros", "180 pasajeros", "190 pasajeros"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "Ana tiene 96 caramelos y quiere repartirlos equitativamente entre 8 amigos. ¿Cuántos caramelos recibe cada uno?",
+                "opciones": ["10 caramelos", "11 caramelos", "12 caramelos", "13 caramelos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "En una biblioteca hay 5 estantes con 25 libros cada uno. ¿Cuántos libros hay en total?",
+                "opciones": ["100 libros", "115 libros", "125 libros", "135 libros"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "Luis corre 8 kilómetros cada día. ¿Cuántos kilómetros corre en una semana?",
+                "opciones": ["48 km", "52 km", "56 km", "60 km"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 9,
+                "pregunta": "En un teatro hay 12 filas con 18 sillas cada una. ¿Cuántas sillas hay en total?",
+                "opciones": ["196 sillas", "206 sillas", "216 sillas", "226 sillas"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 10,
+                "pregunta": "Carmen tenía 450 soles, gastó 175 soles y después recibió 120 soles. ¿Cuánto dinero tiene ahora?",
+                "opciones": ["385 soles", "395 soles", "405 soles", "415 soles"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "Un pastel se divide en 8 partes iguales. Si comes 3 partes, ¿cuántas partes quedan?",
+                "opciones": ["3 partes", "4 partes", "5 partes", "6 partes"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "Roberto compra 9 cajas de lápices. Si cada caja tiene 12 lápices, ¿cuántos lápices compró?",
+                "opciones": ["98 lápices", "100 lápices", "108 lápices", "118 lápices"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 13,
+                "pregunta": "En una clase hay 32 estudiantes. Si se forman grupos de 4, ¿cuántos grupos se pueden formar?",
+                "opciones": ["6 grupos", "7 grupos", "8 grupos", "9 grupos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "Una caja contiene 144 chocolates. Si se reparten entre 12 niños en partes iguales, ¿cuántos chocolates recibe cada niño?",
+                "opciones": ["10 chocolates", "11 chocolates", "12 chocolates", "13 chocolates"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 15,
+                "pregunta": "Julia tiene 85 figuritas. Su hermano le da 47 más y ella regala 28. ¿Cuántas figuritas tiene ahora?",
+                "opciones": ["94 figuritas", "104 figuritas", "114 figuritas", "124 figuritas"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "mat3_3",
+        "curso_id": "matematica",
+        "nombre": "Fracciones y Números Decimales",
+        "descripcion_corta": "Resuelve problemas de cantidad",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué fracción representa la mitad?",
+                "opciones": ["1/3", "1/2", "1/4", "2/3"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "Si divides una pizza en 4 partes iguales y comes 1 parte, ¿qué fracción comiste?",
+                "opciones": ["1/2", "1/3", "1/4", "2/4"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Cuál fracción es mayor: 1/2 o 1/4?",
+                "opciones": ["1/4", "1/2", "Son iguales", "Ninguna"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué fracción representa 3 de 8 partes?",
+                "opciones": ["3/5", "3/6", "3/8", "8/3"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cuánto es 1/2 + 1/2?",
+                "opciones": ["1/2", "2/4", "1 entero", "2 enteros"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "Si un pastel se divide en 6 partes iguales y tomas 2 partes, ¿qué fracción tomaste?",
+                "opciones": ["2/4", "2/6 o 1/3", "2/8", "6/2"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cómo se lee el número decimal 0.5?",
+                "opciones": ["Cero coma cincuenta", "Cinco décimos o cero coma cinco", "Medio décimo", "Cinco enteros"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué fracción es equivalente a 2/4?",
+                "opciones": ["1/2", "3/4", "2/8", "4/2"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "Si tienes 3/4 de un chocolate y comes 1/4, ¿cuánto te queda?",
+                "opciones": ["1/4", "2/4 o 1/2", "3/4", "4/4"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuál es mayor: 0.7 o 0.5?",
+                "opciones": ["0.5", "0.7", "Son iguales", "No se puede comparar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué decimal representa 1/2?",
+                "opciones": ["0.2", "0.3", "0.5", "0.7"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "Si una botella tiene 2/5 de agua, ¿qué fracción está vacía?",
+                "opciones": ["2/5", "3/5", "1/5", "4/5"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Cuántas mitades hay en 2 enteros?",
+                "opciones": ["2 mitades", "3 mitades", "4 mitades", "6 mitades"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué fracción representa 0.25?",
+                "opciones": ["1/2", "1/4", "1/3", "1/5"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "Si divides una barra de chocolate en 10 partes y comes 3, ¿qué fracción comiste?",
+                "opciones": ["3/5", "3/10", "3/12", "10/3"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "mat3_4",
+        "curso_id": "matematica",
+        "nombre": "Geometría, Perímetro y Área",
+        "descripcion_corta": "Resuelve problemas de forma, movimiento y localización",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuántos lados tiene un pentágono?",
+                "opciones": ["4 lados", "5 lados", "6 lados", "7 lados"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es el perímetro de una figura?",
+                "opciones": ["El área interior", "La suma de todos sus lados", "Solo un lado", "El volumen"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "Si un cuadrado tiene lados de 6 cm, ¿cuál es su perímetro?",
+                "opciones": ["12 cm", "18 cm", "24 cm", "30 cm"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuántos ángulos tiene un triángulo?",
+                "opciones": ["2 ángulos", "3 ángulos", "4 ángulos", "5 ángulos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué figura tiene todos sus lados iguales y 4 ángulos rectos?",
+                "opciones": ["Rectángulo", "Triángulo", "Cuadrado", "Pentágono"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cuántas caras tiene una pirámide de base cuadrada?",
+                "opciones": ["4 caras", "5 caras", "6 caras", "8 caras"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "Si un rectángulo tiene 8 cm de largo y 5 cm de ancho, ¿cuál es su perímetro?",
+                "opciones": ["13 cm", "18 cm", "26 cm", "40 cm"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un ángulo recto?",
+                "opciones": ["Un ángulo de 45°", "Un ángulo de 90°", "Un ángulo de 180°", "Un ángulo de 360°"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cuál es el área de un cuadrado con lado de 4 cm?",
+                "opciones": ["8 cm²", "12 cm²", "16 cm²", "20 cm²"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué figura tiene 6 lados?",
+                "opciones": ["Pentágono", "Hexágono", "Heptágono", "Octágono"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cuántas aristas tiene un cubo?",
+                "opciones": ["6 aristas", "8 aristas", "12 aristas", "16 aristas"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué tipo de líneas nunca se cruzan?",
+                "opciones": ["Líneas perpendiculares", "Líneas paralelas", "Líneas curvas", "Líneas quebradas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "Si un rectángulo tiene 6 cm de largo y 3 cm de ancho, ¿cuál es su área?",
+                "opciones": ["9 cm²", "15 cm²", "18 cm²", "24 cm²"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cuántos vértices tiene un hexágono?",
+                "opciones": ["4 vértices", "5 vértices", "6 vértices", "8 vértices"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es un polígono?",
+                "opciones": ["Una línea curva", "Una figura cerrada con lados rectos", "Un círculo", "Un punto"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "mat3_5",
+        "curso_id": "matematica",
+        "nombre": "Medición, Tiempo y Datos",
+        "descripcion_corta": "Resuelve problemas de gestión de datos e incertidumbre",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuántos metros hay en 1 kilómetro?",
+                "opciones": ["10 metros", "100 metros", "1000 metros", "10000 metros"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuántos minutos hay en 2 horas?",
+                "opciones": ["60 minutos", "90 minutos", "120 minutos", "150 minutos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "Si son las 8:45 y pasan 30 minutos, ¿qué hora será?",
+                "opciones": ["9:00", "9:15", "9:30", "9:45"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuántos gramos hay en medio kilogramo?",
+                "opciones": ["250 gramos", "500 gramos", "750 gramos", "1000 gramos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cuántos centímetros hay en 1 metro?",
+                "opciones": ["10 cm", "50 cm", "100 cm", "1000 cm"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 6,
+                "pregunta": "Si hoy es miércoles, ¿qué día será en 5 días?",
+                "opciones": ["Viernes", "Sábado", "Domingo", "Lunes"],
+                "respuesta_correcta": 3
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cuántos mililitros hay en 1 litro?",
+                "opciones": ["100 ml", "500 ml", "1000 ml", "2000 ml"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 8,
+                "pregunta": "En una gráfica de barras, la barra más alta representa:",
+                "opciones": ["El valor más pequeño", "El valor más grande", "El promedio", "No representa nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "Si una película empieza a las 3:30 PM y dura 2 horas, ¿a qué hora termina?",
+                "opciones": ["5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Cuántos días tiene el mes de febrero en un año no bisiesto?",
+                "opciones": ["28 días", "29 días", "30 días", "31 días"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "Observa esta tabla: Juan tiene 15 puntos, Ana 20 y Luis 12. ¿Quién tiene más puntos?",
+                "opciones": ["Juan", "Ana", "Luis", "Todos igual"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Cuál es la unidad apropiada para medir el peso de una persona?",
+                "opciones": ["Gramos", "Kilogramos", "Toneladas", "Miligramos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "Si el reloj marca las 11:50 y pasan 20 minutos, ¿qué hora será?",
+                "opciones": ["12:00", "12:10", "12:20", "12:30"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Cuántos segundos hay en 1 minuto?",
+                "opciones": ["30 segundos", "60 segundos", "90 segundos", "120 segundos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "En un pictograma, cada símbolo 🍎 = 5 manzanas. Si hay 4 símbolos, ¿cuántas manzanas hay?",
+                "opciones": ["10 manzanas", "15 manzanas", "20 manzanas", "25 manzanas"],
+                "respuesta_correcta": 2
+            }
+        ]
+    },
+    {
+        "id": "cyt3_1",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Seres Vivos y su Clasificación",
+        "descripcion_corta": "Explica el mundo físico basándose en conocimientos sobre los seres vivos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuáles son las características de los seres vivos?",
+                "opciones": ["Solo crecen", "Nacen, crecen, se reproducen y mueren", "Solo se mueven", "No tienen características"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es la fotosíntesis?",
+                "opciones": ["El movimiento de las plantas", "Proceso por el cual las plantas producen su alimento con luz solar", "La respiración de los animales", "El crecimiento de las raíces"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué son los animales vertebrados?",
+                "opciones": ["Animales sin huesos", "Animales que tienen columna vertebral", "Solo los peces", "Solo las aves"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuál de estos animales es invertebrado?",
+                "opciones": ["Perro", "Gato", "Mariposa", "Pájaro"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué función cumple el tallo en las plantas?",
+                "opciones": ["Absorber agua", "Sostener la planta y transportar nutrientes", "Producir semillas", "Hacer fotosíntesis solamente"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué son los animales omnívoros?",
+                "opciones": ["Solo comen plantas", "Solo comen carne", "Comen plantas y carne", "No comen nada"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cuál es la función principal de las hojas?",
+                "opciones": ["Almacenar agua", "Realizar la fotosíntesis", "Reproducirse", "Sostener la planta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es el ciclo de vida?",
+                "opciones": ["Solo el nacimiento", "Las etapas por las que pasa un ser vivo: nacer, crecer, reproducirse y morir", "Solo la reproducción", "El color del ser vivo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué animales son de sangre fría?",
+                "opciones": ["Mamíferos", "Aves", "Reptiles y peces", "Solo humanos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué parte de la flor se convierte en fruto?",
+                "opciones": ["El tallo", "La raíz", "El ovario", "Las hojas"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cómo se reproducen las aves?",
+                "opciones": ["Por semillas", "Por huevos", "Por esporas", "Por brotes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es un hábitat?",
+                "opciones": ["Solo una casa", "El lugar donde vive un ser vivo", "Un tipo de comida", "Un animal"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué animales tienen respiración branquial?",
+                "opciones": ["Mamíferos terrestres", "Aves", "Peces", "Reptiles"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es la polinización?",
+                "opciones": ["El crecimiento de raíces", "Transporte del polen de una flor a otra", "La caída de hojas", "El riego de plantas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cuál es la diferencia entre animales diurnos y nocturnos?",
+                "opciones": ["El tamaño", "Los diurnos son activos de día, los nocturnos de noche", "El color", "No hay diferencia"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt3_2",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "El Cuerpo Humano y Sistemas",
+        "descripcion_corta": "Explica el mundo físico basándose en conocimientos sobre el cuerpo humano",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál es la función del sistema digestivo?",
+                "opciones": ["Hacer circular la sangre", "Transformar los alimentos en nutrientes", "Respirar", "Pensar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué órgano pertenece al sistema respiratorio?",
+                "opciones": ["El estómago", "Los pulmones", "El hígado", "Los riñones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Cuál es la función del sistema circulatorio?",
+                "opciones": ["Digerir alimentos", "Transportar sangre y nutrientes por el cuerpo", "Respirar", "Mover los huesos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué protege el cráneo?",
+                "opciones": ["El corazón", "El cerebro", "Los pulmones", "El estómago"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cuál es el músculo más importante del sistema circulatorio?",
+                "opciones": ["El bíceps", "El corazón", "Los abdominales", "Los cuádriceps"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué sistema controla los movimientos del cuerpo?",
+                "opciones": ["Sistema digestivo", "Sistema nervioso", "Sistema respiratorio", "Sistema circulatorio"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Para qué sirven los huesos?",
+                "opciones": ["Solo para estar duros", "Sostener el cuerpo, proteger órganos y permitir movimiento", "Solo para crecer", "No sirven para nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué órgano filtra las impurezas de la sangre?",
+                "opciones": ["El hígado", "Los riñones", "El estómago", "Los pulmones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cuántos tipos de dientes tenemos?",
+                "opciones": ["Un solo tipo", "Dos tipos", "Cuatro tipos: incisivos, caninos, premolares y molares", "Cinco tipos"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es el sistema muscular?",
+                "opciones": ["Solo los huesos", "Conjunto de músculos que permiten el movimiento", "Solo el corazón", "Los órganos internos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cuál es la función de la piel?",
+                "opciones": ["Solo dar color", "Proteger el cuerpo, regular temperatura y sentir", "Solo sudar", "No tiene función"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué son las articulaciones?",
+                "opciones": ["Músculos", "Uniones entre huesos que permiten movimiento", "Órganos internos", "Células"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Por qué es importante el sistema nervioso?",
+                "opciones": ["Solo para dormir", "Controla y coordina todas las funciones del cuerpo", "Solo para comer", "Solo para ver"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué función tiene el estómago?",
+                "opciones": ["Respirar", "Descomponer los alimentos con jugos gástricos", "Bombear sangre", "Producir orina"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cuál es la función de los glóbulos rojos?",
+                "opciones": ["Digerir alimentos", "Transportar oxígeno en la sangre", "Proteger de infecciones", "Producir energía"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt3_3",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Materia, Energía y Fuerzas",
+        "descripcion_corta": "Indaga mediante métodos científicos para construir conocimientos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es la energía?",
+                "opciones": ["Solo la electricidad", "La capacidad de producir trabajo o cambios", "Solo la luz", "El movimiento"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuál es una fuente de energía renovable?",
+                "opciones": ["El petróleo", "El carbón", "La energía solar", "El gas natural"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es la fuerza?",
+                "opciones": ["Solo empujar", "Una acción que puede mover, detener o deformar un objeto", "Solo jalar", "El peso"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué tipo de energía tiene un objeto en movimiento?",
+                "opciones": ["Energía potencial", "Energía cinética", "Energía química", "Energía nuclear"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es la gravedad?",
+                "opciones": ["Un tipo de roca", "La fuerza que atrae los objetos hacia la Tierra", "Un animal", "Una planta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué pasa cuando frotas un globo en tu cabello?",
+                "opciones": ["No pasa nada", "Se genera electricidad estática", "Se moja", "Se rompe"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es un imán?",
+                "opciones": ["Un tipo de comida", "Objeto que atrae metales como el hierro", "Una planta", "Un líquido"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Cuál es una propiedad de los líquidos?",
+                "opciones": ["Tienen forma propia", "Se adaptan al recipiente que los contiene", "No fluyen", "Son siempre sólidos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es la evaporación?",
+                "opciones": ["Cuando el agua se congela", "Cuando el líquido se convierte en gas", "Cuando el hielo se derrite", "Cuando llueve"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es la condensación?",
+                "opciones": ["Cuando el agua hierve", "Cuando el vapor se convierte en líquido", "Cuando el hielo se derrite", "Cuando algo se calienta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué tipo de material conduce la electricidad?",
+                "opciones": ["Madera", "Plástico", "Metal", "Vidrio"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es el calor?",
+                "opciones": ["Solo el fuego", "Una forma de energía que se transfiere de lo caliente a lo frío", "Solo el sol", "Un color"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué necesita el fuego para existir?",
+                "opciones": ["Solo agua", "Oxígeno, combustible y calor", "Solo tierra", "Solo aire"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es la fricción?",
+                "opciones": ["Un tipo de comida", "La fuerza que se opone al movimiento entre superficies", "Un animal", "Una planta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué materiales son transparentes?",
+                "opciones": ["Madera y metal", "Vidrio y plástico claro", "Piedra y tierra", "Papel y cartón"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt3_4",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Ecosistemas y Medio Ambiente",
+        "descripcion_corta": "Explica el mundo físico basándose en conocimientos sobre la Tierra",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es una cadena alimenticia?",
+                "opciones": ["Un collar", "Secuencia que muestra quién come a quién en un ecosistema", "Una receta", "Un juego"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué son los productores en un ecosistema?",
+                "opciones": ["Los animales carnívoros", "Las plantas que producen su propio alimento", "Los descomponedores", "Solo las bacterias"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué son los consumidores primarios?",
+                "opciones": ["Los carnívoros", "Los herbívoros que comen plantas", "Las plantas", "Los descomponedores"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cuál es la función de los descomponedores?",
+                "opciones": ["Comer plantas", "Descomponer materia muerta y reciclar nutrientes", "Cazar animales", "Producir oxígeno"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es la contaminación del agua?",
+                "opciones": ["Limpiar el agua", "Ensuciar el agua con sustancias dañinas", "Hervir el agua", "Congelar el agua"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es un ecosistema terrestre?",
+                "opciones": ["Océanos y mares", "Lugares en la tierra como bosques, desiertos, selvas", "Solo ríos", "Solo lagos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es un ecosistema acuático?",
+                "opciones": ["Solo montañas", "Lugares con agua como ríos, lagos, mares", "Solo desiertos", "Solo bosques"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Por qué son importantes los árboles en un ecosistema?",
+                "opciones": ["Solo para decorar", "Producen oxígeno, dan alimento y refugio a animales", "Solo para cortarlos", "No son importantes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es la deforestación?",
+                "opciones": ["Plantar árboles", "Tala o destrucción de bosques", "Cuidar las plantas", "Regar los árboles"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es el efecto invernadero?",
+                "opciones": ["Un tipo de casa", "Calentamiento de la Tierra por gases en la atmósfera", "Un invernadero para plantas", "Un fenómeno en el océano"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es la biodiversidad?",
+                "opciones": ["Un solo tipo de animal", "Variedad de seres vivos en un lugar", "Solo plantas", "Solo bacterias"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué podemos hacer para cuidar el medio ambiente?",
+                "opciones": ["Tirar basura en cualquier lugar", "Reciclar, ahorrar agua y energía", "Contaminar el aire", "Desperdiciar recursos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué animales están en peligro de extinción?",
+                "opciones": ["Los que hay muchos", "Los que quedan muy pocos y pueden desaparecer", "Solo los domésticos", "Todos los animales"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es el cambio climático?",
+                "opciones": ["El clima de cada día", "Cambio a largo plazo en el clima de la Tierra", "Solo el calor", "Solo el frío"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué son las áreas naturales protegidas?",
+                "opciones": ["Ciudades grandes", "Lugares protegidos para conservar la naturaleza", "Fábricas", "Carreteras"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "cyt3_5",
+        "curso_id": "ciencia_tecnologia",
+        "nombre": "Tecnología, Inventos y Soluciones",
+        "descripcion_corta": "Diseña y construye soluciones tecnológicas para resolver problemas",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es el método científico?",
+                "opciones": ["Una receta de cocina", "Pasos ordenados para investigar: observar, preguntar, experimentar, concluir", "Un juego", "Una máquina"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es una hipótesis?",
+                "opciones": ["Una respuesta final", "Una suposición o idea que se puede comprobar", "Un error", "Un experimento"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Para qué sirve un microscopio?",
+                "opciones": ["Para ver cosas muy lejanas", "Para ver cosas muy pequeñas aumentadas", "Para medir el tiempo", "Para pesar objetos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es un circuito eléctrico simple?",
+                "opciones": ["Un camino cerrado por donde circula la electricidad", "Solo un cable", "Una batería sola", "Un foco apagado"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué inventos nos ayudan a comunicarnos?",
+                "opciones": ["Solo el papel", "Teléfono, internet, radio, televisión", "Solo los libros", "Solo las cartas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es un robot?",
+                "opciones": ["Un juguete solamente", "Máquina programada para hacer tareas", "Solo un dibujo", "Un animal"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Para qué sirve una palanca?",
+                "opciones": ["Solo para jugar", "Máquina simple que ayuda a mover objetos pesados con menos esfuerzo", "Para medir", "Para cocinar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un prototipo?",
+                "opciones": ["El producto final", "Modelo o versión de prueba de un invento", "Una idea sin hacer", "Un dibujo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cuál es un ejemplo de máquina simple?",
+                "opciones": ["Computadora", "Palanca, polea, plano inclinado", "Televisión", "Teléfono celular"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es la rueda?",
+                "opciones": ["Solo un juguete", "Invento que facilita el transporte y movimiento", "Un tipo de comida", "Un animal"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Para qué sirve una polea?",
+                "opciones": ["Para cocinar", "Para levantar objetos pesados más fácilmente", "Para medir temperatura", "Para escribir"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es un plano inclinado?",
+                "opciones": ["Una superficie plana", "Superficie inclinada que facilita subir objetos", "Una herramienta", "Un vehículo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué herramienta usamos para medir la temperatura?",
+                "opciones": ["Regla", "Balanza", "Termómetro", "Reloj"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es innovar?",
+                "opciones": ["Copiar algo exactamente", "Crear algo nuevo o mejorar lo que existe", "Destruir algo", "No hacer nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Cómo podemos resolver un problema tecnológico?",
+                "opciones": ["Ignorándolo", "Identificando el problema, diseñando soluciones y probándolas", "Esperando que se resuelva solo", "Quejándose"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+     {
+        "id": "art3_1",
+        "curso_id": "arte_cultura",
+        "nombre": "Elementos y Principios del Arte",
+        "descripcion_corta": "Aprecia de manera crítica manifestaciones artístico-culturales",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué son los colores complementarios?",
+                "opciones": ["Colores del mismo tono", "Colores opuestos en el círculo cromático (rojo-verde, azul-naranja)", "Solo blanco y negro", "Colores que no se mezclan"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es la composición en el arte?",
+                "opciones": ["Solo pintar", "La forma en que se organizan los elementos en una obra", "El color de fondo", "El tamaño del papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué son los colores análogos?",
+                "opciones": ["Colores opuestos", "Colores que están juntos en el círculo cromático", "Solo el blanco", "Colores que no existen"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué es la perspectiva en el dibujo?",
+                "opciones": ["Solo un color", "Técnica para representar profundidad y distancia", "Un tipo de pintura", "Una forma geométrica"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es el claroscuro?",
+                "opciones": ["Solo usar colores claros", "Contraste entre luces y sombras", "Pintar solo de noche", "Un tipo de papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es la simetría en el arte?",
+                "opciones": ["Dibujar solo círculos", "Equilibrio en que ambos lados son iguales", "Pintar sin reglas", "Solo usar líneas rectas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué son las texturas visuales?",
+                "opciones": ["Solo texturas reales", "Texturas que se ven pero no se sienten", "Solo colores", "Formas geométricas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es el contraste en el arte?",
+                "opciones": ["Usar todo del mismo color", "Diferencia marcada entre elementos (claro-oscuro, grande-pequeño)", "Solo pintar igual", "No usar colores"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué es una línea horizontal?",
+                "opciones": ["Línea que sube y baja", "Línea que va de lado a lado", "Línea en círculo", "Línea en espiral"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es el ritmo en una composición artística?",
+                "opciones": ["Solo música", "Repetición ordenada de elementos visuales", "Pintar rápido", "Un color"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es la proporción en el arte?",
+                "opciones": ["Solo el tamaño", "Relación de tamaño entre las partes de una obra", "El color usado", "El tipo de papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué representa una línea vertical en el arte?",
+                "opciones": ["Movimiento horizontal", "Altura, estabilidad o fuerza", "Solo decoración", "Nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es el punto focal en una obra?",
+                "opciones": ["Cualquier parte", "El área que más llama la atención", "El marco", "El fondo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es un tono en el arte?",
+                "opciones": ["Un sonido", "La claridad u oscuridad de un color", "Una forma", "Una línea"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es el espacio negativo?",
+                "opciones": ["El espacio oscuro", "El espacio vacío alrededor y entre los objetos", "Solo el negro", "El fondo blanco"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "art3_2",
+        "curso_id": "arte_cultura",
+        "nombre": "Técnicas y Medios Artísticos",
+        "descripcion_corta": "Crea proyectos desde los lenguajes artísticos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es la técnica del puntillismo?",
+                "opciones": ["Pintar con líneas", "Crear imágenes usando solo puntos", "Pintar con esponja", "Dibujar círculos grandes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es el collage tridimensional?",
+                "opciones": ["Collage plano", "Collage con volumen y relieve", "Solo recortar papel", "Una fotografía"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es la técnica del esgrafiado?",
+                "opciones": ["Solo pintar", "Raspar una capa de color para revelar otra debajo", "Pegar papeles", "Dibujar con lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Para qué sirve la acuarela?",
+                "opciones": ["Para esculpir", "Para pintar con efectos transparentes y fluidos", "Para cortar papel", "Para hacer música"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es el grabado?",
+                "opciones": ["Solo dibujar", "Técnica de imprimir imágenes desde una matriz", "Pintar con óleo", "Hacer esculturas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué materiales se usan en la técnica del mosaico?",
+                "opciones": ["Solo pintura", "Pequeñas piezas de cerámica, vidrio o piedra", "Solo papel", "Solo madera"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es la técnica del batik?",
+                "opciones": ["Pintar con agua", "Teñir telas usando cera para crear diseños", "Cortar papel", "Hacer esculturas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un boceto?",
+                "opciones": ["La obra final", "Dibujo rápido y preliminar de una idea", "Una pintura terminada", "Una escultura"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Para qué sirve la técnica del soplado?",
+                "opciones": ["Para secar rápido", "Para crear efectos esparciendo pintura con el aire", "Para borrar", "Para medir"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es la técnica mixta?",
+                "opciones": ["Usar solo un material", "Combinar diferentes técnicas y materiales", "Solo pintar", "Solo dibujar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es el modelado en arcilla?",
+                "opciones": ["Pintar sobre barro", "Crear formas tridimensionales moldeando arcilla", "Cortar papel", "Dibujar líneas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Para qué sirve el carboncillo en el arte?",
+                "opciones": ["Para pintar con colores", "Para dibujar con tonos oscuros y difuminados", "Para cortar", "Para pegar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es la técnica del estarcido?",
+                "opciones": ["Pintar libremente", "Aplicar pintura sobre una plantilla recortada", "Hacer esculturas", "Tejer"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es una instalación artística?",
+                "opciones": ["Solo un cuadro", "Obra que transforma un espacio con objetos", "Solo una pintura", "Un dibujo pequeño"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Para qué se usa la espátula en pintura?",
+                "opciones": ["Para cortar", "Para aplicar y texturizar pintura espesa", "Para borrar", "Para medir"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "art3_3",
+        "curso_id": "arte_cultura",
+        "nombre": "Historia del Arte y Artistas",
+        "descripcion_corta": "Aprecia de manera crítica manifestaciones artístico-culturales",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué son las pinturas rupestres?",
+                "opciones": ["Pinturas modernas", "Pinturas prehistóricas en cuevas", "Pinturas digitales", "Solo fotografías"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué cultura antigua peruana es famosa por sus líneas en Nazca?",
+                "opciones": ["Inca", "Cultura Nazca", "Chimú", "Moche"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué es un autorretrato?",
+                "opciones": ["Un paisaje", "Retrato que un artista hace de sí mismo", "Un animal", "Una naturaleza muerta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué representaban principalmente los incas en su arte?",
+                "opciones": ["Solo círculos", "Animales sagrados, dioses y la naturaleza", "Solo líneas", "Nada en particular"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué es una naturaleza muerta?",
+                "opciones": ["Paisajes naturales", "Obras que representan objetos inanimados", "Retratos de personas", "Animales en movimiento"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué cultura precolombina destacó en cerámica Moche?",
+                "opciones": ["Maya", "Azteca", "Moche", "Olmeca"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué es el arte abstracto?",
+                "opciones": ["Arte que copia la realidad exacta", "Arte que usa formas y colores sin representar objetos reales", "Solo retratos", "Solo paisajes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es un mural?",
+                "opciones": ["Un cuadro pequeño", "Pintura de gran tamaño en paredes", "Una escultura", "Un dibujo en papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué son los textiles Paracas?",
+                "opciones": ["Comidas típicas", "Tejidos antiguos con diseños complejos", "Construcciones", "Instrumentos musicales"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué representa la iconografía Chavín?",
+                "opciones": ["Solo flores", "Felinos, serpientes y aves de características sobrenaturales", "Solo personas", "Solo el sol"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es un retrato?",
+                "opciones": ["Un paisaje", "Representación artística de una persona", "Un objeto", "Un edificio"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué cultura peruana destacó en orfebrería (trabajo en oro)?",
+                "opciones": ["Nazca", "Paracas", "Chimú", "Tiahuanaco"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué tipo de arte hacían en las culturas antiguas para ceremonias?",
+                "opciones": ["Solo dibujos simples", "Arte ceremonial y religioso", "Solo fotografías", "Arte digital"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué son los huacos?",
+                "opciones": ["Instrumentos musicales", "Vasijas de cerámica de culturas precolombinas", "Tejidos", "Pinturas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué es un paisaje en el arte?",
+                "opciones": ["Un retrato", "Representación de espacios naturales o urbanos", "Una escultura", "Un objeto"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "art3_4",
+        "curso_id": "arte_cultura",
+        "nombre": "Expresión Artística y Creatividad",
+        "descripcion_corta": "Crea proyectos desde los lenguajes artísticos",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cómo puedes expresar alegría en una pintura?",
+                "opciones": ["Solo con negro", "Con colores brillantes, formas dinámicas", "Sin colores", "Con líneas tristes"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué es la creatividad artística?",
+                "opciones": ["Copiar exactamente", "Capacidad de crear ideas nuevas y originales", "No hacer nada", "Solo repetir"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Cómo representarías el movimiento en un dibujo?",
+                "opciones": ["Con objetos estáticos", "Con líneas dinámicas, poses de acción", "Sin dibujar nada", "Solo con círculos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué emociones puede transmitir el color azul?",
+                "opciones": ["Solo enojo", "Calma, tristeza, tranquilidad", "Solo alegría", "Solo miedo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cómo se crea profundidad en un dibujo?",
+                "opciones": ["Dibujando todo del mismo tamaño", "Haciendo objetos lejanos más pequeños y con menos detalle", "Sin dibujar fondos", "Solo con un color"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué inspira a los artistas a crear?",
+                "opciones": ["Nada", "Emociones, naturaleza, experiencias, cultura", "Solo el dinero", "Solo la competencia"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Cómo representarías la noche en una obra?",
+                "opciones": ["Con colores brillantes y cálidos", "Con colores oscuros, estrellas, luna", "Con rojo brillante", "Sin pintar nada"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es la improvisación en el arte?",
+                "opciones": ["Solo copiar", "Crear espontáneamente sin plan previo", "No hacer nada", "Planear todo con años de anticipación"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Cómo puedes crear tu propio estilo artístico?",
+                "opciones": ["Copiando solo a un artista", "Experimentando y desarrollando tu manera única de expresarte", "No dibujando nunca", "Haciendo siempre lo mismo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es la interpretación personal de una obra?",
+                "opciones": ["Solo la opinión del profesor", "Tu propia forma de entender y sentir el arte", "No opinar nunca", "Solo repetir lo que dicen otros"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cómo representarías el sonido en un dibujo?",
+                "opciones": ["No se puede", "Con líneas onduladas, símbolos, colores vibrantes", "Solo con silencio", "Sin dibujar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué puedes hacer si \"te equivocas\" en tu arte?",
+                "opciones": ["Romper todo", "Incorporar el \"error\" creativamente en la obra", "Rendirte", "Llorar y no intentar más"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Cómo puedes mostrar textura en un dibujo?",
+                "opciones": ["Solo con colores planos", "Con diferentes tipos de líneas, puntos y sombreado", "No se puede", "Solo con un lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué es el proceso creativo?",
+                "opciones": ["Solo el resultado final", "Las etapas desde la idea hasta la obra terminada", "No existe", "Solo copiar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Por qué es importante la originalidad en el arte?",
+                "opciones": ["No es importante", "Porque refleja tu visión única y personal", "Solo para ganar premios", "Para copiar mejor"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "art3_5",
+        "curso_id": "arte_cultura",
+        "nombre": "Arte, Cultura y Patrimonio Peruano",
+        "descripcion_corta": "Aprecia de manera crítica manifestaciones artístico-culturales",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es el patrimonio cultural?",
+                "opciones": ["Solo edificios antiguos", "Bienes heredados de nuestros antepasados que debemos conservar", "Solo dinero", "Solo comida"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué son las danzas folklóricas del Perú?",
+                "opciones": ["Solo bailes modernos", "Bailes tradicionales que representan nuestra identidad cultural", "Solo ejercicios", "Bailes extranjeros"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué representa la Marinera?",
+                "opciones": ["Una comida", "Danza tradicional peruana de conquista amorosa", "Un instrumento", "Una ciudad"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué son los retablos ayacuchanos?",
+                "opciones": ["Comidas", "Cajas de madera con escenas religiosas o costumbristas", "Bailes", "Canciones"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué instrumento musical es típico de los Andes?",
+                "opciones": ["Guitarra eléctrica", "Quena, zampoña, charango", "Batería", "Saxofón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué es el arte textil andino?",
+                "opciones": ["Solo ropa moderna", "Tejidos tradicionales con diseños simbólicos", "Solo plástico", "Solo papel"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué representa el Tondero?",
+                "opciones": ["Una comida", "Danza norteña del Perú de origen afro-peruano", "Un animal", "Una planta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué es Machu Picchu?",
+                "opciones": ["Un baile", "Patrimonio cultural, ciudad inca en Cusco", "Una comida", "Un instrumento"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué son los mates burilados?",
+                "opciones": ["Instrumentos musicales", "Calabazas decoradas con grabados artísticos", "Bailes", "Comidas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué culturas precolombinas destacaron en arte textil?",
+                "opciones": ["Solo culturas extranjeras", "Paracas, Nazca, Chancay", "Ninguna", "Solo europeas"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué es el Huayno?",
+                "opciones": ["Un tipo de comida", "Género musical y danza andina tradicional", "Un edificio", "Un color"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué representan los diseños en la cerámica Shipibo-Conibo?",
+                "opciones": ["Nada especial", "Visiones de la cosmovisión amazónica", "Solo decoración", "Copias de otros países"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué es el Festejo?",
+                "opciones": ["Una comida", "Danza afroperuana alegre y festiva", "Un edificio", "Un animal"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Por qué debemos valorar nuestro arte y cultura?",
+                "opciones": ["No es importante", "Porque es parte de nuestra identidad y herencia", "Solo por obligación", "Solo en la escuela"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué son las Líneas de Nazca?",
+                "opciones": ["Carreteras modernas", "Geoglifos gigantes en el desierto, patrimonio cultural", "Edificios", "Ríos"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ing3_1",
+        "curso_id": "ingles",
+        "nombre": "Greetings and Introductions",
+        "descripcion_corta": "Se comunica oralmente en inglés como lengua extranjera",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "How do you say \"hola\" in English?",
+                "opciones": ["Bye", "Hello", "Thanks", "See you"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "How do you answer \"How are you?\"",
+                "opciones": ["I'm fine, thank you.", "I'm two.", "I'm name.", "Good night."],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "What do you say when you leave?",
+                "opciones": ["Hi", "Hello", "Goodbye", "Welcome"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 4,
+                "pregunta": "\"Good morning\" means:",
+                "opciones": ["Buenas noches", "Buenos días", "Buenas tardes", "Adiós"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "How do you introduce yourself?",
+                "opciones": ["My name is…", "I am food.", "I am bye.", "Thank you."],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "\"Good night\" is used when:",
+                "opciones": ["You arrive", "You sleep", "You eat", "You play"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "\"Nice to meet you\" means:",
+                "opciones": ["Adiós", "Encantado de conocerte", "Gracias", "Por favor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "If someone says \"Thank you\", you say:",
+                "opciones": ["Sorry", "You're welcome", "Goodbye", "Hi"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "\"Good afternoon\" is used at:",
+                "opciones": ["8:00 a.m.", "3:00 p.m.", "10:00 p.m.", "6:00 a.m."],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "What's the opposite of \"Hello\"?",
+                "opciones": ["Bye", "Welcome", "Thanks", "Morning"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "\"How old are you?\" means:",
+                "opciones": ["¿Cómo te llamas?", "¿Cuántos años tienes?", "¿Dónde vives?", "¿Qué haces?"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 12,
+                "pregunta": "If you meet your teacher in the morning, you say:",
+                "opciones": ["Good night", "Good morning", "See you", "Hello night"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "\"See you later\" means:",
+                "opciones": ["Hasta luego", "Buenas tardes", "Gracias", "Hola"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "\"Hi!\" is more informal than:",
+                "opciones": ["Goodbye", "Hello", "Night", "Sorry"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "\"What's your name?\" — \"_____ Alessandro.\"",
+                "opciones": ["I'm", "He's", "She's", "You're"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ing3_2",
+        "curso_id": "ingles",
+        "nombre": "The Family",
+        "descripcion_corta": "Lee diversos tipos de textos escritos en inglés como lengua extranjera",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "\"Mother\" means:",
+                "opciones": ["Mamá", "Papá", "Hermana", "Amiga"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "\"Father\" means:",
+                "opciones": ["Abuela", "Papá", "Tía", "Hijo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "\"Brother\" is:",
+                "opciones": ["Hermano", "Primo", "Abuelo", "Papá"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "\"Sister\" means:",
+                "opciones": ["Madre", "Hermana", "Amigo", "Niño"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "\"Grandfather\" means:",
+                "opciones": ["Abuelo", "Abuela", "Padre", "Hijo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "\"Grandmother\" means:",
+                "opciones": ["Tía", "Abuela", "Hermana", "Amiga"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "\"Uncle\" means:",
+                "opciones": ["Tío", "Tía", "Primo", "Papá"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "\"Aunt\" means:",
+                "opciones": ["Tía", "Amiga", "Prima", "Hermana"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "\"Cousin\" means:",
+                "opciones": ["Primo", "Tío", "Abuelo", "Papá"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "\"Family\" means:",
+                "opciones": ["Amigo", "Familia", "Escuela", "Casa"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 11,
+                "pregunta": "\"Baby\" means:",
+                "opciones": ["Niño pequeño", "Hermano mayor", "Amigo", "Profesor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "\"Parents\" means:",
+                "opciones": ["Abuelos", "Padres", "Hermanos", "Primos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "\"Who is your mother's husband?\"",
+                "opciones": ["Father", "Brother", "Cousin", "Friend"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "\"Who is your father's father?\"",
+                "opciones": ["Grandfather", "Uncle", "Cousin", "Brother"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "\"Who is your aunt's child?\"",
+                "opciones": ["Cousin", "Sister", "Baby", "Friend"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ing3_3",
+        "curso_id": "ingles",
+        "nombre": "Colors and Shapes",
+        "descripcion_corta": "Escribe diversos tipos de textos en inglés como lengua extranjera",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "The color of the sky is:",
+                "opciones": ["Blue", "Red", "Green", "Yellow"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "The color of the sun is:",
+                "opciones": ["Pink", "Yellow", "Black", "White"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "\"Red\" means:",
+                "opciones": ["Azul", "Rojo", "Verde", "Amarillo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "\"Green\" means:",
+                "opciones": ["Verde", "Azul", "Rojo", "Blanco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "\"Black\" means:",
+                "opciones": ["Blanco", "Negro", "Azul", "Marrón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "\"White\" means:",
+                "opciones": ["Amarillo", "Verde", "Blanco", "Gris"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 7,
+                "pregunta": "\"Circle\" means:",
+                "opciones": ["Cuadro", "Círculo", "Triángulo", "Línea"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "\"Square\" means:",
+                "opciones": ["Triángulo", "Cuadro", "Círculo", "Corazón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "\"Triangle\" means:",
+                "opciones": ["Círculo", "Cuadro", "Triángulo", "Estrella"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 10,
+                "pregunta": "\"Heart\" means:",
+                "opciones": ["Corazón", "Estrella", "Círculo", "Cuadro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "The color of grass is:",
+                "opciones": ["Green", "Blue", "Brown", "Red"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "The color of a banana is:",
+                "opciones": ["Yellow", "Blue", "Black", "Red"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "\"Pink\" means:",
+                "opciones": ["Rosado", "Azul", "Verde", "Rojo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "\"Orange\" is both a fruit and a:",
+                "opciones": ["Color", "Shape", "Animal", "Toy"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "\"Star\" means:",
+                "opciones": ["Sol", "Estrella", "Círculo", "Corazón"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ing3_4",
+        "curso_id": "ingles",
+        "nombre": "The Classroom and School Objects",
+        "descripcion_corta": "Se comunica oralmente en inglés como lengua extranjera",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "\"Book\" means:",
+                "opciones": ["Libro", "Cuaderno", "Lápiz", "Borrador"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "\"Pencil\" means:",
+                "opciones": ["Goma", "Lápiz", "Regla", "Carpeta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "\"Eraser\" means:",
+                "opciones": ["Lápiz", "Goma de borrar", "Libro", "Silla"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 4,
+                "pregunta": "\"Chair\" means:",
+                "opciones": ["Mesa", "Silla", "Pizarra", "Lápiz"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "\"Table\" means:",
+                "opciones": ["Mesa", "Silla", "Libro", "Borrador"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "\"Bag\" means:",
+                "opciones": ["Mochila", "Lápiz", "Regla", "Cuaderno"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "\"Ruler\" means:",
+                "opciones": ["Libro", "Regla", "Cuaderno", "Carpeta"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "\"Notebook\" means:",
+                "opciones": ["Cuaderno", "Libro", "Goma", "Mochila"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "\"Board\" means:",
+                "opciones": ["Pizarra", "Mesa", "Silla", "Regla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "\"School\" means:",
+                "opciones": ["Escuela", "Casa", "Parque", "Tienda"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "\"Teacher\" means:",
+                "opciones": ["Profesor", "Estudiante", "Doctor", "Vecino"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "\"Student\" means:",
+                "opciones": ["Alumno", "Profesor", "Padre", "Hermano"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "\"Crayon\" means:",
+                "opciones": ["Lápiz de color", "Cuaderno", "Libro", "Goma"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "\"Scissors\" means:",
+                "opciones": ["Tijeras", "Regla", "Cuaderno", "Mochila"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "\"Glue\" means:",
+                "opciones": ["Pegamento", "Regla", "Libro", "Borrador"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ing3_5",
+        "curso_id": "ingles",
+        "nombre": "Animals and Nature",
+        "descripcion_corta": "Lee diversos tipos de textos escritos en inglés como lengua extranjera",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "\"Dog\" means:",
+                "opciones": ["Perro", "Gato", "Caballo", "Pájaro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "\"Cat\" means:",
+                "opciones": ["Pájaro", "Gato", "Perro", "Ratón"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "\"Bird\" means:",
+                "opciones": ["Gato", "Perro", "Pájaro", "Pez"],
+                "respuesta_correcta": 2
+            },
+            {
+                "id": 4,
+                "pregunta": "\"Fish\" means:",
+                "opciones": ["Rana", "Pez", "León", "Pájaro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 5,
+                "pregunta": "\"Cow\" means:",
+                "opciones": ["Oveja", "Vaca", "Cabra", "Perro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 6,
+                "pregunta": "\"Horse\" means:",
+                "opciones": ["Gato", "Caballo", "Vaca", "Cerdo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 7,
+                "pregunta": "\"Sheep\" means:",
+                "opciones": ["Oveja", "Gato", "León", "Mono"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "\"Monkey\" means:",
+                "opciones": ["León", "Mono", "Perro", "Pez"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "\"Lion\" means:",
+                "opciones": ["León", "Perro", "Pájaro", "Gato"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "\"Elephant\" means:",
+                "opciones": ["Elefante", "Caballo", "Vaca", "Perro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "\"Tree\" means:",
+                "opciones": ["Árbol", "Flor", "Hoja", "Rama"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "\"Flower\" means:",
+                "opciones": ["Hoja", "Flor", "Cielo", "Nube"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "\"Sun\" means:",
+                "opciones": ["Luna", "Sol", "Estrella", "Cielo"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 14,
+                "pregunta": "\"Moon\" means:",
+                "opciones": ["Sol", "Luna", "Estrella", "Nube"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 15,
+                "pregunta": "\"Water\" means:",
+                "opciones": ["Agua", "Tierra", "Aire", "Nieve"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps3_1",
+        "curso_id": "personal_social",
+        "nombre": "Mi identidad y mi familia",
+        "descripcion_corta": "Construye su identidad",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cómo se llama el grupo de personas con quienes vivimos?",
+                "opciones": ["Escuela", "Familia", "Barrio", "Amigos"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Quién te cuida y te da cariño?",
+                "opciones": ["El profesor", "La familia", "El alcalde", "El doctor"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué día celebramos el Día de la Madre en Perú?",
+                "opciones": ["Segundo domingo de mayo", "28 de julio", "1 de enero", "25 de diciembre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Cómo se llama la mamá de tu papá?",
+                "opciones": ["Abuela", "Tía", "Hermana", "Amiga"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Cómo se llama el papá de tu mamá?",
+                "opciones": ["Abuelo", "Primo", "Tío", "Amigo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué documento dice nuestro nombre y fecha de nacimiento?",
+                "opciones": ["DNI", "Carnet escolar", "Pasaporte", "Diploma"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué debemos hacer para convivir bien en casa?",
+                "opciones": ["Pelear", "Compartir", "Gritar", "Ignorar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué valor mostramos al ayudar en casa?",
+                "opciones": ["Solidaridad", "Desobediencia", "Egoísmo", "Desorden"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué debemos decir cuando recibimos algo?",
+                "opciones": ["Dame más", "Gracias", "No quiero", "Adiós"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué valor se muestra cuando obedeces a tus padres?",
+                "opciones": ["Respeto", "Pereza", "Mentira", "Orgullo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Cómo se llama el esposo de tu mamá?",
+                "opciones": ["Padre", "Abuelo", "Tío", "Hermano"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué valor se demuestra cuando decimos la verdad?",
+                "opciones": ["Honestidad", "Mentira", "Orgullo", "Pereza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Quiénes forman una familia?",
+                "opciones": ["Personas que se quieren", "Desconocidos", "Vecinos", "Turistas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué valor se muestra cuando compartes tus juguetes?",
+                "opciones": ["Generosidad", "Envidia", "Tristeza", "Desobediencia"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué debemos hacer si cometemos un error?",
+                "opciones": ["Negarlo", "Pedir perdón", "Gritar", "Culpas a otro"],
+                "respuesta_correcta": 1
+            }
+        ]
+    },
+    {
+        "id": "ps3_2",
+        "curso_id": "personal_social",
+        "nombre": "La escuela y la convivencia",
+        "descripcion_corta": "Convive y participa democráticamente",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Dónde aprendes con tus compañeros?",
+                "opciones": ["Escuela", "Casa", "Mercado", "Parque"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Quién enseña en el aula?",
+                "opciones": ["Profesor", "Alcalde", "Bombero", "Doctor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué valor se demuestra al esperar tu turno?",
+                "opciones": ["Paciencia", "Envidia", "Pereza", "Orgullo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué haces cuando terminas tus tareas?",
+                "opciones": ["Ayudo", "Juego", "Ignoro", "Desordeno"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué debemos hacer para mantener limpia el aula?",
+                "opciones": ["Barrer", "Ensuciar", "Romper", "Pegar papeles"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué muestra respeto hacia los demás?",
+                "opciones": ["Escuchar", "Interrumpir", "Burlarse", "Gritar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué valor se demuestra al cumplir las normas del aula?",
+                "opciones": ["Responsabilidad", "Orgullo", "Desobediencia", "Mentira"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué debemos decir al entrar al aula?",
+                "opciones": ["Buenos días", "Chau", "Nada", "Hasta mañana"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué no debes hacer en clase?",
+                "opciones": ["Escuchar", "Gritar", "Estudiar", "Participar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es un compañero?",
+                "opciones": ["Alguien con quien estudias", "Desconocido", "Vecino lejano", "Maestro"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué valor se muestra al compartir materiales?",
+                "opciones": ["Amabilidad", "Egoísmo", "Desorden", "Miedo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué debes hacer si un compañero se cae?",
+                "opciones": ["Reírte", "Ayudarlo", "Ignorarlo", "Gritar"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué debes hacer cuando la profesora habla?",
+                "opciones": ["Escuchar", "Cantar", "Correr", "Dormir"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué valor se demuestra al cumplir tus deberes?",
+                "opciones": ["Responsabilidad", "Desobediencia", "Mentira", "Orgullo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué debemos hacer con los útiles después de usarlos?",
+                "opciones": ["Guardarlos", "Romperlos", "Prestar sin permiso", "Tirarlos"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps3_3",
+        "curso_id": "personal_social",
+        "nombre": "Mi comunidad y sus autoridades",
+        "descripcion_corta": "Convive y participa democráticamente",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué es una comunidad?",
+                "opciones": ["Lugar donde viven personas", "Un solo niño", "Un animal", "Un país lejano"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Quién cuida el orden en la comunidad?",
+                "opciones": ["Policía", "Panadero", "Carpintero", "Jardinero"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Quién apaga incendios?",
+                "opciones": ["Bombero", "Policía", "Médico", "Profesor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Quién dirige el distrito?",
+                "opciones": ["Alcalde", "Doctor", "Profesor", "Juez"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué valor se muestra al cuidar el parque?",
+                "opciones": ["Responsabilidad", "Pereza", "Orgullo", "Mentira"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué servicio nos da el hospital?",
+                "opciones": ["Salud", "Transporte", "Educación", "Seguridad"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué servicio presta el colegio?",
+                "opciones": ["Educación", "Limpieza", "Comercio", "Transporte"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué debemos hacer en los parques?",
+                "opciones": ["Cuidarlos", "Ensuciarlos", "Romper juegos", "Gritar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué valor se demuestra cuando ayudamos a un vecino?",
+                "opciones": ["Solidaridad", "Envidia", "Pereza", "Orgullo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué lugar tiene el alcalde?",
+                "opciones": ["Municipalidad", "Colegio", "Hospital", "Policía"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Quién entrega las cartas en la comunidad?",
+                "opciones": ["Cartero", "Policía", "Panadero", "Doctor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué es el mercado?",
+                "opciones": ["Lugar para comprar alimentos", "Escuela", "Parque", "Casa"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué debemos hacer al cruzar la calle?",
+                "opciones": ["Mirar a ambos lados", "Correr", "Gritar", "Ignorar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué color indica \"alto\" en el semáforo?",
+                "opciones": ["Rojo", "Verde", "Amarillo", "Azul"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué color indica \"puedes pasar\"?",
+                "opciones": ["Verde", "Rojo", "Amarillo", "Blanco"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps3_4",
+        "curso_id": "personal_social",
+        "nombre": "El Perú y sus símbolos",
+        "descripcion_corta": "Construye interpretaciones históricas",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Cuál es el nombre de nuestro país?",
+                "opciones": ["Perú", "Chile", "México", "Ecuador"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Cuál es el color de la bandera del Perú?",
+                "opciones": ["Rojo y blanco", "Azul y amarillo", "Verde y blanco", "Negro y rojo"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué representa el escudo nacional?",
+                "opciones": ["Riqueza del Perú", "Escuelas", "Calles", "Comida"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué día se celebra la independencia del Perú?",
+                "opciones": ["28 de julio", "1 de mayo", "25 de diciembre", "31 de octubre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Quién fue el libertador del Perú?",
+                "opciones": ["San Martín", "Bolívar", "Pizarro", "Túpac Amaru"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Cómo se llama el himno nacional?",
+                "opciones": ["Himno del Perú", "Canción patria", "Viva el Perú", "Himno andino"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué debemos hacer cuando suena el himno nacional?",
+                "opciones": ["Ponernos de pie", "Correr", "Cantar otra canción", "Jugar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué ave aparece en el escudo nacional?",
+                "opciones": ["Vicuña", "Cóndor", "Gallina", "Loro"],
+                "respuesta_correcta": 1
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué debemos sentir por el Perú?",
+                "opciones": ["Orgullo", "Miedo", "Envidia", "Pereza"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué es la patria?",
+                "opciones": ["Nuestro país", "Un juguete", "Una casa", "Una flor"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué valor mostramos al cuidar los símbolos patrios?",
+                "opciones": ["Respeto", "Desobediencia", "Pereza", "Mentira"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué colores tiene la escarapela?",
+                "opciones": ["Rojo y blanco", "Verde y amarillo", "Azul y rojo", "Negro y blanco"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué debemos hacer el Día de la Bandera?",
+                "opciones": ["Rendir homenaje", "Jugar", "Romper papeles", "Gritar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué animal del escudo representa la fauna del Perú?",
+                "opciones": ["Vicuña", "León", "Perro", "Mono"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Qué representa el árbol del escudo?",
+                "opciones": ["Flora", "Montañas", "Nubes", "Mar"],
+                "respuesta_correcta": 0
+            }
+        ]
+    },
+    {
+        "id": "ps3_5",
+        "curso_id": "personal_social",
+        "nombre": "El ambiente y el cuidado de la naturaleza",
+        "descripcion_corta": "Gestiona responsablemente el espacio y el ambiente",
+        "preguntas": [
+            {
+                "id": 1,
+                "pregunta": "¿Qué debemos hacer con la basura?",
+                "opciones": ["Botarla en su lugar", "Tirarla al suelo", "Guardarla en casa", "Jugar con ella"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 2,
+                "pregunta": "¿Qué necesitamos para vivir?",
+                "opciones": ["Agua, aire y comida", "Juguetes", "Televisión", "Dinero"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 3,
+                "pregunta": "¿Qué hace el sol?",
+                "opciones": ["Da luz y calor", "Llueve", "Enfría", "Oscurece"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 4,
+                "pregunta": "¿Qué debemos hacer para cuidar el agua?",
+                "opciones": ["Cerrar el caño", "Dejarlo abierto", "Jugar con agua", "Ensuciarla"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 5,
+                "pregunta": "¿Qué hacemos para cuidar las plantas?",
+                "opciones": ["Regarlas", "Pisarlas", "Cortarlas", "Ignorarlas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 6,
+                "pregunta": "¿Qué debemos hacer con los árboles?",
+                "opciones": ["Cuidarlos", "Cortarlos", "Romper hojas", "Pisar flores"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 7,
+                "pregunta": "¿Qué animal vive en el agua?",
+                "opciones": ["Pez", "Gato", "Perro", "Gallina"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 8,
+                "pregunta": "¿Qué debemos hacer para no contaminar el aire?",
+                "opciones": ["No quemar basura", "Hacer fuego", "Tirar humo", "Ensuciar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 9,
+                "pregunta": "¿Qué debemos hacer con las luces cuando no se usan?",
+                "opciones": ["Apagarlas", "Dejar prendidas", "Cambiar color", "Ignorar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 10,
+                "pregunta": "¿Qué valor mostramos al cuidar la naturaleza?",
+                "opciones": ["Responsabilidad", "Orgullo", "Desobediencia", "Mentira"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 11,
+                "pregunta": "¿Qué día celebramos el Día del Medio Ambiente?",
+                "opciones": ["5 de junio", "28 de julio", "1 de enero", "24 de diciembre"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 12,
+                "pregunta": "¿Qué debemos hacer si vemos un árbol caído?",
+                "opciones": ["Avisar o replantar", "Ignorar", "Cortar más", "Jugar"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 13,
+                "pregunta": "¿Qué produce oxígeno?",
+                "opciones": ["Las plantas", "El fuego", "El humo", "La basura"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 14,
+                "pregunta": "¿Qué debemos usar para no ensuciar los ríos?",
+                "opciones": ["Tachos de basura", "Piedras", "Fuegos", "Bolsas rotas"],
+                "respuesta_correcta": 0
+            },
+            {
+                "id": 15,
+                "pregunta": "¿Por qué debemos cuidar el planeta?",
+                "opciones": ["Porque es nuestro hogar", "Por obligación", "Por dinero", "Por moda"],
+                "respuesta_correcta": 0
+            }
+        ]
+    }
+]
