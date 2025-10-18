@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login';
 import { RegistroComponent } from './pages/registro/registro';
 import { HomeComponent } from './pages/home/home';
 import { NavigationService } from './services/navigation.service';
+import { MusicService } from './services/music.service';
 
 @Component({
     selector: 'app-root',
@@ -119,6 +120,7 @@ import { NavigationService } from './services/navigation.service';
 export class App implements AfterViewInit, OnDestroy {
     protected readonly title = signal('juego');
     protected navigationService = inject(NavigationService);
+    private musicService = inject(MusicService);
     private resizeListener!: () => void;
 
     constructor(
@@ -132,11 +134,19 @@ export class App implements AfterViewInit, OnDestroy {
         };
         this.resizeListener();
         window.addEventListener('resize', this.resizeListener);
+
+        // Iniciar música de lobby
+        this.musicService.selectMusic('lobby');
+        this.musicService.play().catch(() => {
+            // Si falla el autoplay, esperar a que el usuario interactúe
+            console.log('Autoplay bloqueado. Música iniciará con la primera interacción del usuario.');
+        });
     }
 
     ngOnDestroy() {
         if (this.resizeListener) {
             window.removeEventListener('resize', this.resizeListener);
         }
+        this.musicService.stop();
     }
 }

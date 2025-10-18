@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
 import { NavigationService } from '../../services/navigation.service';
+import { BtnComponent } from '../../components/btn.component';
 
 @Component({
     selector: 'app-login',
     standalone: true,
-    imports: [CommonModule, FormsModule],
+    imports: [CommonModule, FormsModule, BtnComponent],
     template: `
         <h1 class="titulo">¡Bienvenido de vuelta!</h1>
         <p class="subtitle">Ingresa tu nickname para continuar jugando</p>
@@ -16,13 +17,11 @@ import { NavigationService } from '../../services/navigation.service';
         <form (submit)="onSubmit($event)" class="form">
             <input [(ngModel)]="nickname" name="nickname" type="text" maxlength="16" placeholder="Tu nickname" class="input" required autofocus />
 
-            <button type="submit" class="button">Entrar</button>
+            <div class="buttons-container">
+                <button type="button" (click)="goToRegistro()" btn color="secondary">Registrarse</button>
+                <button type="submit" btn>Entrar</button>
+            </div>
         </form>
-
-        <div class="register">
-            <p>¿No tienes cuenta?</p>
-            <a (click)="goToRegistro()" class="link"> Regístrate aquí </a>
-        </div>
 
         <div class="ranking">
             <h2 class="ranking-title">Ranking de Jugadores</h2>
@@ -98,37 +97,11 @@ import { NavigationService } from '../../services/navigation.service';
             box-shadow: 0 0 0 2px #6366f1;
         }
 
-        .button {
-            padding: 0.5rem 1.5rem;
-            border-radius: 0.5rem;
-            background-color: #6366f1;
-            color: white;
-            font-weight: bold;
-            border: none;
+        .buttons-container {
+            display: flex;
+            gap: 1rem;
             width: 100%;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .button:hover {
-            background-color: #4338ca;
-        }
-
-        .register {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #4b5563;
-        }
-
-        .link {
-            color: #4f46e5;
-            font-weight: 600;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .link:hover {
-            color: #3730a3;
+            justify-content: center;
         }
 
         .ranking {
@@ -193,18 +166,12 @@ import { NavigationService } from '../../services/navigation.service';
         }
 
         @media (min-width: 640px) {
-            .container {
-                padding: 1.5rem;
-            }
             .ranking-list {
                 max-height: 14rem;
             }
         }
 
         @media (min-width: 768px) {
-            .container {
-                padding: 2rem;
-            }
             .titulo {
                 font-size: 3rem;
             }
