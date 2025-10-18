@@ -64,6 +64,7 @@ export class MusicService {
 
         if (this.audioElement) {
             this.audioElement.src = track.path;
+            this.audioElement.loop = true; // Asegurar que la música se repita
             this.currentTrackSignal.set(trackId);
             return true;
         }

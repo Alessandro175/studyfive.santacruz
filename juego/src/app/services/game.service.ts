@@ -116,8 +116,6 @@ export class GameService {
             console.log(`✅ Cargadas ${competencias.length} competencias para el grado ${grado}`);
             this.vistaActual.set('seleccion-materias');
 
-            this.toastService.success(`✅ Grado ${grado} cargado exitosamente`, 3000);
-
             return true;
         } catch (error) {
             console.error(`❌ Error al cargar competencias del grado ${grado}:`, error);
