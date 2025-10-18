@@ -1961,7 +1961,7 @@
     },
     {
         "id": "ing2_1",
-        "curso_id": "idioma_extranjero",
+        "curso_id": "ingles",
         "nombre": "Saludos y Presentaciones",
         "descripcion_corta": "Se comunica oralmente en inglés como lengua extranjera",
         "preguntas": [
@@ -2059,7 +2059,7 @@
     },
     {
         "id": "ing2_2",
-        "curso_id": "idioma_extranjero",
+        "curso_id": "ingles",
         "nombre": "Números y Colores",
         "descripcion_corta": "Lee diversos tipos de textos escritos en inglés",
         "preguntas": [
@@ -2157,7 +2157,7 @@
     },
     {
         "id": "ing2_3",
-        "curso_id": "idioma_extranjero",
+        "curso_id": "ingles",
         "nombre": "La Familia y el Cuerpo",
         "descripcion_corta": "Se comunica oralmente en inglés como lengua extranjera",
         "preguntas": [
@@ -2255,7 +2255,7 @@
     },
     {
         "id": "ing2_4",
-        "curso_id": "idioma_extranjero",
+        "curso_id": "ingles",
         "nombre": "Animales y Alimentos",
         "descripcion_corta": "Lee diversos tipos de textos escritos en inglés",
         "preguntas": [
@@ -2353,7 +2353,7 @@
     },
     {
         "id": "ing2_5",
-        "curso_id": "idioma_extranjero",
+        "curso_id": "ingles",
         "nombre": "Objetos y Acciones Cotidianas",
         "descripcion_corta": "Escribe diversos tipos de textos en inglés",
         "preguntas": [

@@ -2451,7 +2451,7 @@
     },
     {
         "id": "art4_1",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Colores y formas",
         "descripcion_corta": "Identifico colores, mezclas de colores y formas geométricas",
         "preguntas": [
@@ -2549,7 +2549,7 @@
     },
     {
         "id": "art4_2",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Técnicas de dibujo y pintura",
         "descripcion_corta": "Conozco diferentes técnicas artísticas y materiales",
         "preguntas": [
@@ -2647,7 +2647,7 @@
     },
     {
         "id": "art4_3",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Arte peruano y cultural",
         "descripcion_corta": "Conozco el arte peruano antiguo y sus características",
         "preguntas": [
@@ -2745,7 +2745,7 @@
     },
     {
         "id": "art4_4",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Música y ritmo",
         "descripcion_corta": "Conozco conceptos de música, ritmo e instrumentos",
         "preguntas": [
@@ -2843,7 +2843,7 @@
     },
     {
         "id": "art4_5",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Expresión y creatividad",
         "descripcion_corta": "Conozco la importancia del arte para la expresión personal",
         "preguntas": [

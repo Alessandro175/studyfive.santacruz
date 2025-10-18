@@ -1,7 +1,7 @@
 [
     {
         "id": "art5_1",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Colores, formas y composición visual",
         "descripcion_corta": "Identifico colores, mezclas y formas en composiciones visuales",
         "preguntas": [
@@ -99,7 +99,7 @@
     },
     {
         "id": "art5_2",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Técnicas artísticas",
         "descripcion_corta": "Conozco diferentes técnicas artísticas y sus características",
         "preguntas": [
@@ -197,7 +197,7 @@
     },
     {
         "id": "art5_3",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Arte y cultura peruana",
         "descripcion_corta": "Conozco el arte precolombino y la cultura peruana",
         "preguntas": [
@@ -295,7 +295,7 @@
     },
     {
         "id": "art5_4",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Música y expresión corporal",
         "descripcion_corta": "Conozco ritmo, instrumentos y expresión a través del movimiento",
         "preguntas": [
@@ -393,7 +393,7 @@
     },
     {
         "id": "art5_5",
-        "curso_id": "arte",
+        "curso_id": "arte_cultura",
         "nombre": "Creatividad y expresión artística",
         "descripcion_corta": "Reconozco la importancia del arte para expresar sentimientos",
         "preguntas": [
