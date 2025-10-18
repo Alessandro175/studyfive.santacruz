@@ -63,7 +63,6 @@ export class BackgroundCanvasComponent implements OnInit, AfterViewInit, OnDestr
         '#FF9800', // Naranja intenso
         '#9C27B0', // Púrpura intenso
         '#00E676', // Verde lima intenso
-
         '#00BCD4', // Cian brillante
         '#FF9800', // Naranja intenso
     ];
