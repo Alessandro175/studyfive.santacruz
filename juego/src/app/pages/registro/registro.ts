@@ -14,8 +14,18 @@ import { AvatarName, AVATARS_DISPONIBLES, getAvatarPath, DEFAULT_AVATAR, getChar
     template: `
         <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4 text-center titulo">¡Bienvenido a la Aventura Educativa!</h1>
         <p class="text-lg text-gray-700 mb-6 text-center">Regístrate con tu nickname para comenzar a jugar y compite en el ranking.</p>
+
+        @if (errorMessage()) {
+            <div class="w-full bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">
+                {{ errorMessage() }}
+            </div>
+        }
+
         <form (submit)="onSubmit($event)" class="flex flex-col items-center gap-4 mb-6 w-full">
             <input [(ngModel)]="nickname" name="nickname" type="text" maxlength="16" placeholder="Tu nickname" class="border-2 border-indigo-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 text-center text-lg" required />
+
+            <!-- Campo de contraseña -->
+            <input [(ngModel)]="password" name="password" type="password" placeholder="Crea una contraseña" class="border-2 border-indigo-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-indigo-400 text-center text-lg" required />
 
             <!-- Selección de género -->
             <div class="flex flex-col w-full gap-2">
@@ -59,7 +69,13 @@ import { AvatarName, AVATARS_DISPONIBLES, getAvatarPath, DEFAULT_AVATAR, getChar
                 }
             </div>
 
-            <button type="submit" class="btn-jugar px-6 py-2 rounded-lg text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition-all mt-2">Registrarse</button>
+            <button type="submit" class="btn-jugar px-6 py-2 rounded-lg text-white font-bold bg-indigo-500 hover:bg-indigo-700 transition-all mt-2" [disabled]="isLoading()">
+                @if (isLoading()) {
+                    <span>Creando cuenta...</span>
+                } @else {
+                    <span>Registrarse</span>
+                }
+            </button>
         </form>
 
         <div class="text-center text-sm text-gray-600 mb-4">
@@ -119,8 +135,11 @@ export class RegistroComponent implements OnInit {
 
     // Campos del formulario
     nickname = signal('');
+    password = signal('');
     genero = signal<'niño' | 'niña'>('niño');
     avatarSeleccionado = signal<AvatarName>(DEFAULT_AVATAR);
+    isLoading = signal(false);
+    errorMessage = signal('');
 
     // Ranking
     ranking = signal(this.userService.getRanking());
@@ -134,7 +153,11 @@ export class RegistroComponent implements OnInit {
         });
     }
 
-    ngOnInit() {
+    async ngOnInit() {
+        // Cargar usuarios desde Supabase para tener el ranking actualizado
+        await this.userService.reloadUsers();
+        this.ranking.set(this.userService.getRanking());
+
         // Si ya hay un usuario logueado, redirigir o mostrar mensaje
         const currentUser = this.userService.currentUser();
         if (currentUser) {
@@ -162,10 +185,14 @@ export class RegistroComponent implements OnInit {
         this.navigationService.goToLogin();
     }
 
-    onSubmit(event: Event) {
+    async onSubmit(event: Event) {
         event.preventDefault();
 
         const nicknameValue = this.nickname().trim();
+        const passwordValue = this.password().trim();
+
+        // Limpiar mensajes de error
+        this.errorMessage.set('');
 
         // Validaciones
         if (!nicknameValue) {
@@ -175,6 +202,16 @@ export class RegistroComponent implements OnInit {
 
         if (nicknameValue.length < 3) {
             this.toastService.warning('El nickname debe tener al menos 3 caracteres');
+            return;
+        }
+
+        if (!passwordValue) {
+            this.toastService.error('Por favor ingresa una contraseña');
+            return;
+        }
+
+        if (passwordValue.length < 4) {
+            this.toastService.warning('La contraseña debe tener al menos 4 caracteres');
             return;
         }
 
@@ -188,20 +225,29 @@ export class RegistroComponent implements OnInit {
             return;
         }
 
-        // Verificar si el nickname es único
-        if (!this.userService.isNicknameUnique(nicknameValue)) {
+        // Activar loading
+        this.isLoading.set(true);
+
+        // Verificar si el nickname es único (ahora es async)
+        const isUnique = await this.userService.isNicknameUnique(nicknameValue);
+
+        if (!isUnique) {
             this.toastService.error('Este nickname ya está en uso. Por favor elige otro.');
+            this.isLoading.set(false);
             return;
         }
 
         // Crear el usuario
         const userData: UserCreate = {
             nickname: nicknameValue,
+            password: passwordValue,
             genero: this.genero(),
             avatarName: this.avatarSeleccionado(),
         };
 
-        const newUser = this.userService.createUser(userData);
+        const newUser = await this.userService.createUser(userData);
+
+        this.isLoading.set(false);
 
         if (newUser) {
             this.toastService.success(`¡Bienvenido ${newUser.nickname}! Tu cuenta ha sido creada.`);

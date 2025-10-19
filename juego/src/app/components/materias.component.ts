@@ -1,8 +1,9 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal, effect, untracked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { ToastService } from '../services/toast.service';
 import { UserService } from '../services/user.service';
+import { MusicService } from '../services/music.service';
 
 @Component({
     selector: 'app-materias',
@@ -105,16 +106,50 @@ import { UserService } from '../services/user.service';
 })
 export class MateriasComponent {
     gameService = inject(GameService);
-    private toastService = inject(ToastService);
     private userService = inject(UserService);
+    private musicService = inject(MusicService);
 
     materias = this.gameService.getMateriasDelGrado();
 
+    // Signal para almacenar puntajes por materia
+    private puntajesPorMateria = signal<Map<string, number>>(new Map());
+
     // Computed para obtener el puntaje del grado actual
     puntajeGrado = computed(() => {
-        const grado = this.gameService.gradoSeleccionado();
-        return grado ? this.userService.obtenerPuntajePorGrado(grado) : 0;
+        const puntajesMap = this.puntajesPorMateria();
+        let totalPuntaje = 0;
+        for (const puntaje of puntajesMap.values()) {
+            totalPuntaje += puntaje;
+        }
+        return totalPuntaje;
     });
+
+    constructor() {
+        // Effect para cargar puntajes cuando cambie el grado
+        effect(() => {
+            const grado = this.gameService.gradoSeleccionado();
+            if (grado) {
+                untracked(() => {
+                    this.cargarPuntajesMaterias(grado);
+                });
+            }
+        });
+    }
+
+    // Cargar puntajes de todas las materias de forma asíncrona
+    private async cargarPuntajesMaterias(grado: number) {
+        const puntajes = new Map<string, number>();
+
+        const all = (await this.userService.obtenerTodasLasCompetencias()).filter((c) => c.grado === grado);
+        console.log(all, 'TODO');
+
+        for (const materia of this.materias) {
+            const puntaje = await this.userService.obtenerPuntajePorMateria(grado, materia.nombre);
+            puntajes.set(materia.nombre, puntaje);
+        }
+
+        this.puntajesPorMateria.set(puntajes);
+    }
 
     // Función helper para obtener el label de la materia
     getMateriaLabel(cursoId: string): string {
@@ -123,9 +158,7 @@ export class MateriasComponent {
 
     // Obtener puntaje acumulado de una materia específica
     obtenerPuntajeMateria(cursoId: string): number {
-        const grado = this.gameService.gradoSeleccionado();
-        if (!grado) return 0;
-        return this.userService.obtenerPuntajePorMateria(grado, cursoId);
+        return this.puntajesPorMateria().get(cursoId) ?? 0;
     }
 
     volverAGrados() {
@@ -133,6 +166,10 @@ export class MateriasComponent {
     }
 
     seleccionarMateria(cursoId: string) {
+        // Reproducir efecto de sonido en paralelo
+        this.musicService.playSoundEffect('click');
+
+        // Continuar con la selección de materia
         this.gameService.seleccionarMateria(cursoId);
     }
 }

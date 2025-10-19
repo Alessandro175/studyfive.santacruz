@@ -79,7 +79,7 @@
             },
             {
                 "id": 13,
-                "pregunta": "¿Qué palabra empieza con la letra J?",
+                "pregunta": "¿Qué palabra empieza con la letra J y comida de la selva?",
                 "opciones": ["Jirafa", "Juane", "Jaguar", "Jugo"],
                 "respuesta_correcta": 1
             },

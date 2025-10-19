@@ -14,7 +14,10 @@ export class MusicService {
     private currentTrackSignal = signal<string | null>(null);
 
     // Música disponible
-    private tracks: Map<string, MusicTrack> = new Map([['lobby', { name: 'Lobby', path: '/musica/lobby.mp3' }]]);
+    private tracks: Map<string, MusicTrack> = new Map([['lobby', { name: 'Lobby', path: '/musica/lobby-v2.mp3' }]]);
+
+    // Map para almacenar efectos de sonido en caché
+    private soundEffects: Map<string, HTMLAudioElement> = new Map();
 
     // Señales públicas
     isPlaying = this.isPlayingSignal.asReadonly();
@@ -22,6 +25,7 @@ export class MusicService {
 
     constructor() {
         this.initializeAudio();
+        this.preloadSoundEffects();
     }
 
     /**
@@ -164,5 +168,58 @@ export class MusicService {
      */
     getTracks(): MusicTrack[] {
         return Array.from(this.tracks.values());
+    }
+
+    /**
+     * Precarga los efectos de sonido más comunes
+     */
+    private preloadSoundEffects(): void {
+        const effects = [{ id: 'click', path: '/musica/efectos/pen-click.mp3' }];
+
+        effects.forEach((effect) => {
+            const audio = new Audio();
+            audio.src = effect.path;
+            audio.volume = 0.6; // Volumen moderado para efectos
+            audio.preload = 'auto';
+            this.soundEffects.set(effect.id, audio);
+        });
+    }
+
+    /**
+     * Reproduce un efecto de sonido
+     * @param effectId - ID del efecto a reproducir
+     * @param volume - Volumen opcional (0 a 1)
+     */
+    async playSoundEffect(effectId: string, volume?: number): Promise<boolean> {
+        let audio = this.soundEffects.get(effectId);
+
+        if (!audio) {
+            console.warn(`Efecto de sonido no encontrado: ${effectId}`);
+            return false;
+        }
+
+        try {
+            // Clonar el audio para permitir reproducción simultánea
+            const audioClone = audio.cloneNode(true) as HTMLAudioElement;
+
+            if (volume !== undefined) {
+                audioClone.volume = Math.max(0, Math.min(1, volume));
+            }
+
+            // Reproducir el efecto
+            const playPromise = audioClone.play();
+            if (playPromise !== undefined) {
+                await playPromise;
+            }
+
+            return true;
+        } catch (error: any) {
+            if (error.name === 'NotAllowedError') {
+                console.warn('Reproducción de efecto bloqueada por el navegador.');
+                return false;
+            }
+            console.error('Error al reproducir efecto de sonido:', error);
+            return false;
+        }
     }
 }

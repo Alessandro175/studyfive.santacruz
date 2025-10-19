@@ -1,9 +1,11 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, signal, effect, untracked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { ToastService } from '../services/toast.service';
 import { UserService } from '../services/user.service';
+import { MusicService } from '../services/music.service';
 import { CompetenciaRegistro } from '../models/user.model';
+import { CompetenciasSupabaseService } from '../services/competencias-supabase.service';
 
 @Component({
     selector: 'app-competencias',
@@ -269,6 +271,11 @@ export class CompetenciasComponent {
     gameService = inject(GameService);
     private toastService = inject(ToastService);
     private userService = inject(UserService);
+    private competenciasService = inject(CompetenciasSupabaseService);
+    private musicService = inject(MusicService);
+
+    // Signal para almacenar registros de competencias
+    private registrosCompetencias = signal<Map<string, CompetenciaRegistro | null>>(new Map());
 
     // Computed para obtener las competencias de la materia seleccionada
     competencias = computed(() => {
@@ -279,21 +286,49 @@ export class CompetenciasComponent {
         return this.gameService.getCompetenciasPorMateria(materia);
     });
 
+    constructor() {
+        // Effect para cargar registros cuando cambie el grado o la materia
+        effect(() => {
+            const grado = this.gameService.gradoSeleccionado();
+            const materia = this.gameService.materiaSeleccionada();
+            const competencias = this.competencias();
+
+            if (grado && materia && competencias.length > 0) {
+                untracked(() => {
+                    this.cargarRegistrosCompetencias(grado, materia, competencias);
+                });
+            }
+        });
+    }
+
+    // Cargar registros de todas las competencias de forma asíncrona
+    private async cargarRegistrosCompetencias(grado: number, materia: string, competencias: any[]) {
+        const registros = new Map<string, CompetenciaRegistro | null>();
+
+        const all = await this.userService.obtenerTodasLasCompetencias();
+
+        for (const competencia of competencias) {
+            const element = all.find((registro) => registro.competencia === competencia.id && registro.grado === grado && registro.materia === materia);
+            registros.set(competencia.id, element || null);
+        }
+
+        this.registrosCompetencias.set(registros);
+    }
+
     volverAMaterias() {
         this.gameService.volverAMaterias();
     }
 
     seleccionarCompetencia(competenciaId: string) {
+        // Reproducir efecto de sonido en paralelo
+        this.musicService.playSoundEffect('click');
+
+        // Continuar con la selección de competencia
         this.gameService.seleccionarCompetencia(competenciaId);
     }
 
     obtenerRegistro(competenciaId: string): CompetenciaRegistro | null {
-        const grado = this.gameService.gradoSeleccionado();
-        const materia = this.gameService.materiaSeleccionada();
-
-        if (!grado || !materia) return null;
-
-        return this.userService.obtenerCompetencia(grado, materia, competenciaId);
+        return this.registrosCompetencias().get(competenciaId) ?? null;
     }
 
     calcularProgreso(registro: CompetenciaRegistro | null): number {

@@ -5,6 +5,7 @@ import { UserService } from '../../services/user.service';
 import { ToastService } from '../../services/toast.service';
 import { GameService } from '../../services/game.service';
 import { NavigationService } from '../../services/navigation.service';
+import { MusicService } from '../../services/music.service';
 import { MateriasComponent } from '../../components/materias.component';
 import { CompetenciasComponent } from '../../components/competencias.component';
 import { JuegoComponent } from '../../components/juego.component';
@@ -53,7 +54,7 @@ import { ResultadosComponent } from '../../components/resultados.component';
                                 <h2 class="card-title">{{ grado.numero }}° Grado</h2>
                                 <p class="card-puntaje">
                                     Puntaje:
-                                    <span class="puntaje-value">{{ obtenerPuntajeGrado()(grado.numero) }}</span>
+                                    <span class="puntaje-value">{{ puntajes()[grado.numero] }}</span>
                                 </p>
                                 <div class="medallas">
                                     @for (medalla of [1, 2, 3, 4, 5, 6]; track medalla) {
@@ -307,14 +308,26 @@ export class HomeComponent {
     private userService = inject(UserService);
     private toastService = inject(ToastService);
     private navigationService = inject(NavigationService);
+    private musicService = inject(MusicService);
     gameService = inject(GameService);
+
+    readonly puntajes = signal<{ [grado: number]: number }>({});
 
     currentUser = this.userService.currentUser;
 
-    // Computed para obtener puntaje por grado dinámicamente
-    obtenerPuntajeGrado = computed(() => {
-        return (grado: number) => this.userService.obtenerPuntajePorGrado(grado);
-    });
+    constructor() {
+        this.cargarPuntajes();
+    }
+
+    cargarPuntajes() {
+        this.grados.forEach(async (grado) => {
+            const puntaje = await this.userService.obtenerPuntajePorGrado(grado.numero);
+            this.puntajes.update((current) => ({
+                ...current,
+                [grado.numero]: puntaje,
+            }));
+        });
+    }
 
     // Datos de los grados
     grados = [
@@ -365,6 +378,10 @@ export class HomeComponent {
     getAvatarPath = getAvatarPath;
 
     async seleccionarGrado(numero: number) {
+        // Reproducir efecto de sonido en paralelo
+        this.musicService.playSoundEffect('click');
+
+        // Continuar con la selección del grado
         await this.gameService.seleccionarGrado(numero);
     }
 

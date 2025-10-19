@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
@@ -12,14 +12,28 @@ import { BtnComponent } from '../../components/btn.component';
     imports: [CommonModule, FormsModule, BtnComponent],
     template: `
         <h1 class="titulo">¡Bienvenido de vuelta!</h1>
-        <p class="subtitle">Ingresa tu nickname para continuar jugando</p>
+        <p class="subtitle">Ingresa tu nickname y contraseña para continuar jugando</p>
+
+        @if (errorMessage()) {
+            <div class="error-banner">
+                {{ errorMessage() }}
+            </div>
+        }
 
         <form (submit)="onSubmit($event)" class="form">
-            <input [(ngModel)]="nickname" name="nickname" type="text" maxlength="16" placeholder="Tu nickname" class="input" required autofocus />
+            <input [(ngModel)]="nickname" name="nickname" type="text" maxlength="16" placeholder="Tu nickname" class="input" required autofocus [disabled]="isLoading()" />
+
+            <input [(ngModel)]="password" name="password" type="password" placeholder="Tu contraseña" class="input" required [disabled]="isLoading()" />
 
             <div class="buttons-container">
-                <button type="button" (click)="goToRegistro()" btn color="secondary">Registrarse</button>
-                <button type="submit" btn>Entrar</button>
+                <button type="button" (click)="goToRegistro()" btn color="secondary" [disabled]="isLoading()">Registrarse</button>
+                <button type="submit" btn [disabled]="isLoading()">
+                    @if (isLoading()) {
+                        <span>Iniciando...</span>
+                    } @else {
+                        <span>Entrar</span>
+                    }
+                </button>
             </div>
         </form>
 
@@ -70,6 +84,17 @@ import { BtnComponent } from '../../components/btn.component';
             font-size: 1.125rem;
             color: #374151;
             margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .error-banner {
+            width: 100%;
+            background-color: #fee2e2;
+            border: 1px solid #f87171;
+            color: #b91c1c;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
             text-align: center;
         }
 
@@ -181,45 +206,68 @@ import { BtnComponent } from '../../components/btn.component';
         }
     `,
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
     private userService = inject(UserService);
     private toastService = inject(ToastService);
     private navigationService = inject(NavigationService);
 
     nickname = signal('');
+    password = signal('');
+    isLoading = signal(false);
+    errorMessage = signal('');
     ranking = signal(this.userService.getRanking());
+
+    async ngOnInit() {
+        // Cargar usuarios desde Supabase para tener el ranking actualizado
+        await this.userService.reloadUsers();
+        this.ranking.set(this.userService.getRanking());
+    }
 
     goToRegistro() {
         this.navigationService.goToRegistro();
     }
 
-    onSubmit(event: Event) {
+    async onSubmit(event: Event) {
         event.preventDefault();
 
         const nicknameValue = this.nickname().trim();
+        const passwordValue = this.password().trim();
+
+        // Limpiar mensaje de error
+        this.errorMessage.set('');
 
         // Validaciones
         if (!nicknameValue) {
+            this.errorMessage.set('Por favor ingresa tu nickname');
             this.toastService.error('Por favor ingresa tu nickname');
             return;
         }
 
-        // Buscar el usuario por nickname
-        const users = this.userService.users();
-        const user = users.find((u) => u.nickname.toLowerCase() === nicknameValue.toLowerCase());
-
-        if (!user) {
-            this.toastService.error('Nickname no encontrado. ¿Quieres registrarte?');
+        if (!passwordValue) {
+            this.errorMessage.set('Por favor ingresa tu contraseña');
+            this.toastService.error('Por favor ingresa tu contraseña');
             return;
         }
 
-        // Establecer el usuario actual
-        this.userService.currentUser.set(user);
-        localStorage.setItem('studyfive_current_user', JSON.stringify(user));
+        // Activar loading
+        this.isLoading.set(true);
 
-        this.toastService.success(`¡Bienvenido de vuelta, ${user.nickname}!`);
+        // Intentar hacer login
+        const user = await this.userService.login({
+            nickname: nicknameValue,
+            password: passwordValue,
+        });
 
-        // Navegar al dashboard
-        this.navigationService.goToDashboard();
+        this.isLoading.set(false);
+
+        if (user) {
+            this.toastService.success(`¡Bienvenido de vuelta, ${user.nickname}!`);
+            // Navegar al dashboard
+            this.navigationService.goToDashboard();
+        } else {
+            this.toastService.error('Usuario o contraseña incorrectos');
+            // Limpiar la contraseña
+            this.password.set('');
+        }
     }
 }

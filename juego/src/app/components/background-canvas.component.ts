@@ -45,7 +45,6 @@ export class BackgroundCanvasComponent implements OnInit, AfterViewInit, OnDestr
         minus: 'M5 12 H19', // trazado simple: redondeado con stroke-linecap
         division: 'M5 12 H19 M12 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3 M12 15a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3',
 
-        // 5 iconos nuevos con bordes/sombras más suaves o pensados para trazado con joins/caps redondeados
         square: 'M7 3 H17 a2 2 0 0 1 2 2 V19 a2 2 0 0 1 -2 2 H7 a2 2 0 0 1 -2 -2 V5 a2 2 0 0 1 2 -2 Z',
         heart: 'M20.8 5.6c-1.9-1.9-5-1.9-6.9 0L12 7.5l-1.9-1.9c-1.9-1.9-5-1.9-6.9 0-2 2-2 5.1 0 7l7.9 7.9c0.3 0.3 0.8 0.3 1.1 0l7.9-7.9c2-1.9 2-5 0-7z',
         hexagon: 'M21 12l-4.5 7.794H7.5L3 12l4.5-7.794h9L21 12z',

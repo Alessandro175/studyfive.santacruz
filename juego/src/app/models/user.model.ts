@@ -3,6 +3,7 @@ import { AvatarName } from '../data/avatars.constants';
 export interface User {
     id: string;
     nickname: string;
+    password: string;
     genero: 'niño' | 'niña';
     avatarName: AvatarName;
     puntuacion: number;
@@ -12,8 +13,14 @@ export interface User {
 
 export interface UserCreate {
     nickname: string;
+    password: string;
     genero: 'niño' | 'niña';
     avatarName: AvatarName;
+}
+
+export interface UserLogin {
+    nickname: string;
+    password: string;
 }
 
 /**
