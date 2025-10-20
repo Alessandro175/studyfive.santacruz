@@ -69,11 +69,20 @@ CREATE INDEX idx_competencias_fecha_ultimo ON competencias(fecha_ultimo_intento 
 CREATE INDEX idx_competencias_mejor_puntaje ON competencias(mejor_puntaje DESC);
 CREATE INDEX idx_competencias_materia ON competencias(materia);
 
+-- Función para actualizar fecha_ultimo_intento en competencias
+CREATE OR REPLACE FUNCTION update_fecha_ultimo_intento()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.fecha_ultimo_intento = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
 -- Trigger para actualizar fecha_ultimo_intento
 CREATE TRIGGER trigger_update_fecha_ultimo_intento
     BEFORE UPDATE ON competencias
     FOR EACH ROW
-    EXECUTE FUNCTION update_ultima_actualizacion();
+    EXECUTE FUNCTION update_fecha_ultimo_intento();
 
 -- =====================================================
 -- FUNCIONES

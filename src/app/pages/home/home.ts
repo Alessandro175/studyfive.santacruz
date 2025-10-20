@@ -95,7 +95,6 @@ import { ResultadosComponent } from '../../components/resultados.component';
                 margin: 0 auto;
                 position: relative;
                 z-index: 10;
-                padding: 3rem 1rem;
             }
 
             .header {

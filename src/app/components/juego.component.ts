@@ -87,7 +87,6 @@ import { UserService } from '../services/user.service';
         `
             :host {
                 display: block;
-                padding: 3rem 1rem;
             }
             .opcion-btn {
                 text-align: left;

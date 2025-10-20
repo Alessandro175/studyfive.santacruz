@@ -8,6 +8,7 @@ import { NavigationService } from './services/navigation.service';
 import { MusicService } from './services/music.service';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material-icons/baseline';
+import { GameService } from './services/game.service';
 
 @Component({
     selector: 'app-root',
@@ -17,11 +18,8 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
         <!-- Canvas de fondo animado -->
         <app-background-canvas />
 
-        <!-- Botón de toggle de música -->
-
-        <!-- Mostrar vista según el estado de navegación -->
         <main>
-            <div>
+            <div class="cuerpo-juego">
                 @switch (navigationService.currentView()) {
                     @case ('login') {
                         <app-login />
@@ -34,8 +32,8 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
                     }
                 }
             </div>
-            <img src="/img/otros/jaguari-presentacion.png" alt="" class="presentacion-01" />
-            <img src="/img/otros/llami-presentacion.png" alt="" class="presentacion-02" />
+            <img [src]="'/img/otros/llami-' + gameService.mascotaAccionActual() + '.png'" alt="" class="presentacion-01" />
+            <img src="/img/otros/jaguari-presentacion.png" alt="" class="presentacion-02" />
             <button class="music-toggle" (click)="toggleMusic()" [class.playing]="musicService.isPlaying()" title="Toggle música">
                 <ng-icon name="matMusicNote" class="icon music-icon"></ng-icon>
                 <ng-icon name="matPause" class="icon pause-icon"></ng-icon>
@@ -58,15 +56,6 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
                 backdrop-filter: blur(10px);
                 position: relative;
                 z-index: 1;
-                div {
-                    background: rgba(255, 255, 255, 0.95);
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    overflow-y: auto;
-                }
             }
             img {
                 // height: 500px;
@@ -78,7 +67,7 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
                 display: none;
                 &.presentacion-01 {
                     left: 0;
-                    transform: translateX(-74%);
+                    transform: translateX(-85%);
                 }
                 &.presentacion-02 {
                     right: 0;
@@ -89,8 +78,8 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
             // Botón de toggle de música
             .music-toggle {
                 position: absolute;
-                bottom: 1rem;
-                left: 1rem;
+                bottom: 2rem;
+                left: 2rem;
                 z-index: 999;
                 width: 50px;
                 height: 50px;
@@ -157,6 +146,17 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
             }
         }
 
+        .cuerpo-juego {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 3rem 1rem;
+        }
+
         @media (min-width: 720px) {
             :host {
                 padding: 3rem 0;
@@ -165,6 +165,9 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 border-radius: 2rem;
                 border: 4px solid var(--primary);
+            }
+            .cuerpo-juego {
+                padding: 3rem 2rem;
             }
         }
         @media (min-width: 992px) {
@@ -207,6 +210,7 @@ import { matMusicNote, matPause, matPauseCircleFilled } from '@ng-icons/material
     `,
 })
 export class App implements AfterViewInit, OnDestroy {
+    readonly gameService = inject(GameService);
     protected navigationService = inject(NavigationService);
     protected musicService = inject(MusicService);
     private resizeListener!: () => void;

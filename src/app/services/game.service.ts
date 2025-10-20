@@ -45,7 +45,7 @@ export interface RespuestaUsuario {
 export class GameService {
     // Estado de la vista actual
     vistaActual = signal<VistaJuego>('seleccion-grados');
-
+    mascotaAccionActual = signal<string>('presentacion');
     // Grado seleccionado (1-6)
     gradoSeleccionado = signal<number | null>(null);
 

@@ -95,7 +95,6 @@ import { CompetenciasSupabaseService } from '../services/competencias-supabase.s
         `
             :host {
                 display: block;
-                padding: 3rem 1rem;
             }
 
             .competencias-timeline {
@@ -269,9 +268,7 @@ import { CompetenciasSupabaseService } from '../services/competencias-supabase.s
 })
 export class CompetenciasComponent {
     gameService = inject(GameService);
-    private toastService = inject(ToastService);
     private userService = inject(UserService);
-    private competenciasService = inject(CompetenciasSupabaseService);
     private musicService = inject(MusicService);
 
     // Signal para almacenar registros de competencias
@@ -296,6 +293,15 @@ export class CompetenciasComponent {
             if (grado && materia && competencias.length > 0) {
                 untracked(() => {
                     this.cargarRegistrosCompetencias(grado, materia, competencias);
+                });
+            }
+        });
+
+        effect(() => {
+            const materia = this.gameService.materiaSeleccionada();
+            if (materia) {
+                untracked(() => {
+                    this.gameService.mascotaAccionActual.set(materia.toLowerCase());
                 });
             }
         });

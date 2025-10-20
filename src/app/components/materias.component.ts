@@ -10,37 +10,35 @@ import { MusicService } from '../services/music.service';
     standalone: true,
     imports: [CommonModule],
     template: `
-        <div class="max-w-4xl mx-auto">
-            <button (click)="volverAGrados()" class="mb-6 flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                </svg>
-                Volver a grados
-            </button>
+        <button (click)="volverAGrados()" class="mb-6 flex items-center text-indigo-600 hover:text-indigo-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Volver a grados
+        </button>
 
-            <h2 class="titulo text-4xl mb-8 text-center text-indigo-700 font-extrabold drop-shadow-lg">Materias de {{ gameService.gradoSeleccionado() }}° Grado</h2>
+        <h2 class="titulo text-4xl mb-8 text-center text-indigo-700 font-extrabold drop-shadow-lg">Materias de {{ gameService.gradoSeleccionado() }}° Grado</h2>
 
-            <div class="puntaje-grado-container mb-6">
-                <div class="puntaje-grado-card">
-                    <span class="puntaje-label">Puntaje Total del Grado:</span>
-                    <span class="puntaje-valor">{{ puntajeGrado() }} puntos</span>
+        <div class="puntaje-grado-container mb-6">
+            <div class="puntaje-grado-card">
+                <span class="puntaje-label">Puntaje Total del Grado:</span>
+                <span class="puntaje-valor">{{ puntajeGrado() }} puntos</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            @for (materia of materias; track materia.nombre) {
+                <div class="card bg-white rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative" (click)="seleccionarMateria(materia.nombre)">
+                    <img [src]="materia.imagen" class="mx-auto mb-4 materia-icon" [alt]="getMateriaLabel(materia.nombre)" />
+                    <h3 class="text-xl font-bold mb-2 text-center">
+                        {{ getMateriaLabel(materia.nombre) }}
+                    </h3>
+                    <p class="text-gray-700 text-center mb-2">
+                        Puntaje:
+                        <span class="font-bold">{{ obtenerPuntajeMateria(materia.nombre) }}</span>
+                    </p>
                 </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                @for (materia of materias; track materia.nombre) {
-                    <div class="card bg-white rounded-xl p-6 cursor-pointer transition-all hover:scale-105 relative" (click)="seleccionarMateria(materia.nombre)">
-                        <img [src]="materia.imagen" class="mx-auto mb-4 materia-icon" [alt]="getMateriaLabel(materia.nombre)" />
-                        <h3 class="text-xl font-bold mb-2 text-center">
-                            {{ getMateriaLabel(materia.nombre) }}
-                        </h3>
-                        <p class="text-gray-700 text-center mb-2">
-                            Puntaje:
-                            <span class="font-bold">{{ obtenerPuntajeMateria(materia.nombre) }}</span>
-                        </p>
-                    </div>
-                }
-            </div>
+            }
         </div>
     `,
     styles: [
@@ -99,7 +97,6 @@ import { MusicService } from '../services/music.service';
             }
             :host {
                 display: block;
-                padding: 3rem 1rem;
             }
         `,
     ],
@@ -134,6 +131,8 @@ export class MateriasComponent {
                 });
             }
         });
+
+        this.gameService.mascotaAccionActual.set('presentacion');
     }
 
     // Cargar puntajes de todas las materias de forma asíncrona
@@ -145,7 +144,6 @@ export class MateriasComponent {
             const competenciasMateria = all.filter((c) => c.materia === materia.nombre);
             const puntajeMateria = competenciasMateria.reduce((sum, c) => sum + c.puntaje * 10, 0);
             puntajes.set(materia.nombre, puntajeMateria);
-
         }
 
         this.puntajesPorMateria.set(puntajes);
