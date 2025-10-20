@@ -194,25 +194,6 @@ export class UserService {
     }
 
     /**
-     * Elimina un usuario de Supabase
-     */
-    async deleteUser(userId: string): Promise<boolean> {
-        const success = await this.supabase.deleteUser(userId);
-
-        if (success) {
-            // Si es el usuario actual, cerrar sesión
-            if (this.currentUser()?.id === userId) {
-                this.logout();
-            }
-
-            // Recargar lista de usuarios
-            await this.reloadUsers();
-        }
-
-        return success;
-    }
-
-    /**
      * Actualiza los datos del usuario (excepto puntuación)
      */
     async updateUser(userId: string, userData: Partial<UserCreate>): Promise<User | null> {
@@ -220,9 +201,7 @@ export class UserService {
 
         if (updatedUser) {
             // Si es el usuario actual, actualizar también localmente
-            if (this.currentUser()?.id === userId) {
-                this.saveCurrentUser(updatedUser);
-            }
+            if (this.currentUser()?.id === userId) this.saveCurrentUser(updatedUser);
 
             // Recargar lista de usuarios
             await this.reloadUsers();
@@ -235,11 +214,8 @@ export class UserService {
      * Limpia el cache de competencias
      */
     private limpiarCacheCompetencias(userId?: string): void {
-        if (userId) {
-            this.competenciasCache.delete(userId);
-        } else {
-            this.competenciasCache.clear();
-        }
+        if (userId) this.competenciasCache.delete(userId);
+        else this.competenciasCache.clear();
     }
 
     /**
@@ -284,50 +260,6 @@ export class UserService {
     }
 
     /**
-     * Calcula el puntaje total acumulado del usuario actual desde Supabase
-     */
-    async calcularPuntajeAcumulado(): Promise<number> {
-        const user = this.currentUser();
-        if (!user) return 0;
-
-        return await this.competenciasSupabase.calcularPuntajeTotal(user.id);
-    }
-
-    /**
-     * Obtiene el puntaje acumulado por grado desde Supabase
-     */
-    async obtenerPuntajePorGrado(grado: number): Promise<number> {
-        const user = this.currentUser();
-        if (!user) return 0;
-
-        const competencias = await this.competenciasSupabase.obtenerCompetenciasPorGrado(user.id, grado);
-        let total = 0;
-
-        competencias.forEach((registro) => {
-            total += registro.mejorPuntaje * 10;
-        });
-
-        return total;
-    }
-
-    /**
-     * Obtiene el puntaje acumulado por materia de un grado desde Supabase
-     */
-    async obtenerPuntajePorMateria(grado: number, materia: string): Promise<number> {
-        const user = this.currentUser();
-        if (!user) return 0;
-
-        const competencias = await this.competenciasSupabase.obtenerCompetenciasPorMateria(user.id, grado, materia);
-        let total = 0;
-
-        competencias.forEach((registro) => {
-            total += registro.mejorPuntaje * 10;
-        });
-
-        return total;
-    }
-
-    /**
      * Obtiene todas las competencias del usuario actual desde Supabase
      */
     async obtenerTodasLasCompetencias(): Promise<CompetenciaRegistro[]> {
@@ -335,58 +267,11 @@ export class UserService {
         if (!user) return [];
 
         // Usar cache si está disponible
-        if (this.competenciasCache.has(user.id)) {
-            return this.competenciasCache.get(user.id)!;
-        }
+        if (this.competenciasCache.has(user.id)) return this.competenciasCache.get(user.id)!;
 
-        // Cargar desde Supabase
         const competencias = await this.competenciasSupabase.obtenerCompetenciasUsuario(user.id);
-
-        // Guardar en cache
         this.competenciasCache.set(user.id, competencias);
 
         return competencias;
-    }
-
-    /**
-     * Obtiene estadísticas del usuario actual
-     */
-    async obtenerEstadisticas(): Promise<any> {
-        const user = this.currentUser();
-        if (!user) return null;
-
-        return await this.competenciasSupabase.obtenerEstadisticasUsuario(user.id);
-    }
-
-    /**
-     * Resetea el progreso del usuario (elimina todas sus competencias)
-     */
-    async resetearProgreso(): Promise<boolean> {
-        const user = this.currentUser();
-        if (!user) return false;
-
-        const success = await this.competenciasSupabase.eliminarCompetenciasUsuario(user.id);
-
-        if (success) {
-            // Limpiar cache
-            this.limpiarCacheCompetencias(user.id);
-
-            // Actualizar puntuación del usuario a 0
-            await this.supabase.updateUserScore(user.id, 0);
-
-            // Actualizar localmente
-            const updatedUser: User = {
-                ...user,
-                puntuacion: 0,
-                ultimaActualizacion: new Date(),
-            };
-
-            this.saveCurrentUser(updatedUser);
-            await this.reloadUsers();
-
-            console.log('✅ Progreso reseteado correctamente');
-        }
-
-        return success;
     }
 }

@@ -141,11 +141,11 @@ export class MateriasComponent {
         const puntajes = new Map<string, number>();
 
         const all = (await this.userService.obtenerTodasLasCompetencias()).filter((c) => c.grado === grado);
-        console.log(all, 'TODO');
-
         for (const materia of this.materias) {
-            const puntaje = await this.userService.obtenerPuntajePorMateria(grado, materia.nombre);
-            puntajes.set(materia.nombre, puntaje);
+            const competenciasMateria = all.filter((c) => c.materia === materia.nombre);
+            const puntajeMateria = competenciasMateria.reduce((sum, c) => sum + c.puntaje * 10, 0);
+            puntajes.set(materia.nombre, puntajeMateria);
+
         }
 
         this.puntajesPorMateria.set(puntajes);

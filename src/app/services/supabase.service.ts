@@ -235,32 +235,6 @@ export class SupabaseService {
         }
     }
 
-    /**
-     * Elimina un usuario
-     */
-    async deleteUser(userId: string): Promise<boolean> {
-        if (!this.isConfigured()) {
-            console.warn('⚠️ Supabase no está configurado');
-            return false;
-        }
-
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/usuarios?id=eq.${userId}`, {
-                method: 'DELETE',
-                headers: this.headers,
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error al eliminar usuario: ${response.status}`);
-            }
-
-            console.log('✅ Usuario eliminado de Supabase');
-            return true;
-        } catch (error) {
-            console.error('❌ Error al eliminar usuario:', error);
-            return false;
-        }
-    }
 
     /**
      * Obtiene un usuario por su ID

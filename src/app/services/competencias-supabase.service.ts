@@ -151,32 +151,7 @@ export class CompetenciasSupabaseService {
         }
     }
 
-    /**
-     * Calcula el puntaje total de un usuario
-     * (También se puede obtener directamente del campo puntuacion en la tabla usuarios)
-     */
-    async calcularPuntajeTotal(userId: string): Promise<number> {
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/rpc/calcular_puntaje_total`, {
-                method: 'POST',
-                headers: this.headers,
-                body: JSON.stringify({
-                    usuario_id: userId,
-                }),
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error al calcular puntaje: ${response.status}`);
-            }
-
-            const puntaje = await response.json();
-            return puntaje || 0;
-        } catch (error) {
-            console.error('❌ Error al calcular puntaje total:', error);
-            return 0;
-        }
-    }
-
+   
     /**
      * Obtiene estadísticas del usuario
      */
@@ -199,28 +174,7 @@ export class CompetenciasSupabaseService {
         }
     }
 
-    /**
-     * Elimina todas las competencias de un usuario
-     * (Útil si se quiere resetear el progreso)
-     */
-    async eliminarCompetenciasUsuario(userId: string): Promise<boolean> {
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/competencias?user_id=eq.${userId}`, {
-                method: 'DELETE',
-                headers: this.headers,
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error al eliminar competencias: ${response.status}`);
-            }
-
-            console.log('✅ Competencias eliminadas de Supabase');
-            return true;
-        } catch (error) {
-            console.error('❌ Error al eliminar competencias:', error);
-            return false;
-        }
-    }
+ 
 
     /**
      * Mapea el resultado de la función upsert_competencia a CompetenciaRegistro

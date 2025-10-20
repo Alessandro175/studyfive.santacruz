@@ -319,14 +319,16 @@ export class HomeComponent {
         this.cargarPuntajes();
     }
 
-    cargarPuntajes() {
-        this.grados.forEach(async (grado) => {
-            const puntaje = await this.userService.obtenerPuntajePorGrado(grado.numero);
-            this.puntajes.update((current) => ({
-                ...current,
-                [grado.numero]: puntaje,
-            }));
-        });
+    async cargarPuntajes() {
+
+        const all = await this.userService.obtenerTodasLasCompetencias();
+        const puntajesPorGrado: { [grado: number]: number } = {};
+        for (const grado of this.grados) {
+            const competenciasGrado = all.filter((c) => c.grado === grado.numero);
+            const puntajeGrado = competenciasGrado.reduce((sum, c) => sum + c.puntaje * 10, 0);
+            puntajesPorGrado[grado.numero] = puntajeGrado;
+        }
+        this.puntajes.set(puntajesPorGrado);
     }
 
     // Datos de los grados
