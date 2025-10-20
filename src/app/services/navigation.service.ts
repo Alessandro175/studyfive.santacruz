@@ -1,7 +1,7 @@
 import { Injectable, signal, computed, effect, inject } from '@angular/core';
 import { UserService } from './user.service';
 
-export type ViewType = 'login' | 'registro' | 'dashboard';
+export type ViewType = 'login' | 'registro' | 'dashboard' | 'admin';
 
 @Injectable({
     providedIn: 'root',
@@ -55,5 +55,12 @@ export class NavigationService {
         if (this.userService.currentUser()) {
             this.navigateTo('dashboard');
         }
+    }
+
+    /**
+     * Navega a admin
+     */
+    goToAdmin() {
+        this.navigateTo('admin');
     }
 }

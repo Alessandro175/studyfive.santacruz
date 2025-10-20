@@ -44,6 +44,8 @@ export class MusicService {
 
             this.audioElement.addEventListener('pause', () => {
                 this.isPlayingSignal.set(false);
+                console.log('Sonido pausado');
+                
             });
 
             this.audioElement.addEventListener('ended', () => {
