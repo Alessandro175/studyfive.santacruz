@@ -70,7 +70,10 @@ import { GameService } from './services/game.service';
                 display: none;
                 &.presentacion-01 {
                     left: 0;
-                    transform: translateX(-85%);
+                    height: 160px;
+                    display: block;
+                    transform: translateX(-10%);
+                    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
                 }
                 &.presentacion-02 {
                     right: 0;
@@ -82,7 +85,7 @@ import { GameService } from './services/game.service';
             .music-toggle {
                 position: absolute;
                 bottom: 2rem;
-                left: 2rem;
+                right: 2rem;
                 z-index: 999;
                 width: 50px;
                 height: 50px;
@@ -157,7 +160,7 @@ import { GameService } from './services/game.service';
             display: flex;
             flex-direction: column;
             overflow-y: auto;
-            padding: 3rem 1rem;
+            padding: 3rem 1rem 140px 1rem;
         }
 
         @media (min-width: 720px) {
@@ -178,6 +181,11 @@ import { GameService } from './services/game.service';
                 img {
                     display: block;
                     height: 400px;
+                    &.presentacion-01 {
+                        left: 0;
+                        height: 400px;
+                        transform: translateX(-85%);
+                    }
                 }
             }
         }
@@ -187,6 +195,9 @@ import { GameService } from './services/game.service';
                 img {
                     height: 500px;
                     display: block;
+                    &.presentacion-01 {
+                        height: 500px;
+                    }
                 }
             }
         }
@@ -197,6 +208,9 @@ import { GameService } from './services/game.service';
                 img {
                     height: auto;
                     display: block;
+                    &.presentacion-01 {
+                        height: auto;
+                    }
                 }
             }
         }
@@ -212,7 +226,7 @@ import { GameService } from './services/game.service';
         }
     `,
 })
-export class App2 implements AfterViewInit, OnDestroy {
+export class InicioJuego implements AfterViewInit, OnDestroy {
     readonly gameService = inject(GameService);
     protected navigationService = inject(NavigationService);
     protected musicService = inject(MusicService);

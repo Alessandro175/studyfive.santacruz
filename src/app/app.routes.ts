@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './guards/auth.guard';
-import { App2 } from './app2';
+import { InicioJuego } from './inicio-juego';
 import AdminPage from './pages/admin/admin';
 
 export const routes: Routes = [
@@ -11,6 +11,6 @@ export const routes: Routes = [
     {
         path: '',
         canActivate: [authGuard],
-        component: App2,
+        component: InicioJuego,
     },
 ];
