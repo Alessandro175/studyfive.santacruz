@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
@@ -18,7 +18,7 @@ import { UserService } from '../services/user.service';
             </button>
 
             <div class="flex items-center gap-4 flex-col">
-                <span class="text-2xl font-bold text-indigo-700"> {{ userService.currentUser()?.puntuacion || 0 }} pts </span>
+                <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">{{ puntosActuales() }} pts</div>
                 <div class="w-40 bg-gray-200 rounded-full h-4">
                     <div class="bg-green-500 h-4 rounded-full transition-all duration-500" [style.width.%]="progreso()"></div>
                 </div>
@@ -35,7 +35,7 @@ import { UserService } from '../services/user.service';
         @if (!gameService.mostrarFeedback() && preguntaActual()) {
             <div class="p-6 bg-white rounded-xl shadow-lg">
                 <!-- Indicador de pregunta -->
-                <div class="mb-4 text-sm text-gray-500 font-semibold">Pregunta {{ gameService.preguntaActual() + 1 }} de {{ totalPreguntas() }}</div>
+                <div class="mb-6 inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full font-bold text-lg">Pregunta {{ gameService.preguntaActual() + 1 }} de {{ totalPreguntas() }}</div>
 
                 <h3 class="text-xl font-bold mb-6 text-gray-800">
                     {{ preguntaActual()!.pregunta }}
@@ -110,8 +110,9 @@ export class JuegoComponent {
     gameService = inject(GameService);
     userService = inject(UserService);
 
-    progreso = computed(() => this.gameService.getProgreso());
+    readonly progreso = this.gameService.progreso;
     totalPreguntas = computed(() => this.gameService.preguntasActuales().length);
+    readonly puntosActuales = this.gameService.puntajeActual;
     preguntaActual = computed(() => {
         const index = this.gameService.preguntaActual();
         const preguntas = this.gameService.preguntasActuales();
@@ -128,12 +129,8 @@ export class JuegoComponent {
     }
 
     siguiente() {
-        // Si es correcta, sumar puntos al usuario
-        if (this.gameService.ultimaRespuestaCorrecta()) {
-            const puntosGanados = 10; // 10 puntos por respuesta correcta
-            this.userService.updateScore(puntosGanados);
-        }
-
+        // La puntuación se actualiza al final en ResultadosComponent
+        // No debemos actualizar puntos aquí para evitar duplicación
         this.gameService.siguientePregunta();
     }
 

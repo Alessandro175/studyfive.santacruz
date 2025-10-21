@@ -2,11 +2,12 @@ import { Component, computed, effect, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
+import { BackButtonComponent } from './back-button.component';
 
 @Component({
     selector: 'app-resultados',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, BackButtonComponent],
     template: `
         <div class="resultados-container">
             <div class="resultados-card">
@@ -60,12 +61,7 @@ import { UserService } from '../services/user.service';
 
                 <!-- Botones de acción -->
                 <div class="actions-container">
-                    <button class="btn btn-secondary" (click)="volverACompetencias()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M19 12H5M12 19l-7-7 7-7" />
-                        </svg>
-                        Ver Competencias
-                    </button>
+                    <back-button [label]="'Ver Competencias'" (click)="volverACompetencias()" />
 
                     <button class="btn btn-primary" (click)="volverAJugar()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -322,17 +318,22 @@ export class ResultadosComponent implements OnInit {
     gameService = inject(GameService);
     userService = inject(UserService);
 
-    respuestasCorrectas = computed(() => this.gameService.getPuntaje());
+    // Conteo real de respuestas correctas e incorrectas
+    respuestasCorrectas = computed(() => this.gameService.respuestasCorrectasCount());
     respuestasIncorrectas = computed(() => {
         const total = this.gameService.preguntasActuales().length;
         const correctas = this.respuestasCorrectas();
         return total - correctas;
     });
+    
+    // Precisión en porcentaje
     porcentaje = computed(() => {
         const total = this.gameService.preguntasActuales().length;
         if (total === 0) return 0;
         return Math.round((this.respuestasCorrectas() / total) * 100);
     });
+    
+    // Puntos ganados (respuestas correctas * 10)
     puntosGanados = computed(() => this.respuestasCorrectas() * 10);
 
     ngOnInit() {
@@ -342,22 +343,37 @@ export class ResultadosComponent implements OnInit {
 
     /**
      * Guarda el resultado de la competencia en el registro del usuario
+     * y actualiza la puntuación total del usuario
      */
-    private guardarResultado() {
+    private async guardarResultado() {
         const grado = this.gameService.gradoSeleccionado();
         const materia = this.gameService.materiaSeleccionada();
         const competencia = this.gameService.competenciaSeleccionada();
-        const puntaje = this.respuestasCorrectas();
+        const puntaje = this.respuestasCorrectas(); // Conteo real de respuestas correctas
         const totalPreguntas = this.gameService.preguntasActuales().length;
+        const puntosGanados = this.puntosGanados(); // Puntos = respuestas correctas * 10
+
+        console.log('📊 Guardando resultado:', { grado, materia, competencia, puntaje, totalPreguntas, puntosGanados });
 
         if (grado && materia && competencia) {
-            this.userService.guardarCompetencia({
-                grado,
-                materia,
-                competencia,
-                puntaje,
-                totalPreguntas,
-            });
+            try {
+                // Guardar el registro de la competencia
+                await this.userService.guardarCompetencia({
+                    grado,
+                    materia,
+                    competencia,
+                    puntaje,
+                    totalPreguntas,
+                });
+                
+                // La función guardarCompetencia ya actualiza automáticamente la puntuación
+                // del usuario mediante la función upsert_competencia de Supabase
+                console.log('✅ Resultado guardado correctamente');
+            } catch (error) {
+                console.error('❌ Error al guardar resultado:', error);
+            }
+        } else {
+            console.warn('⚠️ No se pudo guardar: faltan datos', { grado, materia, competencia });
         }
     }
 

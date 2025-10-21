@@ -113,3 +113,9 @@ input::placeholder {
         }
     }
 }
+
+@media (min-width: 720px) {
+    body{
+        overflow: hidden;
+    }
+}

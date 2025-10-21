@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { RepositorioService } from './repositorio.service';
 import { ToastService } from './toast.service';
 
@@ -60,6 +60,24 @@ export class GameService {
 
     // Estado del quiz
     preguntaActual = signal<number>(0);
+    
+    // Conteo de respuestas correctas (sin multiplicar por 10)
+    respuestasCorrectasCount = computed<number>(() => {
+        return this.respuestasUsuario().filter((r) => r.esCorrecta === true).length;
+    });
+    
+    // Puntaje total (respuestas correctas * 10 puntos)
+    puntajeActual = computed<number>(() => {
+        return this.respuestasCorrectasCount() * 10;
+    });
+    
+    progreso = computed((): number => {
+        const total = this.preguntasActuales().length;
+        if (total === 0) return 0;
+
+        const actual = this.preguntaActual();
+        return Math.round((actual / total) * 100);
+    });
     respuestasUsuario = signal<RespuestaUsuario[]>([]);
     mostrarFeedback = signal<boolean>(false);
     ultimaRespuestaCorrecta = signal<boolean>(false);
@@ -106,14 +124,12 @@ export class GameService {
             // Validar que existan competencias
             if (!competencias || competencias.length === 0) {
                 this.toastService.warning(`⚠️ No hay recursos disponibles para el grado ${grado}`, 5000);
-                console.warn(`⚠️ No hay competencias disponibles para el grado ${grado}`);
-                return false;
+                throw new Error('No hay competencias disponibles');
             }
 
             // Todo OK - Guardar datos y cambiar vista
             this.gradoSeleccionado.set(grado);
             this.competenciasCargadas.set(competencias);
-            console.log(`✅ Cargadas ${competencias.length} competencias para el grado ${grado}`);
             this.vistaActual.set('seleccion-materias');
 
             return true;
@@ -207,11 +223,13 @@ export class GameService {
     responderPregunta(respuestaIndex: number) {
         const preguntaIndex = this.preguntaActual();
         const preguntas = this.preguntasActuales();
+        console.log('Preguntas actuales:', preguntaIndex, preguntas.length);
 
         if (preguntaIndex >= preguntas.length) return;
 
         const pregunta = preguntas[preguntaIndex];
         const esCorrecta = pregunta.respuesta_correcta === respuestaIndex;
+        console.log('Es correcta?', esCorrecta);
 
         // Guardar respuesta
         const respuestas = this.respuestasUsuario();
@@ -220,7 +238,7 @@ export class GameService {
             respuestaSeleccionada: respuestaIndex,
             esCorrecta,
         });
-        this.respuestasUsuario.set(respuestas);
+        this.respuestasUsuario.set([...respuestas]);
 
         // Mostrar feedback
         this.ultimaRespuestaCorrecta.set(esCorrecta);
@@ -240,25 +258,6 @@ export class GameService {
         } else {
             this.preguntaActual.set(siguiente);
         }
-    }
-
-    /**
-     * Obtiene el progreso actual (0-100)
-     */
-    getProgreso(): number {
-        const total = this.preguntasActuales().length;
-        if (total === 0) return 0;
-
-        const actual = this.preguntaActual();
-        return Math.round((actual / total) * 100);
-    }
-
-    /**
-     * Obtiene el puntaje actual
-     */
-    getPuntaje(): number {
-        const respuestas = this.respuestasUsuario();
-        return respuestas.filter((r) => r.esCorrecta).length;
     }
 
     /**

@@ -224,7 +224,7 @@ interface PlayerData {
         }
     `],
 })
-export default class AdminPage {
+export class AdminPage {
     private supabaseService = inject(SupabaseService);
     private competenciasService = inject(CompetenciasSupabaseService);
     private toastService = inject(ToastService);

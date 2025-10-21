@@ -4,7 +4,6 @@ import { BackgroundCanvasComponent } from './components/background-canvas.compon
 import { LoginComponent } from './pages/login/login';
 import { RegistroComponent } from './pages/registro/registro';
 import { HomeComponent } from './pages/home/home';
-import AdminPage from './pages/admin/admin';
 import { NavigationService } from './services/navigation.service';
 import { MusicService } from './services/music.service';
 import { NgIcon, provideIcons } from '@ng-icons/core';
@@ -12,15 +11,15 @@ import { matMusicNote, matPause } from '@ng-icons/material-icons/baseline';
 import { GameService } from './services/game.service';
 
 @Component({
-    selector: 'app2',
-    imports: [BackgroundCanvasComponent, LoginComponent, RegistroComponent, HomeComponent, AdminPage, NgIcon],
+    selector: 'start',
+    imports: [BackgroundCanvasComponent, LoginComponent, RegistroComponent, HomeComponent, NgIcon],
     viewProviders: [provideIcons({ matMusicNote, matPause })],
     template: `
         <!-- Canvas de fondo animado -->
         <app-background-canvas />
 
         <main>
-            <div class="cuerpo-juego">
+            <section class="cuerpo-juego">
                 @switch (navigationService.currentView()) {
                     @case ('login') {
                         <app-login />
@@ -31,13 +30,14 @@ import { GameService } from './services/game.service';
                     @case ('dashboard') {
                         <app-home />
                     }
-                    @case ('admin') {
-                        <app-admin />
-                    }
                 }
+            </section>
+            <div class="presentacion-01">
+                <img [src]="'/img/otros/llami-' + gameService.mascotaAccionActual() + '.png'" alt="" />
             </div>
-            <img [src]="'/img/otros/llami-' + gameService.mascotaAccionActual() + '.png'" alt="" class="presentacion-01" />
-            <img src="/img/otros/jaguari-presentacion.png" alt="" class="presentacion-02" />
+            <div class="presentacion-02">
+                <img src="/img/otros/jaguari-presentacion.png" alt="" />
+            </div>
             <button class="music-toggle" (click)="toggleMusic()" [class.playing]="musicService.isPlaying()" title="Toggle música">
                 <ng-icon name="matMusicNote" class="icon music-icon"></ng-icon>
                 <ng-icon name="matPause" class="icon pause-icon"></ng-icon>
@@ -59,26 +59,6 @@ import { GameService } from './services/game.service';
                 backdrop-filter: blur(10px);
                 position: relative;
                 z-index: 1;
-            }
-            img {
-                // height: 500px;
-                position: absolute;
-                width: auto;
-                z-index: 10;
-                bottom: 0;
-                pointer-events: none;
-                display: none;
-                &.presentacion-01 {
-                    left: 0;
-                    height: 160px;
-                    display: block;
-                    transform: translateX(-10%);
-                    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
-                }
-                &.presentacion-02 {
-                    right: 0;
-                    transform: translateX(74%);
-                }
             }
 
             // Botón de toggle de música
@@ -152,6 +132,33 @@ import { GameService } from './services/game.service';
             }
         }
 
+        .presentacion-01,
+        .presentacion-02 {
+            position: absolute;
+            width: auto;
+            z-index: 10;
+            bottom: 0;
+            pointer-events: none;
+            display: none;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .presentacion-01 {
+            left: 0;
+            height: 160px;
+            width: 160px;
+            display: block;
+            transform: translateX(-10%);
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+        }
+        .presentacion-02 {
+            right: 0;
+            transform: translateX(74%);
+        }
+
         .cuerpo-juego {
             background: rgba(255, 255, 255, 0.95);
             width: 100%;
@@ -167,7 +174,7 @@ import { GameService } from './services/game.service';
             :host {
                 padding: 3rem 0;
             }
-            div {
+            section {
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 border-radius: 2rem;
                 border: 4px solid var(--primary);
@@ -177,41 +184,33 @@ import { GameService } from './services/game.service';
             }
         }
         @media (min-width: 992px) {
-            :host {
-                img {
-                    display: block;
-                    height: 400px;
-                    &.presentacion-01 {
-                        left: 0;
-                        height: 400px;
-                        transform: translateX(-85%);
-                    }
-                }
+            .presentacion-01 {
+                left: 0;
+                height: 400px;
+                width: 400px;
+                transform: translateX(-85%);
+                bottom: 0;
+            }
+            .presentacion-02 {
+                display: block;
+                height: 400px;
+                width: 400px;
+                bottom: 0;
             }
         }
         @media (min-width: 1200px) {
             :host {
                 max-width: 800px;
-                img {
-                    height: 500px;
-                    display: block;
-                    &.presentacion-01 {
-                        height: 500px;
-                    }
-                }
+            }
+            .presentacion-01,
+            .presentacion-02 {
+                height: 600px;
+                width: 600px;
             }
         }
         @media (min-width: 1800px) {
             :host {
                 max-width: 1000px;
-
-                img {
-                    height: auto;
-                    display: block;
-                    &.presentacion-01 {
-                        height: auto;
-                    }
-                }
             }
         }
 
@@ -226,7 +225,7 @@ import { GameService } from './services/game.service';
         }
     `,
 })
-export class InicioJuego implements AfterViewInit, OnDestroy {
+export class Start implements AfterViewInit, OnDestroy {
     readonly gameService = inject(GameService);
     protected navigationService = inject(NavigationService);
     protected musicService = inject(MusicService);

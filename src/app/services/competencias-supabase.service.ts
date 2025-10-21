@@ -24,7 +24,14 @@ export class CompetenciasSupabaseService {
 
     async guardarCompetencia(userId: string, data: CompetenciaRegistroData): Promise<CompetenciaRegistro | null> {
         try {
-            const porcentaje = Math.round((data.puntaje / data.totalPreguntas) * 100);
+            console.log('💾 Guardando competencia:', {
+                userId,
+                grado: data.grado,
+                materia: data.materia,
+                competencia: data.competencia,
+                puntaje: data.puntaje,
+                totalPreguntas: data.totalPreguntas
+            });
 
             // Llamar a la función RPC upsert_competencia
             const response = await fetch(`${this.supabaseUrl}/rest/v1/rpc/upsert_competencia`, {
@@ -41,16 +48,19 @@ export class CompetenciasSupabaseService {
             });
 
             if (!response.ok) {
-                const error = await response.json();
-                throw new Error(`Error al guardar competencia: ${JSON.stringify(error)}`);
+                const error = await response.text();
+                console.error('❌ Error HTTP al guardar competencia:', response.status, error);
+                throw new Error(`Error al guardar competencia: ${response.status} - ${error}`);
             }
 
             const resultado = await response.json();
-
-            console.log('✅ Competencia guardada en Supabase');
+            console.log('✅ Respuesta de Supabase:', resultado);
 
             // Construir el objeto CompetenciaRegistro desde la respuesta
-            return this.mapSupabaseToCompetencia(resultado, userId, data.grado, data.materia, data.competencia, data.totalPreguntas);
+            const competencia = this.mapSupabaseCompetenciaToModel(resultado);
+            console.log('✅ Competencia guardada correctamente:', competencia);
+            
+            return competencia;
         } catch (error) {
             console.error('❌ Error al guardar competencia:', error);
             return null;
@@ -80,76 +90,7 @@ export class CompetenciasSupabaseService {
         }
     }
 
-    /**
-     * Obtiene una competencia específica
-     */
-    async obtenerCompetencia(userId: string, grado: number, materia: string, competenciaId: string): Promise<CompetenciaRegistro | null> {
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/competencias?user_id=eq.${userId}&grado=eq.${grado}&materia=eq.${encodeURIComponent(materia)}&competencia_id=eq.${encodeURIComponent(competenciaId)}&select=*`, {
-                method: 'GET',
-                headers: this.headers,
-            });
 
-            if (!response.ok) {
-                throw new Error(`Error al obtener competencia: ${response.status}`);
-            }
-
-            const competencias = await response.json();
-
-            if (competencias.length === 0) return null;
-
-            return this.mapSupabaseCompetenciaToModel(competencias[0]);
-        } catch (error) {
-            console.error('❌ Error al obtener competencia:', error);
-            return null;
-        }
-    }
-
-    /**
-     * Obtiene competencias filtradas por grado
-     */
-    async obtenerCompetenciasPorGrado(userId: string, grado: number): Promise<CompetenciaRegistro[]> {
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/competencias?user_id=eq.${userId}&grado=eq.${grado}&select=*&order=fecha_ultimo_intento.desc`, {
-                method: 'GET',
-                headers: this.headers,
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error al obtener competencias: ${response.status}`);
-            }
-
-            const competencias = await response.json();
-
-            return competencias.map((c: any) => this.mapSupabaseCompetenciaToModel(c));
-        } catch (error) {
-            console.error('❌ Error al obtener competencias por grado:', error);
-            return [];
-        }
-    }
-
-    /**
-     * Obtiene competencias filtradas por materia
-     */
-    async obtenerCompetenciasPorMateria(userId: string, grado: number, materia: string): Promise<CompetenciaRegistro[]> {
-        try {
-            const response = await fetch(`${this.supabaseUrl}/rest/v1/competencias?user_id=eq.${userId}&grado=eq.${grado}&materia=eq.${encodeURIComponent(materia)}&select=*&order=fecha_ultimo_intento.desc`, {
-                method: 'GET',
-                headers: this.headers,
-            });
-
-            if (!response.ok) {
-                throw new Error(`Error al obtener competencias: ${response.status}`);
-            }
-
-            const competencias = await response.json();
-
-            return competencias.map((c: any) => this.mapSupabaseCompetenciaToModel(c));
-        } catch (error) {
-            console.error('❌ Error al obtener competencias por materia:', error);
-            return [];
-        }
-    }
 
    
     /**
@@ -175,28 +116,6 @@ export class CompetenciasSupabaseService {
     }
 
  
-
-    /**
-     * Mapea el resultado de la función upsert_competencia a CompetenciaRegistro
-     */
-    private mapSupabaseToCompetencia(resultado: any, userId: string, grado: number, materia: string, competencia: string, totalPreguntas: number): CompetenciaRegistro {
-        const key = `${userId}_${grado}_${materia}_${competencia}`;
-
-        return {
-            id: key,
-            userId: userId,
-            grado: grado,
-            materia: materia,
-            competencia: competencia,
-            puntaje: resultado.puntaje || 0,
-            totalPreguntas: totalPreguntas,
-            porcentaje: resultado.porcentaje || 0,
-            intentos: resultado.intentos || 1,
-            mejorPuntaje: resultado.mejor_puntaje || 0,
-            fechaPrimerIntento: new Date(resultado.fecha_primer_intento),
-            fechaUltimoIntento: new Date(resultado.fecha_ultimo_intento),
-        };
-    }
 
     /**
      * Mapea una competencia de Supabase (snake_case) a CompetenciaRegistro (camelCase)

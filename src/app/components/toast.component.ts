@@ -1,33 +1,43 @@
 import { Component, inject } from '@angular/core';
 import { ToastService } from '../services/toast.service';
-import { NgClass } from '@angular/common';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { matCheckCircle, matErrorOutline, matWarning, matInfo, matClose } from '@ng-icons/material-icons/baseline';
 
 @Component({
     selector: 'app-toast',
     standalone: true,
-    imports: [NgClass],
+    imports: [NgIcon],
+    viewProviders: [provideIcons({
+        matCheckCircle,
+        matErrorOutline,
+        matWarning,
+        matInfo,
+        matClose,
+    })],
     template: `
         <div class="toast-container">
             @for (toast of toastService.toasts(); track toast.id) {
-                <div [ngClass]="['toast', 'toast-' + toast.type]" (click)="toastService.remove(toast.id)">
+                <div class="toast toast-{{ toast.type }}" (click)="toastService.remove(toast.id)">
                     <div class="toast-icon">
                         @switch (toast.type) {
                             @case ('success') {
-                                ✓
+                                <ng-icon name="matCheckCircle" size="1.5rem"></ng-icon>
                             }
                             @case ('error') {
-                                ✕
+                                <ng-icon name="matErrorOutline" size="1.5rem"></ng-icon>
                             }
                             @case ('warning') {
-                                ⚠
+                                <ng-icon name="matWarning" size="1.5rem"></ng-icon>
                             }
                             @case ('info') {
-                                ℹ
+                                <ng-icon name="matInfo" size="1.5rem"></ng-icon>
                             }
                         }
                     </div>
                     <div class="toast-message">{{ toast.message }}</div>
-                    <button class="toast-close" (click)="toastService.remove(toast.id)">×</button>
+                    <button class="toast-close" (click)="toastService.remove(toast.id)">
+                        <ng-icon name="matClose" size="1.5rem"></ng-icon>
+                    </button>
                 </div>
             }
         </div>
@@ -79,8 +89,6 @@ import { NgClass } from '@angular/common';
                 justify-content: center;
                 width: 1.5rem;
                 height: 1.5rem;
-                font-size: 1.25rem;
-                font-weight: bold;
                 flex-shrink: 0;
             }
 
