@@ -14,9 +14,9 @@ import { getAvatarPath } from '../data/avatars.constants';
     template: `
         <div class="flex flex-col min-h-screen">
             <div class="flex-1 mx-auto relative z-10 w-full">
-                <div class="flex flex-col md:flex-row gap-4 items-center justify-between md:items-start">
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
                     <div class="flex flex-col items-center md:items-start text-center md:text-left flex-1">
-                        <h1 class="text-3xl md:text-5xl font-black mb-4 text-indigo-600 drop-shadow-sm">¡Elige tu Grado!</h1>
+                        <h1 class="titulo text-3xl md:text-5xl font-black mb-4 text-indigo-600 drop-shadow-sm">¡Elige tu Grado!</h1>
                         <p class="text-lg md:text-xl font-semibold text-gray-700">Cada grado es un mundo de aventuras. ¡Desbloquea logros y colecciona medallas!</p>
                     </div>
                     <div class="p-4">
