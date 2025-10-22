@@ -12,11 +12,18 @@ export interface Pregunta {
     respuesta_correcta: number;
 }
 
+export interface Recurso {
+    tipo: string;
+    url: string;
+    descripcion: string;
+}
+
 export interface Competencia {
     id: string;
     curso_id: string;
     nombre: string;
     descripcion_corta: string;
+    recursos?: Recurso[];
     preguntas: Pregunta[];
 }
 
@@ -60,6 +67,9 @@ export class GameService {
 
     // Estado del quiz
     preguntaActual = signal<number>(0);
+    
+    // Estado de visualización de recursos
+    mostrandoRecursos = signal<boolean>(false);
     
     // Conteo de respuestas correctas (sin multiplicar por 10)
     respuestasCorrectasCount = computed<number>(() => {
@@ -214,6 +224,17 @@ export class GameService {
      */
     iniciarQuiz() {
         this.reiniciarQuiz();
+        
+        // Verificar si la competencia actual tiene recursos
+        const competencia = this.competenciaActual();
+        if (competencia?.recursos && competencia.recursos.length > 0) {
+            // Si hay recursos, mostrarlos primero
+            this.mostrandoRecursos.set(true);
+        } else {
+            // Si no hay recursos, ir directo a las preguntas
+            this.mostrandoRecursos.set(false);
+        }
+        
         this.vistaActual.set('jugando');
     }
 
@@ -268,6 +289,14 @@ export class GameService {
         this.respuestasUsuario.set([]);
         this.mostrarFeedback.set(false);
         this.ultimaRespuestaCorrecta.set(false);
+        this.mostrandoRecursos.set(false);
+    }
+
+    /**
+     * Comienza con las preguntas después de ver los recursos
+     */
+    iniciarPreguntas() {
+        this.mostrandoRecursos.set(false);
     }
 
     /**

@@ -2,11 +2,12 @@ import { Component, inject, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { UserService } from '../services/user.service';
+import { BtnComponent } from "./btn.component";
 
 @Component({
     selector: 'app-juego',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, BtnComponent],
     template: `
         <!-- Header con botón volver, puntuación y progreso -->
         <div class="flex justify-between items-start mb-4">
@@ -31,8 +32,41 @@ import { UserService } from '../services/user.service';
             <p class="text-gray-600">{{ gameService.gradoSeleccionado() }}° Grado</p>
         </div>
 
+        <!-- Recursos (si existen y estamos mostrándolos) -->
+        @if (gameService.mostrandoRecursos() && recursos().length > 0) {
+            <div class="p-6 bg-white rounded-xl shadow-lg mb-6">
+                <h3 class="text-2xl font-bold mb-6 text-indigo-700">📚 Material de Estudio</h3>
+                <p class="text-gray-600 mb-6">Lee atentamente el siguiente material antes de comenzar con las preguntas:</p>
+                
+                <!-- Mostrar todos los recursos uno debajo del otro -->
+                <div class="space-y-6">
+                    @for (recurso of recursos(); track $index) {
+                        <div class="recurso-item border-2 border-indigo-200 rounded-lg p-4 bg-indigo-50">
+                            @if (recurso.tipo === 'imagen') {
+                                <div class="text-center">
+                                    <img [src]="recurso.url" [alt]="recurso.descripcion" class="max-w-full h-auto rounded-lg shadow-md mx-auto mb-3" />
+                                    <p class="text-sm text-gray-600 italic">{{ recurso.descripcion }}</p>
+                                </div>
+                            }
+                            @if (recurso.tipo === 'texto') {
+                                <div class="prose max-w-none">
+                                    <p class="text-gray-700 leading-relaxed">{{ recurso.descripcion }}</p>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button btn (click)="iniciarPreguntas()">
+                        🚀 Comenzar Preguntas
+                    </button>
+                </div>
+            </div>
+        }
+
         <!-- Pregunta actual -->
-        @if (!gameService.mostrarFeedback() && preguntaActual()) {
+        @if (!gameService.mostrandoRecursos() && !gameService.mostrarFeedback() && preguntaActual()) {
             <div class="p-6 bg-white rounded-xl shadow-lg">
                 <!-- Indicador de pregunta -->
                 <div class="mb-6 inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full font-bold text-lg">Pregunta {{ gameService.preguntaActual() + 1 }} de {{ totalPreguntas() }}</div>
@@ -52,7 +86,7 @@ import { UserService } from '../services/user.service';
         }
 
         <!-- Loading state -->
-        @if (!gameService.mostrarFeedback() && !preguntaActual()) {
+        @if (!gameService.mostrandoRecursos() && !gameService.mostrarFeedback() && !preguntaActual()) {
             <div class="p-6 bg-white rounded-xl shadow-lg text-center">
                 <p class="text-gray-500">Cargando pregunta...</p>
             </div>
@@ -97,10 +131,19 @@ import { UserService } from '../services/user.service';
                 transform: translateX(4px);
             }
 
+            .recurso-item img {
+                max-height: 600px;
+                object-fit: contain;
+            }
+
             @media (max-width: 768px) {
                 .opcion-btn {
                     font-size: 14px;
                     padding: 12px;
+                }
+                
+                .recurso-item img {
+                    max-height: 400px;
                 }
             }
         `,
@@ -113,6 +156,7 @@ export class JuegoComponent {
     readonly progreso = this.gameService.progreso;
     totalPreguntas = computed(() => this.gameService.preguntasActuales().length);
     readonly puntosActuales = this.gameService.puntajeActual;
+    
     preguntaActual = computed(() => {
         const index = this.gameService.preguntaActual();
         const preguntas = this.gameService.preguntasActuales();
@@ -120,8 +164,17 @@ export class JuegoComponent {
         return preguntas[index] || undefined;
     });
 
+    recursos = computed(() => {
+        const competencia = this.gameService.competenciaActual();
+        return competencia?.recursos || [];
+    });
+
     volverACompetencias() {
         this.gameService.volverACompetencias();
+    }
+
+    iniciarPreguntas() {
+        this.gameService.iniciarPreguntas();
     }
 
     responder(opcionIndex: number) {

@@ -394,98 +394,110 @@
     {
         "id": "com1_5",
         "curso_id": "comunicacion",
-        "nombre": "Cuentos del Perú",
-        "descripcion_corta": "Comprendo historias tradicionales peruanas",
+        "nombre": "Historias del Perú",
+        "descripcion_corta": "Comprendo historias tradicionales del Perú y sus héroes",
+        "recursos": [
+            {
+                "tipo": "imagen",
+                "url": "/img/recursos/recurso_img_sanmartin.png",
+                "descripcion": "Lectura sobre Don José de San Martín y su sueño"
+            },
+            {
+                "tipo": "imagen",
+                "url": "/img/recursos/recurso_img_caperusita.png",
+                "descripcion": "Cuento clásico de Caperucita Roja"
+            }
+        ],
         "preguntas": [
             {
                 "id": 1,
-                "pregunta": "¿Dónde vivían el zorro y el sapo?",
-                "opciones": ["En la selva", "En los cerros del Perú", "En el mar", "En la ciudad"],
-                "respuesta_correcta": 1
+                "pregunta": "¿En qué fecha y lugar desembarcó José de San Martín con su ejército?",
+                "opciones": ["El 8 de septiembre de 1820, en Lima", "El 8 de septiembre de 1821, en Paracas", "El 8 de septiembre de 1820, en la bahía de Paracas", "El 28 de julio de 1821, en la bahía de Paracas"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 2,
-                "pregunta": "¿Qué pensaba el zorro de sí mismo?",
-                "opciones": ["Que era el más rápido", "Que era lento", "Que era débil", "Que era amigo del sapo"],
-                "respuesta_correcta": 0
-            },
-            {
-                "id": 3,
-                "pregunta": "¿Qué hizo el sapo cuando el zorro se burló?",
-                "opciones": ["Se escondió", "Lo retó a una carrera", "Se fue del cerro", "Se enojó y lloró"],
+                "pregunta": "¿Quién estaba al mando del ejército de soldados que desembarcó en Paracas?",
+                "opciones": ["Un capitán anónimo", "Un general, llamado José de San Martín", "Un coronel cansado", "Un almirante, llamado José de San Martín"],
                 "respuesta_correcta": 1
             },
             {
+                "id": 3,
+                "pregunta": "¿Por qué José de San Martín se recostó a la sombra de una palmera?",
+                "opciones": ["Para esperar a más soldados", "Porque ya era de noche", "Para protegerse del Sol porque estaba cansado", "Para vigilar a las aves"],
+                "respuesta_correcta": 2
+            },
+            {
                 "id": 4,
-                "pregunta": "¿Cómo ganó el sapo la carrera?",
-                "opciones": ["Corrió más rápido", "Puso a sus amigos sapos en el camino", "Se subió al zorro", "Voló"],
+                "pregunta": "¿Cómo se quedó San Martín después de recostarse?",
+                "opciones": ["Pensando en la marcha", "Se quedó profundamente dormido", "Observando el cielo", "Hablando con sus soldados"],
                 "respuesta_correcta": 1
             },
             {
                 "id": 5,
-                "pregunta": "¿Qué sintió el zorro al final?",
-                "opciones": ["Tristeza", "Sorpresa", "Alegría", "Miedo"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Qué vio San Martín en el cielo al despertar?",
+                "opciones": ["Una gran bandada de aves con alas rojas y pechos blancos", "Un arcoíris después de la lluvia", "El Sol saliendo por el mar", "Una bandera de color rojo y blanco"],
+                "respuesta_correcta": 0
             },
             {
                 "id": 6,
-                "pregunta": "¿Qué enseña el cuento?",
-                "opciones": ["Que hay que ser orgulloso", "Que el zorro es fuerte", "Que gana el más grande", "Que la inteligencia vale más que la fuerza"],
-                "respuesta_correcta": 3
+                "pregunta": "¿Cuál era el nombre de las aves que inspiraron a San Martín?",
+                "opciones": ["Flamencos", "Parihuanas", "Cóndores", "Gaviotas"],
+                "respuesta_correcta": 1
             },
             {
                 "id": 7,
-                "pregunta": "¿Qué animal era pequeño pero listo?",
-                "opciones": ["El zorro", "El sapo", "El cóndor", "El cuy"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Qué color tenían las alas y los pechos de las aves que San Martín observó?",
+                "opciones": ["Alas blancas y pechos rojos", "Alas negras y pechos blancos", "Alas rojas y pechos blancos", "Alas verdes y pechos amarillos"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 8,
-                "pregunta": "¿Quién ganó la carrera?",
-                "opciones": ["El zorro", "El sapo", "Nadie", "Los dos"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Qué le dijo San Martín a los soldados que representaba la bandada de aves?",
+                "opciones": ["Son el inicio de la guerra", "Parecen la bandera de Chile", "Es una bandera. La bandera de la libertad: bandera del Perú", "Son solo pájaros de colores"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 9,
-                "pregunta": "¿Dónde vivía la vicuña?",
-                "opciones": ["En la selva", "En la puna del Perú", "En el mar", "En la ciudad"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Por qué la niña era conocida como Caperucita Roja?",
+                "opciones": ["Porque su madre le cosió un vestido rojo", "Porque le gustaba jugar en el jardín", "Porque le encantaba ponerse una capa roja", "Porque siempre llevaba una cesta roja"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 10,
-                "pregunta": "¿Qué les pasó a los animales?",
-                "opciones": ["Tenían hambre", "Tenían frío", "Tenían sed", "Estaban dormidos"],
+                "pregunta": "¿Cuál era el motivo por el que Caperucita debía visitar a su abuelita?",
+                "opciones": ["La abuelita estaba de cumpleaños", "La abuelita estaba muy enferma y necesitaba que le llevaran comida", "La abuelita quería que le llevaran flores", "La abuelita se mudaba al final del bosque"],
                 "respuesta_correcta": 1
             },
             {
                 "id": 11,
-                "pregunta": "¿Qué hizo la vicuña al verlos?",
-                "opciones": ["Los ignoró", "Les dio su lana", "Corrió", "Se escondió"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Qué había preparado la mamá de Caperucita para la abuelita?",
+                "opciones": ["Solo leche fresca", "Un ramo de flores", "Una cesta con pasteles y leche", "Una capa roja"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 12,
-                "pregunta": "¿Para qué sirvió la lana?",
-                "opciones": ["Para jugar", "Para abrigarse", "Para vender", "Para hacer comida"],
+                "pregunta": "¿Cuál de estas advertencias le dio la madre a Caperucita?",
+                "opciones": ["Que caminara muy rápido", "Que no hablara con extraños ni se saliera del camino", "Que no se detuviera a comer los pasteles", "Que regresara antes del anochecer"],
                 "respuesta_correcta": 1
             },
             {
                 "id": 13,
-                "pregunta": "¿Qué valor enseña el cuento?",
-                "opciones": ["Compartir y ayudar", "No prestar nada", "Guardar todo", "Ser egoísta"],
-                "respuesta_correcta": 0
+                "pregunta": "¿Qué hizo Caperucita que desobedeció las advertencias de su madre?",
+                "opciones": ["Se encontró con un leñador", "Regresó a casa", "Se salió del camino para hacer un pequeño ramo de flores", "Se puso a jugar en el bosque"],
+                "respuesta_correcta": 2
             },
             {
                 "id": 14,
-                "pregunta": "¿Cómo se sintieron los animales después?",
-                "opciones": ["Enojados", "Felices y agradecidos", "Cansados", "Dormidos"],
+                "pregunta": "¿Cuál es la enseñanza principal de la historia de Caperucita Roja?",
+                "opciones": ["Nunca debes confiar en nadie", "Es importante obedecer a los padres y no hablar con extraños", "Los pasteles son peligrosos", "El bosque es un lugar seguro"],
                 "respuesta_correcta": 1
             },
             {
                 "id": 15,
-                "pregunta": "¿Qué aprendemos de la vicuña?",
-                "opciones": ["Que es orgullosa", "Que comparte con amor", "Que no ayuda", "Que no tiene lana"],
-                "respuesta_correcta": 1
+                "pregunta": "¿Qué heroína inspiró a San Martín a crear la bandera del Perú?",
+                "opciones": ["Las parihuanas con sus alas rojas y pechos blancos", "Una princesa inca", "La bandera del Chile", "Un guila volando"],
+                "respuesta_correcta": 0
             }
         ]
     },
