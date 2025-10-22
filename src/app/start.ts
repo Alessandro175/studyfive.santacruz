@@ -33,6 +33,7 @@ import { GameService } from './services/game.service';
                 }
             </section>
             <div class="presentacion-01">
+                <div class="elogios">Vamos tu puedes</div>
                 <img [src]="'/img/otros/llami-' + gameService.mascotaAccionActual() + '.png'" alt="" />
             </div>
             <div class="presentacion-02">
@@ -170,6 +171,17 @@ import { GameService } from './services/game.service';
             padding: 3rem 1rem 140px 1rem;
         }
 
+        .elogios {
+            position: absolute;
+            width: 50%;
+            top: 0;
+            transform: translateY(-105%) translateX(50%);
+            text-align: center;
+            background: rgba(255, 255, 255, 1);
+            padding: 0.5rem;
+            border-radius: 10rem;
+            font-size: 12px;
+        }
         @media (min-width: 720px) {
             :host {
                 padding: 3rem 0;
@@ -181,6 +193,10 @@ import { GameService } from './services/game.service';
             }
             .cuerpo-juego {
                 padding: 3rem 2rem;
+            }
+            .elogios {
+                padding: 1rem;
+                font-size: 16px;
             }
         }
         @media (min-width: 992px) {

@@ -505,7 +505,7 @@
                 "id": 2,
                 "pregunta": "Si 3 276 + 4 829 = ____, el resultado es:",
                 "opciones": ["7 095", "8 105", "8 075", "7 055"],
-                "respuesta_correcta": 2
+                "respuesta_correcta": 1
             },
             {
                 "id": 3,

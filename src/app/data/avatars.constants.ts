@@ -3,7 +3,7 @@
  * Este archivo maneja todos los avatares disponibles en el sistema
  */
 
-export type AvatarName = 'cuto' | 'dolpi' | 'llami' | 'loderi' | 'peli' | 'pengu' | 'zoro' | 'jaguari';
+export type AvatarName = 'cuto' | 'dolpi' | 'llami' | 'loderi' | 'peli' | 'pengu' | 'zoro' | 'jaguari' | 'arpi' | 'camin' | 'capy' | 'flash' | 'gantes';
 
 export interface Avatar {
     name: AvatarName;
@@ -18,7 +18,7 @@ export const AVATARS_DISPONIBLES: Avatar[] = [
     {
         name: 'cuto',
         displayName: 'Cuto',
-        description: 'Un adorable zorro',
+        description: 'Un mono travieso',
     },
     {
         name: 'dolpi',
@@ -38,7 +38,7 @@ export const AVATARS_DISPONIBLES: Avatar[] = [
     {
         name: 'peli',
         displayName: 'Peli',
-        description: 'Un pingüino aventurero',
+        description: 'Una pelícana aventurera',
     },
     {
         name: 'pengu',
@@ -54,6 +54,31 @@ export const AVATARS_DISPONIBLES: Avatar[] = [
         name: 'jaguari',
         displayName: 'Jaguari',
         description: 'Un jaguar ágil',
+    },
+    {
+        name: 'arpi',
+        displayName: 'Arpi',
+        description: 'Un águila majestuosa',
+    },
+    {
+        name: 'camin',
+        displayName: 'Camin',
+        description: 'Un caiman maestro del karate',
+    },
+    {
+        name: 'capy',
+        displayName: 'Capy',
+        description: 'Un capibara relajado',
+    },
+    {
+        name: 'flash',
+        displayName: 'Flash',
+        description: 'Un oso perezoso veloz',
+    },
+    {
+        name: 'gantes',
+        displayName: 'Gantes',
+        description: 'Un tigrillo curioso',
     },
 ];
 
