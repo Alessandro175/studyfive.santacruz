@@ -1,4 +1,4 @@
-import { Component, inject, AfterViewInit, OnDestroy, ElementRef, Renderer2 } from '@angular/core';
+import { Component, inject, AfterViewInit, OnDestroy, ElementRef, Renderer2, computed } from '@angular/core';
 import { Router } from '@angular/router';
 import { BackgroundCanvasComponent } from './components/background-canvas.component';
 import { LoginComponent } from './pages/login/login';
@@ -33,7 +33,7 @@ import { GameService } from './services/game.service';
                 }
             </section>
             <div class="presentacion-01">
-                <div class="elogios">Vamos tu puedes</div>
+                <div class="elogios">{{ mensajeMascota() }}</div>
                 <img [src]="'/img/otros/llami-' + gameService.mascotaAccionActual() + '.png'" alt="" />
             </div>
             <div class="presentacion-02">
@@ -247,6 +247,62 @@ export class Start implements AfterViewInit, OnDestroy {
     protected musicService = inject(MusicService);
     private router = inject(Router);
     private resizeListener!: () => void;
+
+    // Mensaje motivacional que cambia según el estado del juego
+    mensajeMascota = computed(() => {
+        const vistaActual = this.gameService.vistaActual();
+        const ultimaRespuestaCorrecta = this.gameService.ultimaRespuestaCorrecta();
+        const mostrarFeedback = this.gameService.mostrarFeedback();
+        const respuestasCorrectas = this.gameService.respuestasCorrectasCount();
+        const preguntaActual = this.gameService.preguntaActual();
+
+        // Mensajes para cuando está jugando y hay feedback
+        if (vistaActual === 'jugando' && mostrarFeedback) {
+            if (ultimaRespuestaCorrecta) {
+                const mensajesCorrectos = [
+                    '¡Excelente trabajo!',
+                    '¡Muy bien!',
+                    '¡Bravo!',
+                    '¡Sigue así!',
+                    '¡Vas genial!',
+                    '¡Increíble!'
+                ];
+                return mensajesCorrectos[Math.floor(Math.random() * mensajesCorrectos.length)];
+            } else {
+                const mensajesIncorrectos = [
+                    '¡No te rindas!',
+                    '¡Tú puedes!',
+                    '¡Sigue intentando!',
+                    '¡Ánimo!',
+                    '¡La próxima será!',
+                    '¡Vamos!'
+                ];
+                return mensajesIncorrectos[Math.floor(Math.random() * mensajesIncorrectos.length)];
+            }
+        }
+
+        // Mensajes por fase del juego
+        switch (vistaActual) {
+            case 'seleccion-grados':
+                return '¡Elige tu grado!';
+            case 'seleccion-materias':
+                return '¿Qué materia estudiarás?';
+            case 'seleccion-competencias':
+                return '¡Selecciona un tema!';
+            case 'jugando':
+                return '¡Vamos, tú puedes!';
+            case 'resultados':
+                if (respuestasCorrectas >= preguntaActual) {
+                    return '¡Eres increíble!';
+                } else if (respuestasCorrectas >= preguntaActual / 2) {
+                    return '¡Buen trabajo!';
+                } else {
+                    return '¡Sigue practicando!';
+                }
+            default:
+                return '¡Bienvenido!';
+        }
+    });
 
     constructor(
         private el: ElementRef,

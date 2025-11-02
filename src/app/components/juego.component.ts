@@ -111,6 +111,8 @@ import { BtnComponent } from "./btn.component";
                     }
                 </div>
 
+                <p class="text-lg font-semibold text-indigo-600 mb-6">{{ mensajeMotivacional() }}</p>
+
                 <button class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold transition-colors" (click)="siguiente()">
                     {{ estaEnUltimaPregunta() ? 'Ver Resultados' : 'Siguiente Pregunta →' }}
                 </button>
@@ -167,6 +169,40 @@ export class JuegoComponent {
     recursos = computed(() => {
         const competencia = this.gameService.competenciaActual();
         return competencia?.recursos || [];
+    });
+
+    // Mensaje motivacional dinámico
+    mensajeMotivacional = computed(() => {
+        const esCorrecta = this.gameService.ultimaRespuestaCorrecta();
+        const preguntaIndex = this.gameService.preguntaActual();
+        const totalPreguntas = this.totalPreguntas();
+        const respuestasCorrectas = this.gameService.respuestasCorrectasCount();
+
+        // Mensajes para respuestas correctas
+        if (esCorrecta) {
+            const mensajesCorrectos = [
+                '¡Excelente! ¡Vas muy bien!',
+                '¡Perfecto! ¡Así se hace!',
+                '¡Bravo! ¡Muy bien hecho!',
+                '¡Formidable! ¡Continúa así!',
+                '¡Increíble! ¡Vas arrasando!',
+                '¡Muy bien! ¡Sigue adelante!',
+                '¡Fantástico! ¡Vaya talento tienes!'
+            ];
+            return mensajesCorrectos[Math.floor(Math.random() * mensajesCorrectos.length)];
+        }
+
+        // Mensajes para respuestas incorrectas
+        const mensajesIncorrectos = [
+            'No te des por vencido, ¡tú puedes!',
+            'Casi lo logras, ¡intenta de nuevo!',
+            'No importa, ¡cada error te hace más fuerte!',
+            'Vamos, ¡tú puedes lograrlo!',
+            'Esto es solo el comienzo, ¡adelante!',
+            'No te preocupes, ¡sigamos intentando!',
+            '¡Ánimo! ¡La próxima será tuya!'
+        ];
+        return mensajesIncorrectos[Math.floor(Math.random() * mensajesIncorrectos.length)];
     });
 
     volverACompetencias() {
